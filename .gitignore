@@ -5,7 +5,13 @@
 *.tar.gz
 *.tar.xz
 
-# emacs stuff
+# Python stuff
+__pycache__/
+.ipynb_checkpoints
+
+
+
+# Emacs stuff
 *#*
 .#*
 
