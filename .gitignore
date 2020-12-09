@@ -1,0 +1,26 @@
+# FORTRAN stuff
+*~
+*.o
+*.smod
+*.tar.gz
+*.tar.xz
+
+# emacs stuff
+*#*
+.#*
+
+
+# laTeX stuff
+*.aux
+*.bbl
+*.blg
+*.toc
+*.out
+*.data
+*.log
+
+# MESA data files
+*..npy
+*.pickle
+*.mod
+*.data
