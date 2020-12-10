@@ -170,20 +170,27 @@
          type (binary_info), pointer :: b
          integer, intent(in) :: binary_id
          integer :: ierr
+         character (len=200) :: fname
          call binary_ptr(binary_id, b, ierr)
          if (ierr /= 0) then ! failure in  binary_ptr
             return
          end if
          extras_binary_finish_step = keep_going
 
-         ! onset_RLOF
-
-         ! end_RLOF
-         if ((b% s_donor% xa(ihe4, 1) > 0.4) .and. &
-              (b% rl_relative_gap(b% d_i) > 0.15d0)) then
+         ! stop at the end RLOF
+         if ((b% s_donor% xa(ihe4, 1) > 0.4d0) .and. &
+              (b% rl_relative_gap(b% d_i) < -0.9d0)) then
             print *, "Donor is HE rich and significantly detached, gonna stop now!"
             print *, "termination code: RLOF detachment"
             extras_binary_finish_step = terminate
+            ! save model for the donor
+            write(fname, fmt="(a18)") 'donor_postRLOF.mod'
+            call star_write_model(b% star_ids(1), fname, ierr)
+            if (ierr /= 0) return
+            ! save model for the accretor
+            write(fname, fmt="(a21)") 'accretor_postRLOF.mod'
+            call star_write_model(b% star_ids(2), fname, ierr)
+            if (ierr /= 0) return
          end if
 
       end function extras_binary_finish_step
