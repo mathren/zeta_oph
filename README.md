@@ -2,7 +2,7 @@
 
 author: [Mathieu Renzo](mailto:mrenzo@flatironinstitute.org)
 
-project on self-consistent MESA (+CMFGEN?) modeling of $\zeta$ ophiuchi.
+project on self-consistent MESA (+CMFGEN?) modeling of [$\zeta$ ophiuchi](http://simbad.u-strasbg.fr/simbad/sim-id?Ident=zeta+ophiuchi&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id).
 
 ## $\zeta$ Ophiuchi's observational literature
 
