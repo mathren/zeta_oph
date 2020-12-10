@@ -18,6 +18,16 @@ From its runaway nature we know it is associated to PSR B1929+10 (PSR
 J1932+1059) their parent association is probably Upper Scorpio in Sco
 OB1 which is likely to be slightly sub-solar Z based on the precision
 fitting of pre-MS asteroseismology of one star by [Murphy et al. 20](https://ui.adsabs.harvard.edu/abs/2020arXiv201111821M/abstract).
-Indeed, Z lower than Zsun is required to fit the temperature required by Villamariz & Herrero 2001
+Indeed, Z lower than Zsun is required to fit the temperature required
+by Villamariz & Herrero 2005.
+
+## Computational notes
+
+Right now MESA evolves a binary until the donor's He core depletion.
+If one wants to finish the evolution of the accretor, you should run
+it separately as a single star (to avoid the difficult computation of
+the very late phases for the donor to be the bottleneck). MESA saves a
+model that can be used as initial condition for this, alternatively
+one can use a photo. Preliminary tests show this is equivalent.
 
 
