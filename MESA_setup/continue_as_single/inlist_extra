@@ -1,10 +1,23 @@
 &star_job
 
+
+load_saved_model = .true.
+saved_model_name = "../binary_to_donor_Hedepl/16accretor_at_donor_He_depl.mod"
+
+! don't overwrite age and model number
+set_initial_age = .false.
+set_initial_model_number = .false.
+
+save_model_filename = 'accretor_TAMS.mod'
+
 /
 
 
+&kap
+Zbase = 0.005d0
+/
+
 &controls
 
-initial_mass = MASSd0
 
 / ! end of controls namelist
