@@ -30,6 +30,10 @@ the very late phases for the donor to be the bottleneck). MESA saves a
 model that can be used as initial condition for this, alternatively
 one can use a photo. Preliminary tests show this is equivalent.
 
+The `epsilon(oxygen)` reported in Villamariz & Herrero 2005
+corresponds to the Solar value according to Asplund 2005 (cf. Japeli
+et al. 2018). There is no way to enhance oxygen through binary
+interactions and/or rotational mixing.
 
 ## TO DO
 
