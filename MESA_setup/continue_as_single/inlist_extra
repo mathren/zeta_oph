@@ -1,0 +1,10 @@
+&star_job
+
+/
+
+
+&controls
+
+initial_mass = MASSd0
+
+/ ! end of controls namelist

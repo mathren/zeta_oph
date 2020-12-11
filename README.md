@@ -31,3 +31,6 @@ model that can be used as initial condition for this, alternatively
 one can use a photo. Preliminary tests show this is equivalent.
 
 
+## TO DO
+
+recalculate astrometry using Gaia EDR3
