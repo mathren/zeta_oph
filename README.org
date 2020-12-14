@@ -50,4 +50,12 @@ Tetzlaff et al. 2010 mention ~ ~20km/s~ for \zeta Ophiuchi's space
 velocity, dominated by its large proper-motion. However, [[https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract][Blaauw 1961]]
 quotes 39km/s. [[https://ui.adsabs.harvard.edu/abs/1952BAN....11..414B/abstract][Blaauw 1952]]
 quotes 31km/s just for the transverse motion. Note that Blaauw's
-numbers are not relative to Upper Scorpio, Tetzlaff's number is unclear.
+numbers are not relative to Upper Scorpio, Tetzlaff's number is
+unclear.
+
+*** Parameters that matter for the orbital velocity
+
+How conservative mass transfer is (in other words, how the mass ratio
+evolves), what angular momentum it loses. This is turn can depend on
+the prescription for spin-up/spin-down of the accretor. This are being
+assumed right now.
