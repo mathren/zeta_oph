@@ -34,7 +34,7 @@ one can use a photo. Preliminary tests show this is equivalent.
 
 *** Metallicity
 
-The `\varepsilon(oxygen)` reported in Villamariz & Herrero 2005
+The `\varepsilon(oxygen)' reported in Villamariz & Herrero 2005
 corresponds to the Solar value according to Asplund 2005 (cf. Japeli
 et al. 2018). There is no way to enhance oxygen through binary
 interactions and/or rotational mixing, so this is a good indicator of
@@ -42,9 +42,9 @@ the initial Z (or suggests a non-solar mixture)
 
 *** Kinematics
 
-Unfortunately the `ruwe` for \zeta Ophiuchi is >4, so EDR3 is
+Unfortunately the `ruwe' for \zeta Ophiuchi is >4, so EDR3 is
 useless. I suspect this is due to the stellar variability and the very
-large visual magnitude `Mv = -4.2`.
+large visual magnitude `Mv = -4.2'.
 
 Tetzlaff et al. 2010 mention ~20km/s for \zeta Ophiuchi's space
 velocity, dominated by its large proper-motion. However, [[https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract][Blaauw 1961]]
