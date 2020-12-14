@@ -46,4 +46,10 @@ Unfortunately the `ruwe` for $\zeta$ Ophiuchi is >4, so EDR3 is
 useless. I suspect this is due to the stellar variability and the very
 large visual magnitude `Mv = -4.2`.
 
+Tetzlaff et al. 2010 mention ~20km/s for $zeta$ Ophiuchi's space
+velocity, dominated by its large proper-motion. However, [Blaauw
+1961](https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract)
+quotes 39km/s. [Blaauw
+1952](https://ui.adsabs.harvard.edu/abs/1952BAN....11..414B/abstract)
+quotes 31km/s just for the transverse motion.
 
