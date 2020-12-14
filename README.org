@@ -6,13 +6,11 @@ Project on self-consistent MESA (+CMFGEN?) modeling of [[http://simbad.u-strasbg
 
 ** \zeta Ophiuchi's observational literature
 
-This doesn't mean to be a comprehensive list:
+This doesn't mean to be a comprehensive list, and it is in no
+particular order:
 
-[[https://ui.adsabs.harvard.edu/abs/2014ApJS..211...10S/abstract][Sota et al. 2014]],
-[[https://www.aanda.org/articles/aa/pdf/2005/40/aa2848-05.p][Villamariz & Herrero 2005]],
-[[https://ui.adsabs.harvard.edu/abs/2001MNRAS.327..353H/abstract][Howarth & Smith 2001]],
-[[https://ui.adsabs.harvard.edu/abs/2010MNRAS.402.2369T/abstract][Tetzlaff al. 2010]],
-[[https://ui.adsabs.harvard.edu/abs/2011MNRAS.410..190T/abstrac][Tetzlaff et al. 2011]].
+[[https://ui.adsabs.harvard.edu/abs/2014ApJS..211...10S/abstract][Sota et al. 2014]], [[https://www.aanda.org/articles/aa/pdf/2005/40/aa2848-05.p][Villamariz & Herrero 2005]], [[https://ui.adsabs.harvard.edu/abs/2001MNRAS.327..353H/abstract][Howarth & Smith 2001]],
+[[https://ui.adsabs.harvard.edu/abs/2010MNRAS.402.2369T/abstract][Tetzlaff al. 2010]], [[https://ui.adsabs.harvard.edu/abs/2011MNRAS.410..190T/abstrac][Tetzlaff et al. 2011]], [[https://ui.adsabs.harvard.edu/abs/1952BAN....11..414B/abstract][Blaauw 1952]], [[https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract][Blaauw 1961]].
 
 From its runaway nature we know it is associated to PSR B1929+10 (PSR
 J1932+1059) their parent association is probably Upper Scorpio in Sco
