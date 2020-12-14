@@ -2,7 +2,7 @@
 
 author: [[mailto:mrenzo@flatironinstitute.org][Mathieu Renzo]]
 
-Project on self-consistent MESA (+CMFGEN?) modeling of [[http://simbad.u-strasbg.fr/simbad/sim-id?Ident=zeta+ophiuchi&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id][[\zeta ophiuchi]]]
+Project on self-consistent MESA (+CMFGEN?) modeling of [[http://simbad.u-strasbg.fr/simbad/sim-id?Ident=zeta+ophiuchi&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id][\zeta ophiuchi]]
 
 ** \zeta Ophiuchi's observational literature
 
