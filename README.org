@@ -1,10 +1,10 @@
-* $\zeta$ Ophiuchi
+* \zeta Ophiuchi
 
 author: [[mailto:mrenzo@flatironinstitute.org][Mathieu Renzo]]
 
-Project on self-consistent MESA (+CMFGEN?) modeling of [[http://simbad.u-strasbg.fr/simbad/sim-id?Ident=zeta+ophiuchi&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id][[$\zeta$ ophiuchi]]]
+Project on self-consistent MESA (+CMFGEN?) modeling of [[http://simbad.u-strasbg.fr/simbad/sim-id?Ident=zeta+ophiuchi&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id][[\zeta ophiuchi]]]
 
-** $\zeta$ Ophiuchi's observational literature
+** \zeta Ophiuchi's observational literature
 
 This doesn't mean to be a comprehensive list:
 
@@ -42,7 +42,7 @@ the initial Z (or suggests a non-solar mixture)
 
 *** Kinematics
 
-Unfortunately the `ruwe` for $\zeta$ Ophiuchi is >4, so EDR3 is
+Unfortunately the `ruwe` for \zeta Ophiuchi is >4, so EDR3 is
 useless. I suspect this is due to the stellar variability and the very
 large visual magnitude `Mv = -4.2`.
 
