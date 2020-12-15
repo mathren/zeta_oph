@@ -46,10 +46,10 @@ fr = 0.01
 fr_limit = 2.5d-2
 fm = 0.01
 fm_limit = 1d-1
-varcontrol_case_a = 1d-3
-varcontrol_case_b = 1d-3
+varcontrol_case_a = 1d-4
+varcontrol_case_b = 5d-4
 varcontrol_ms = 1d-4
-varcontrol_post_ms = 1d-3
+varcontrol_post_ms = 5d-4
 dt_softening_factor = 0.4d0
 
 sync_mode_1 = "Uniform"
