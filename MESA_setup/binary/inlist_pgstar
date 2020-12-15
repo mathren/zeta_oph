@@ -11,7 +11,7 @@ pgstar_xaxis_label_scale = 1.3
 pgstar_left_yaxis_label_scale = 1.3
 pgstar_right_yaxis_label_scale = 1.3
 
-Grid2_win_flag = .true.
+Grid2_win_flag = .false.
 !Grid2_win_flag = .false.
 Grid2_file_flag = .true.
 
