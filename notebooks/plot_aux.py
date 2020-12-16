@@ -21,11 +21,85 @@
 import sys
 # the line below import stuff from git@github.com:mathren90/plotFunc.git
 sys.path.append('/mnt/home/mrenzo/codes/python_stuff/plotFunc/')
-from MESAreader import *
-import matplotlib.pyplot as plt
-from plotDefaults import *
+from MESAreader import getSrcCol
+import numpy as np
+
+# Zeta Ophiuchi's data
+#Spectral type: O9.5Vnn
+# xi=15 # no idea what this is, maybe microturbulence
+
+def get_zeta_oph_vsini():
+    """
+    returns the vsini and error from Villamariz & Herrero 05
+    """
+    vsini = 400 #km/s
+    err_vsini = 20 #km/s
+    return vsini, err_vsini
 
 
+def zeta_oph_epsilon_he(ax):
+    """
+    plots the epsilon_he and error on ax
+    data from Villamariz & Herrero 05
+    """
+    epsilon_he = 0.11  ## N(He/(N(H)+N(He)))
+    err_epsilon_he_up = 0.05  # estimated from the range of values they explore
+    err_epsilon_he_down=0.02
+    ax.errorbar(epslion_he, yerr=[err_epsilon_he_up,err_epsilon_he_down], fmt='o', color='r', zorder=1)
+
+def zeta_oph_radius(ax):
+    """
+    plots the radius and error on ax
+    data from Villamariz & Herrero 05
+    """
+    R = 8.3 #Rsun
+    err_R = 1.5
+    ax.errorbar(R, yerr=err_R, fmt='o', color='r', zorder=1)
+
+
+def zeta_oph_mass(ax):
+    """
+    plots the mass and error on ax
+    data from Villamariz & Herrero 05
+    """
+    M = 19 #Msun
+    err_M = 11
+    ax.errorbar(M, yerr=err_M, fmt='o', color='r', zorder=1)
+
+
+def zeta_oph_spectroscopicHRD(ax):
+    """
+    plots Zeta ophiuchi logg and Teff on ax
+    data from Villamariz & Herrero 05
+    """
+    logg = 3.7 #cm/s^2
+    err_log_g = 0.15  # estimated from the range of values they explore
+    Teff = 34000 #K
+    err_Teff = 1500 # K # estimated from the range of Teff they explore
+    # take log10
+    log_Teff = np.log10(Teff)
+    err_log_Teff = err_Teff/(Teff*np.log(10))
+    ax.errorbar(log_Teff, logg, xerr=err_log_Teff, yerr=err_log_g, fmt='o', color='r', zorder=1)
+
+
+def zeta_oph_HRD(ax):
+    """
+    plots Zeta ophiuchi L and Teff on ax
+    data from Villamariz & Herrero 05
+    """
+    Teff = 34000 #K
+    err_Teff = 1500 # K # estimated from the range of Teff they explore
+    # take log10
+    log_Teff = np.log10(Teff)
+    err_log_Teff = err_Teff/(Teff*np.log(10))
+    #visual magnitude
+    # Mv = -4.2 # taken from Howarth & Prinja 1989
+    L = 8.3e4 #Lsun
+    err_L = 4e4
+    # take log10
+    log_L = np.log10(L)
+    err_log_L = err_L/(L*np.log(10))
+    ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt='o', color='r', zorder=1)
 # -------------------------------------------------------------------
 # radius plots
 def get_radius_time(hfile):
