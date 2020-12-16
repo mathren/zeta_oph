@@ -50,7 +50,7 @@ for Per in PERIODS:
             with open(RUNFILE,"a") as F:
                 headerline = "export OMP_NUM_THREADS=7 && export MESA_DIR=/mnt/home/mrenzo/codes/mesa/mesa_15140/ && export MESASDK_ROOT=/mnt/home/mrenzo/codes/mesa/mesa_12778/mesasdk && source $MESASDK_ROOT/bin/mesasdk_init.sh"
                 backline = " && ./clean && ./mk && ./rn 2>&1 | tee output"+"\n" # missing: move to destination
-                folder_name = "P"+str(Per)+"/"
+                folder_name = f"P{Per:03.f}/"
                 print("----------")
                 # print(M1, M2)
                 print(folder_name)
