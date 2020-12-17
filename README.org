@@ -51,9 +51,26 @@ quotes 31km/s just for the transverse motion. Note that Blaauw's
 numbers are not relative to Upper Scorpio, Tetzlaff's number is
 unclear.
 
+The [[https://ui.adsabs.harvard.edu/abs/1996A%26A...305..825V/abstract][Vanrensbergen et al. 1996]] paper quotes a 46km/s 3D velocity
+with respect to SCO OB2.
+
 *** Parameters that matter for the orbital velocity
 
 How conservative mass transfer is (in other words, how the mass ratio
 evolves), what angular momentum it loses. This is turn can depend on
 the prescription for spin-up/spin-down of the accretor. This are being
 assumed right now.
+
+*** Notes on the parent association
+
+Based on the proper motion alone, Blaauw 1952 suggested the parent
+association might be the Upper Scorpio association of SCO
+OB2. Although [[https://ui.adsabs.harvard.edu/abs/1996A%26A...305..825V/abstract][Vanrensbergen et al. 1996]] could not find a suitable
+binary evolution model for \zeta Ophiuchi and excluded this region,
+Tetzlaff et al. 2010 reconsidered the star kinematics and the
+kinematics of a pulsar (PSR 1929+10) and concluded a common origin in
+Upper Scorpio about 1 Myr ago.
+
+The age of Upper Scorpio is not well known,
+[[https://ui.adsabs.harvard.edu/abs/2015MNRAS.448.2737R/abstract][Rizzuto et al. 2015]] place it between 5-10Myr, which implies 4-9Myr at
+the explosion, i.e. a donor ZAMS mass larger than 20Msun.
