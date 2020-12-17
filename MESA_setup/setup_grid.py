@@ -8,16 +8,19 @@ import numpy as np
 sys.path.append("/mnt/home/mrenzo/codes/python_stuff/plotFunc/")
 from utilsLib import *
 
-PERIODS = [3, 5, 8, 10, 12, 15, 20, 100]
+# PERIODS = [3, 5, 8, 10, 12, 15, 20, 100]
+
+SEMI = [2,10,100]
 
 # these will all become sys.argv if needed
 TEMPLATE = "/mnt/home/mrenzo/Templates/zeta_oph/MESA_setup/binary/"
-ROOT = "/mnt/home/mrenzo/ceph/RUNS/ZETA_OPH/Z_0.01/"
+ROOT = "/mnt/home/mrenzo/ceph/RUNS/ZETA_OPH/Z_0.01/23_18_SEMICONV/"
 DESTINATION_ROOT = "/mnt/home/mrenzo/ceph/RESULTS//ZETA_OPH/Z_0.01/"
 
 
-for Per in PERIODS:
-    DESTINATION=DESTINATION_ROOT+"/Period"+str(Per)+"/"
+# for Per in PERIODS:
+for sem in SEMI:
+    DESTINATION=DESTINATION_ROOT+"/mix_efficiency"+str(sem)+"/"
     RUNFILE=ROOT+'/runFile.txt' # to use with disBatch.py
 
     print("template:",TEMPLATE)
@@ -43,14 +46,14 @@ for Per in PERIODS:
             if (go_on_dest != 'Y' and go_on_dest != 'y'): sys.exit()
         if (((go_on_root == 'Y') or (go_on_root == 'y')) and ((go_on_dest == 'Y') or (go_on_dest == 'y'))):
             # now set up stuff
-            description="binary P"+str(Per)+", q=0.8, small grid, mesa testing"
+            description="binary semiconv and thermohaline description"+str(sem)+", q=0.8, small grid, mesa testing"
             # save template in destination
             os.system('tar -czf template.tar.xz '+TEMPLATE+' && mv template.tar.xz '+DESTINATION)
             # now write the RUNFILE
             with open(RUNFILE,"a") as F:
                 headerline = "export OMP_NUM_THREADS=7 && export MESA_DIR=/mnt/home/mrenzo/codes/mesa/mesa_15140/ && export MESASDK_ROOT=/mnt/home/mrenzo/codes/mesa/mesa_12778/mesasdk && source $MESASDK_ROOT/bin/mesasdk_init.sh"
                 backline = " && ./clean && ./mk && ./rn 2>&1 | tee output"+"\n" # missing: move to destination
-                folder_name = f"P{Per:03.f}/"
+                folder_name = f"MIX{sem:03.0f}/"
                 print("----------")
                 # print(M1, M2)
                 print(folder_name)
@@ -62,5 +65,6 @@ for Per in PERIODS:
                 os.system(copy)
                 F.writelines(headerline+" && cd "+ROOT+'/'+folder_name+backline)
                 # modify the inlists
-                os.system('perl -pi.back -e \'s/PERIOD/'+str(Per)+'/g;\' inlist_binary')
+                os.system('perl -pi.back -e \'s/SEMI/'+str(sem)+'/g;\' inlist_both')
+                os.system('perl -pi.back -e \'s/THERMO/'+str(sem)+'/g;\' inlist_both')
                 os.chdir(ROOT)

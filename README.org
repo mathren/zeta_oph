@@ -24,7 +24,7 @@ by Villamariz & Herrero 2005.
 *** MESA
 
 Right now MESA evolves a binary until the donor's He core depletion.
-If one wants to finish the evolution of the accretor, you should run
+If one wants to push the evolution of the accretor to TAMS, you should run
 it separately as a single star (to avoid the difficult computation of
 the very late phases for the donor to be the bottleneck). MESA saves a
 model that can be used as initial condition for this, alternatively
