@@ -79,3 +79,6 @@ The metallicity is likely to be slightly sub-solar Z based on the precision
 fitting of pre-MS asteroseismology of one star by [[https://ui.adsabs.harvard.edu/abs/2020arXiv201111821M/abstract][Murphy et
 al. 2020]]. However, Villamariz & Herrero 2005 report a solar abundance
 of Oxygen and Carbon, maybe there is a different mixture of elements?
+
+For an overview of the SCO OB2 in the Hipparcos data and Upper
+Scorpio, see [[https://ui.adsabs.harvard.edu/abs/1999AJ....117..354D/abstract][de Zeeuw et al. 1999]].
