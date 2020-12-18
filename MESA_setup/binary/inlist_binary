@@ -10,9 +10,9 @@ evolve_both_stars = .true.
 &binary_controls
 
 ! masses will be set in inlist1/inlist2
-m1 = 23d0  ! donor mass in Msun
-m2 = 18d0 ! companion mass in Msun
-initial_period_in_days = 50d0
+m1 = MASS1d0  ! donor mass in Msun
+m2 = MASS2d0 ! companion mass in Msun
+initial_period_in_days = PERIODd0
 
 limit_retention_by_mdot_edd = .false. ! this is for BH secondaries
 mass_transfer_alpha = 0.0d0
