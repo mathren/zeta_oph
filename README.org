@@ -10,7 +10,8 @@ This doesn't mean to be a comprehensive list, and it is in no
 particular order:
 
 [[https://ui.adsabs.harvard.edu/abs/2014ApJS..211...10S/abstract][Sota et al. 2014]], [[https://www.aanda.org/articles/aa/pdf/2005/40/aa2848-05.p][Villamariz & Herrero 2005]], [[https://ui.adsabs.harvard.edu/abs/2001MNRAS.327..353H/abstract][Howarth & Smith 2001]],
-[[https://ui.adsabs.harvard.edu/abs/2010MNRAS.402.2369T/abstract][Tetzlaff al. 2010]], [[https://ui.adsabs.harvard.edu/abs/2011MNRAS.410..190T/abstrac][Tetzlaff et al. 2011]], [[https://ui.adsabs.harvard.edu/abs/1952BAN....11..414B/abstract][Blaauw 1952]], [[https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract][Blaauw 1961]].
+[[https://ui.adsabs.harvard.edu/abs/2010MNRAS.402.2369T/abstract][Tetzlaff al. 2010]], [[https://ui.adsabs.harvard.edu/abs/2011MNRAS.410..190T/abstrac][Tetzlaff et al. 2011]], [[https://ui.adsabs.harvard.edu/abs/1952BAN....11..414B/abstract][Blaauw 1952]], [[https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract][Blaauw 1961]],
+[[https://ui.adsabs.harvard.edu/abs/2020MNRAS.498..899N/abstract][Neuhauser et al. 2020]], [[https://ui.adsabs.harvard.edu/abs/2018AN....339...46Z/abstrac][Zehe et al. 2017]].
 
 From its runaway nature we know it is associated to PSR B1929+10 (PSR
 J1932+1059) their parent association is probably Upper Scorpio in Sco
@@ -45,14 +46,21 @@ useless. I suspect this is due to the stellar variability and the very
 large visual magnitude ~Mv = -4.2~.
 
 Tetzlaff et al. 2010 mention ~ ~20km/s~ for \zeta Ophiuchi's space
-velocity, dominated by its large proper-motion. However, [[https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract][Blaauw 1961]]
+velocity, dominated by its large proper-motion. This is a local
+standard frame velocity corrected for Galactic rotation. However, [[https://ui.adsabs.harvard.edu/abs/1961BAN....15..265B/abstract][Blaauw 1961]]
 quotes 39km/s. [[https://ui.adsabs.harvard.edu/abs/1952BAN....11..414B/abstract][Blaauw 1952]]
 quotes 31km/s just for the transverse motion. Note that Blaauw's
-numbers are not relative to Upper Scorpio, Tetzlaff's number is
-unclear.
+numbers are not relative to Upper Scorpio. [[https://ui.adsabs.harvard.edu/abs/2018AN....339...46Z/abstrac][Zehe et al. 2017]] questions
+the radial velocity used in Hoogerwerf et al. 2001, and Neuhauser et
+al. 2020 updated the kinematics and identify Upper Centaurus Lupus
+rather than Upper Scorpio as most likely origin, and a different
+pulsar for the companion.
 
 The [[https://ui.adsabs.harvard.edu/abs/1996A%26A...305..825V/abstract][Vanrensbergen et al. 1996]] paper quotes a 46km/s 3D velocity
-with respect to SCO OB2.
+with respect to SCO OB2. This was derived assuming RV=18km/s and
+42km/s of transverse velocity.
+
+[[https://ui.adsabs.harvard.edu/abs/2018AN....339...46Z/abstrac][Zehe et al. 2017]] claim a RV of 12.2+/- 3.3 km/s
 
 *** Parameters that matter for the orbital velocity
 
@@ -69,7 +77,9 @@ OB2. Although [[https://ui.adsabs.harvard.edu/abs/1996A%26A...305..825V/abstract
 binary evolution model for \zeta Ophiuchi and excluded this region,
 Tetzlaff et al. 2010 reconsidered the star kinematics and the
 kinematics of a pulsar (PSR 1929+10) and concluded a common origin in
-Upper Scorpio about 1 Myr ago.
+Upper Scorpio about 1 Myr ago. Neuhauser et al. 20 updated this result
+with a different pulsar identified as best companion, and not US but
+UCL as region of origin.
 
 The age of Upper Scorpio is not well known,
 [[https://ui.adsabs.harvard.edu/abs/2015MNRAS.448.2737R/abstract][Rizzuto et al. 2015]] place it between 5-10Myr, which implies 4-9Myr at
@@ -82,3 +92,18 @@ of Oxygen and Carbon, maybe there is a different mixture of elements?
 
 For an overview of the SCO OB2 in the Hipparcos data and Upper
 Scorpio, see [[https://ui.adsabs.harvard.edu/abs/1999AJ....117..354D/abstract][de Zeeuw et al. 1999]].
+
+Neuhauser et al. 2020 report a flight time of ~1.5Myr (which
+uncertainties dominated by the unknown pulsar velocity), and PSR
+B1706-16 as the most likely companion NS, in contrast to previous
+results by Hoogerwerf et al. and Tetzlaff et al. 2010. The update is
+mostly due to the RV from Zehe et al. 2018. This would put the origin
+of this system in UCL and not US. UCL has an estimated age of 10-20
+Myr, so brings down the donor's initial mass to 10-20Msun. The
+peculiar space velocity with respect to the LSR quoted by Neuhauser et
+al. 2020 is 19.7km/s.
+
+**** TODO Papers to check
+
+ - [] Wright & Mamajek 2018 for kinematics of parent association
+ - [] Marcolio et al 2009 for spectral characterization of \zeta Ophiuchi
