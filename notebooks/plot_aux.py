@@ -33,10 +33,10 @@ import numpy as np
 
 def get_zeta_oph_vsini():
     """
-    returns the vsini and error from Villamariz & Herrero 05
+    returns the vsini and error from Zehe et al. 2019
     """
-    vsini = 400  # km/s
-    err_vsini = 20  # km/s
+    vsini = 432  # km/s
+    err_vsini = 16  # km/s
     return vsini, err_vsini
 
 
