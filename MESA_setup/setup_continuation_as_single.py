@@ -64,7 +64,7 @@ def setup_one_model(folder, RUNFILE=ROOT+"run_as_single_to_TAMS.txt"):
             F.writelines(headerline+" && cd "+folder_name+backline)
         # modify the inlists
         os.system('perl -pi.back -e \'s/MASS2/'+str(M2)+'/g;\' inlist_extra')
-        os.system('perl -pi.back -e \'s/PERIOD/'+str(P)+'/g;\' inlist_extra')
+        # os.system('perl -pi.back -e \'s/PERIOD/'+str(P)+'/g;\' inlist_extra')
     os.chdir(ROOT)
 
 

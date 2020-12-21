@@ -121,7 +121,6 @@ def plot_radius_time(ax, hfile1, c="#77CCCC", hfile2="", label=""):
     ax.plot(t, R, c=c, zorder=2, label=label)
     # post binary evolution part is optional
     if hfile2 != "":
-        print("debug")
         t, R = get_radius_time(hfile2)
         ax.plot(t, R, c=c, ls="-.", zorder=2, label=label)
 
