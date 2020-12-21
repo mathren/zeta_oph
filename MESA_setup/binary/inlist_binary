@@ -36,7 +36,7 @@ write_header_frequency = 1
 history_interval = 1
 
 do_tidal_sync = .true.
-do_j_accretion = .false. ! if .true. use A.3.3 of de Mink et al. 2013, ApJ, 764, 166
+do_j_accretion = .true. ! if .true. use A.3.3 of de Mink et al. 2013, ApJ, 764, 166
 ! be 100% sure MB is always off
 do_jdot_mb = .false.
 do_jdot_missing_wind = .true.

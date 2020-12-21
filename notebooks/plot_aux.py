@@ -106,9 +106,7 @@ def zeta_oph_HRD(ax):
     # take log10
     log_L = np.log10(L)
     err_log_L = err_L / (L * np.log(10))
-    ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt="o", color="r", zorder=1)
-
-
+    ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt="o", color="r", zorder=10)
 # -------------------------------------------------------------------
 # radius plots
 def get_radius_time(hfile):
@@ -123,6 +121,7 @@ def plot_radius_time(ax, hfile1, c="#77CCCC", hfile2="", label=""):
     ax.plot(t, R, c=c, zorder=2, label=label)
     # post binary evolution part is optional
     if hfile2 != "":
+        print("debug")
         t, R = get_radius_time(hfile2)
         ax.plot(t, R, c=c, ls="-.", zorder=2, label=label)
 
