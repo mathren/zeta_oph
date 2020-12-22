@@ -29,6 +29,12 @@ import numpy as np
 # Zeta Ophiuchi's data
 # Spectral type: O9.5Vnn
 # xi=15 # no idea what this is, maybe microturbulence
+def get_zeta_oph_inclination():
+    """
+    returns the inclination angle and error from Zehe et al. 2019
+    """
+    imin = 34 # degrees
+    return imin
 
 
 def get_zeta_oph_vsini():
@@ -64,13 +70,19 @@ def zeta_oph_radius(ax):
     ax.errorbar(age, R, yerr=err_R, fmt="o", color="r", zorder=1)
 
 
+def get_zeta_oph_mass():
+    """ mass estimated by Villamariz & Herrero 2005 """
+    M = 19  # Msun
+    err_M = 11
+    return M, err_M
+
+
 def zeta_oph_mass(ax):
     """
     plots the mass and error on ax
     data from Villamariz & Herrero 05
     """
-    M = 19  # Msun
-    err_M = 11
+    M, err_M = get_zeta_oph_mass()
     ax.errorbar(M, yerr=err_M, fmt="o", color="r", zorder=1)
 
 
@@ -317,3 +329,43 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, do
         ax.set_yscale("log")
     if legend:
         ax.legend(ncol=2)
+# ------------------------------------------------------------
+# make Latex table with observed values
+def make_table_zeta_Oph(outfname=""):
+    if outfname=="":
+        outfname="/tmp/zeta_ophiuchi.text"
+    with open(outfname, "w") as F:
+        # write header
+        outfname.writelines(["\begin{table}",
+                             "\begin{center}",
+                             "\caption{Stellar parameters of $\zeta$ Ophiuchi.}",
+                             "\begin{tabular}{lc|c|c}",
+                             "\hline\hline",
+                             "Parameter & Units & Value & Ref.\\[2pt]"])
+        # write main body
+        vsini, errvisini = get_zeta_oph_vsini()
+        line  =  "$v\,\sin(i)$ & $\mathrm{km\ s^{-1}}$ & "+f"${vsini:.0f}"+"\pm"+f"{errvisini}"+"$ &"+" (1)\\"
+        outfname.writelines(line)
+        # inclination
+        min_i = get_zeta_oph_inclination()
+        line = "$i$ & degrees & $\gtrim "+f"{min_i:.d}"+"$ & (1)\\"
+        outfname.writelines(line)
+        # L, Teff, logg
+
+        # radius
+
+
+        # mass
+        M, err_M = get_zeta_oph_mass()
+        line = "Mass & $M_\odot$ &"+f"${M}\pm{err_M}$& (2)\\"
+        outfname.writelines(line)
+        # surf composition
+
+        # space velocity
+
+        # write footer
+        outfname.writelines(["\hline",
+                             "\label{tab:star_param}",
+                             "\end{tabular}",
+                             "\end{center}",
+                             "\end{table}"])
