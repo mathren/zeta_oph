@@ -38,10 +38,36 @@
 \section{Introduction}
 \label{sec:intro}
 
+
+\begin{todo}
+  In the intro:
+  \begin{itemize}
+  \item runaway nature
+  \item association with pulsar and SNe polluting Earth
+  \item debate on parent association
+  \item weak wind problem
+  \end{itemize}
+  Methods:
+  \begin{itemize}
+  \item self-consistent modeling of the evolution \citep[see also][]{vanrensbergen:96}
+  \item depends on many free parameters governing the intricate and
+    coupled physics of mass transfer, mixing, rotation
+  \end{itemize}
+  Aim:
+  \begin{itemize}
+  \item since observations are not always agreeing with each other, we
+    aim at finding a model in the right ballpark and explore how
+    physical variations move such model around
+  \item in this way we find a set of recommended parameters for the
+    evolution of massive binary system going through stable mass transfer
+  \end{itemize}
+\end{todo}
+
 The nearest O-type star to Earth is $\zeta$ Ophiuchi, classified as
 O9.5{\rm IVnn} type star \citep[e.g.,][]{sota:14} and with a parallax
 of 5-8\,milliarcsec \citep[e.g.,][and references
-therein]{neuhauser:20}. This star also has a large proper-motion
+therein]{neuhauser:20}. This star has been the target of many
+observations and underpins many open puzzles.
 
 
 \software{
@@ -53,15 +79,28 @@ therein]{neuhauser:20}. This star also has a large proper-motion
   \MESA \citep{paxton:11,paxton:13,paxton:15,paxton:18,paxton:19}
 }
 
+\section{Modeling mass transfer with \texttt{MESA}}
+\label{sec:methods}
+
+\section{Initial grid of models}
+
+\subsection{Favorite model}
+
+\section{Physical variations}
+
+\section{Discussion}
+
+\section{Conclusions}
+
 \section*{Acknowledgements}
 
 
 
 \appendix
 
-% \section{\texttt{MESA} setup}
-% \label{sec:software}
-
+\section{\texttt{MESA} setup}
+\label{sec:software}
+\todo{possibly move to methods}
 We use \code{MESA} version 15140 to compute our models.  The
 \code{MESA} equation of state (EOS) is a blend of the OPAL \citet{Rogers2002}, SCVH
 \citet{Saumon1995}, PTEH \citet{Pols1995}, HELM \citet{Timmes2000},
