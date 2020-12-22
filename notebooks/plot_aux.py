@@ -36,6 +36,11 @@ def get_zeta_oph_inclination():
     imin = 34 # degrees
     return imin
 
+def get_zeta_oph_wind_mdot():
+    """ data from marcolino et al. 2009"""
+    log_mdot = -8.8
+    err_log_mdot = 0.7
+    return log_mdot, err_log_mdot
 
 def get_zeta_oph_vsini():
     """
@@ -62,12 +67,13 @@ def zeta_oph_epsilon_he(ax):
 def zeta_oph_radius(ax):
     """
     plots the radius and error on ax
-    data from Villamariz & Herrero 05
+    data from Marcolino et al. 2009
     """
-    R = 8.3  # Rsun
-    err_R = 1.5
+    R = 9.2  # Rsun
+    err_Rp = 1.7
+    err_Rm = 1.4
     age = 5 # Myr -- this is based on fits from single rotating models, not trustworthy
-    ax.errorbar(age, R, yerr=err_R, fmt="o", color="r", zorder=1)
+    ax.errorbar(age, R, yerr=[err_Rp, err_Rm], fmt="o", color="r", zorder=1)
 
 
 def get_zeta_oph_mass():
@@ -114,19 +120,16 @@ def zeta_oph_spectroscopicHRD(ax):
 
 def get_zeta_oph_L_teff():
     """ returns luminosity and effective temperature
-    from Villamariz & Herrero 2005 which agree with Marcolino et al. 2009 """
-    Teff = 34000  # K
-    err_Teff = 1500  # K # estimated from the range of Teff they explore
+    from Marcolino et al. 2009 see their Tab. 3"""
+    Teff = 32000  # K
+    err_Teff = 2000
     # take log10
     log_Teff = np.log10(Teff)
     err_log_Teff = err_Teff / (Teff * np.log(10))
     # visual magnitude
     # Mv = -4.2 # taken from Howarth & Prinja 1989
-    L = 8.3e4  # Lsun
-    err_L = 4e4
-    # take log10
-    log_L = np.log10(L)
-    err_log_L = err_L / (L * np.log(10))
+    log_L = 4.86 # in Lsun units
+    err_log_L = 0.1
     return log_L, err_log_L,log_Teff, err_log_Teff
 
 def zeta_oph_HRD(ax):
