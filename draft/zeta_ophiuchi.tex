@@ -1,0 +1,118 @@
+\documentclass[twocolumn,twocolappendix,trackchanges]{aastex63}
+\usepackage{amsmath}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\mesa}{\code{MESA}}
+\newcommand{\MESA}{\code{MESA}}
+\renewcommand{\labelitemii}{$\bullet$}
+\newcommand{\kms}{{\mathrm{km\ s^{-1}}}}
+\newcommand{\Msun}{{\mathrm{M}_\odot}}
+\newcommand{\kev}{\mathrm{keV}}
+\newcommand{\gk}{\ensuremath{\,\rm{GK}}}
+\usepackage{CJK}
+\DeclareRobustCommand{\Eqref}[1]{Eq.~\ref{#1}}
+\DeclareRobustCommand{\Figref}[1]{Fig.~\ref{#1}}
+\DeclareRobustCommand{\Tabref}[1]{Tab.~\ref{#1}}
+\DeclareRobustCommand{\Secref}[1]{Sec.~\ref{#1}}
+
+\newcommand{\todo}[1]{{\large $\blacksquare$~\textbf{\color{red}[#1]}}~$\blacksquare$}
+
+\begin{document}
+
+\title{$\zeta$ Ophiuchi as a test bed for modeling accretors}
+\author[0000-0002-6718-9472]{M.~Renzo}
+\affiliation{Center for Computational Astrophysics, Flatiron Institute, New York, NY 10010, USA}
+\affiliation{Department of Physics, Columbia University, New York, NY 10027, USA}
+\author{\todo{ }}
+
+\begin{abstract}
+\todo{write abstract}
+\end{abstract}
+
+\vspace*{-10pt}
+\keywords{stars: individual: $\zeta$ Ophiuchi  -- stars: massive --
+  stars: binaries} %% check keywords exist
+
+
+%% main text limit:
+%% 3500 words, 50 references, 5 figures (each up to 9 panels)
+\section{Introduction}
+\label{sec:intro}
+
+The nearest O-type star to Earth is $\zeta$ Ophiuchi, classified as
+O9.5{\rm IVnn} type star \citep[e.g.,][]{sota:14} and with a parallax
+of 5-8\,milliarcsec \citep[e.g.,][and references
+therein]{neuhauser:20}. This star also has a large proper-motion
+
+
+\software{
+  \texttt{mesaPlot} \citep{mesaplot},
+  \texttt{mesaSDK} \citep{mesasdk},
+  \texttt{ipython/jupyter} \citep{ipython},
+  \texttt{matplotlib} \citep{matplotlib},
+  \texttt{NumPy} \citep{numpy},
+  \MESA \citep{paxton:11,paxton:13,paxton:15,paxton:18,paxton:19}
+}
+
+\section*{Acknowledgements}
+
+
+
+\appendix
+
+% \section{\texttt{MESA} setup}
+% \label{sec:software}
+
+We use \code{MESA} version 15140 to compute our models.  The
+\code{MESA} equation of state (EOS) is a blend of the OPAL \citet{Rogers2002}, SCVH
+\citet{Saumon1995}, PTEH \citet{Pols1995}, HELM \citet{Timmes2000},
+and PC \citet{Potekhin2010} EOSes. \todo{update EOS}
+
+Radiative opacities are primarily from OPAL \citep{Iglesias1993,
+  Iglesias1996}, with low-temperature data from \citet{Ferguson2005}
+and the high-temperature, Compton-scattering dominated regime by
+\citet{Buchler1976}. Electron conduction opacities are from
+\citet{Cassisi2007}.
+
+Nuclear reaction rates are a combination of rates from NACRE
+\citep{Angulo1999}, JINA REACLIB \citep{Cyburt2010}, plus additional
+tabulated weak reaction rates \citet{Fuller1985, Oda1994,
+  Langanke2000}. Screening is included via the prescription of
+\citet{Chugunov2007}.  Thermal neutrino loss rates are from
+\citet{Itoh1996}. We compute the pre-merger evolution using an
+8-isotope $\alpha$-chain nuclear reaction network and switch to a
+22-isotope nuclear network for the post-merger evolution.
+
+We evolve our models from the pre-main sequence to the terminal age
+main sequence of the most massive $58\,M_\odot$ star, defined as the
+time when the central hydrogen abundance $X(^1\mathrm{H})\leq 10^{-4}$.
+We treat convection using the Ledoux criterion, and include
+thermohaline mixing (until the central temperature
+$\log_{10}(T_c/\mathrm{[K]})>9.45$, \citealt{farmer:16}) and semiconvection, both with an
+efficiency factor of 1. We assume $\alpha_\mathrm{MLT}=2.0$ and use
+\cite{brott:11} overshooting for the convective core burning. We have
+tested that varying core overshooting does not impact significantly the
+post-merger evolution, however, when including shell overshooting
+and/or undershooting we were unable to find solutions to the stellar
+structure equations. Moreover, we employ the MLT++ artificial
+enhancement of the convective flux \citep[e.g.,][]{paxton:15,
+  jiang:15}. Stellar winds are included using the algorithms from
+\cite{vink:01} with an efficiency factor of 1.%  and \cite{nugis:00} when the surface en abundance
+% is below 0.4 and $T_\mathrm{eff}>10^{4.7}\,\mathrm{K}$. We use a
+% hyperbolic tangent interpolation between the two for
+% hydrogen-deficient surfaces with
+% $10^{4.5}\,\mathrm{K}\leq T_\mathrm{eff}\leq10^{4.7}\,\mathrm{K}$. In
+% both cases, we use an efficiency factor of 1, and our post-merger models never
+% become cool enough to use a cool wind algorithm \citep[e.g.,][]{renzo:17}.
+
+To compute through the very late phases, we reduce the core resolution
+and increase the numerical solver tolerance when the central
+temperature increases above $\log_{10}(T_c/\mathrm{[K]})>9.45$. We
+define the onset of core-collapse when the iron-core infall velocity
+exceeds $1000\,\mathrm{km\ s^{-1}}$ \citep[e.g.,][]{woosley:02}.
+
+The inlists, processing scripts, and model output will be made available at~\href{link}{link}.
+
+\bibliographystyle{aasjournal}
+\bibliography{./zeta_oph.bib}
+
+\end{document}
