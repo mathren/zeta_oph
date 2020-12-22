@@ -120,3 +120,10 @@ al. 2020 is 19.7km/s.
 \zeta Ophiuchi. They find winds weaker than predicted by Vink et
 al. 2001, which would help keeping up the rotation rate and accrete
 more even at higher Z.
+*** Note on the donor star
+
+At He depletion the masses of the donor stars range form 6.5-9Msun
+(depending on the initial donor mass and the period and mass ratio). A
+6.5Msun stripped core at He depletion has \lesssim 10^4 years to live,
+so this can be neglected when aiming at the kinematic age and
+abundances match
