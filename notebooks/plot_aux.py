@@ -364,11 +364,12 @@ def make_table_zeta_Oph(outfname=""):
         outfname.writelines(line)
         # logg
         logg, err_logg = get_zeta_oph_logg()
-        line "$\log_{10}(g/\mathrm{[cm\ s^{-2}]})$ & & "+f"${logg}\pm{err_logg}$ & (2)\\"
+        line = "$\log_{10}(g/\mathrm{[cm\ s^{-2}]})$ & & "+f"${logg}\pm{err_logg}$"+" & (2)\\"
         outfname.writelines(line)
         # radius
-
-
+        R, err_R = get_zeta_oph_R()
+        line = "$R$ & $R_\odot$ & "+f"${R}\pm{err_R}$ & (2)\\"
+        outfname.writelines(line)
         # mass
         M, err_M = get_zeta_oph_mass()
         line = "Mass & $M_\odot$ &"+f"${M}\pm{err_M}$& (2)\\"
