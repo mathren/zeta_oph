@@ -120,6 +120,12 @@ al. 2020 is 19.7km/s.
 \zeta Ophiuchi. They find winds weaker than predicted by Vink et
 al. 2001, which would help keeping up the rotation rate and accrete
 more even at higher Z.
+*** Mass of \zeta Ophiuchi
+
+Masses are inferred from taking the log_g of (rotating) single star
+models. This seems to lead to low-ish mass values incompatible with
+the high Teff observed.
+
 *** Note on the donor star
 
 At He depletion the masses of the donor stars range form 6.5-9Msun

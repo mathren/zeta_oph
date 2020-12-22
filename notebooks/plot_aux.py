@@ -71,9 +71,17 @@ def zeta_oph_radius(ax):
 
 
 def get_zeta_oph_mass():
-    """ mass estimated by Villamariz & Herrero 2005 """
+    """
+    mass estimated by Villamariz & Herrero 2005:
+    """
     M = 19  # Msun
     err_M = 11
+    """
+    mass estimated by Marcolino et al. 2009:
+    """
+    # M=13
+    # err_M_plus = 10
+    # err_M_minus = 7
     return M, err_M
 
 
@@ -88,11 +96,11 @@ def zeta_oph_mass(ax):
 
 def get_zeta_oph_logg():
     """
-    data from Villamariz & Herrero 05
-    TODO: check if Marcolino 2009 agrees
+    data from Marcolino et al. 2009
+    but Villamariz & Herrero 05 agrees too
     """
-    logg = 3.7  # cm/s^2
-    err_log_g = 0.15  # estimated from the range of values they explore
+    logg = 3.6  # cm/s^2
+    err_log_g = 0.2  # estimated from the range of values they explore
     return logg, err_log_g
 
 def zeta_oph_spectroscopicHRD(ax):

@@ -12,10 +12,12 @@ from utilsLib import *
 def setup_one_model(M1, M2, PERIOD, ROOT, RUNFILE):
     headerline = "export OMP_NUM_THREADS=4 && export MESA_DIR=/mnt/home/mrenzo/codes/mesa/mesa_15140/mesa15140 && export MESASDK_ROOT=/mnt/home/mrenzo/codes/mesa/mesa_15140/mesasdk && source $MESASDK_ROOT/bin/mesasdk_init.sh"
     backline = " && ./clean && ./mk && ./rn 2>&1 | tee output"+"\n" # missing: move to destination
-    folder_name = ROOT+"/"+f"M1_{M1:.0f}_M2_{M2:.0f}_P_{PERIOD:.0f}/"
+    folder_name = ROOT+"/"+f"M1_{M1:.0f}_M2_{M2:.0f}_P_{PERIOD:.0f}/binary_to_donor_Hedepl/"
     print("----------")
     print(folder_name)
     print("----------")
+    # check already run models
+    content = checkFolder(folder_name+"/../")
     # check if it exists
     content = checkFolder(folder_name)
     if not content:
@@ -42,13 +44,13 @@ def setup_one_model(M1, M2, PERIOD, ROOT, RUNFILE):
 
 
 PERIODS = [50, 75, 100] # days
-M1 = [18, 19,20,21,22,23,24,25]
-M2 = [15, 16,17,18,19,20]
+M1 = [26, 27, 28, 29, 30]# [18, 19,20,21,22,23,24,25]
+M2 = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 
 # these will all become sys.argv if needed
 TEMPLATE = "/mnt/home/mrenzo/Templates/zeta_oph/MESA_setup/binary/"
 ROOT = "/mnt/home/mrenzo/ceph/RUNS/ZETA_OPH/Z_0.01/"
-RUNFILE=ROOT+'/runFile.txt' # to use with disBatch.py
+RUNFILE=ROOT+'/runFile_new.txt' # to use with disBatch.py
 
 count_models = 0
 for m1 in M1:
