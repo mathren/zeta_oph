@@ -252,7 +252,7 @@ def get_epsilon(mass_frac, X):
     return 12 + np.log10(mass_frac / X)
 
 
-def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False):
+def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, do_log=True):
     """
     plot the surface abundances of a few isotopes
     the post binary evolution is optional
@@ -313,6 +313,7 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False):
     ax.set_xlabel(r"$\mathrm{time \ [Myr]}$")
     ax.set_ylabel(r"$\mathrm{Surface\ mass\ fraction}\ X_i$")
     # ax.set_xlim(xmin=8.5, xmax=10)
-    ax.set_yscale("log")
+    if do_log:
+        ax.set_yscale("log")
     if legend:
         ax.legend(ncol=2)
