@@ -86,26 +86,27 @@ def zeta_oph_mass(ax):
     ax.errorbar(M, yerr=err_M, fmt="o", color="r", zorder=1)
 
 
-def zeta_oph_spectroscopicHRD(ax):
+def get_zeta_oph_logg():
     """
-    plots Zeta ophiuchi logg and Teff on ax
     data from Villamariz & Herrero 05
+    TODO: check if Marcolino 2009 agrees
     """
     logg = 3.7  # cm/s^2
     err_log_g = 0.15  # estimated from the range of values they explore
-    Teff = 34000  # K
-    err_Teff = 1500  # K # estimated from the range of Teff they explore
-    # take log10
-    log_Teff = np.log10(Teff)
-    err_log_Teff = err_Teff / (Teff * np.log(10))
+    return logg, err_log_g
+
+def zeta_oph_spectroscopicHRD(ax):
+    """
+    plots Zeta ophiuchi logg and Teff on ax
+    """
+    logg, err_log_g = get_zeta_oph_logg()
+    log_L, err_log_L,log_Teff, err_log_Teff = get_zeta_oph_L_teff()
     ax.errorbar(log_Teff, logg, xerr=err_log_Teff, yerr=err_log_g, fmt="o", color="r", zorder=1)
 
 
-def zeta_oph_HRD(ax):
-    """
-    plots Zeta ophiuchi L and Teff on ax
-    data from Villamariz & Herrero 05
-    """
+def get_zeta_oph_L_teff():
+    """ returns luminosity and effective temperature
+    from Villamariz & Herrero 2005 which agree with Marcolino et al. 2009 """
     Teff = 34000  # K
     err_Teff = 1500  # K # estimated from the range of Teff they explore
     # take log10
@@ -118,6 +119,13 @@ def zeta_oph_HRD(ax):
     # take log10
     log_L = np.log10(L)
     err_log_L = err_L / (L * np.log(10))
+    return log_L, err_log_L,log_Teff, err_log_Teff
+
+def zeta_oph_HRD(ax):
+    """
+    plots Zeta ophiuchi L and Teff on ax
+    """
+    log_L, err_log_L,log_Teff, err_log_Teff = get_zeta_oph_L_teff()
     ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt="o", color="r", zorder=10)
 # -------------------------------------------------------------------
 # radius plots
@@ -350,8 +358,14 @@ def make_table_zeta_Oph(outfname=""):
         min_i = get_zeta_oph_inclination()
         line = "$i$ & degrees & $\gtrim "+f"{min_i:.d}"+"$ & (1)\\"
         outfname.writelines(line)
-        # L, Teff, logg
-
+        # L, Teff,
+        log_L, err_log_L,log_Teff, err_log_Teff = get_zeta_oph_L_teff()
+        line = "$\log_{10}(L/L_\odot)$ & &"+f"${log_L}\pm {err_log_L}$ & (2,3)\\"
+        outfname.writelines(line)
+        # logg
+        logg, err_logg = get_zeta_oph_logg()
+        line "$\log_{10}(g/\mathrm{[cm\ s^{-2}]})$ & & "+f"${logg}\pm{err_logg}$ & (2)\\"
+        outfname.writelines(line)
         # radius
 
 
