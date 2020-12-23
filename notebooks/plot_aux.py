@@ -73,22 +73,22 @@ def zeta_oph_radius(ax):
     err_Rp = 1.7
     err_Rm = 1.4
     age = 5 # Myr -- this is based on fits from single rotating models, not trustworthy
-    ax.errorbar(age, R, yerr=[err_Rp, err_Rm], fmt="o", color="r", zorder=1)
+    ax.errorbar(age, R, yerr=[[err_Rm],[err_Rp]], fmt="o", color="r", zorder=1)
 
 
 def get_zeta_oph_mass():
     """
     mass estimated by Villamariz & Herrero 2005:
     """
-    M = 19  # Msun
-    err_M = 11
+    # M = 19  # Msun
+    # err_M = 11
     """
     mass estimated by Marcolino et al. 2009:
     """
-    # M=13
-    # err_M_plus = 10
-    # err_M_minus = 7
-    return M, err_M
+    M=13
+    err_M_plus = 10
+    err_M_minus = 7
+    return M, [[err_M_minus], [err_M_plus]]
 
 
 def zeta_oph_mass(ax):
@@ -155,7 +155,61 @@ def plot_radius_time(ax, hfile1, c="#77CCCC", hfile2="", label=""):
         t, R = get_radius_time(hfile2)
         ax.plot(t, R, c=c, ls="-.", zorder=2, label=label)
 
+def get_zeta_oph_surface_he(X=0.7):
+    """
+    converts epsilon_he = N(He)/(N(H)+N(He)) with N number abundance
+    to Y, mass fraction of He at the surface. Note that this takes X,
+    the mass fraction of hydrogen as an optional argument. Data from
+    Villamariz & Herrero 2005
 
+    """
+    epsilon = 0.11
+    err_eps_p = 0.05 # errors estimated from the range shown in Tab. 1
+    err_eps_m = 0.02
+    # convert epsilon to Y
+    # N.B: m_he4 = 4.002 atomic unit mass
+    # and m_h1 = 1.007  atomic unit mass
+    # so I'm going to assume m_he4 = 4m_h1 and neglect he3 here
+    Y = 4*X*epsilon/(1-epsilon)
+    err_Y_p = 4*X*(1/(1-epsilon**2))*err_eps_p
+    err_Y_m = 4*X*(1/(1-epsilon**2))*err_eps_m
+    return Y, err_Y_p, err_Y_m
+
+def get_zeta_oph_surface_c(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note again the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_c = 7.86
+    err_epsilon_c = 0.3
+    x_c = X*10.**(epsilon_c-12.0)
+    err_x_c = X*10.**(epsilon_c-12.0)*np.log(10)*err_epsilon_c
+    return x_c, err_x_c
+
+def get_zeta_oph_surface_n(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note again the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_n = 8.34
+    err_epsilon_n = 0.3
+    x_n = X*10.**(epsilon_n-12.0)
+    err_x_n = X*10.**(epsilon_n-12.0)*np.log(10)*err_epsilon_n
+    return x_n, err_x_n
+
+def get_zeta_oph_surface_o(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note again the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_o = 8.69
+    err_epsilon_o = 0.3
+    x_o = X*10.**(epsilon_o-12.0)
+    err_x_o = X*10.**(epsilon_o-12.0)*np.log(10)*err_epsilon_o
+    return x_o, err_x_o
 # -------------------------------------------------------------------
 # rotation
 def get_surface_rotation_time(hfile):
@@ -263,7 +317,7 @@ def get_epsilon_he(X, Y, Mtot=20, dq=1e-8):
     N_h = mass * X / mp
     N_he = mass * Y / mhe
     # calculate epsilon
-    epsilon = N_he / (N_h + N - he)
+    epsilon = N_he / (N_h + N_he)
     return epsilon
 
 
@@ -347,7 +401,7 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, do
     if do_log:
         ax.set_yscale("log")
     if legend:
-        ax.legend(ncol=2)
+        ax.legend(ncol=2, fontsize=20)
 # ------------------------------------------------------------
 # make Latex table with observed values
 def make_table_zeta_Oph(outfname=""):
