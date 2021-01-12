@@ -29,8 +29,8 @@ extra_controls_inlist1_name = 'inlist_both'
 extra_terminal_output_file = 'log1'
 log_directory = 'LOGS1'
 
-write_header_frequency = 1
-profile_interval = 50
+write_header_frequency = 3
+profile_interval = 1000
 
 / ! end of controls namelist
 

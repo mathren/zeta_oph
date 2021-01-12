@@ -45,8 +45,6 @@ implicit_mdot_boost = 0.1
 xa_central_lower_limit_species(2) = 'h1'
 xa_central_lower_limit(2) = 0.0001d0
 
-max_num_profile_models = 10000
-
 ! increase temporal resolution of the accretor
 ! time_delta_coeff = 0.5d0
 

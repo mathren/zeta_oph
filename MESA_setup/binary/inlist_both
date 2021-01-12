@@ -61,9 +61,6 @@ xa_central_lower_limit_species(1) = 'he4'
 xa_central_lower_limit(1) = 0.001d0
 
 max_model_number = 10000 ! for testing this is more than enough
-history_interval = 1
-profile_interval = 10
-max_num_profile_models = 5000
 redo_limit = 300
 
 !wind
@@ -125,13 +122,11 @@ mixing_D_limit_for_log = 1d-10
 max_mdot_jump_for_rotation = 1d99
 
 ! output stuff
-profile_interval = 1000
 max_num_profile_models = 100
+profile_interval = 1000
 photo_interval = 100
 history_interval = 1
 terminal_interval = 1
-history_interval = 1
-profile_interval = 10
 
 ! resolution
 ! timesteps
