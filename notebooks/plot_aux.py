@@ -36,6 +36,11 @@ def get_zeta_oph_inclination():
     imin = 34 # degrees
     return imin
 
+def get_zeta_oph_wind_mdot():
+    """ data from marcolino et al. 2009"""
+    log_mdot = -8.8
+    err_log_mdot = 0.7
+    return log_mdot, err_log_mdot
 
 def get_zeta_oph_vsini():
     """
@@ -62,27 +67,28 @@ def zeta_oph_epsilon_he(ax):
 def zeta_oph_radius(ax):
     """
     plots the radius and error on ax
-    data from Villamariz & Herrero 05
+    data from Marcolino et al. 2009
     """
-    R = 8.3  # Rsun
-    err_R = 1.5
+    R = 9.2  # Rsun
+    err_Rp = 1.7
+    err_Rm = 1.4
     age = 5 # Myr -- this is based on fits from single rotating models, not trustworthy
-    ax.errorbar(age, R, yerr=err_R, fmt="o", color="r", zorder=1)
+    ax.errorbar(age, R, yerr=[[err_Rm],[err_Rp]], fmt="o", color="r", zorder=1)
 
 
 def get_zeta_oph_mass():
     """
     mass estimated by Villamariz & Herrero 2005:
     """
-    M = 19  # Msun
-    err_M = 11
+    # M = 19  # Msun
+    # err_M = 11
     """
     mass estimated by Marcolino et al. 2009:
     """
-    # M=13
-    # err_M_plus = 10
-    # err_M_minus = 7
-    return M, err_M
+    M=13
+    err_M_plus = 10
+    err_M_minus = 7
+    return M, [[err_M_minus], [err_M_plus]]
 
 
 def zeta_oph_mass(ax):
@@ -114,19 +120,16 @@ def zeta_oph_spectroscopicHRD(ax):
 
 def get_zeta_oph_L_teff():
     """ returns luminosity and effective temperature
-    from Villamariz & Herrero 2005 which agree with Marcolino et al. 2009 """
-    Teff = 34000  # K
-    err_Teff = 1500  # K # estimated from the range of Teff they explore
+    from Marcolino et al. 2009 see their Tab. 3"""
+    Teff = 32000  # K
+    err_Teff = 2000
     # take log10
     log_Teff = np.log10(Teff)
     err_log_Teff = err_Teff / (Teff * np.log(10))
     # visual magnitude
     # Mv = -4.2 # taken from Howarth & Prinja 1989
-    L = 8.3e4  # Lsun
-    err_L = 4e4
-    # take log10
-    log_L = np.log10(L)
-    err_log_L = err_L / (L * np.log(10))
+    log_L = 4.86 # in Lsun units
+    err_log_L = 0.1
     return log_L, err_log_L,log_Teff, err_log_Teff
 
 def zeta_oph_HRD(ax):
@@ -152,7 +155,61 @@ def plot_radius_time(ax, hfile1, c="#77CCCC", hfile2="", label=""):
         t, R = get_radius_time(hfile2)
         ax.plot(t, R, c=c, ls="-.", zorder=2, label=label)
 
+def get_zeta_oph_surface_he(X=0.7):
+    """
+    converts epsilon_he = N(He)/(N(H)+N(He)) with N number abundance
+    to Y, mass fraction of He at the surface. Note that this takes X,
+    the mass fraction of hydrogen as an optional argument. Data from
+    Villamariz & Herrero 2005
 
+    """
+    epsilon = 0.11
+    err_eps_p = 0.05 # errors estimated from the range shown in Tab. 1
+    err_eps_m = 0.02
+    # convert epsilon to Y
+    # N.B: m_he4 = 4.002 atomic unit mass
+    # and m_h1 = 1.007  atomic unit mass
+    # so I'm going to assume m_he4 = 4m_h1 and neglect he3 here
+    Y = 4*X*epsilon/(1-epsilon)
+    err_Y_p = 4*X*(1/(1-epsilon**2))*err_eps_p
+    err_Y_m = 4*X*(1/(1-epsilon**2))*err_eps_m
+    return Y, err_Y_p, err_Y_m
+
+def get_zeta_oph_surface_c(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note again the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_c = 7.86
+    err_epsilon_c = 0.3
+    x_c = X*np.exp(epsilon_c-12.0)
+    err_x_c = X*np.exp(epsilon_c-12.0)*err_epsilon_c
+    return x_c, err_x_c
+
+def get_zeta_oph_surface_n(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note again the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_n = 8.34
+    err_epsilon_n = 0.3
+    x_n = X*np.exp(epsilon_n-12.0)
+    err_x_n = X*np.exp(epsilon_n-12.0)*err_epsilon_n
+    return x_n, err_x_n
+
+def get_zeta_oph_surface_o(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note again the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_o = 8.69
+    err_epsilon_o = 0.3
+    x_o = X*np.exp(epsilon_o-12.0)
+    err_x_o = X*np.exp(epsilon_o-12.0)*err_epsilon_o
+    return x_o, err_x_o
 # -------------------------------------------------------------------
 # rotation
 def get_surface_rotation_time(hfile):
@@ -260,7 +317,7 @@ def get_epsilon_he(X, Y, Mtot=20, dq=1e-8):
     N_h = mass * X / mp
     N_he = mass * Y / mhe
     # calculate epsilon
-    epsilon = N_he / (N_h + N - he)
+    epsilon = N_he / (N_h + N_he)
     return epsilon
 
 
@@ -280,7 +337,7 @@ def get_epsilon(mass_frac, X):
     return 12 + np.log10(mass_frac / X)
 
 
-def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, do_log=True):
+def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, plot_expected=True):
     """
     plot the surface abundances of a few isotopes
     the post binary evolution is optional
@@ -332,19 +389,39 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, do
     ax.plot(t, n14, c="m", label=r"$^{14}\mathrm{N}$")
     ax.plot(t, o16, c="y", label=r"$^{16}\mathrm{O}$")
 
-    ax.axhline(h1[0], 0, 1, c="b", ls="--", lw=1)
-    ax.axhline(he4[0], 0, 1, c="r", ls="--", lw=1)
-    ax.axhline(n14[0], 0, 1, c="m", ls="--", lw=1)
-    ax.axhline(c12[0], 0, 1, c="g", ls="--", lw=1)
-    ax.axhline(o16[0], 0, 1, c="y", ls="--", lw=1)
+    ax.axhline(h1[0], 0, 1, c="b", ls="-.", lw=2)
+    ax.axhline(he4[0], 0, 1, c="r", ls="-.", lw=2)
+    ax.axhline(n14[0], 0, 1, c="m", ls="-.", lw=2)
+    ax.axhline(c12[0], 0, 1, c="g", ls="-.", lw=2)
+    ax.axhline(o16[0], 0, 1, c="y", ls="-.", lw=2)
 
     ax.set_xlabel(r"$\mathrm{time \ [Myr]}$")
     ax.set_ylabel(r"$\mathrm{Surface\ mass\ fraction}\ X_i$")
     # ax.set_xlim(xmin=8.5, xmax=10)
-    if do_log:
-        ax.set_yscale("log")
+    if plot_expected:
+        xmin, xmax = ax.get_xlim()
+        xcoord = np.linspace(xmin,xmax,len(h1))
+        # helium
+        Y, err_Y_p, err_Y_m = get_zeta_oph_surface_he(h1)
+        ax.fill_between(xcoord, Y+err_Y_p, Y-err_Y_m, fc='r',alpha=0.2)
+        ax.plot(xcoord, Y, c='r', ls='--', lw=2)
+
+        # # oxygen
+        Xo, err_Xo = get_zeta_oph_surface_o(h1)
+        ax.fill_between(xcoord, Xo+err_Xo, Xo-err_Xo, fc='y',alpha=0.2)
+        ax.plot(xcoord, Xo, c='y', ls='--', lw=2)
+
+        # nitrogen
+        Xn, err_Xn = get_zeta_oph_surface_n(h1)
+        ax.fill_between(xcoord, Xn+err_Xn, Xn-err_Xn, fc='m',alpha=0.2)
+        ax.plot(xcoord, Xn, c='m', ls='--', lw=2)
+
+        # # carbon
+        Xc, err_Xc = get_zeta_oph_surface_c(h1)
+        ax.fill_between(xcoord, Xc+err_Xc, Xc-err_Xc, fc='g',alpha=0.2)
+        ax.plot(xcoord, Xc, c='g', ls='--', lw=2)
     if legend:
-        ax.legend(ncol=2)
+        ax.legend(ncol=2, fontsize=20)
 # ------------------------------------------------------------
 # make Latex table with observed values
 def make_table_zeta_Oph(outfname=""):
