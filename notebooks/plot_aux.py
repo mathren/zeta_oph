@@ -183,8 +183,8 @@ def get_zeta_oph_surface_c(X=0.7):
     """
     epsilon_c = 7.86
     err_epsilon_c = 0.3
-    x_c = X*10.**(epsilon_c-12.0)
-    err_x_c = X*10.**(epsilon_c-12.0)*np.log(10)*err_epsilon_c
+    x_c = X*np.exp(epsilon_c-12.0)
+    err_x_c = X*np.exp(epsilon_c-12.0)*err_epsilon_c
     return x_c, err_x_c
 
 def get_zeta_oph_surface_n(X=0.7):
@@ -195,8 +195,8 @@ def get_zeta_oph_surface_n(X=0.7):
     """
     epsilon_n = 8.34
     err_epsilon_n = 0.3
-    x_n = X*10.**(epsilon_n-12.0)
-    err_x_n = X*10.**(epsilon_n-12.0)*np.log(10)*err_epsilon_n
+    x_n = X*np.exp(epsilon_n-12.0)
+    err_x_n = X*np.exp(epsilon_n-12.0)*err_epsilon_n
     return x_n, err_x_n
 
 def get_zeta_oph_surface_o(X=0.7):
@@ -207,8 +207,8 @@ def get_zeta_oph_surface_o(X=0.7):
     """
     epsilon_o = 8.69
     err_epsilon_o = 0.3
-    x_o = X*10.**(epsilon_o-12.0)
-    err_x_o = X*10.**(epsilon_o-12.0)*np.log(10)*err_epsilon_o
+    x_o = X*np.exp(epsilon_o-12.0)
+    err_x_o = X*np.exp(epsilon_o-12.0)*err_epsilon_o
     return x_o, err_x_o
 # -------------------------------------------------------------------
 # rotation
@@ -337,7 +337,7 @@ def get_epsilon(mass_frac, X):
     return 12 + np.log10(mass_frac / X)
 
 
-def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, do_log=True):
+def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, plot_expected=True):
     """
     plot the surface abundances of a few isotopes
     the post binary evolution is optional
@@ -389,17 +389,37 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, do
     ax.plot(t, n14, c="m", label=r"$^{14}\mathrm{N}$")
     ax.plot(t, o16, c="y", label=r"$^{16}\mathrm{O}$")
 
-    ax.axhline(h1[0], 0, 1, c="b", ls="--", lw=1)
-    ax.axhline(he4[0], 0, 1, c="r", ls="--", lw=1)
-    ax.axhline(n14[0], 0, 1, c="m", ls="--", lw=1)
-    ax.axhline(c12[0], 0, 1, c="g", ls="--", lw=1)
-    ax.axhline(o16[0], 0, 1, c="y", ls="--", lw=1)
+    ax.axhline(h1[0], 0, 1, c="b", ls="-.", lw=2)
+    ax.axhline(he4[0], 0, 1, c="r", ls="-.", lw=2)
+    ax.axhline(n14[0], 0, 1, c="m", ls="-.", lw=2)
+    ax.axhline(c12[0], 0, 1, c="g", ls="-.", lw=2)
+    ax.axhline(o16[0], 0, 1, c="y", ls="-.", lw=2)
 
     ax.set_xlabel(r"$\mathrm{time \ [Myr]}$")
     ax.set_ylabel(r"$\mathrm{Surface\ mass\ fraction}\ X_i$")
     # ax.set_xlim(xmin=8.5, xmax=10)
-    if do_log:
-        ax.set_yscale("log")
+    if plot_expected:
+        xmin, xmax = ax.get_xlim()
+        xcoord = np.linspace(xmin,xmax,len(h1))
+        # helium
+        Y, err_Y_p, err_Y_m = get_zeta_oph_surface_he(h1)
+        ax.fill_between(xcoord, Y+err_Y_p, Y-err_Y_m, fc='r',alpha=0.2)
+        ax.plot(xcoord, Y, c='r', ls='--', lw=2)
+
+        # # oxygen
+        Xo, err_Xo = get_zeta_oph_surface_o(h1)
+        ax.fill_between(xcoord, Xo+err_Xo, Xo-err_Xo, fc='y',alpha=0.2)
+        ax.plot(xcoord, Xo, c='y', ls='--', lw=2)
+
+        # nitrogen
+        Xn, err_Xn = get_zeta_oph_surface_n(h1)
+        ax.fill_between(xcoord, Xn+err_Xn, Xn-err_Xn, fc='m',alpha=0.2)
+        ax.plot(xcoord, Xn, c='m', ls='--', lw=2)
+
+        # # carbon
+        Xc, err_Xc = get_zeta_oph_surface_c(h1)
+        ax.fill_between(xcoord, Xc+err_Xc, Xc-err_Xc, fc='g',alpha=0.2)
+        ax.plot(xcoord, Xc, c='g', ls='--', lw=2)
     if legend:
         ax.legend(ncol=2, fontsize=20)
 # ------------------------------------------------------------

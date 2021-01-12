@@ -51,8 +51,8 @@ max_num_profile_models = 10000
 ! time_delta_coeff = 0.5d0
 
 ! extra resolution on HRD of accretor
-! delta_HR_ds_L = 0.5
-! delta_HR_ds_Teff = 0.5
+delta_HR_ds_L = 0.001
+delta_HR_ds_Teff = 0.001
 ! delta_HR_limit = 0.5
 ! delta_HR_hard_limit = 1
 
