@@ -133,6 +133,8 @@ terminal_interval = 1
 min_timestep_limit = 1e-6 !sec ! 1e-10 !to be able to reach CC
 varcontrol_target = 1d-4
 time_delta_coeff = 1.0d0
+max_timestep_factor = 1.05d0 ! force slow increases to avoid HRD jumps
+
 ! max_timestep_factor = 1.05d0
 
 ! spatial resolution
