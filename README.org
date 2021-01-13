@@ -133,3 +133,15 @@ At He depletion the masses of the donor stars range form 6.5-9Msun
 6.5Msun stripped core at He depletion has \lesssim 10^4 years to live,
 so this can be neglected when aiming at the kinematic age and
 abundances match
+*** Problems with the CHE scenario
+
+    \zeta Ophiuchi has undeniably a very fast rotation rate and shows
+    He enhancement. However, its C, N, O surface abundance are
+    "normal". This is in contrast with the typical predictions of CHE.
+    [[https://ui.adsabs.harvard.edu/abs/2007A%26A...465L..29C/abstract)][Cantiello et al. 2007]] proposed that accretors in binaries would
+    lead to CHE and become GRB progenitors. While this remains a
+    possibility, it might not be always the case. In particular, they
+    also showed that the accretor would evolve very similarly to a
+    single star fast rotating from ZAMS. However Villamariz & Herrero
+    2005 where unable to find a good match for \zeta Ophiuchi using
+    the rotating GENEVA models.
