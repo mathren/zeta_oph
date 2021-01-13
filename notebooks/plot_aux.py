@@ -1,22 +1,22 @@
-## author: Mathieu Renzo
+# author: Mathieu Renzo
 
-## Author: Mathieu Renzo <mrenzo@flatironinstitute.org>
-## Keywords: files
+# Author: Mathieu Renzo <mrenzo@flatironinstitute.org>
+# Keywords: files
 
-## Copyright (C) 2020 Mathieu Renzo
+# Copyright (C) 2021 Mathieu Renzo
 
-## This program is free software: you can redistribute it and/or modify
-## it under the terms of the GNU General Public License as published by
-## the Free Software Foundation, either version 3 of the License, or (at
-## your option) any later version.
-##
-## This program is distributed in the hope that it will be useful, but
-## WITHOUT ANY WARRANTY; without even the implied warranty of
-## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-## General Public License for more details.
-##
-## You should have received a copy of the GNU General Public License
-## along with this program.  If not, see http://www.gnu.org/licenses/.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or (at
+# your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see http://www.gnu.org/licenses/.
 
 import sys
 
@@ -469,3 +469,42 @@ def make_table_zeta_Oph(outfname=""):
                              "\end{tabular}",
                              "\end{center}",
                              "\end{table}"])
+
+
+def MassVelocityEvolution(folder, convert=False, figName=""):
+    print(folder)
+    fig = plt.figure(figsize=(15,9))
+    gs = gridspec.GridSpec(200, 100)
+    ax = fig.add_subplot(gs[:100,:])
+    bx = fig.add_subplot(gs[100:200,:])
+    bbx = bx.twinx()
+
+    srcb, colb = getSrcCol(folder+'/binary_history.data', convert, convert)
+    t = srcb[:, colb.index("age")]*1e-6
+    M1 = srcb[:, colb.index("star_1_mass")]
+    M2 = srcb[:, colb.index("star_2_mass")]
+    v2 = srcb[:, colb.index("v_orb_2")]
+    P = srcb[:, colb.index("period_days")]
+
+    ax.plot(t, M2, c='r', label=r"$M_2$")
+    ax.plot(t, M1, c='b', label=r"$M_1$")
+    ax.plot(t, M1+M2, c="k", label=r"$M_1+M_2$")
+
+    ax.text(t[-1]+0.1, M2[-1], r"$M_2="+f"{M2[-1]:.1f}"+r"$", fontsize=30)
+    ax.text(t[-1]+0.1, M1[-1], r"$M_1="+f"{M1[-1]:.1f}"+r"$", fontsize=30)
+    ax.text(t[-1]+0.1, M1[-1]+M2[-1], r"$M_1+M_2="+f"{M1[-1]+M2[-1]:.1f}"+r"$", fontsize=30)
+
+
+    bx.plot(t,v2, ls='-', lw=3, c='r')
+    bx.text(t[-1]+0.1, v2[-1], f"{v2[-1]:.1f}", fontsize=30)
+    bbx.plot(t, P, ls='--', lw=3, c='b')
+
+    # ax.set_ylim(0,37)
+    ax.set_xlim(0,12)
+    ax.set_xticklabels([])
+    bx.set_xlim(ax.get_xlim())
+    # bbx.set_ylim(90,700)
+    bx.set_xlabel(r"$\mathrm{t \ [Myr]}$")
+    ax.set_ylabel(r"$M \ [M_\odot]$")
+    bx.set_ylabel(r"$v_2 \ [\mathrm{km\ s^{-1}}]$")
+    bbx.set_ylabel(r"$P \ \mathrm{[days]}$", color="b")
