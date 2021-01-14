@@ -42,15 +42,15 @@ do_jdot_mb = .false.
 do_jdot_missing_wind = .true.
 
 ! ! timestep controls
-fr = 0.01
+fr = 0.01d0
 fr_limit = 2.5d-2
-fm = 0.01
+fm = 0.01d0
 fm_limit = 1d-1
 varcontrol_case_a = 1d-4
-varcontrol_case_b = 5d-4
+varcontrol_case_b = 2.5d-4
 varcontrol_ms = 1d-4
 varcontrol_post_ms = 5d-4
-dt_softening_factor = 0.4d0 ! try smaller factor
+dt_softening_factor = 0.1d0
 
 sync_mode_1 = "Uniform"
 sync_type_1 = "Hut_rad"
