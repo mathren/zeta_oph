@@ -7,6 +7,10 @@ saved_model_name = "../binary_to_donor_Hedepl/MASS2accretor_at_donor_He_depl.mod
 ! don't overwrite age and model number
 set_initial_age = .false.
 set_initial_model_number = .false.
+! force small initial timestep
+set_initial_dt = .true.
+years_for_initial_dt = 1
+
 
 save_model_filename = 'MASS2accretor_TAMS.mod'
 
@@ -14,7 +18,7 @@ save_model_filename = 'MASS2accretor_TAMS.mod'
 
 
 &kap
-Zbase = 0.01d0
+Zbase = ZBASEd0
 /
 
 &controls

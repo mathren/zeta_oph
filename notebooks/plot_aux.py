@@ -33,14 +33,16 @@ def get_zeta_oph_inclination():
     """
     returns the inclination angle and error from Zehe et al. 2019
     """
-    imin = 34 # degrees
+    imin = 34  # degrees
     return imin
+
 
 def get_zeta_oph_wind_mdot():
     """ data from marcolino et al. 2009"""
     log_mdot = -8.8
     err_log_mdot = 0.7
     return log_mdot, err_log_mdot
+
 
 def get_zeta_oph_vsini():
     """
@@ -72,8 +74,8 @@ def zeta_oph_radius(ax):
     R = 9.2  # Rsun
     err_Rp = 1.7
     err_Rm = 1.4
-    age = 5 # Myr -- this is based on fits from single rotating models, not trustworthy
-    ax.errorbar(age, R, yerr=[[err_Rm],[err_Rp]], fmt="o", color="r", zorder=1)
+    age = 5  # Myr -- this is based on fits from single rotating models, not trustworthy
+    ax.errorbar(age, R, yerr=[[err_Rm], [err_Rp]], fmt="o", color="r", zorder=1)
 
 
 def get_zeta_oph_mass():
@@ -85,7 +87,7 @@ def get_zeta_oph_mass():
     """
     mass estimated by Marcolino et al. 2009:
     """
-    M=13
+    M = 13
     err_M_plus = 10
     err_M_minus = 7
     return M, [[err_M_minus], [err_M_plus]]
@@ -109,12 +111,13 @@ def get_zeta_oph_logg():
     err_log_g = 0.2  # estimated from the range of values they explore
     return logg, err_log_g
 
+
 def zeta_oph_spectroscopicHRD(ax):
     """
     plots Zeta ophiuchi logg and Teff on ax
     """
     logg, err_log_g = get_zeta_oph_logg()
-    log_L, err_log_L,log_Teff, err_log_Teff = get_zeta_oph_L_teff()
+    log_L, err_log_L, log_Teff, err_log_Teff = get_zeta_oph_L_teff()
     ax.errorbar(log_Teff, logg, xerr=err_log_Teff, yerr=err_log_g, fmt="o", color="r", zorder=1)
 
 
@@ -128,16 +131,19 @@ def get_zeta_oph_L_teff():
     err_log_Teff = err_Teff / (Teff * np.log(10))
     # visual magnitude
     # Mv = -4.2 # taken from Howarth & Prinja 1989
-    log_L = 4.86 # in Lsun units
+    log_L = 4.86  # in Lsun units
     err_log_L = 0.1
-    return log_L, err_log_L,log_Teff, err_log_Teff
+    return log_L, err_log_L, log_Teff, err_log_Teff
+
 
 def zeta_oph_HRD(ax):
     """
     plots Zeta ophiuchi L and Teff on ax
     """
-    log_L, err_log_L,log_Teff, err_log_Teff = get_zeta_oph_L_teff()
+    log_L, err_log_L, log_Teff, err_log_Teff = get_zeta_oph_L_teff()
     ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt="o", color="r", zorder=10)
+
+
 # -------------------------------------------------------------------
 # radius plots
 def get_radius_time(hfile):
@@ -155,6 +161,7 @@ def plot_radius_time(ax, hfile1, c="#77CCCC", hfile2="", label=""):
         t, R = get_radius_time(hfile2)
         ax.plot(t, R, c=c, ls="-.", zorder=2, label=label)
 
+
 def get_zeta_oph_surface_he(X=0.7):
     """
     converts epsilon_he = N(He)/(N(H)+N(He)) with N number abundance
@@ -164,16 +171,17 @@ def get_zeta_oph_surface_he(X=0.7):
 
     """
     epsilon = 0.11
-    err_eps_p = 0.05 # errors estimated from the range shown in Tab. 1
+    err_eps_p = 0.05  # errors estimated from the range shown in Tab. 1
     err_eps_m = 0.02
     # convert epsilon to Y
     # N.B: m_he4 = 4.002 atomic unit mass
     # and m_h1 = 1.007  atomic unit mass
     # so I'm going to assume m_he4 = 4m_h1 and neglect he3 here
-    Y = 4*X*epsilon/(1-epsilon)
-    err_Y_p = 4*X*(1/(1-epsilon**2))*err_eps_p
-    err_Y_m = 4*X*(1/(1-epsilon**2))*err_eps_m
+    Y = 4 * X * epsilon / (1 - epsilon)
+    err_Y_p = 4 * X * (1 / (1 - epsilon ** 2)) * err_eps_p
+    err_Y_m = 4 * X * (1 / (1 - epsilon ** 2)) * err_eps_m
     return Y, err_Y_p, err_Y_m
+
 
 def get_zeta_oph_surface_c(X=0.7):
     """
@@ -183,9 +191,10 @@ def get_zeta_oph_surface_c(X=0.7):
     """
     epsilon_c = 7.86
     err_epsilon_c = 0.3
-    x_c = X*np.exp(epsilon_c-12.0)
-    err_x_c = X*np.exp(epsilon_c-12.0)*err_epsilon_c
+    x_c = X * np.exp(epsilon_c - 12.0)
+    err_x_c = X * np.exp(epsilon_c - 12.0) * err_epsilon_c
     return x_c, err_x_c
+
 
 def get_zeta_oph_surface_n(X=0.7):
     """
@@ -195,9 +204,10 @@ def get_zeta_oph_surface_n(X=0.7):
     """
     epsilon_n = 8.34
     err_epsilon_n = 0.3
-    x_n = X*np.exp(epsilon_n-12.0)
-    err_x_n = X*np.exp(epsilon_n-12.0)*err_epsilon_n
+    x_n = X * np.exp(epsilon_n - 12.0)
+    err_x_n = X * np.exp(epsilon_n - 12.0) * err_epsilon_n
     return x_n, err_x_n
+
 
 def get_zeta_oph_surface_o(X=0.7):
     """
@@ -207,9 +217,11 @@ def get_zeta_oph_surface_o(X=0.7):
     """
     epsilon_o = 8.69
     err_epsilon_o = 0.3
-    x_o = X*np.exp(epsilon_o-12.0)
-    err_x_o = X*np.exp(epsilon_o-12.0)*err_epsilon_o
+    x_o = X * np.exp(epsilon_o - 12.0)
+    err_x_o = X * np.exp(epsilon_o - 12.0) * err_epsilon_o
     return x_o, err_x_o
+
+
 # -------------------------------------------------------------------
 # rotation
 def get_surface_rotation_time(hfile):
@@ -284,14 +296,18 @@ def plot_HRD(ax, hfile1, c="#77CCCC", hfile2="", bfile="", label=""):
     if hfile2 != "":
         logL, logTeff = getlogLlogTeff(hfile2)
         ax.plot(logTeff, logL, c=c, ls="-.", zorder=2)
+
+
 # -------------------------------------------------------------------
 # orbital velocity evolution
 def plot_orbital_v2(ax, bfile, c="#77CCCC", label=""):
     srcb, colb = getSrcCol(bfile)
     v2 = srcb[:, colb.index("v_orb_2")]
-    t = srcb[:, colb.index("age")]*1e-6
-    ax.plot(t,v2, lw=3, c=c, label=label)
-    ax.text(t[-1]+0.1, v2[-1], f"{v2[-1]:.1f}", fontsize=30)
+    t = srcb[:, colb.index("age")] * 1e-6
+    ax.plot(t, v2, lw=3, c=c, label=label)
+    ax.text(t[-1] + 0.1, v2[-1], f"{v2[-1]:.1f}", fontsize=30)
+
+
 # -------------------------------------------------------------------
 # chemical composition
 def get_epsilon_he(X, Y, Mtot=20, dq=1e-8):
@@ -400,107 +416,120 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, pl
     # ax.set_xlim(xmin=8.5, xmax=10)
     if plot_expected:
         xmin, xmax = ax.get_xlim()
-        xcoord = np.linspace(xmin,xmax,len(h1))
+        xcoord = np.linspace(xmin, xmax, len(h1))
         # helium
         Y, err_Y_p, err_Y_m = get_zeta_oph_surface_he(h1)
-        ax.fill_between(xcoord, Y+err_Y_p, Y-err_Y_m, fc='r',alpha=0.2)
-        ax.plot(xcoord, Y, c='r', ls='--', lw=2)
+        ax.fill_between(xcoord, Y + err_Y_p, Y - err_Y_m, fc="r", alpha=0.2)
+        ax.plot(xcoord, Y, c="r", ls="--", lw=2)
 
         # # oxygen
         Xo, err_Xo = get_zeta_oph_surface_o(h1)
-        ax.fill_between(xcoord, Xo+err_Xo, Xo-err_Xo, fc='y',alpha=0.2)
-        ax.plot(xcoord, Xo, c='y', ls='--', lw=2)
+        ax.fill_between(xcoord, Xo + err_Xo, Xo - err_Xo, fc="y", alpha=0.2)
+        ax.plot(xcoord, Xo, c="y", ls="--", lw=2)
 
         # nitrogen
         Xn, err_Xn = get_zeta_oph_surface_n(h1)
-        ax.fill_between(xcoord, Xn+err_Xn, Xn-err_Xn, fc='m',alpha=0.2)
-        ax.plot(xcoord, Xn, c='m', ls='--', lw=2)
+        ax.fill_between(xcoord, Xn + err_Xn, Xn - err_Xn, fc="m", alpha=0.2)
+        ax.plot(xcoord, Xn, c="m", ls="--", lw=2)
 
         # # carbon
         Xc, err_Xc = get_zeta_oph_surface_c(h1)
-        ax.fill_between(xcoord, Xc+err_Xc, Xc-err_Xc, fc='g',alpha=0.2)
-        ax.plot(xcoord, Xc, c='g', ls='--', lw=2)
+        ax.fill_between(xcoord, Xc + err_Xc, Xc - err_Xc, fc="g", alpha=0.2)
+        ax.plot(xcoord, Xc, c="g", ls="--", lw=2)
     if legend:
         ax.legend(ncol=2, fontsize=20)
+
+
 # ------------------------------------------------------------
 # make Latex table with observed values
 def make_table_zeta_Oph(outfname=""):
-    if outfname=="":
-        outfname="/tmp/zeta_ophiuchi.text"
+    if outfname == "":
+        outfname = "/tmp/zeta_ophiuchi.text"
     with open(outfname, "w") as F:
         # write header
-        outfname.writelines(["\begin{table}",
-                             "\begin{center}",
-                             "\caption{Stellar parameters of $\zeta$ Ophiuchi.}",
-                             "\begin{tabular}{lc|c|c}",
-                             "\hline\hline",
-                             "Parameter & Units & Value & Ref.\\[2pt]"])
+        outfname.writelines(
+            [
+                "\begin{table}",
+                "\begin{center}",
+                "\caption{Stellar parameters of $\zeta$ Ophiuchi.}",
+                "\begin{tabular}{lc|c|c}",
+                "\hline\hline",
+                "Parameter & Units & Value & Ref.\\[2pt]",
+            ]
+        )
         # write main body
         vsini, errvisini = get_zeta_oph_vsini()
-        line  =  "$v\,\sin(i)$ & $\mathrm{km\ s^{-1}}$ & "+f"${vsini:.0f}"+"\pm"+f"{errvisini}"+"$ &"+" (1)\\"
+        line = (
+            "$v\,\sin(i)$ & $\mathrm{km\ s^{-1}}$ & "
+            + f"${vsini:.0f}"
+            + "\pm"
+            + f"{errvisini}"
+            + "$ &"
+            + " (1)\\"
+        )
         outfname.writelines(line)
         # inclination
         min_i = get_zeta_oph_inclination()
-        line = "$i$ & degrees & $\gtrim "+f"{min_i:.d}"+"$ & (1)\\"
+        line = "$i$ & degrees & $\gtrim " + f"{min_i:.d}" + "$ & (1)\\"
         outfname.writelines(line)
         # L, Teff,
-        log_L, err_log_L,log_Teff, err_log_Teff = get_zeta_oph_L_teff()
-        line = "$\log_{10}(L/L_\odot)$ & &"+f"${log_L}\pm {err_log_L}$ & (2,3)\\"
+        log_L, err_log_L, log_Teff, err_log_Teff = get_zeta_oph_L_teff()
+        line = "$\log_{10}(L/L_\odot)$ & &" + f"${log_L}\pm {err_log_L}$ & (2,3)\\"
         outfname.writelines(line)
         # logg
         logg, err_logg = get_zeta_oph_logg()
-        line = "$\log_{10}(g/\mathrm{[cm\ s^{-2}]})$ & & "+f"${logg}\pm{err_logg}$"+" & (2)\\"
+        line = "$\log_{10}(g/\mathrm{[cm\ s^{-2}]})$ & & " + f"${logg}\pm{err_logg}$" + " & (2)\\"
         outfname.writelines(line)
         # radius
         R, err_R = get_zeta_oph_R()
-        line = "$R$ & $R_\odot$ & "+f"${R}\pm{err_R}$ & (2)\\"
+        line = "$R$ & $R_\odot$ & " + f"${R}\pm{err_R}$ & (2)\\"
         outfname.writelines(line)
         # mass
         M, err_M = get_zeta_oph_mass()
-        line = "Mass & $M_\odot$ &"+f"${M}\pm{err_M}$& (2)\\"
+        line = "Mass & $M_\odot$ &" + f"${M}\pm{err_M}$& (2)\\"
         outfname.writelines(line)
         # surf composition
 
         # space velocity
 
         # write footer
-        outfname.writelines(["\hline",
-                             "\label{tab:star_param}",
-                             "\end{tabular}",
-                             "\end{center}",
-                             "\end{table}"])
+        outfname.writelines(
+            ["\hline", "\label{tab:star_param}", "\end{tabular}", "\end{center}", "\end{table}"]
+        )
 
 
 def MassVelocityEvolution(folder, convert=False, figName=""):
+    import matplotlib.pyplot as plt
+    import matplotlib.gridspec as gridspec
+
     print(folder)
-    fig = plt.figure(figsize=(15,9))
+    fig = plt.figure(figsize=(15, 9))
     gs = gridspec.GridSpec(200, 100)
-    ax = fig.add_subplot(gs[:100,:])
-    bx = fig.add_subplot(gs[100:200,:])
+    ax = fig.add_subplot(gs[:100, :])
+    bx = fig.add_subplot(gs[100:200, :])
     bbx = bx.twinx()
 
-    srcb, colb = getSrcCol(folder+'/binary_history.data', convert, convert)
-    t = srcb[:, colb.index("age")]*1e-6
+    srcb, colb = getSrcCol(folder + "/binary_history.data", convert, convert)
+    t = srcb[:, colb.index("age")] * 1e-6
     M1 = srcb[:, colb.index("star_1_mass")]
     M2 = srcb[:, colb.index("star_2_mass")]
     v2 = srcb[:, colb.index("v_orb_2")]
     P = srcb[:, colb.index("period_days")]
 
-    ax.plot(t, M2, c='r', label=r"$M_2$")
-    ax.plot(t, M1, c='b', label=r"$M_1$")
-    ax.plot(t, M1+M2, c="k", label=r"$M_1+M_2$")
+    ax.plot(t, M2, c="r", label=r"$M_2$")
+    ax.plot(t, M1, c="b", label=r"$M_1$")
+    ax.plot(t, M1 + M2, c="k", label=r"$M_1+M_2$")
 
-    ax.text(t[-1]+0.1, M2[-1], r"$M_2="+f"{M2[-1]:.1f}"+r"$", fontsize=30)
-    ax.text(t[-1]+0.1, M1[-1], r"$M_1="+f"{M1[-1]:.1f}"+r"$", fontsize=30)
-    ax.text(t[-1]+0.1, M1[-1]+M2[-1], r"$M_1+M_2="+f"{M1[-1]+M2[-1]:.1f}"+r"$", fontsize=30)
+    ax.text(t[-1] + 0.1, M2[-1], r"$M_2=" + f"{M2[-1]:.1f}" + r"$", fontsize=30)
+    ax.text(t[-1] + 0.1, M1[-1], r"$M_1=" + f"{M1[-1]:.1f}" + r"$", fontsize=30)
+    ax.text(t[-1] + 0.1, M1[-1] + M2[-1], r"$M_1+M_2=" + f"{M1[-1]+M2[-1]:.1f}" + r"$", fontsize=30)
 
-
-    bx.plot(t,v2, ls='-', lw=3, c='r')
-    bx.text(t[-1]+0.1, v2[-1], f"{v2[-1]:.1f}", fontsize=30)
-    bbx.plot(t, P, ls='--', lw=3, c='b')
+    bx.plot(t, v2, ls="-", lw=3, c="r")
+    bx.text(t[-1] + 0.1, v2[-1], f"{v2[-1]:.1f}", fontsize=30)
+    bbx.plot(t, P, ls="--", lw=3, c="b")
 
     # ax.set_ylim(0,37)
-    ax.set_xlim(0,12)
+    ax.set_xlim(0, 12)
     ax.set_xticklabels([])
     bx.set_xlim(ax.get_xlim())
     # bbx.set_ylim(90,700)
