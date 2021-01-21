@@ -33,11 +33,11 @@ one can use a photo. Preliminary tests show this is equivalent.
 
 *** Metallicity
 
-The `\varepsilon(oxygen)' reported in Villamariz & Herrero 2005
+The =\varepsilon(oxygen)= reported in Villamariz & Herrero 2005
 corresponds to the Solar value according to Asplund 2005 (cf. Japeli
 et al. 2018). There is no way to enhance oxygen through binary
 interactions and/or rotational mixing, so this is a good indicator of
-the initial Z (or suggests a non-solar mixture)
+the initial Z (or suggests a non-solar mixture).
 
 *** Kinematics
 
@@ -113,6 +113,7 @@ al. 2020 is 19.7km/s.
 **** TODO Papers to check
 
  - [] Wright & Mamajek 2018 for kinematics of parent association
+ - [] Intro of https://arxiv.org/abs/2101.05771
 
 *** Weak wind problem
 
@@ -120,6 +121,7 @@ al. 2020 is 19.7km/s.
 \zeta Ophiuchi. They find winds weaker than predicted by Vink et
 al. 2001, which would help keeping up the rotation rate and accrete
 more even at higher Z.
+
 *** Mass of \zeta Ophiuchi
 
 Masses are inferred from taking the log_g of (rotating) single star
