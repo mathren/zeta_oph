@@ -357,6 +357,13 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, pl
     """
     plot the surface abundances of a few isotopes
     the post binary evolution is optional
+
+    dash-dotted lines are the initial abundances.
+    solid lines are the current abundances.
+    dashed line are the conversion of the epsilon
+    values reported in the literature for Zeta Ophiuchi. These depend
+    on the amount of Y, so they have the same time dependence of the
+    abundance of helium. Data from Villamariz & Herrero 2005.
     """
     src, col = getSrcCol(hfile1)
 
