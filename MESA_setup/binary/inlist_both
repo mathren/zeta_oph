@@ -34,7 +34,7 @@ new_w_div_wc_flag = .true.
 pgstar_flag = .true.
 
 change_initial_Z = .true.
-new_Z = 0.01d0
+new_Z = 0.0142d0
 
 / ! end of star_job namelist
 
@@ -46,7 +46,7 @@ new_Z = 0.01d0
 &kap
 
 use_Type2_opacities = .true.
-Zbase = 0.01d0
+Zbase = 0.0142d0
 
 /
 
