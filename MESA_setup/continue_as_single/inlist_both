@@ -41,7 +41,7 @@ pgstar_flag = .true.
 
 &kap
 use_Type2_opacities = .true.
-Zbase = 0.01d0
+Zbase = 0.0142d0
 /
 
 
@@ -56,7 +56,7 @@ xa_central_lower_limit(1) = 0.0001d0
 
 max_model_number = 10000 ! for testing this is more than enough
 history_interval = 1
-profile_interval = 10
+profile_interval = 1000
 max_num_profile_models = 5000
 redo_limit = 300
 

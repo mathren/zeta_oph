@@ -3,7 +3,7 @@
 read_extra_star_job_inlist1 = .true.
 extra_star_job_inlist1_name = 'inlist_both'
 
-save_model_filename = 'MASS2accretor_at_donor_He_depl.mod'
+save_model_filename = '16accretor_at_donor_He_depl.mod'
 
 / ! end of star_job namelist
 
@@ -24,7 +24,7 @@ extra_kap_inlist1_name = 'inlist_both'
 read_extra_controls_inlist1 = .true.
 extra_controls_inlist1_name = 'inlist_both'
 
-extra_terminal_output_file = 'log2'
+! extra_terminal_output_file = 'log2'
 log_directory = 'LOGS2'
 
 ! !! smooth outer composition in the accretor
