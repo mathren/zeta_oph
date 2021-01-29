@@ -34,7 +34,7 @@ new_w_div_wc_flag = .true.
 pgstar_flag = .true.
 
 change_initial_Z = .true.
-new_Z = 0.0142d0
+new_Z = ZBASEd0
 
 / ! end of star_job namelist
 
@@ -46,7 +46,7 @@ new_Z = 0.0142d0
 &kap
 
 use_Type2_opacities = .true.
-Zbase = 0.0142d0
+Zbase = ZBASEd0
 
 /
 
@@ -86,7 +86,7 @@ thermohaline_coeff = 1.0d0 !1.0d0
 ! overshoot_zone_type(1) = 'any'
 ! overshoot_zone_loc(1) = 'core'
 ! overshoot_bdy_loc(1) = 'any'
-! overshoot_f(1) = 0.01
+! overshoot_f(1) = 0.01 ! check values from Manos
 ! overshoot_f0(1) = 0.005
 
 
