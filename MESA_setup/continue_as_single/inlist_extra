@@ -2,7 +2,7 @@
 
 
 load_saved_model = .true.
-saved_model_name = "../binary_to_donor_Hedepl/16accretor_at_donor_He_depl.mod"
+saved_model_name = "../binary_to_donor_Hedepl/MASS2accretor_at_donor_He_depl.mod"
 
 ! don't overwrite age and model number
 set_initial_age = .false.
@@ -12,13 +12,13 @@ set_initial_dt = .true.
 years_for_initial_dt = 0.1d0
 
 
-save_model_filename = '16accretor_TAMS.mod'
+save_model_filename = 'MASS2accretor_TAMS.mod'
 
 /
 
 
 &kap
-Zbase = 0.0142d0
+Zbase = ZBASEd0
 /
 
 &controls
