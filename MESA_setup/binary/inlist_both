@@ -82,20 +82,20 @@ thermohaline_coeff = 1.0d0 !1.0d0
 ! thermohaline_option = 'Brown_Garaud_Stellmach_13'
 
 ! overshoot controls
-! overshoot_scheme(1) = 'exponential'
-! overshoot_zone_type(1) = 'any'
-! overshoot_zone_loc(1) = 'core'
-! overshoot_bdy_loc(1) = 'any'
-! overshoot_f(1) = 0.01 ! check values from Manos
-! overshoot_f0(1) = 0.005
-
-
-overshoot_scheme(1) = 'step'
+overshoot_scheme(1) = 'exponential'
 overshoot_zone_type(1) = 'any'
 overshoot_zone_loc(1) = 'core'
 overshoot_bdy_loc(1) = 'any'
-overshoot_f(1) = 0.345d0
-overshoot_f0(1) = 0.01d0
+overshoot_f(1) = 4.25d-2
+overshoot_f0(1) = 0.001d0
+
+! Brott+11
+! overshoot_scheme(1) = 'step'
+! overshoot_zone_type(1) = 'any'
+! overshoot_zone_loc(1) = 'core'
+! overshoot_bdy_loc(1) = 'any'
+! overshoot_f(1) = 0.345d0
+! overshoot_f0(1) = 0.01d0
 
 ! from inlist_massive_defaults -------------------------------------
 dX_nuc_drop_limit = 5d-2

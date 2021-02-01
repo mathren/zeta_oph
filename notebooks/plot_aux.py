@@ -1,9 +1,9 @@
-# author: Mathieu Renzo
-
-# Author: Mathieu Renzo <mrenzo@flatironinstitute.org>
+# Authors:
+#          Mathieu Renzo <mrenzo@flatironinstitute.org>
+#          Ylva Gotberg
 # Keywords: files
 
-# Copyright (C) 2021 Mathieu Renzo
+# Copyright (C) 2020-2021 Mathieu Renzo
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -143,6 +143,80 @@ def zeta_oph_HRD(ax):
     log_L, err_log_L, log_Teff, err_log_Teff = get_zeta_oph_L_teff()
     ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt="o", color="r", zorder=10)
 
+def get_zeta_oph_surface_he(X=0.7):
+    """
+    converts epsilon_he = N(He)/(N(H)+N(He)) with N number abundance
+    to Y, mass fraction of He at the surface. Note that this takes X,
+    the mass fraction of hydrogen as an optional argument. Data from
+    Villamariz & Herrero 2005
+    """
+    epsilon = 0.11
+    err_eps_p = 0.05  # errors estimated from the range shown in Tab. 1
+    err_eps_m = 0.02
+    # convert epsilon to Y
+    # N.B: m_he4 = 4.002 atomic unit mass
+    # and m_h1 = 1.007  atomic unit mass
+    # so I'm going to assume m_he4 = 4m_h1 and neglect he3 here
+    Y = 4 * X * epsilon / (1 - epsilon)
+    err_Y_p = 4 * X * (1 / (1 - epsilon ** 2)) * err_eps_p
+    err_Y_m = 4 * X * (1 / (1 - epsilon ** 2)) * err_eps_m
+    return Y, err_Y_p, err_Y_m
+
+
+def convert_eps_to_mass_frac(X_H,epsilon, err_epsilon, A_element):
+    """
+    converts epsilon = 12+log10(N_element/N_H) to mass_fraction
+    A_element is the atomic mass. X_H the hydrogen mass fraction.
+    """
+    # Get the number ratio between the element and hydrogen
+    N_element_div_N_H = 10.**(epsilon - 12.)
+    # since:
+    # N1/N2 = (X1/A1)/(X2/A2)
+    # Therefore:
+    # X1 = A1*(X2/A2)*(N1/N2)
+    A_H = 1. # we neglect deuterium and tritium
+    X_element = A_element*(X_H/A_H)*N_element_div_N_H
+    err_X_element = A_element*(X_H/A_H)*N_element_div_N_H*np.log(10)*err_epsilon
+    return X_element, err_X_element
+
+def get_zeta_oph_surface_c(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_c = 7.86
+    err_epsilon_c = 0.3
+    A_c12 = 12.
+    x_c, err_x_c = convert_eps_to_mass_frac(X, epsilon_c, err_epsilon_c, A_c12)
+    return x_c, err_x_c
+
+
+def get_zeta_oph_surface_n(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_n = 8.34
+    err_epsilon_n = 0.3
+    A_n14  = 14.
+    x_n, err_x_n = convert_eps_to_mass_frac(X, epsilon_n, err_epsilon_n, A_n14)
+    return x_n, err_x_n
+
+
+def get_zeta_oph_surface_o(X=0.7):
+    """
+    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    Note the need for the hydrogen mass fraction as an input.
+    Data from Villamariz & Herrero 2005.
+    """
+    epsilon_o = 8.69
+    err_epsilon_o = 0.3
+    A_o16 = 16.
+    x_o, err_x_o = convert_eps_to_mass_frac(X, epsilon_o, err_epsilon_o, A_o16)
+    return x_o, err_x_o
+
 
 # -------------------------------------------------------------------
 # radius plots
@@ -160,67 +234,6 @@ def plot_radius_time(ax, hfile1, c="#77CCCC", hfile2="", label=""):
     if hfile2 != "":
         t, R = get_radius_time(hfile2)
         ax.plot(t, R, c=c, ls="-.", zorder=2, label=label)
-
-
-def get_zeta_oph_surface_he(X=0.7):
-    """
-    converts epsilon_he = N(He)/(N(H)+N(He)) with N number abundance
-    to Y, mass fraction of He at the surface. Note that this takes X,
-    the mass fraction of hydrogen as an optional argument. Data from
-    Villamariz & Herrero 2005
-
-    """
-    epsilon = 0.11
-    err_eps_p = 0.05  # errors estimated from the range shown in Tab. 1
-    err_eps_m = 0.02
-    # convert epsilon to Y
-    # N.B: m_he4 = 4.002 atomic unit mass
-    # and m_h1 = 1.007  atomic unit mass
-    # so I'm going to assume m_he4 = 4m_h1 and neglect he3 here
-    Y = 4 * X * epsilon / (1 - epsilon)
-    err_Y_p = 4 * X * (1 / (1 - epsilon ** 2)) * err_eps_p
-    err_Y_m = 4 * X * (1 / (1 - epsilon ** 2)) * err_eps_m
-    return Y, err_Y_p, err_Y_m
-
-
-def get_zeta_oph_surface_c(X=0.7):
-    """
-    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
-    Note again the need for the hydrogen mass fraction as an input.
-    Data from Villamariz & Herrero 2005.
-    """
-    epsilon_c = 7.86
-    err_epsilon_c = 0.3
-    x_c = X * np.exp(epsilon_c - 12.0)
-    err_x_c = X * np.exp(epsilon_c - 12.0) * err_epsilon_c
-    return x_c, err_x_c
-
-
-def get_zeta_oph_surface_n(X=0.7):
-    """
-    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
-    Note again the need for the hydrogen mass fraction as an input.
-    Data from Villamariz & Herrero 2005.
-    """
-    epsilon_n = 8.34
-    err_epsilon_n = 0.3
-    x_n = X * np.exp(epsilon_n - 12.0)
-    err_x_n = X * np.exp(epsilon_n - 12.0) * err_epsilon_n
-    return x_n, err_x_n
-
-
-def get_zeta_oph_surface_o(X=0.7):
-    """
-    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
-    Note again the need for the hydrogen mass fraction as an input.
-    Data from Villamariz & Herrero 2005.
-    """
-    epsilon_o = 8.69
-    err_epsilon_o = 0.3
-    x_o = X * np.exp(epsilon_o - 12.0)
-    err_x_o = X * np.exp(epsilon_o - 12.0) * err_epsilon_o
-    return x_o, err_x_o
-
 
 # -------------------------------------------------------------------
 # rotation
@@ -406,13 +419,13 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, pl
     if label != "":
         ax.set_title(label, fontsize=30)
 
-    ax.plot(t, h1, c="b", label=r"$^1\mathrm{H}$")
+    ax.plot(t, h1,  c="b", label=r"$^1\mathrm{H}$")
     ax.plot(t, he4, c="r", label=r"$^4\mathrm{He}$")
     ax.plot(t, c12, c="g", label=r"$^{12}\mathrm{C}$")
     ax.plot(t, n14, c="m", label=r"$^{14}\mathrm{N}$")
     ax.plot(t, o16, c="y", label=r"$^{16}\mathrm{O}$")
 
-    ax.axhline(h1[0], 0, 1, c="b", ls="-.", lw=2)
+    ax.axhline(h1[0], 0, 1,  c="b", ls="-.", lw=2)
     ax.axhline(he4[0], 0, 1, c="r", ls="-.", lw=2)
     ax.axhline(n14[0], 0, 1, c="m", ls="-.", lw=2)
     ax.axhline(c12[0], 0, 1, c="g", ls="-.", lw=2)
