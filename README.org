@@ -149,3 +149,5 @@ abundances match
     single star fast rotating from ZAMS. However Villamariz & Herrero
     2005 where unable to find a good match for \zeta Ophiuchi using
     the rotating GENEVA models.
+** TODOs
+*** TODO build python dependencies list with poetry
