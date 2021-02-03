@@ -34,7 +34,7 @@ new_w_div_wc_flag = .true.
 pgstar_flag = .true.
 
 change_initial_Z = .true.
-new_Z = ZBASEd0
+new_Z = 0.01d0
 
 / ! end of star_job namelist
 
@@ -46,7 +46,7 @@ new_Z = ZBASEd0
 &kap
 
 use_Type2_opacities = .true.
-Zbase = ZBASEd0
+Zbase = 0.01d0
 
 /
 
@@ -71,7 +71,7 @@ redo_limit = 300
 hot_wind_scheme = 'Dutch'
 cool_wind_RGB_scheme = 'Dutch'
 cool_wind_AGB_scheme = 'Dutch'
-Dutch_scaling_factor = 1.0 !0.8 ! from Gleebeek et al 2013
+Dutch_scaling_factor = 0.1 !1.0 !0.8 ! from Gleebeek et al 2013
 mdot_omega_power = 0.43d0
 
 ! mixing
@@ -121,7 +121,7 @@ remove_small_D_limit = 1d-10
 mixing_D_limit_for_log = 1d-10
 max_mdot_jump_for_rotation = 1d99
 
-! output stuff
+! output
 max_num_profile_models = 100
 profile_interval = 1000
 photo_interval = 100
@@ -133,7 +133,9 @@ terminal_interval = 1
 min_timestep_limit = 1e-6 !sec ! 1e-10 !to be able to reach CC
 varcontrol_target = 1d-4
 time_delta_coeff = 1.0d0
-! max_timestep_factor = 1.05d0
+max_timestep_factor = 1.05d0
+retry_hold = 5
+min_J_div_delta_J = 50d0 ! 15d0
 
 ! spatial resolution
 mesh_delta_coeff = 1.0d0 !0.8d0

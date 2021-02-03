@@ -50,7 +50,7 @@ xa_central_lower_limit(2) = 0.0001d0
 
 ! extra resolution on HRD of accretor
 ! delta_HR_ds_L = 0.001
-! delta_HR_ds_Teff = 0.001
+delta_HR_ds_Teff = 1d-5
 ! delta_HR_limit = 0.5
 ! delta_HR_hard_limit = 1
 

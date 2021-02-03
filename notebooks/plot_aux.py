@@ -381,27 +381,27 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, pl
     src, col = getSrcCol(hfile1)
 
     he4_1 = src[:, col.index("surface_he4")]
-    h1_1 = src[:, col.index("surface_h1")]
+    h1_1  = src[:, col.index("surface_h1")]
     n14_1 = src[:, col.index("surface_n14")]
     c12_1 = src[:, col.index("surface_c12")]
     o16_1 = src[:, col.index("surface_o16")]
-    t_1 = src[:, col.index("star_age")] * 1e-6
+    t_1   = src[:, col.index("star_age")] * 1e-6
 
     if hfile2 != "":
         src2, col2 = getSrcCol(hfile2)
         he4_2 = src2[:, col2.index("surface_he4")]
-        h1_2 = src2[:, col2.index("surface_h1")]
+        h1_2  = src2[:, col2.index("surface_h1")]
         n14_2 = src2[:, col2.index("surface_n14")]
         c12_2 = src2[:, col2.index("surface_c12")]
         o16_2 = src2[:, col2.index("surface_o16")]
-        t_2 = src2[:, col2.index("star_age")] * 1e-6
+        t_2   = src2[:, col2.index("star_age")] * 1e-6
 
         he4 = np.concatenate((he4_1, he4_2))
-        h1 = np.concatenate((h1_1, h1_2))
+        h1  = np.concatenate((h1_1, h1_2))
         n14 = np.concatenate((n14_1, n14_2))
         c12 = np.concatenate((c12_1, c12_2))
         o16 = np.concatenate((o16_1, o16_2))
-        t = np.concatenate((t_1, t_2))
+        t   = np.concatenate((t_1, t_2))
     else:
         he4 = he4_1
         h1 = h1_1
@@ -425,11 +425,11 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, pl
     ax.plot(t, n14, c="m", label=r"$^{14}\mathrm{N}$")
     ax.plot(t, o16, c="y", label=r"$^{16}\mathrm{O}$")
 
-    ax.axhline(h1[0], 0, 1,  c="b", ls="-.", lw=2)
-    ax.axhline(he4[0], 0, 1, c="r", ls="-.", lw=2)
-    ax.axhline(n14[0], 0, 1, c="m", ls="-.", lw=2)
-    ax.axhline(c12[0], 0, 1, c="g", ls="-.", lw=2)
-    ax.axhline(o16[0], 0, 1, c="y", ls="-.", lw=2)
+    ax.axhline(h1[0], 0, 1,  c="b", ls="-.", lw=1)
+    ax.axhline(he4[0], 0, 1, c="r", ls="-.", lw=1)
+    ax.axhline(n14[0], 0, 1, c="m", ls="-.", lw=1)
+    ax.axhline(c12[0], 0, 1, c="g", ls="-.", lw=1)
+    ax.axhline(o16[0], 0, 1, c="y", ls="-.", lw=1)
 
     ax.set_xlabel(r"$\mathrm{time \ [Myr]}$")
     ax.set_ylabel(r"$\mathrm{Surface\ mass\ fraction}\ X_i$")
