@@ -2,7 +2,7 @@
 
 author: [[mailto:mrenzo@flatironinstitute.org][Mathieu Renzo]]
 
-Project on self-consistent MESA (+CMFGEN?) modeling of [[http://simbad.u-strasbg.fr/simbad/sim-id?Ident=zeta+ophiuchi&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id][\zeta ophiuchi]]
+Project on self-consistent MESA modeling of [[http://simbad.u-strasbg.fr/simbad/sim-id?Ident=zeta+ophiuchi&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id][\zeta ophiuchi]]
 
 ** \zeta Ophiuchi's observational literature
 
@@ -122,6 +122,16 @@ al. 2020 is 19.7km/s.
 al. 2001, which would help keeping up the rotation rate and accrete
 more even at higher Z.
 
+The factor by which the wind should be decreased is ~10^-2.2, however
+already reducing by a factor of ~10x the wind in MESA the very fast
+rotating accretor stars go crazy as they evolve towards the end of the
+main sequence. This is because the core contraction would already tend
+to spin them up, but they are already critically rotating because of
+the mass transfer.
+
+On the other hand, lowered winds would significantly help mantaining
+for longer the high rotation rate observed.
+
 *** Mass of \zeta Ophiuchi
 
 Masses are inferred from taking the log_g of (rotating) single star
@@ -135,6 +145,20 @@ At He depletion the masses of the donor stars range form 6.5-9Msun
 6.5Msun stripped core at He depletion has \lesssim 10^4 years to live,
 so this can be neglected when aiming at the kinematic age and
 abundances match
+*** Staircase in the HRD
+
+This can be reduced to small variations by adjusting
+
+#+BEGIN_SRC fortran90
+
+max_timestep_factor = 1.05d0
+retry_hold = 5
+min_J_div_delta_J = 50d0 ! 3d0
+
+#+END_SRC
+
+in particular the last one seem to lead to noisiness in the spin down.
+**** TODO maybe try reducing =max_mdot_jump_for_rotation=
 *** Problems with the CHE scenario
 
     \zeta Ophiuchi has undeniably a very fast rotation rate and shows
