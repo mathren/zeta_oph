@@ -24,7 +24,7 @@ extra_kap_inlist1_name = 'inlist_both'
 read_extra_controls_inlist1 = .true.
 extra_controls_inlist1_name = 'inlist_both'
 
-extra_terminal_output_file = 'log2'
+! extra_terminal_output_file = 'log2'
 log_directory = 'LOGS2'
 
 ! !! smooth outer composition in the accretor

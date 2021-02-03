@@ -445,7 +445,12 @@ def plot_surface_abundances(hfile1, hfile2="", ax="", label="", legend=False, pl
         ax.plot(xcoord, Xc, c="g", ls="--", lw=2)
     if legend:
         ax.legend(ncol=2, fontsize=20)
-
+    # return the mass fractions at the end of the run
+    return(h1[-1],
+           he4[-1],
+           n14[-1],
+           c12[-1],
+           o16[-1])
 
 # ------------------------------------------------------------
 # make Latex table with observed values
@@ -506,6 +511,7 @@ def make_table_zeta_Oph(outfname=""):
 
 
 def MassVelocityEvolution(folder, convert=False, figName=""):
+    """ folder is the binary evolution MESA folder """
     import matplotlib.pyplot as plt
     import matplotlib.gridspec as gridspec
 

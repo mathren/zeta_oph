@@ -9,7 +9,7 @@ set_initial_age = .false.
 set_initial_model_number = .false.
 ! force small initial timestep
 set_initial_dt = .true.
-years_for_initial_dt = 1
+years_for_initial_dt = 0.1d0
 
 
 save_model_filename = 'MASS2accretor_TAMS.mod'
