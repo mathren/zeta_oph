@@ -218,6 +218,12 @@ redistribution in the star?
      They begin when the thermohaline mixing zone touches the
      convective region that has grown because of accretion.
 
+
+**** weird loopy at end of RLOF in the donor
+
+     That is the damned surface convection layer that pops up because
+     of partial recombination of He.
+
 ** TODOs
 
 *** TODO build python dependencies list with poetry

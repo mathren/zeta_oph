@@ -563,3 +563,6 @@ def MassVelocityEvolution(folder, convert=False, figName=""):
     ax.set_ylabel(r"$M \ [M_\odot]$")
     bx.set_ylabel(r"$v_2 \ [\mathrm{km\ s^{-1}}]$")
     bbx.set_ylabel(r"$P \ \mathrm{[days]}$", color="b")
+
+    if figName != "":
+        plt.savefig(figName)
