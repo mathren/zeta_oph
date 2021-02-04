@@ -113,7 +113,6 @@ al. 2020 is 19.7km/s.
 **** TODO Papers to check
 
  - [] Wright & Mamajek 2018 for kinematics of parent association
- - [] Intro of https://arxiv.org/abs/2101.05771
 
 *** Weak wind problem
 
