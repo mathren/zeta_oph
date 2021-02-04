@@ -308,7 +308,7 @@ def plot_HRD(ax, hfile1, c="#77CCCC", hfile2="", bfile="", label=""):
     # post binary evolution part is optional
     if hfile2 != "":
         logL, logTeff = getlogLlogTeff(hfile2)
-        ax.plot(logTeff, logL, c=c, ls="-.", zorder=2)
+        ax.plot(logTeff, logL, c=c, zorder=2)
 
 
 # -------------------------------------------------------------------

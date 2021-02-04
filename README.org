@@ -125,9 +125,11 @@ more even at higher Z.
 The factor by which the wind should be decreased is ~10^-2.2, however
 already reducing by a factor of ~10x the wind in MESA the very fast
 rotating accretor stars go crazy as they evolve towards the end of the
-main sequence. This is because the core contraction would already tend
-to spin them up, but they are already critically rotating because of
-the mass transfer.
+main sequence. Running now with just a factor of 3x decrease, just to
+prove the point than more AM would remain, though it is insufficient
+to address the weak wind problem. This is because the core
+contraction would already tend to spin them up, but they are already
+critically rotating because of the mass transfer.
 
 On the other hand, lowered winds would significantly help mantaining
 for longer the high rotation rate observed.
@@ -145,7 +147,11 @@ At He depletion the masses of the donor stars range form 6.5-9Msun
 6.5Msun stripped core at He depletion has \lesssim 10^4 years to live,
 so this can be neglected when aiming at the kinematic age and
 abundances match
+
 *** Staircase in the HRD
+
+It is most severe when thermohaline mixing start mixing the newly
+accreted material with the pre-existing envelope.
 
 This can be reduced to small variations by adjusting
 
@@ -158,6 +164,7 @@ min_J_div_delta_J = 50d0 ! 3d0
 #+END_SRC
 
 in particular the last one seem to lead to noisiness in the spin down.
+
 **** TODO maybe try reducing =max_mdot_jump_for_rotation=
 *** Problems with the CHE scenario
 
@@ -174,6 +181,7 @@ in particular the last one seem to lead to noisiness in the spin down.
     2005 where unable to find a good match for \zeta Ophiuchi using
     the rotating GENEVA models.
 
+
 ** TODO Questions
 
 *** Why left-ward HRD movement when becoming single star?
@@ -183,19 +191,33 @@ with the thermohaline mixing?
 
 *** Why blips mid-way through HRD?
 
-Is it some convective shell behavior?
+Is it some convective shell behavior? Or is it related to the AM
+redistribution in the star?
 
 *** Morphology of mass transfer
 
 **** max extension
 
+     The model turns around when it reaches omega_div_omega_crit>0.95
+
 **** v-shape
 
-     Possibly related to mixing of initial material and newly accreted material
+     Possibly related to mixing of initial material and newly accreted
+     material? NO! That is when the stair-case becomes severe. The
+     v-shape is earlier.
+
+     Possibly related to omega_div_omega_crit? NO! there doesn't seem
+     to be any variation in omega_div_omega_crit at the v-shape.
+
+     Possibly related to the donor reaching the minimum luminosity
+     during mass transfer and change in the composition of the stuff
+     coming in, maybe more He rich? This appears to be correct!
 
 **** thermohaline loops
 
-
+     These where found in Cantiello et al. 2007 as well.
+     They begin when the thermohaline mixing zone touches the
+     convective region that has grown because of accretion.
 
 ** TODOs
 
