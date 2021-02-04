@@ -173,5 +173,30 @@ in particular the last one seem to lead to noisiness in the spin down.
     single star fast rotating from ZAMS. However Villamariz & Herrero
     2005 where unable to find a good match for \zeta Ophiuchi using
     the rotating GENEVA models.
+
+** TODO Questions
+
+*** Why left-ward HRD movement when becoming single star?
+
+This does not depend on the timestep resolution. Does it have to do
+with the thermohaline mixing?
+
+*** Why blips mid-way through HRD?
+
+Is it some convective shell behavior?
+
+*** Morphology of mass transfer
+
+**** max extension
+
+**** v-shape
+
+     Possibly related to mixing of initial material and newly accreted material
+
+**** thermohaline loops
+
+
+
 ** TODOs
+
 *** TODO build python dependencies list with poetry
