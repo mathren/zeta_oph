@@ -18,13 +18,13 @@
 
 \begin{document}
 
-\title{$\zeta$ Ophiuchi as a test bed for models of accretor stars in
+\title{$\zeta$ Ophiuchi as a test for models of accreting stars in
   massive binaries}
 \author[0000-0002-6718-9472]{M.~Renzo}
 \affiliation{Department of Physics, Columbia University, New York, NY 10027, USA}
 \affiliation{Center for Computational Astrophysics, Flatiron Institute, New York, NY 10010, USA}
 
-\author{\todo{others}}
+\author{\todo{TBD}}
 
 \begin{abstract}
 \todo{write abstract}
@@ -40,21 +40,77 @@
 \section{Introduction}
 \label{sec:intro}
 
-Problems with CHE:
-Also high Z so doesn't work!
-Cantiello et al. 2007 proposed that many runaways might be evolving
-CHE, and showed that an accretor runaway and a single fast rotating
-star evolve very similarly. However, Villamariz \& Herrero failed at
-finding a match with rapidly rotating single stars. Therefore we
-consider here the possibility that while mass transfer might induce
-rapid rotation of the accretor, it might not necessarily lead to CHE.
+
+The nearest O-type star to Earth is $\zeta$ Ophiuchi \citep[spectral
+type O9.5{\rm IVnn},][]{sota:14}, at % with a parallax of
+% 5-8\,milliarcsec corresponding to
+a distance of $\sim$110\,pc \citep[e.g.,][and references
+therein]{neuhauser:20}. It was originally identified as a runaway star
+through its large proper motion by \cite{blaauw:52}, who identified
+the Scorpio-Centaurus group as its parent association.  Unfortunately,
+the \emph{Gaia} data for this object are not of sufficient quality to
+improve previous astrometric results, but estimates of the peculiar
+velocity range in $30-50\,\mathrm{km \ s^{-1}}$
+\citep[e.g.,][]{zehe:18, neuhauser:20}. The
+large velocity with respect the surrounding interstellar material is
+also confirmed by the presence of a prominent bow-shock
+\citep[e.g.,][]{bodensteiner:18}.
+
+Because of its young apparent age, extremely fast rotation
+($v\sin(i)\sim 400\,\mathrm{km\ s^{-1}}$, e.g., \citealt{zehe:18}),
+and nitrogen (N) and helium (He) rich surface \citep[e.g.,][]{blaauw:93,
+  villamariz:05, marcolino:09}, $\zeta$ Oph is considered a prime
+candidate for the binary supernova scenario \citep{blaauw:61,
+  renzo:19walk}. In this scenario, after a phase of mass transfer in a
+massive binary, the core collapse of the donor star disrupts the
+binary, and the former accretor is ejected with its pre-explosion
+orbital velocity. Many studies have suggested $\zeta$ Oph
+might have accreted mass from a companion before acquiring its large
+velocity, both from spectroscopic and kinematic considerations
+\citep[e.g.,][]{blaauw:93, hoogerwerf:00, hoogerwerf:01, tetzlaff:10, neuhauser:20}
+and using stellar modeling arguments
+\citep[e.g.,][]{vanrensbergen:96}.  More specifically,
+\cite{neuhauser:20} suggested that the supernova that ejected $\zeta$
+Oph produced PSR B1706-16 and also injected the short-lived
+radioactive isotope $^{60}\mathrm{Fe}$ on Earth about $\sim 1.5$\,Myr
+ago. This argues strongly for a successful supernova explosion
+accompanied by a large $\sim 250\,\mathrm{km\ s^{-1}}$ natal kick,
+which would suffice to disrupt the binary.
+
+Although the nature of $\zeta$ Oph as a binary product is well
+established, its large rotation rate has lead most attempts to
+explain the surface composition to rely on rotational mixing \cite[e.g.,][]{maeder:00}. Even the
+binary models of \cite{vanrensbergen:96} assumed spin-up due to
+mass accretion \citep[e.g.,][]{packet:81} to drive rotational mixing from the interior of
+the accreting star (see also \citealt{cantiello:07}). However,
+\cite{villamariz:05} were unable to find good fit for the stellar
+spectra using the rotating models from \cite{meynet:00}.
+
+This may not be surprising, since rotational mixing has
+lower efficiency for metal-rich and relatively low mass stars because
+of the increased importance of mean molecular weight gradients and
+longer thermal timescales compared to more massive stars
+\citep[e.g.,][]{yoon:06, perna:14}. The parent association of $\zeta$
+Oph has $Z=0.01-0.02\simeq Z_\odot$ \citep[e.g.,][]{murphy:21}, and
+mass estimates for the star range from $13-25\,M_\odot$, i.e. on the
+lower end of the range where efficient mixing might bring He and
+CNO-processed material to the surface (chemically homogeneous
+evolution).
+
+On top of the surface abundances, its extreme rotation rate,
+and the peculiar space velocity, $\zeta$ Oph poses a number of still
+open puzzles. Its wind mass loss rate appears lower than commonly
+assumed (weak wind problem, \citealt{marcolino:09}), it exhibits
+spectral variability with occasional appearance of H$\alpha$ in
+emission \citep[e.g.,][]{walker:79}.
+
 
 \todo{
   In the intro:
   \begin{itemize}
-  \item runaway nature
-  \item association with pulsar and SNe polluting Earth
-  \item debate on parent association
+  % \item runaway nature
+  % \item association with pulsar and SNe polluting Earth
+  % \item debate on parent association
   \item weak wind problem
   \end{itemize}
   Methods:
@@ -72,12 +128,6 @@ rapid rotation of the accretor, it might not necessarily lead to CHE.
     evolution of massive binary system going through stable mass transfer
   \end{itemize}
 }
-
-The nearest O-type star to Earth is $\zeta$ Ophiuchi, classified as
-O9.5{\rm IVnn} type star \citep[e.g.,][]{sota:14} and with a parallax
-of 5-8\,milliarcsec \citep[e.g.,][and references
-therein]{neuhauser:20}. This star has been the target of many
-observations and underpins many open puzzles.
 
 \todo{vanrensbergen:96 already excluded single star solutions based on
 the age of the parent association and the surface composition, but
@@ -163,15 +213,9 @@ enhancement of the convective flux \citep[e.g.,][]{paxton:15,
 % both cases, we use an efficiency factor of 1, and our post-merger models never
 % become cool enough to use a cool wind algorithm \citep[e.g.,][]{renzo:17}.
 
-To compute through the very late phases, we reduce the core resolution
-and increase the numerical solver tolerance when the central
-temperature increases above $\log_{10}(T_c/\mathrm{[K]})>9.45$. We
-define the onset of core-collapse when the iron-core infall velocity
-exceeds $1000\,\mathrm{km\ s^{-1}}$ \citep[e.g.,][]{woosley:02}.
-
 The inlists, processing scripts, and model output will be made available at~\href{link}{link}.
 
 \bibliographystyle{aasjournal}
-\bibliography{./zeta_oph.bib}
+\bibliography{./zeta_ophiuchi.bib}
 
 \end{document}
