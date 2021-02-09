@@ -1,14 +1,16 @@
-# FORTRAN stuff
 *~
+
+# FORTRAN stuff
 *.o
 *.smod
+
+
 *.tar.gz
 *.tar.xz
 
 # Python stuff
 __pycache__/
 .ipynb_checkpoints
-
 
 
 # Emacs stuff
@@ -26,8 +28,6 @@ __pycache__/
 *.log
 *.el
 *.synctex.gz
-
-
 
 # MESA data files
 *..npy
