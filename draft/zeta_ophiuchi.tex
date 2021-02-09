@@ -27,7 +27,7 @@
 \author{\todo{TBD}}
 
 \begin{abstract}
-\todo{write abstract}
+\centering \todo{TBD}
 \end{abstract}
 
 \vspace*{-10pt}
@@ -50,14 +50,14 @@ through its large proper motion by \cite{blaauw:52}, who identified
 the Scorpio-Centaurus group as its parent association.  Unfortunately,
 the \emph{Gaia} data for this object are not of sufficient quality to
 improve previous astrometric results, but estimates of the peculiar
-velocity range in $30-50\,\mathrm{km \ s^{-1}}$
+velocity range in $30-50\,\kms$
 \citep[e.g.,][]{zehe:18, neuhauser:20}. The
 large velocity with respect the surrounding interstellar material is
 also confirmed by the presence of a prominent bow-shock
 \citep[e.g.,][]{bodensteiner:18}.
 
 Because of its young apparent age, extremely fast rotation
-($v\sin(i)\sim 400\,\mathrm{km\ s^{-1}}$, e.g., \citealt{zehe:18}),
+($v\sin(i)\sim 400\,\kms$, e.g., \citealt{zehe:18}),
 and nitrogen (N) and helium (He) rich surface \citep[e.g.,][]{blaauw:93,
   villamariz:05, marcolino:09}, $\zeta$ Oph is considered a prime
 candidate for the binary supernova scenario \citep{blaauw:61,
@@ -74,17 +74,19 @@ and using stellar modeling arguments
 Oph produced PSR B1706-16 and also injected the short-lived
 radioactive isotope $^{60}\mathrm{Fe}$ on Earth about $\sim 1.5$\,Myr
 ago. This argues strongly for a successful supernova explosion
-accompanied by a large $\sim 250\,\mathrm{km\ s^{-1}}$ natal kick,
+accompanied by a large $\sim 250\,\kms$ natal kick,
 which would suffice to disrupt the binary.
 
 Although the nature of $\zeta$ Oph as a binary product is well
-established, its large rotation rate has lead most attempts to
-explain the surface composition to rely on rotational mixing \cite[e.g.,][]{maeder:00}. Even the
-binary models of \cite{vanrensbergen:96} assumed spin-up due to
-mass accretion \citep[e.g.,][]{packet:81} to drive rotational mixing from the interior of
-the accreting star (see also \citealt{cantiello:07}). However,
-\cite{villamariz:05} were unable to find good fit for the stellar
-spectra using the rotating models from \cite{meynet:00}.
+established, its large rotation rate has lead most attempts to explain
+the surface composition to rely on rotational mixing
+\cite[e.g.,][]{maeder:00}. Even the binary models of
+\cite{vanrensbergen:96} assumed spin-up due to mass accretion
+\citep[e.g.,][]{packet:81} to drive rotational mixing from the
+interior of the accreting star (see also
+\citealt{cantiello:07}). However, \cite{villamariz:05} were unable to
+find good fit for the stellar spectra using the rotating models from
+\cite{meynet:00}.
 
 This may not be surprising, since rotational mixing has
 lower efficiency for metal-rich and relatively low mass stars because
@@ -97,30 +99,19 @@ lower end of the range where efficient mixing might bring He and
 CNO-processed material to the surface (chemically homogeneous
 evolution).
 
-On top of the surface abundances, its extreme rotation rate,
-and the peculiar space velocity, $\zeta$ Oph poses a number of still
-open puzzles. Its wind mass loss rate appears lower than commonly
-assumed (weak wind problem, \citealt{marcolino:09}), it exhibits
-spectral variability with occasional appearance of H$\alpha$ in
-emission \citep[e.g.,][]{walker:79}.
-
+On top of the surface abundances, its extreme rotation rate, and the
+peculiar space velocity, $\zeta$ Oph poses a number of other
+puzzles: its wind mass-loss rate is about two orders of magnitude
+lower than theoretical predictions (weak wind problem,
+\citealt{marcolino:09}), the star exhibits spectral variability with
+occasional appearance of H$\alpha$ in emission
+\citep[e.g.,][]{walker:79}, and is potentially magnetic \todo{true?ref?}.
 
 \todo{
-  In the intro:
-  \begin{itemize}
-  % \item runaway nature
-  % \item association with pulsar and SNe polluting Earth
-  % \item debate on parent association
-  \item weak wind problem
-  \end{itemize}
-  Methods:
-  \begin{itemize}
-  \item self-consistent modeling of the evolution \citep[see also][]{vanrensbergen:96}
-  \item depends on many free parameters governing the intricate and
-    coupled physics of mass transfer, mixing, rotation
-  \end{itemize}
   Aim:
   \begin{itemize}
+    \item importance of binary products and opportunity to understand
+  binary physics with $\zeta$ Oph
   \item since observations are not always agreeing with each other, we
     aim at finding a model in the right ballpark and explore how
     physical variations move such model around
@@ -129,25 +120,42 @@ emission \citep[e.g.,][]{walker:79}.
   \end{itemize}
 }
 
-\todo{vanrensbergen:96 already excluded single star solutions based on
-the age of the parent association and the surface composition, but
-invoked large scale (rotational) mixing during binary evolution for the surface abundances}
+
+Here, we present the first self-consistent binary evolution model for
+$\zeta$ Oph computing simultaneously the coupled evolution of donor
+and accretor star. After presenting our calculations in
+\Secref{sec:methods}, we show our best model which reproduces the
+majority of the salient features of this star in
+\Secref{sec:best_model}, and discuss the sensitivity of our results to
+the admittedly many free parameters required for this kind of
+computations in \Secref{sec:param_variations}. Finally, we conclude in
+\Secref{sec:conclusions}.
+
+
+
 
 
 
 \section{Modeling mass transfer with \texttt{MESA}}
 \label{sec:methods}
 
-\section{Initial grid of models}
+\todo{  Methods:
+  \begin{itemize}
+  \item self-consistent modeling of the evolution
+  \item depends on many free parameters governing the intricate and
+    coupled physics of mass transfer, mixing, rotation
+  \end{itemize}
+}
 
-\subsection{Favorite model}
+\section{Best model}
+\label{sec:best_model}
 
 \section{Physical variations}
+\label{sec:param_variations}
 
-\section{Discussion}
 
 \section{Conclusions}
-
+\label{sec:conclusions}
 
 
 \software{
@@ -174,7 +182,7 @@ invoked large scale (rotational) mixing during binary evolution for the surface 
 We use \code{MESA} version 15140 to compute our models.  The
 \code{MESA} equation of state (EOS) is a blend of the OPAL \citet{Rogers2002}, SCVH
 \citet{Saumon1995}, PTEH \citet{Pols1995}, HELM \citet{Timmes2000},
-and PC \citet{Potekhin2010} EOSes. \todo{update EOS}
+and PC \citet{Potekhin2010} EOSes. \todo{check if updated EOS?}
 
 Radiative opacities are primarily from OPAL \citep{Iglesias1993,
   Iglesias1996}, with low-temperature data from \citet{Ferguson2005}
@@ -187,25 +195,18 @@ Nuclear reaction rates are a combination of rates from NACRE
 tabulated weak reaction rates \citet{Fuller1985, Oda1994,
   Langanke2000}. Screening is included via the prescription of
 \citet{Chugunov2007}.  Thermal neutrino loss rates are from
-\citet{Itoh1996}. We compute the pre-merger evolution using an
-8-isotope $\alpha$-chain nuclear reaction network and switch to a
-22-isotope nuclear network for the post-merger evolution.
+\citet{Itoh1996}. We use a
+22-isotope nuclear network (\texttt{approx\_21\_plus\_cr56}).
 
-We evolve our models from the pre-main sequence to the terminal age
-main sequence of the most massive $58\,M_\odot$ star, defined as the
-time when the central hydrogen abundance $X(^1\mathrm{H})\leq 10^{-4}$.
 We treat convection using the Ledoux criterion, and include
-thermohaline mixing (until the central temperature
-$\log_{10}(T_c/\mathrm{[K]})>9.45$, \citealt{farmer:16}) and semiconvection, both with an
-efficiency factor of 1. We assume $\alpha_\mathrm{MLT}=2.0$ and use
-\cite{brott:11} overshooting for the convective core burning. We have
-tested that varying core overshooting does not impact significantly the
-post-merger evolution, however, when including shell overshooting
-and/or undershooting we were unable to find solutions to the stellar
-structure equations. Moreover, we employ the MLT++ artificial
+thermohaline mixing and semiconvection, both with an efficiency factor
+of 1. We assume $\alpha_\mathrm{MLT}=1.5$ and use \todo{fix}
+\cite{brott:11} overshooting for the convective core
+burning. \todo{fix} Moreover, we employ the MLT++ artificial
 enhancement of the convective flux \citep[e.g.,][]{paxton:15,
   jiang:15}. Stellar winds are included using the algorithms from
-\cite{vink:01} with an efficiency factor of 1.%  and \cite{nugis:00} when the surface en abundance
+\cite{vink:01} with an efficiency factor of
+1.% and \cite{nugis:00} when the surface en abundance
 % is below 0.4 and $T_\mathrm{eff}>10^{4.7}\,\mathrm{K}$. We use a
 % hyperbolic tangent interpolation between the two for
 % hydrogen-deficient surfaces with
