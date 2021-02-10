@@ -71,7 +71,7 @@ redo_limit = 300
 hot_wind_scheme = 'Dutch'
 cool_wind_RGB_scheme = 'Dutch'
 cool_wind_AGB_scheme = 'Dutch'
-Dutch_scaling_factor = 0.1 !1.0 !0.8 ! from Gleebeek et al 2013
+Dutch_scaling_factor = 1.0 !0.8 ! from Gleebeek et al 2013
 mdot_omega_power = 0.43d0
 
 ! mixing
