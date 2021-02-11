@@ -70,7 +70,7 @@
       integer function how_many_extra_binary_history_header_items(binary_id)
          use binary_def, only: binary_info
          integer, intent(in) :: binary_id
-         how_many_extra_binary_history_header_items = 1
+         how_many_extra_binary_history_header_items = 0
       end function how_many_extra_binary_history_header_items
 
 
@@ -87,15 +87,6 @@
             write(*,*) 'failed in binary_ptr'
             return
          end if
-
-         names(1) = 'RLOF_flag'
-         if ((b% rl_relative_gap(1) > 0) .or. (b% rl_relative_gap(2) >0)) then
-            ! overflowing RLOF
-            vals(1) = 1
-         else
-            vals(1) = 0
-         end if
-
       end subroutine data_for_extra_binary_history_header_items
 
 
@@ -133,9 +124,11 @@
             return
          end if
 
-!          b% s1% job% warn_run_star_extras = .false.
-          extras_binary_startup = keep_going
-      end function  extras_binary_startup
+         ! b% s1% job% warn_run_star_extras = .false.
+         b% lxtra(1) = .false. !flag for end of donor's main sequence
+         extras_binary_startup = keep_going
+
+       end function  extras_binary_startup
 
       integer function extras_binary_start_step(binary_id,ierr)
          type (binary_info), pointer :: b
@@ -177,9 +170,19 @@
          end if
          extras_binary_finish_step = keep_going
 
+         if ((b% s_donor% xa(ih1, b% s_donor% nz) < 1d-4) .and. &
+              (b% lxtra(1) .eqv. .false.)) then
+            b% lxtra(1) =.true.
+            b% xtra(1) = b% s_donor% r(1)
+            print *, "saved donor radius at TAMS", b% xtra(1)
+            write(fname, fmt="(a18)") 'donor_TAMS.mod'
+            call star_write_model(b% star_ids(1), fname, ierr)
+         end if
+
          ! stop at the end RLOF
-         if ((b% s_donor% xa(ihe4, 1) > 0.4d0) .and. &
-              (b% rl_relative_gap(b% d_i) < -0.9d0)) then
+         if ((b% s_donor% xa(ihe4, 1) > 0.5d0) .and. & ! donor is He rich
+              (b% rl_relative_gap(b% d_i) < 0) .and. & ! RLOF is not going on
+              (b% s_donor% r(1) < b% xtra(1))) then    ! donor's radius smaller than TAMS radius
             print *, "Donor is HE rich and significantly detached, gonna stop now!"
             print *, "termination code: RLOF detachment"
             extras_binary_finish_step = terminate
