@@ -179,10 +179,10 @@
             call star_write_model(b% star_ids(1), fname, ierr)
          end if
 
-         ! stop at the end RLOF
-         if ((b% s_donor% xa(ihe4, 1) > 0.5d0) .and. & ! donor is He rich
-              (b% rl_relative_gap(b% d_i) < 0) .and. & ! RLOF is not going on
-              (b% s_donor% r(1) < b% xtra(1))) then    ! donor's radius smaller than TAMS radius
+         ! stop at the end case B RLOF
+         if ((b% s_donor% surface_he4 > 0.35d0) .and. & ! donor is He rich
+              (b% rl_relative_gap(b% d_i) < 0) .and. &  ! donor is detached
+              (b% s_donor% r(1) < b% xtra(1))) then     ! donor's radius smaller than TAMS radius
             print *, "Donor is HE rich and significantly detached, gonna stop now!"
             print *, "termination code: RLOF detachment"
             extras_binary_finish_step = terminate
@@ -195,6 +195,7 @@
             call star_write_model(b% star_ids(2), fname, ierr)
             if (ierr /= 0) return
          end if
+
 
       end function extras_binary_finish_step
 
