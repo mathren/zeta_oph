@@ -175,7 +175,7 @@
             b% lxtra(1) =.true.
             b% xtra(1) = b% s_donor% r(1)
             print *, "saved donor radius at TAMS", b% xtra(1)
-            write(fname, fmt="(a18)") 'donor_TAMS.mod'
+            write(fname, fmt="(a14)") 'donor_TAMS.mod'
             call star_write_model(b% star_ids(1), fname, ierr)
          end if
 
@@ -183,10 +183,8 @@
          if ((b% s_donor% surface_he4 > 0.35d0) .and. & ! donor is He rich
               (b% rl_relative_gap(b% d_i) < 0) .and. &  ! donor is detached
               (b% s_donor% r(1) < b% xtra(1))) then     ! donor's radius smaller than TAMS radius
-            print *, "Donor is HE rich and significantly detached, gonna stop now!"
-            print *, "termination code: RLOF detachment"
-            extras_binary_finish_step = terminate
             ! save model for the donor
+            print *, "save models after (case B) RLOF"
             write(fname, fmt="(a18)") 'donor_postRLOF.mod'
             call star_write_model(b% star_ids(1), fname, ierr)
             if (ierr /= 0) return
@@ -194,8 +192,13 @@
             write(fname, fmt="(a21)") 'accretor_postRLOF.mod'
             call star_write_model(b% star_ids(2), fname, ierr)
             if (ierr /= 0) return
-         end if
 
+            if (b% lxtra(2) .eqv. .true.) then
+               print *, "Donor is HE rich and significantly detached, gonna stop now!"
+               print *, "termination code: RLOF detachment"
+               extras_binary_finish_step = terminate
+            end if
+         end if
 
       end function extras_binary_finish_step
 

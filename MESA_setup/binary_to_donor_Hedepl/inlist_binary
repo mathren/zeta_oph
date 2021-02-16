@@ -14,6 +14,10 @@ m1 = MASS1d0  ! donor mass in Msun
 m2 = MASS2d0 ! companion mass in Msun
 initial_period_in_days = PERIODd0
 
+! set this to true to stop post RLOF
+lxtra(2) = .true.
+
+
 limit_retention_by_mdot_edd = .false. ! this is for BH secondaries
 mass_transfer_alpha = 0.0d0
 mass_transfer_beta = 0.0d0
