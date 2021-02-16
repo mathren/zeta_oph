@@ -25,6 +25,10 @@ extra_kap_inlist1_name = 'inlist_both'
 read_extra_controls_inlist1 = .true.
 extra_controls_inlist1_name = 'inlist_both'
 
+! set this to .true. to stop post RLOF
+! otherwise see stopping condition in inlist_both
+x_logical_ctrl(1) = .true.
+
 
 ! extra_terminal_output_file = 'log1'
 log_directory = 'LOGS1'

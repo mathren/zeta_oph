@@ -125,6 +125,7 @@
          end if
 
          ! b% s1% job% warn_run_star_extras = .false.
+
          b% lxtra(1) = .false. !flag for end of donor's main sequence
          extras_binary_startup = keep_going
 
@@ -140,8 +141,6 @@
          if (ierr /= 0) then ! failure in  binary_ptr
             return
          end if
-
-         b% lxtra(2) = b%
       end function  extras_binary_start_step
 
       !Return either keep_going, retry or terminate
@@ -194,7 +193,7 @@
             call star_write_model(b% star_ids(2), fname, ierr)
             if (ierr /= 0) return
 
-            if (b% lxtra(2) .eqv. .true.) then
+            if (b% s_donor% x_logical_ctrl(1) .eqv. .true.) then
                print *, "Donor is HE rich and significantly detached, gonna stop now!"
                print *, "termination code: RLOF detachment"
                extras_binary_finish_step = terminate
