@@ -192,6 +192,8 @@
             write(fname, fmt="(a21)") 'accretor_postRLOF.mod'
             call star_write_model(b% star_ids(2), fname, ierr)
             if (ierr /= 0) return
+            ! reset radius at TAMS to a negative value so we don't override the postRLOF models
+            b% xtra(1) = -1
 
             if (b% s_donor% x_logical_ctrl(1) .eqv. .true.) then
                print *, "Donor is HE rich and significantly detached, gonna stop now!"
