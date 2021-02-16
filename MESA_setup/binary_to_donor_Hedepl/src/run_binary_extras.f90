@@ -141,6 +141,7 @@
             return
          end if
 
+         b% lxtra(2) = b%
       end function  extras_binary_start_step
 
       !Return either keep_going, retry or terminate
