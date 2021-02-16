@@ -31,9 +31,8 @@
   Binarity dominates the evolution of massive stars, and the nearest
   O-type star to Earth, $\zeta$ Ophiuchi, has long been proposed to be
   a product of binary evolution. Despite this, most stellar models
-  have tried unsuccessfully to reproduce its appearance relying on
-  single-star evolutionary phenomena such as rotational mixing.
-  \todo{Here we do better}
+  have tried unsuccessfully to reproduce its observable properties
+  relying on single-star rotating models.  \todo{Here we do better}
 \end{abstract}
 
 \vspace*{-10pt}
@@ -47,7 +46,8 @@
 \label{sec:intro}
 
 
-The nearest O-type star to Earth is $\zeta$ Ophiuchi \citep[spectral
+The nearest O-type star to Earth is $\zeta$ Ophiuchi\footnote{also known
+as HD149757.} \citep[spectral
 type O9.5{\rm IVnn},][]{sota:14}, at % with a parallax of
 % 5-8\,milliarcsec corresponding to
 a distance of $\sim$110\,pc \citep[e.g.,][and references
@@ -62,27 +62,30 @@ also confirmed by the presence of a prominent bow-shock
 \citep[e.g.,][]{bodensteiner:18}.
 
 Because of its young apparent age, extremely fast rotation
-($v\sin(i)\sim 400\,\kms$, e.g., \citealt{zehe:18}),
-and nitrogen (N) and helium (He) rich surface \citep[e.g.,][]{blaauw:93,
-  villamariz:05, marcolino:09}, \zoph\ is a prime
-candidate for the binary supernova scenario \citep{blaauw:61,
-  renzo:19walk}. In this scenario, after a phase of mass transfer in a
-massive binary, the core collapse of the donor star disrupts the
-binary, and the former accretor is ejected with its pre-explosion
-orbital velocity. Many studies have suggested \zoph\
-might have accreted mass from a companion before acquiring its large
-velocity, both from spectroscopic and kinematic considerations
-\citep[e.g.,][]{blaauw:93, hoogerwerf:00, hoogerwerf:01, tetzlaff:10, neuhauser:20}
-and using stellar modeling arguments
-\citep[e.g.,][]{vanrensbergen:96}.  More specifically,
-\cite{neuhauser:20} suggested that a supernova in
-Upper-Centaurus-Lupus produced the pulsar PSR B1706-16, ejected \zoph, and also injected the short-lived
-radioactive isotope $^{60}\mathrm{Fe}$ on Earth about $\sim 1.5$\,Myr
-ago. This argues strongly for a successful supernova explosion
-accompanied by a large $\sim 250\,\kms$ natal kick,
-which would suffice to disrupt the binary.
+($v\sin(i)\gtrsim 400\,\kms$, e.g., \citealt{zehe:18}), and nitrogen
+(N) and helium (He) rich surface \citep[e.g.,][]{herrero:92,
+  blaauw:93, villamariz:05, marcolino:09}, \zoph\ is a prime candidate
+for the binary supernova scenario \citep{blaauw:61, renzo:19walk}. In
+this scenario, after a phase of mass transfer in a massive binary
+which can spin up the accreting star \citep[e.g.,][]{packet:81}, the
+core-collapse of the donor star disrupts the binary. This results in
+the ejection of the former accretor as a fast rotator and with its
+pre-explosion orbital velocity as peculiar velocity.
 
-Although the nature of \zoph as a binary product is well
+Many studies have suggested \zoph\ might have accreted mass from a
+companion before acquiring its large velocity, both from spectroscopic
+and kinematic considerations \citep[e.g.,][]{blaauw:93, hoogerwerf:00,
+  hoogerwerf:01, tetzlaff:10, neuhauser:20} and using stellar modeling
+arguments \citep[e.g.,][]{vanrensbergen:96}. Recently,
+\cite{neuhauser:20} suggested that a supernova in
+Upper-Centaurus-Lupus produced the pulsar PSR B1706-16, ejected \zoph,
+and also injected the short-lived radioactive isotope
+$^{60}\mathrm{Fe}$ on Earth about $\sim 1.5$\,Myr ago. This argues
+strongly for a successful supernova explosion accompanied by a large
+$\sim 250\,\kms$ natal kick, which in most cases would be sufficient
+to disrupt the binary.
+
+Although the nature of \zoph\ as a binary product is well
 established, its large rotation rate has lead most attempts to explain
 the surface composition to rely on rotational mixing
 \cite[e.g.,][]{maeder:00}. Even the binary models of
@@ -113,12 +116,13 @@ lower than theoretical predictions (weak wind problem,
 occasional appearance of H$\alpha$ in emission
 \citep[e.g.,][]{walker:79}, and is potentially magnetic \todo{true?ref?}.
 
-Given the apparent failure of rotational mixing to explain the
-properties of \zoph, and the strong evidence for its past as a member
-of a binary system, the data available offer a unique opportunity to
-constrain the evolution of accreting stars in massive binary
-systems, which is hard to model because of the interplay of rotation,
-mixing, and accretion \citep[e.g.][]{hellings:83, hellings:84, braun:95}.
+Given the challenges in explaining the surface composition of \zoph\
+with rotational mixing from the stellar interior and the strong
+evidence for its past as a member of a binary system, this star offers
+a unique opportunity to constrain the evolution of accreting stars in
+massive binary systems, which is hard to model because of the
+interplay of rotation, mixing, and accretion
+\citep[e.g.][]{hellings:83, hellings:84, braun:95}.
 
 While we focus here on this particular star, we emphasize that
 understanding the evolution of  accretors in massive binaries has
@@ -127,24 +131,26 @@ contain $\sim10\%$ of presently single O-type that accreted mass
 previously \citep{renzo:19walk}, gravitational-wave progenitors in
 isolated binary formation scenarios go through a common envelope phase
 initiated by the originally less massive accretor after the formation
-of the first compact object \citep[e.g.,][]{belczynski:16nat,
-  law-smith:20},\todo{more?}
+of the first compact object \citep[e.g.,][]{belczynski:16nat, tauris:17,
+  law-smith:20}, \todo{more reasons?}
 
 Here, we present the first self-consistent binary evolution model for
-$\zeta$ Oph computing simultaneously the coupled evolution of donor
+$\zeta$ Oph computing simultaneously the coupled evolution of
+\emph{both} donor
 and accretor star. After presenting our calculations in
 \Secref{sec:methods}, we show our best model which reproduces the
 majority of the salient features of this star in
-\Secref{sec:best_model}, and discuss the sensitivity of our results to
-the admittedly many free parameters required for this kind of
-computations in \Secref{sec:param_variations}. Finally, we conclude in
+\Secref{sec:best_model}. In this model, the surface abundances of
+\zoph\ are explained by pollution from the former companion, rather
+than upward mixing from the interior of \zoph\ itself. We discuss the
+sensitivity of our results to the admittedly many free parameters
+required for this kind of computations in
+\Secref{sec:param_variations}. Finally, we conclude in
 \Secref{sec:conclusions}.
-
-
-
 
 \section{Modeling mass transfer with \texttt{MESA}}
 \label{sec:methods}
+
 
 \todo{  Methods:
   \begin{itemize}
