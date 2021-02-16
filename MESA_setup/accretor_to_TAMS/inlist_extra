@@ -2,7 +2,7 @@
 
 
 load_saved_model = .true.
-saved_model_name = "../binary_to_donor_Hedepl/MASS2accretor_at_donor_He_depl.mod"
+saved_model_name = "../binary_to_postRLOF/accretor_postRLOF.mod"
 
 ! don't overwrite age and model number
 set_initial_age = .false.
