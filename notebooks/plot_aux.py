@@ -163,7 +163,7 @@ def get_zeta_oph_surface_he(X=0.7):
     return Y, err_Y_p, err_Y_m
 
 
-def convert_eps_to_mass_frac(X_H,epsilon, err_epsilon, A_element):
+def convert_eps_to_mass_frac(X_H, epsilon, err_epsilon, A_element):
     """
     converts epsilon = 12+log10(N_element/N_H) to mass_fraction
     A_element is the atomic mass. X_H the hydrogen mass fraction.
@@ -181,7 +181,7 @@ def convert_eps_to_mass_frac(X_H,epsilon, err_epsilon, A_element):
 
 def get_zeta_oph_surface_c(X=0.7):
     """
-    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    converts epsilon = 12+log10(N_element/N_H) to mass_fraction
     Note the need for the hydrogen mass fraction as an input.
     Data from Villamariz & Herrero 2005.
     """
@@ -194,7 +194,7 @@ def get_zeta_oph_surface_c(X=0.7):
 
 def get_zeta_oph_surface_n(X=0.7):
     """
-    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    converts epsilon = 12+log10(N_element/N_H) to mass_fraction
     Note the need for the hydrogen mass fraction as an input.
     Data from Villamariz & Herrero 2005.
     """
@@ -207,7 +207,7 @@ def get_zeta_oph_surface_n(X=0.7):
 
 def get_zeta_oph_surface_o(X=0.7):
     """
-    converts epsilon = 12+log10(mass_fraction/X) to mass_fraction
+    converts epsilon = 12+log10(N_element/X) to mass_fraction
     Note the need for the hydrogen mass fraction as an input.
     Data from Villamariz & Herrero 2005.
     """
