@@ -121,10 +121,6 @@ remove_small_D_limit = 1d-10
 mixing_D_limit_for_log = 1d-10
 max_mdot_jump_for_rotation = 1d99
 
-! output
-max_num_profile_models = 100
-profile_interval = 1000
-photo_interval = 100
 history_interval = 1
 terminal_interval = 1
 

@@ -126,7 +126,8 @@
 
          ! b% s1% job% warn_run_star_extras = .false.
 
-         b% lxtra(1) = .false. !flag for end of donor's main sequence
+         b% lxtra(1) = .false. ! flag for end of donor's main sequence
+         b% lxtra(2) = .false. ! flag for beginning RLOF
          extras_binary_startup = keep_going
 
        end function  extras_binary_startup
@@ -170,6 +171,19 @@
          end if
          extras_binary_finish_step = keep_going
 
+         ! find beginning RLOF
+         if ((b% lxtra_old(2) .eqv. .false.) .and. &
+              ((b% rl_relative_gap(b% d_i) > 0))) then
+            b% lxtra(2) = .true.
+            print *, "Beginning of RLOF"
+            write(fname, fmt="(a20)") 'donor_onset_RLOF.mod'
+            call star_write_model(b% star_ids(1), fname, ierr)
+            write(fname, fmt="(a23)") 'accretor_onset_RLOF.mod'
+            call star_write_model(b% star_ids(2), fname, ierr)
+         end if
+
+
+         ! find donor's TAMS
          if ((b% s_donor% xa(ih1, b% s_donor% nz) < 1d-4) .and. &
               (b% lxtra(1) .eqv. .false.)) then
             b% lxtra(1) =.true.
