@@ -34,7 +34,12 @@ x_logical_ctrl(1) = .true.
 log_directory = 'LOGS1'
 
 write_header_frequency = 3
+
+! output
+max_num_profile_models = 100
 profile_interval = 1000
+photo_interval = 500
+
 
 / ! end of controls namelist
 
