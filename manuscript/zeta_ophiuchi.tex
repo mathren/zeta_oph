@@ -163,8 +163,63 @@ required for this kind of computations in
 \Secref{sec:param_variations}. Finally, we conclude in
 \Secref{sec:conclusions}.
 
-\section{Modeling mass transfer with \texttt{MESA}}
+\section{Modeling massive binaries with \texttt{MESA}}
 \label{sec:methods}
+
+Modeling the evolution of massive binaries is challenging because of
+the intricate and coupled role of several notoriously difficult
+stellar physics ingredients (e.g., rotation, mixing, high mass-loss
+rates). Here we follow self-consistently the coupled evolution of two
+massive stars in a binary system using \texttt{MESA} (version
+15140). Our choice of input parameters and our numerical results are
+available at \todo{link}. We discuss here only the main relevant
+physical parameters, and Appendix~\ref{sec:software} gives more
+details on our choice of input physics.
+
+We adopt the Ledoux criterion to determine convective stability and a
+mixing length parameter of $1.5$. Semiconvection \citep{langer:85} and a
+thermohaline \citep{kippenhahn:83} mixing are included with an
+efficiency of $1.0$ for both. We use the exponential core
+overshooting from \cite{herwig:00} with free parameters
+$(f, f_0)=(4.25\times10^{-2}, 10^{-3})$ which were chosen to reproduce
+the width of the main sequence from \cite{brott:11} following
+\cite{claret:17}. We also use the superadiabaticity reduction
+introduced in \texttt{MESA} 15140.
+
+Rotation is initialized assuming tidal synchronization at the
+beginning of the evolution. Our models include in a diffusive
+approximation the effect of Eddington-Sweet circulations \citep{},
+which dominates the chemical mixing due to rotation, and also SSI, DSI
+and GSF \todo{sharpen and ref} \citep[e.g.,]{gotberg:17, gotberg:18}.
+We assume a Spruit-Tayler dynamo for the transport of angular
+momentum, and chose the same free parameters as \cite{heger:00}. This
+also includes the rotational enhancement of wind mass loss as in \cite{langer:98}/
+
+We treat wind mass loss with the \cite{vink:00,vink:01} hot wind,
+and \cite{dejager:88} with a scaling factor of 1. This effectively
+means our wind mass loss rate post-mass transfer is overestimated by
+almost a factor of 100 \citep[weak wind problem][]{marcolino:09}.
+
+
+Both stars are evolved simultaneously on the same timesteps until
+after the donor detaches from the Roche lobe. We follow \cite{kolb:90}
+to calculate the mass transfer rate from optically thick layers of the
+donor star during RLOF, and assume that the transfered layers reach
+the accretor with the accretor's specific surface angular
+momentum. Mass transfer is conservative until the accretor reaches
+critical rotation, after which rotationally enhanced mass loss governs
+the accretion efficiency.
+
+We define RLOF detachment as the moment
+after the onset of RLOF, when the donor has a surface He mass fraction
+larger than 0.35 (indicating that a significant amount of envelope has
+been lost or transferred), a radius smaller than its terminal-age main
+sequence (TAMS) radius, and no mass is being transferred. At this
+point in time, we save a model for the accreting star, and continue
+its evolution until TAMS with the same setup.
+
+
+
 
 
 \todo{  Methods:
@@ -180,15 +235,14 @@ required for this kind of computations in
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{HRD_both}
-  \caption{Hertzsprung-Russell diagram for the progenitor binary of
-    \zoph. The bottom (top) panel shows the accretor (donor), with the
-    color indicating the surface $^4\mathrm{He}$ mass fraction. The
+  \caption{Hertzsprung-Russell diagram for the donor star (top) and
+    accretor star (bottom) of the progenitor binary of \zoph. The
+    tracks are colored with the stellar age, the
     red datapoint shows the position of \zoph\ according to
-    \cite{villamariz:05}. Note the different scale on the two panels,
-    and that the bottom panel shows a longer time, until the end of
-    the accretor's main sequence.\todo{maybe color with something
-      better}
-  \todo{maybe don't show stripped star?}}
+    \cite{villamariz:05}, and the black diamond marks the post-RLOF
+    position of the accreting star. We continue its evolution as a single star from
+    there until core H depletion, hence the bottom panel shows a longer
+    time. Note the different scale on the two panels.}
   \label{fig:HRD_both}
 \end{figure}
 
@@ -197,18 +251,19 @@ We describe here the evolution of a binary system with initial masses
 $M_1=25\,M_\odot$, $M_2=17\,M_\odot$ on a period of $100$\,days at
 $Z=0.01$. \Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams
 of both stars. The donor star (top panel) evolves off the main
-sequence and shortly \todo{quantify?} after mass transfer ensue, resulting in a stable
-case B \citep{kippenhahn:67} Roche lobe overflow (RLOF) when the
-donor's effective temperature reaches about $10^4$\,K. We refer to
-\cite{gotberg:17, laplace:21} \todo{more refs?} and references therein for a detailed
-description of the evolution of massive donor stars in binaries:
-although our models here are significantly more massive, the
-qualitative behavior is similar.
+sequence and $\sim8400$\,years after, when the donor's effective
+temperature reaches about $10^4$\,K, mass transfer starts. This
+results in a stable case B \citep{kippenhahn:67} Roche lobe overflow
+(RLOF). We refer to \cite{gotberg:17, laplace:21, blagorodnova:21}
+and references therein for a detailed description of the evolution of
+massive donor stars in binaries: although our models here are
+significantly more massive than those presented there, the qualitative behavior is similar.
 
-At this point, the accretor star (bottom panel) is still on the main sequence
-(effective temperature $T_\mathrm{eff}\simeq10^{4.5}$\,K), and because of the accretion of
-matter it quickly becomes over-luminous ($L\simeq10^{5.4}\,L_\odot$),
-and its radius increases dramatically \todo{quantify}. Once the
+At this point, the accretor star (bottom panel) is still on the main
+sequence (effective temperature $T_\mathrm{eff}\simeq10^{4.5}$\,K),
+and because of the accretion of matter it quickly becomes
+over-luminous ($L\simeq10^{5.4}\,L_\odot$), and its radius increases
+dramatically from $\sim7.5\,R_\odot$ to $\sim35\,R_\odot$. Once the
 accretor reaches critical rotation, the star begins contracting and
 its $T_\mathrm{eff}$ increases. At $T_\mathrm{eff}\simeq 4.{43}$\,K
 the material transferred from the companion star becomes progressively
@@ -222,23 +277,28 @@ well-known loops on the HR diagram (cf. \citealt{cantiello:07}).
 
 Right at the end of RLOF, the donor star briefly expands again
 ($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
-is due to the transient appearance of a surface convection layer due
-to partial recombination of the He rich material. This small feature
+is due to the partial recombination of the He rich material now at the
+surface, which causes a transient  surface convection layer. This small feature
 was found to be the culprit of failing computations in older
 \texttt{MESA} releases, because although only a very small amount
-\todo{quantify} of mass is involved, this would lead to large radial
+ of mass is involved, this would lead to large radial
 expansion much beyond the donor's Roche lobe, and cause numerical
 problems.
 
 
-After RLOF, the donor star is a 9.4$\,M_\odot$ core with surface He
+\todo{describe fig. 2}
+
+After RLOF, the donor star is a 12.6$\,M_\odot$ core with surface He
 mass fraction of $\sim$0.8, and quickly contracts. Such a star would
 likely appear as a Wolf-Rayet \todo{Ylva: want to comment on
-  appearance with companion star next to it?}. We keep evolving the
+  appearance with companion star next to it?}.
+
+\todo{fix this, and maybe goes into methods}
+We keep evolving the
 binary until core-He exhaustion of the donor \todo{defined how?}. The
 evolutionary track of the top panel stops at this point.  We then take
-the accretor, which has now a mass of $20.1\,M_\odot$ and an orbital
-velocity of $\sim 40\kms$ (corresponding to a period of $\sim\,160$
+the accretor, which has now a mass of $20.2\,M_\odot$ and an orbital
+velocity of $\sim 52\kms$ (corresponding to a period of $\sim\,130$
 days) and continue it evolution as a single star
 with the same setup until its terminal age main sequence (shown in the
 bottom panel).
@@ -248,6 +308,9 @@ wind-driven widening of the binary \todo{estimate and ref}, therefore
 one can expect this system to produce a runaway star of velocity
 comparable to \zoph\ if the stripped donor can successfully explode
 \ref{schneider:20, laplace:21, vartanyan:21}.
+
+\todo{discuss rotation rate and radius with fig. 3}
+
 
 
 
@@ -288,6 +351,12 @@ comparable to \zoph\ if the stripped donor can successfully explode
     because of internal mixing. }
   \label{fig:surface_ab}
 \end{figure}
+
+\todo{logg is maybe on the low side}
+
+\subsection{Mixing and abundances}
+
+
 
 \section{Robustness of the model}
 \label{sec:param_variations}
