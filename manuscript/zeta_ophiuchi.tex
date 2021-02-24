@@ -189,23 +189,22 @@ the width of the main sequence from \cite{brott:11} following
 \cite{claret:17}. We also use the superadiabaticity reduction
 introduced in \texttt{MESA} 15140.
 
-Rotation is initialized assuming tidal synchronization at the
+We treat rotation in the ``shellular'' approximation and initialize it
+assuming tidal synchronization at the
 beginning of the evolution. Our models include in a diffusive
 approximation the effect of Eddington-Sweet circulations
 \citep{sweet:50}, which dominates the chemical mixing due to
 rotation. We also include the secular and dynamical shear
 instabilities, and the Goldreich-Schubert-Fricke instability as in
 \cite{gotberg:17, gotberg:18, laplace:20, laplace:21}.  We assume a Spruit-Tayler
-dynamo for the transport of angular momentum, and chose the same free
-parameters as \cite{heger:00}. This also includes the rotational
-enhancement of wind mass loss as in \cite{langer:98}.\todo{check this
-  statement
-}
+dynamo for the transport of angular momentum \citep{spruit:02}, and chose the same free
+parameters as \cite{heger:00} \todo{check this statement}. This also includes the rotational
+enhancement of wind mass loss as in \cite{langer:98}.
 
 We treat wind mass loss with the \cite{vink:00,vink:01} hot wind,
 and \cite{dejager:88} with a scaling factor of 1. This effectively
 means our wind mass loss rate post-mass transfer is overestimated by
-almost a factor of 100 \citep[weak wind problem][]{marcolino:09}.
+almost a factor of 100 \citep[weak wind problem, see][]{marcolino:09}.
 
 
 Both stars are evolved simultaneously on the same timesteps until
@@ -217,25 +216,18 @@ momentum. Mass transfer is conservative until the accretor reaches
 critical rotation, after which rotationally enhanced mass loss governs
 the accretion efficiency.
 
-We define RLOF detachment as the moment
-after the onset of RLOF, when the donor has a surface He mass fraction
-larger than 0.35 (indicating that a significant amount of envelope has
-been lost or transferred), a radius smaller than its terminal-age main
-sequence (TAMS) radius, and no mass is being transferred. At this
-point in time, we save a model for the accreting star, and continue
-its evolution until TAMS with the same setup.
+To define RLOF detachment, we take advantage of the fact that we focus
+here on post-main sequence (case B, \citealt{kippenhahn:67})
+interactions among massive stars which are not expected to hundreds of
+$R_\odot$ during He shell burning \citep[e.g.,][]{laplace:20}.  We
+define RLOF detachment as the moment after the onset of RLOF, when the
+donor has a surface He mass fraction larger than 0.35 (indicating that
+a significant amount of envelope has been lost or transferred), a
+radius smaller than its terminal-age main sequence (TAMS) radius, and
+no mass is being transferred anymore. At this point in time, we save a
+model for the accreting star, and continue its evolution as a single
+star until TAMS with the same setup.
 
-
-
-
-
-\todo{  Methods:
-  \begin{itemize}
-  \item self-consistent modeling of the evolution
-  \item depends on many free parameters governing the intricate and
-    coupled physics of mass transfer, mixing, rotation
-  \end{itemize}
-}
 
 \section{Best model}
 \label{sec:best_model}
