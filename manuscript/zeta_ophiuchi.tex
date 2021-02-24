@@ -163,24 +163,27 @@ required for this kind of computations in
 \Secref{sec:param_variations}. Finally, we conclude in
 \Secref{sec:conclusions}.
 
-\section{Modeling massive binaries with \texttt{MESA}}
+\section{Massive binaries with \texttt{MESA}}
 \label{sec:methods}
 
-Modeling the evolution of massive binaries is challenging because of
-the intricate and coupled role of several notoriously difficult
-stellar physics ingredients (e.g., rotation, mixing, high mass-loss
-rates). Here we follow self-consistently the coupled evolution of two
-massive stars in a binary system using \texttt{MESA} (version
-15140). Our choice of input parameters and our numerical results are
-available at \todo{link}. We discuss here only the main relevant
-physical parameters, and Appendix~\ref{sec:software} gives more
-details on our choice of input physics.
+Modeling the evolution of massive binaries
+($M_1\gtrsim 20\,M_\odot \geq M_2$) is challenging because of the
+intricate and coupled role of several notoriously difficult stellar
+physics ingredients (differential rotation, mixing, high mass-loss
+rates, accretion, etc.) Here we follow self-consistently in one
+dimension the coupled evolution of two massive stars in a binary
+system using \texttt{MESA} (version 15140). Our choice of input
+parameters and our numerical results are available at \todo{link}. We
+discuss here only the main relevant physical parameters, and
+Appendix~\ref{sec:software} gives more details on our choice of input
+physics.
 
 We adopt the Ledoux criterion to determine convective stability and a
-mixing length parameter of $1.5$. Semiconvection \citep{langer:85} and a
-thermohaline \citep{kippenhahn:83} mixing are included with an
-efficiency of $1.0$ for both. We use the exponential core
-overshooting from \cite{herwig:00} with free parameters
+mixing length parameter of $1.5$. Semiconvection and a thermohaline
+mixing are included with an efficiency of $1.0$ for both using the
+algorithms from \cite{langer:83} and \cite{kippenhahn:80},
+respectively. We use the exponential core overshooting from
+\cite{herwig:00} with free parameters
 $(f, f_0)=(4.25\times10^{-2}, 10^{-3})$ which were chosen to reproduce
 the width of the main sequence from \cite{brott:11} following
 \cite{claret:17}. We also use the superadiabaticity reduction
@@ -188,12 +191,16 @@ introduced in \texttt{MESA} 15140.
 
 Rotation is initialized assuming tidal synchronization at the
 beginning of the evolution. Our models include in a diffusive
-approximation the effect of Eddington-Sweet circulations \citep{},
-which dominates the chemical mixing due to rotation, and also SSI, DSI
-and GSF \todo{sharpen and ref} \citep[e.g.,]{gotberg:17, gotberg:18}.
-We assume a Spruit-Tayler dynamo for the transport of angular
-momentum, and chose the same free parameters as \cite{heger:00}. This
-also includes the rotational enhancement of wind mass loss as in \cite{langer:98}/
+approximation the effect of Eddington-Sweet circulations
+\citep{sweet:50}, which dominates the chemical mixing due to
+rotation. We also include the secular and dynamical shear
+instabilities, and the Goldreich-Schubert-Fricke instability as in
+\cite{gotberg:17, gotberg:18, laplace:20, laplace:21}.  We assume a Spruit-Tayler
+dynamo for the transport of angular momentum, and chose the same free
+parameters as \cite{heger:00}. This also includes the rotational
+enhancement of wind mass loss as in \cite{langer:98}.\todo{check this
+  statement
+}
 
 We treat wind mass loss with the \cite{vink:00,vink:01} hot wind,
 and \cite{dejager:88} with a scaling factor of 1. This effectively
@@ -469,6 +476,8 @@ efficiency factor of
 % become cool enough to use a cool wind algorithm \citep[e.g.,][]{renzo:17}.
 
 The inlists, processing scripts, and model output will be made available at~\href{link}{link}.
+
+\acknowledgements{E.~Zapartas}
 
 \bibliographystyle{aasjournal}
 \bibliography{./zeta_ophiuchi.bib}
