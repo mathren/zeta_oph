@@ -276,6 +276,22 @@ fraction and causes noisy features on the HR diagram
 \citep[e.g.,][]{cantiello:07}.
 
 
+\Figref{fig:MT} shows the rate of mass loss/accretion in both stars
+during the RLOF phase. The top panel focuses on the donor star
+which loses mass to RLOF (cyan line) and wind mass loss (thin red
+line). The combined effect of these is shown in the dashed blue line.
+The bottom panel shows instead the accreting star, which grows in mass becau
+
+
+The entire duration of this case B stable RLOF
+is about $10^4$\,years, and the mass transfer rates reaches very high
+values above $10^{-2.5}\,M_\odot\ \mathrm{yr^{-1}}$.
+
+
+
+The total amount
+of mass lost transferred is \todo{XXX}, of which on
+
 \todo{maybe paragraph below can be cut}
 At the end of RLOF, the donor star briefly expands again
 ($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
@@ -286,6 +302,21 @@ transferring mass in older \texttt{MESA} releases, because although
 only a very small amount of mass is involved, this would lead to large
 radial expansion much beyond the donor's Roche lobe, and cause
 numerical problems.
+
+
+
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{MT}
+  \caption{Mass transfer rates as a function of time during RLOF. The top (bottom) panel
+    shows the donor (accretor) star. The cyan solid lines show the
+    mass transfer rate between the two stars. The dashed blue lines
+    show the actual change in the mass of the stars (due to the
+    combination of wind, and accretion efficiency). The thin red
+    lines show the wind mass loss rates. During RLOF the accretor
+    reaches critical rotation, which leads to oscillations in the
+    rotationally-enhahnced wind mass loss.}
+  \label{fig:MT}
+\end{figure}
 
 
 \todo{describe fig. 2}
@@ -314,19 +345,6 @@ comparable to \zoph\ if the stripped donor can successfully explode
 \todo{discuss rotation rate and radius with fig. 3}
 
 
-
-
-\begin{figure}[htbp]
-  \includegraphics[width=0.5\textwidth]{MT}
-  \caption{Mass transfer history during RLOF. The top (bottom) panel
-    shows the donor (accretor) star. The cyan solid line shows the
-    mass transfer rate between the two stars, the dashed blue line
-    shows the actual change in the mass of the stars, and the thin red
-    line shows the wind mass loss rates. During RLOF the accretor
-    reaches critical rotation, which leads to oscillations in the
-    rotationally-enhahnced wind mass loss. \todo{better x-axis}}
-  \label{fig:MT}
-\end{figure}
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
@@ -474,7 +492,19 @@ The inlists, processing scripts, and model output will be made available at~\hre
 
 \section{Resolution tests}
 \label{sec:res_tests}
+\subsection{Spatial resolution}
 
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{spatial_res_plot}
+  \caption{Left: HRD comparison for our fiducial binary model varying
+  the number of mesh points. We only show the evolution until our definition
+  of RLOF detachment. Right: number of mesh points as a
+  function of timestep number. In both panels, the blue/cyan tracks show the donor stars, the
+red/pink tracks show the accretor. Thicker dashed lines correspond to
+the models at higher resolution (i.e., lower $\Delta$ which indicates
+the value of \texttt{mesh\_delta\_coeff}).}
+\end{figure*}
 
 \acknowledgements{E.~Zapartas}
 
