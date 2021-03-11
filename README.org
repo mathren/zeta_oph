@@ -20,6 +20,10 @@ fitting of pre-MS asteroseismology of one star by [[https://ui.adsabs.harvard.ed
 Indeed, Z lower than Zsun is required to fit the temperature required
 by Villamariz & Herrero 2005.
 
+*** TODO Vink 2009
+
+    - [] check https://ui.adsabs.harvard.edu/abs/2009A%26A...505..743V/abstract
+
 ** Miscellaneous notes
 
 *** MESA
