@@ -314,36 +314,8 @@ weight $\mu$ on top of the primordial envelope of the accretor. This
 also starts vigorous thermohaline mixing in the accreting star, which,
 together with rotational mixing, progressively dilutes the surface He
 mass fraction and causes noisy features on the HR diagram
-\citep[e.g.,][]{cantiello:07}.
-
-\Figref{fig:MT} shows the rate of mass loss/accretion in both stars
-during the RLOF phase. The top panel focuses on the donor star
-which loses mass to RLOF (cyan line) and wind mass loss (thin red
-line). The combined effect of these is shown in the dashed blue line.
-The bottom panel shows instead the accreting star, which grows in mass
-because of the mass transfer.
-
-
-The entire duration of this case B stable RLOF
-is about $10^4$\,years, and the mass transfer rates reaches very high
-values above $10^{-2.5}\,M_\odot\ \mathrm{yr^{-1}}$.
-
-
-
-The total amount
-of mass lost transferred is \todo{XXX}, of which on
-
-\todo{maybe paragraph below can be cut}
-At the end of RLOF, the donor star briefly expands again
-($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
-is due to the partial recombination of the He rich material now at the
-surface, which causes a transient surface convection layer. We find
-this to be the culprit of difficulties in modeling massive binaries
-transferring mass in older \texttt{MESA} releases, because although
-only a very small amount of mass is involved, this would lead to large
-radial expansion much beyond the donor's Roche lobe, and cause
-numerical problems.
-
+\citep[e.g.,][]{cantiello:07}. We discuss in more detail the mixing
+processes inside the accretor in \Secref{sec:mixing}
 
 
 \begin{figure}[htbp]
@@ -359,6 +331,39 @@ numerical problems.
   \label{fig:MT}
 \end{figure}
 
+
+
+\Figref{fig:MT} shows the rate of mass loss/accretion in both stars
+during the RLOF phase. The top panel focuses on the donor star
+which loses mass to RLOF (cyan line) and wind mass loss (thin red
+line). The combined effect of these is shown in the dashed blue line.
+The bottom panel shows instead the accreting star, which grows in mass
+because of the mass transfer. The entire duration of this case B stable RLOF
+is about $10^4$\,years, and the mass transfer rates reaches very high
+values above $10^{-2.5}\,M_\odot\ \mathrm{yr^{-1}}$.
+
+The total amount of mass lost by the donor is
+$\sim$$10.6\,M_\odot$, of which only
+$\sim$$3.4\,M_\odot$ are successfully accreted by the
+accretor. Accounting also for the wind mass loss, after RLOF the donor
+star is a He star with
+$\sim$$9.4\,M_\odot$, and the accretor is a H-rich star of
+$\sim$$20.1\,M_\odot$. Presently available mass estimates for the
+presently single \zoph\ are highly uncertain, but most include
+$20\,M_\odot$. \todo{improve}
+
+At the end of RLOF, the donor star briefly expands again
+($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
+is due to the partial recombination of the He rich material now at the
+surface, which causes a transient surface convection layer. We find
+this to be the culprit of difficulties in modeling massive binaries
+transferring mass in older \texttt{MESA} releases, because although
+only a very small amount of mass is involved, this would lead to large
+radial expansion much beyond the donor's Roche lobe, and cause
+numerical problems.
+
+\subsection{Internal mixing and angular momentum transport in the accretor}
+\label{sec:mixing}
 
 \todo{describe fig. 2}
 
