@@ -225,6 +225,9 @@ redistribution in the star?
      That is the damned surface convection layer that pops up because
      of partial recombination of He.
 
+
 ** TODOs
 
 *** TODO build python dependencies list with poetry
+
+*** TODO read wang + 2020 (effects of binarity on the main sequence width)
