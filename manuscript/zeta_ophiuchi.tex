@@ -355,12 +355,6 @@ $\sim$2\,Myr within the represented errorbars after the end of RLOF. Assuming th
 $1.78\pm0.21$ \citep{neuhauser:20}, and estimating a remaining lifetime of the donor of
 $\sim$0.5\,Myr, this gives the correct timescale for the binary SN scenario.
 
-We note that the observed position of \zoph\ on the HRD, and especially
-its relatively high $T_\mathrm{eff}$ would be hard to reproduce
-assuming initially less massive accretors (which would remain too cool
-even after accreting mass), or more equal initial mass ratio (which
-would produce a too evolved accretor at the onset of mass transfer).
-
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{MT}
   \caption{Mass transfer rates as a function of time during RLOF. The top (bottom) panel
@@ -375,6 +369,11 @@ would produce a too evolved accretor at the onset of mass transfer).
 \end{figure}
 
 
+We note that the observed position of \zoph\ on the HRD, and especially
+its relatively high $T_\mathrm{eff}$ would be hard to reproduce
+assuming initially less massive accretors (which would remain too cool
+even after accreting mass), or more equal initial mass ratio (which
+would produce a too evolved accretor at the onset of mass transfer).
 
 \Figref{fig:MT} shows the rate of mass loss/accretion in each star
 during RLOF. The top panel focuses on the donor star
@@ -420,28 +419,56 @@ is generally lower than the RLOF mass transfer rate.
 
 
 
-\subsection{Internal mixing and angular momentum transport in the accretor}
+\subsection{Internal mixing and surface composition of the accretor}
 \label{sec:mixing}
 
- \todo{clarify rotational mixing
-  dominates, show mixing plot}
+\texttt{MESA} treats mixing processes in the diffusion approximation.
+To illustrate the dominant processes processes throughout the
+accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
+coefficients as a function of mass coordinate at selected times. Each
+panel corresponds to one of the thin blue crosses in the bottom panel
+of \Figref{fig:HRD_both}. The last panel represents the predicted
+internal structure of \zoph\ as observed.
+
+In \Figref{fig:D_mix}, the thin red lines correspond to convection,
+with the initial convective core of
+$\sim$$6\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The thin blue lines mark mixing processes that are not related to rotation, nor are any of the other processes explicitly shown, which in these models effectively means overshooting. The extension of the convective diffusion coefficient above the core in all panels is the typical behavior for an exponentially decreasing overshooting. Purple and pink represent semiconvection and thermohaline mixing respectively. Before mass transfer (left-most panel), only a small amount of sub-surface thermohaline mixing occurs, with a mass extent comparable or smaller to the sub-surface convective zone, and no semiconvection occurs. The thick cyan line corresponds to the total diffusion coefficient, obtained as the sum of the diffusion coefficients for each process
+modeled: where the cyan line is not overlapping with the others, rotational mixing (and more specifically Eddington-Sweet meridional circulation) is the dominant process.
+
+During RLOF (second and third panel), the spin up due to accretion causes an increase in the rotational mixing (cyan line above the core), and the accretion of nuclearly processed material progressively widens the thermohaline mixing region at the surface. Late during the mass transfer (third panel), thermohaline mixing dominates the outermost layers -- except within the sub-surface convective zone, but throughout most of the envelope rotation does the lion's share of the mixing. The two processes together mix inwards and dilute the CNO-enriched material coming from the donor's surface.
+
+At the same time, the increase in the accretor mass drives
+rejuvenation \citep[e.g.][]{schneider:16}. This can be seen as a
+growth of the convective core from
+$\sim$$6\,M_\odot$ to almost $\sim$$8\,M_\odot$, plus the
+corresponding growth of the overshooting region. This mixes inward
+H-rich material resulting in an elongation of the accretor's lifetime,
+and at the same time mixes outward CNO-equilibrium matter, connecting
+the N-rich core with the outer envelope polluted from the top.
+
 
 \begin{figure*}[htbp]
   \includegraphics[width=\textwidth]{D_mix}
-  \caption{Internal mixing in the accreting star during the RLOF. The
-    y axis shows the total diffusion coefficient (thick cyan line),
-    and the contribution from processes unrelated to rotation (think
-    blue line). These include convection (shown in red), overshooting
-    (visible above the convective core), thermohaline mixing (pink)
-    and semiconvection (in purple).}
+  \caption{Mixing diffusion coefficients in the accretor star. From
+    left to right, each panel shows times during the main sequence
+    ($t$=2.71\,Myr), right before the ``v-shaped'' feature during RLOF
+    ($t$=7.25\,Myr), close to the end of RLOF ($t$=7.26\,Myr), and
+    after mass transfer ($t=8.38$\,Myr). The total diffusion
+    coefficient (thick cyan line) is obtained as the sum of
+    non-rotational mixing processes (i.e., here overshooting, thin blue line), convection
+    (shown in red), thermohaline mixing (pink) and semiconvection (in
+    purple). The HRD position for each panel is marked by a thin blue
+    cross in \Figref{fig:HRD_both}}
   \label{fig:D_mix}
 \end{figure*}
 
+\todo{abundances plot -- N14 only maybe?}
 
 
-\todo{discuss rotation rate and radius with fig. 3}
+\subsection{Angular momentum transport and internal structure}
+\label{sec:rot}
 
-
+\todo{discuss rotation rate and radius}
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
