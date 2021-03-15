@@ -338,7 +338,9 @@ $v_2\simeq40\,\kms$, which is expected to decrease a bit further due to wind-dri
 
 Accounting for both wind mass loss and the amount of mass transferred, at the end of RLOF the donor becomes a He star of
 $\sim$$9.4\,M_\odot$, likely to contract further and appear as a
-Wolf-Rayet star. \todo{Ylva: want to expand?}.
+Wolf-Rayet star. It's surface H mass fraction is $\lesssim 0.2$ and
+most of the H is likely to be removed by further wind mass loss
+\citep[e.g.,][]{gotberg:17}. \todo{Ylva: want to expand?}.
 For our assumed scenario to work, such donor needs to successfully
 explode in a SN, breaking the binary system and making a neutron star
 remnant. While the post-RLOF donor mass we obtain is rather high, recent studies
@@ -348,7 +350,7 @@ emphasize that neither the initial donor mass nor the initial period are
 observable, and thus there is room to chose different values to obtain
 easier to explode donors and faster (or slower) accretors post-RLOF.
 
-From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The red point with errors in the bottom panel of \Figref{fig:HRD_both} marks the approximate position of \zoph based on the analysis of \cite{villamariz:05}. The color of the track in \Figref{fig:HRD_both} indicate that our accreting star spends about
+From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly different morphology due to the accretion of matter partially processed in the core of the donor before mass transfer. The red point with errors in the bottom panel of \Figref{fig:HRD_both} marks the approximate position of \zoph based on the analysis of \cite{villamariz:05}. The color of the track in \Figref{fig:HRD_both} indicate that our accreting star spends about
 $\sim$2\,Myr within the represented errorbars after the end of RLOF. Assuming the kinematic age of
 $1.78\pm0.21$ \citep{neuhauser:20}, and estimating a remaining lifetime of the donor of
 $\sim$0.5\,Myr, this gives the correct timescale for the binary SN scenario.
@@ -399,7 +401,7 @@ At the end of RLOF, the donor star briefly expands again
 is due to the partial recombination of the He rich material now at the
 surface, which causes a transient surface convection layer. This
 causes the second broad peak in the mass transfer rates seen at
-$7.262$\,Myrs. We find this to be the culprit of difficulties in
+$7.261$\,Myrs. We find this to be the culprit of difficulties in
 modeling massive binaries transferring mass in older \texttt{MESA}
 releases, because although only a very small amount of mass is
 involved, this would lead to large radial expansion much beyond the
@@ -436,24 +438,6 @@ is generally lower than the RLOF mass transfer rate.
 \end{figure*}
 
 
-After RLOF, the donor star is a 12.6$\,M_\odot$ core with surface He
-mass fraction of $\sim$0.8, and quickly contracts.
-
-\todo{fix this, and maybe goes into methods}
-We keep evolving the
-binary until core-He exhaustion of the donor \todo{defined how?}. The
-evolutionary track of the top panel stops at this point.  We then take
-the accretor, which has now a mass of $20.2\,M_\odot$ and an orbital
-velocity of $\sim 52\kms$ (corresponding to a period of $\sim\,130$
-days) and continue it evolution as a single star
-with the same setup until its terminal age main sequence (shown in the
-bottom panel).
-
-The orbital velocity would likely decrease a bit further due to
-wind-driven widening of the binary \todo{estimate and ref}, therefore
-one can expect this system to produce a runaway star of velocity
-comparable to \zoph\ if the stripped donor can successfully explode
-\ref{schneider:20, laplace:21, vartanyan:21}.
 
 \todo{discuss rotation rate and radius with fig. 3}
 
