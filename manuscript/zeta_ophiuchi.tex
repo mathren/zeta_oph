@@ -31,7 +31,6 @@
 \author{Y.~G\"otberg}
 \affiliation{The Observatories of the Carnegie Institution for Science, 813 Santa Barbara Street, Pasadena, CA 91101, USA}
 
-\author{\todo{TBD}}
 
 \begin{abstract}
   Binarity dominates the evolution of massive stars, and the nearest
@@ -261,7 +260,8 @@ $R_\odot$ during He shell burning at the metallicity we consider
 after the onset of RLOF when the donor has a surface He mass fraction
 larger than 0.35 (indicating that a significant amount of envelope has
 been lost or transferred), a radius smaller than its terminal-age main
-sequence (TAMS) radius, and no mass is being transferred anymore. At
+sequence (TAMS, defined as when the central mass fraction of H drops
+below $10^4$) radius, and no mass is being transferred anymore. At
 this point in time, we save a model for the accreting star, and
 continue its evolution as a single star until TAMS with the same
 setup.
@@ -467,6 +467,23 @@ the N-rich core with the outer envelope polluted from the top.
 \todo{abundances plot -- N14 only maybe?}
 
 
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{n14_struct_complete_zeta_ab}
+  \caption{$^{14}\mathrm{N}$ mass fraction as a function of mass
+    coordinate for $20\,M_\odot$ single star models with increasing
+    $\omega/\omega_\mathrm{crit}$ at birth (first four panels), and
+    for the accretor of our fiducial binary. The dotted thick red line
+    marks the primordial value, the thin dashed red line marks the
+    surface value at TAMS. In the last panel, the thin vertical dashed line shows the initial total mass of the accretor. The colors of each profile go from dark to
+    light at TAMS, and selected profiles along the main sequence are
+    shown. The solid red line and the shaded region correspond to the
+    mass fraction of $^{14}\mathrm{N}$ estimated by
+    \cite{villamariz:05} assuming a surface H mass fraction of 0.7:
+    the abundance of $^{14}\mathrm{N}$ alone is not strongly constraining.}
+  \label{fig:n14}
+\end{figure*}
+
 \subsection{Angular momentum transport and internal structure}
 \label{sec:rot}
 
@@ -483,6 +500,14 @@ the N-rich core with the outer envelope polluted from the top.
   \label{fig:rot}
 \end{figure}
 
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{zeta_Rotational_struct}
+  \caption{Internal rotational profile for $20\,M_\odot$ single star models with
+    increasing $\omega/\omega_\mathrm{crit}$ at birth (first four
+    panels), and for the accretor of our fiducial binary. As in \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light at TAMS, and the thin dashed red line mark the TAMS surface rotation rate. In the last panel, the thin vertical dashed line shows the initial total mass of the accretor. We note that at TAMS the core of the accretor is rotating almost as fast as its surface, and both are faster than the surface of single star models.}
+\end{figure*}
 
 
 \section{Robustness of the model}
