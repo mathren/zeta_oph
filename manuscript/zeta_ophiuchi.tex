@@ -243,7 +243,7 @@ almost a factor of 100 \citep[weak wind problem, see][]{marcolino:09}.
 
 
 Both stars are evolved simultaneously on the same timesteps until
-after the donor detaches from the Roche lobe. We follow \cite{kolb:90}
+after the donor detaches from its Roche lobe. We follow \cite{kolb:90}
 to calculate the mass transfer rate from optically thick layers of the
 donor star during Roche lobe overflow (RLOF). Moreover, we assume that
 the transfered layers reach the accretor with the accretor's specific
@@ -272,16 +272,17 @@ setup.
   Ophiuchi's properties}
 \label{sec:best_model}
 
-\begin{figure}[bp]
+\begin{figure}[tbp]
   \includegraphics[width=0.5\textwidth]{HRD_both}
   \caption{HRD for the donor star (top) and accretor star (bottom) of
     the progenitor binary of \zoph. Each point is separated by 50
     years of evolution. The colors represent the
     stellar age, the red datapoint shows the position of \zoph\
-    according to \cite{villamariz:05}, and the black diamonds mark the
+    according to \cite{villamariz:05}, thin blue crosses mark the
+    position of the profiles shown in \Figref{fig:D_mix} and the black diamonds mark the
     position at the end of the binary run. We continue the accretor
     evolution as a single star from there until core H depletion,
-    hence the bottom panel shows a longer time. Note the different
+    hence the bottom panel shows a longer time. We emphasize the different
     scales on the two panels. The thin gray dashed line show the main
     sequence evolution of non-rotating single stars of 15, 17, 25, and
     30\,$M_\odot$ at $Z=0.01$ for comparison.}
@@ -314,15 +315,15 @@ $\sim35\,R_\odot$. Once the accretor reaches critical rotation
 $T_\mathrm{eff}$ increases. At $T_\mathrm{eff}\simeq 4.{43}$\,K the
 material transferred from the companion star becomes progressively
 more He-rich, causing a ``v-shaped'' feature in the evolutionary
-track. This indicates that the outer layers of the donor core are
+track. This indicates that the outer layers of the donor's core are
 uncovered by mass transfer, after the convective core recession in
 mass during the main sequence. On top of modifying the morphology of
 the evolutionary track, this late mass transfer puts material at high
 mean molecular weight $\mu$ on top of the primordial envelope of the
 accretor. This also starts vigorous thermohaline mixing in the
 accreting star, which, together with rotational mixing, progressively
-dilutes the surface He mass fraction and causes noisy features on the
-HR diagram \citep[e.g.,][]{cantiello:07}.  \Secref{sec:mixing}
+dilutes the surface He and N mass fractions and causes noisy features on the
+HR diagram \citep[e.g.,][]{cantiello:07}. \Secref{sec:mixing}
 describes in more detail the mixing processes inside the accretor, we
 emphasize here that the algorithmic choices made to model mixing might
 impact the morphology of the accretor's evolutionary track during
@@ -333,7 +334,7 @@ We evolve the binary system until the black diamonds in
 the Roche Lobe. At this point, the accretor is a H-rich fast-rotating
 star of
 $\sim$$20.1\,M_\odot$. Available mass estimates for the presently single \zoph\ are highly uncertain, but most include
-$20\,M_\odot$ \citep[e.g.,][]{hoogerwerf:01, villamariz:05, neuhauser:20}. Its post-RLOF orbital velocity is
+$20\,M_\odot$ \citep[e.g.,][]{hoogerwerf:01, villamariz:05, neuhauser:20}. The accretor's post-RLOF orbital velocity is
 $v_2\simeq40\,\kms$, which is expected to decrease a bit further due to wind-driven widening of the binary, but is in good agreement with the presently observed runaway velocity of \zoph.
 
 Accounting for both wind mass loss and the amount of mass transferred, at the end of RLOF the donor becomes a He star of
@@ -341,7 +342,7 @@ $\sim$$9.4\,M_\odot$, likely to contract further and appear as a
 Wolf-Rayet star. It's surface H mass fraction is $\lesssim 0.2$ and
 most of the H is likely to be removed by further wind mass loss
 \citep[e.g.,][]{gotberg:17}. \todo{Ylva: want to expand?}.
-For our assumed scenario to work, such donor needs to successfully
+\todo{maybe more next paragraph to discussion?} For our assumed scenario to work, such donor needs to successfully
 explode in a SN, breaking the binary system and making a neutron star
 remnant. While the post-RLOF donor mass we obtain is rather high, recent studies
 suggest higher ``explodability'' of donor stars in binary systems
@@ -350,7 +351,7 @@ emphasize that neither the initial donor mass nor the initial period are
 observable, and thus there is room to chose different values to obtain
 easier to explode donors and faster (or slower) accretors post-RLOF.
 
-From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly different morphology due to the accretion of matter partially processed in the core of the donor before mass transfer. The red point with errors in the bottom panel of \Figref{fig:HRD_both} marks the approximate position of \zoph based on the analysis of \cite{villamariz:05}. The color of the track in \Figref{fig:HRD_both} indicate that our accreting star spends about
+From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly different slope due to the close-to-critical rotation and the accretion of matter partially processed in the core of the donor before mass transfer. The red point with errors in the bottom panel of \Figref{fig:HRD_both} marks the approximate position of \zoph\ based on the analysis of \cite{villamariz:05}. The color of the track in \Figref{fig:HRD_both} indicate that our accreting star spends about
 $\sim$2\,Myr within the represented errorbars after the end of RLOF. Assuming the kinematic age of
 $1.78\pm0.21$ \citep{neuhauser:20}, and estimating a remaining lifetime of the donor of
 $\sim$0.5\,Myr, this gives the correct timescale for the binary SN scenario.
@@ -375,15 +376,18 @@ assuming initially less massive accretors (which would remain too cool
 even after accreting mass), or more equal initial mass ratio (which
 would produce a too evolved accretor at the onset of mass transfer).
 
-\Figref{fig:MT} shows the rate of mass loss/accretion in each star
+\Figref{fig:MT} shows the rate of mass change for each star
 during RLOF. The top panel focuses on the donor star
 which loses mass to RLOF (cyan line) and wind mass loss (thin red
 line). The dashed blue lines show their combination resulting in the
 actual rate of mass change of the stars.
 The bottom panel shows instead the accreting star, which grows in mass
-because of the mass transfer. The entire duration of this case B stable RLOF
-is only about $10^4$\,years, and the mass transfer rates reaches very high
-values above $10^{-2.5}\,M_\odot\ \mathrm{yr^{-1}}$.
+because of the mass transfer. The entire duration of this case B
+stable RLOF (and thus of the feature in the bottom panel of
+\Figref{fig:HRD_both} from the departure from the main-sequence to the
+black diamond) is only about $10^4$\,years. At peak the mass transfer rates reaches very high
+values above $10^{-2.5}\,M_\odot\ \mathrm{yr^{-1}}$, and taps into the
+optically thick matter of the donor.
 
 During RLOF, the total amount of mass lost by the donor is
 $\Delta M_\mathrm{donor} \simeq 10.6\,M_\odot$, of which only
@@ -397,14 +401,14 @@ the accreting star.
 
 At the end of RLOF, the donor star briefly expands again
 ($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
-is due to the partial recombination of the He rich material now at the
-surface, which causes a transient surface convection layer. This
-causes the second broad peak in the mass transfer rates seen at
-$7.261$\,Myrs. We find this to be the culprit of difficulties in
-modeling massive binaries transferring mass in older \texttt{MESA}
-releases, because although only a very small amount of mass is
-involved, this would lead to large radial expansion much beyond the
-donor's Roche lobe, and cause numerical problems.
+is due to the partial recombination of the now He-rich outer layers,
+which causes a transient surface convection layer. This causes the
+second broad peak in the mass transfer rates centered at $7.261$\,Myrs. We
+find this to be the culprit of difficulties in modeling massive
+binaries transferring mass in older \texttt{MESA} releases, because
+although only a very small amount of mass is involved, this would lead
+to large radial expansion much beyond the donor's Roche lobe, and
+cause numerical problems.
 
 The wind mass loss (in red) controls the accretion efficiency and thus
 the difference between the actual rate of change in mass of the
@@ -416,37 +420,8 @@ accreted mass. The interplay between the stellar radius and rotation
 causes the oscillations visible in the bottom panel, whose amplitude
 is generally lower than the RLOF mass transfer rate.
 
-
-
-
 \subsection{Internal mixing and surface composition of the accretor}
 \label{sec:mixing}
-
-\texttt{MESA} treats mixing processes in the diffusion approximation.
-To illustrate the dominant processes throughout the
-accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
-coefficients as a function of mass coordinate at selected times. Each
-panel corresponds to one of the thin blue crosses in the bottom panel
-of \Figref{fig:HRD_both}, and the gray shaded area marks mass that is
-accreted during RLOF. The last panel represents the predicted
-internal structure of \zoph\ as observed.
-
-In \Figref{fig:D_mix}, the thin red lines correspond to convection,
-with the initial convective core of
-$\sim$$6\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The thin blue lines mark mixing processes that are not related to rotation, nor are any of the other processes explicitly shown, which in these models effectively means overshooting. The extension of the convective diffusion coefficient above the core in all panels is the typical behavior for an exponentially decreasing overshooting. Purple and pink represent semiconvection and thermohaline mixing respectively. Before mass transfer (left-most panel), only a small amount of sub-surface thermohaline mixing occurs, with a mass extent comparable or smaller to the sub-surface convective zone, and no semiconvection occurs. The thick cyan line corresponds to the total diffusion coefficient, obtained as the sum of the diffusion coefficients for each process
-modeled: where the cyan line is not overlapping with the others, rotational mixing (and more specifically Eddington-Sweet meridional circulation) is the dominant process.
-
-During RLOF (second and third panel), the spin up due to accretion causes an increase in the rotational mixing (cyan line above the core), and the accretion of nuclearly processed material progressively widens the thermohaline mixing region at the surface. Late during the mass transfer (third panel), thermohaline mixing dominates the outermost layers -- except within the sub-surface convective zone, but throughout most of the envelope rotation does the lion's share of the mixing. The two processes together mix inwards and dilute the CNO-enriched material coming from the donor's surface.
-
-At the same time, the increase in the accretor mass drives
-rejuvenation \citep[e.g.,][]{schneider:16}. This can be seen as a
-growth of the convective core from
-$\sim$$6\,M_\odot$ to almost $\sim$$8\,M_\odot$, plus the
-corresponding growth of the overshooting region. This mixes inward
-H-rich material resulting in an elongation of the accretor's lifetime,
-and at the same time mixes outward CNO-equilibrium matter, connecting
-the N-rich core with the outer envelope polluted from the top.
-
 
 \begin{figure*}[htbp]
   \includegraphics[width=\textwidth]{D_mix}
@@ -464,7 +439,87 @@ the N-rich core with the outer envelope polluted from the top.
   \label{fig:D_mix}
 \end{figure*}
 
-\todo{abundances plot -- N14 only maybe?}
+\texttt{MESA} treats mixing processes in the diffusion approximation \citep{paxton:11}.
+To illustrate the dominant processes throughout the
+accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
+coefficients as a function of mass coordinate at selected times. Each
+panel corresponds to one of the thin blue crosses in the bottom panel
+of \Figref{fig:HRD_both}, and the gray shaded areas mark mass that is
+accreted during RLOF. The last panel roughly represents the predicted
+internal structure of \zoph\ as observed today.
+
+In \Figref{fig:D_mix}, the thin red lines correspond to convection,
+with the initial convective core of
+$\sim$$6\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The thin blue lines mark mixing processes that are not related to rotation, nor are any of the other processes explicitly shown, which in these models effectively means overshooting. The extension of the convective diffusion coefficient above the core in all panels is the typical behavior for an exponentially decreasing overshooting. Purple and pink represent semiconvection and thermohaline mixing, respectively. Before mass transfer (left-most panel), only a small amount of sub-surface thermohaline mixing occurs, with a mass extent comparable or smaller to the sub-surface convective zone, and no semiconvection occurs. The thick cyan line corresponds to the total diffusion coefficient, obtained as the sum of the diffusion coefficients for each process modeled: where the cyan line is not overlapping with the others, rotational mixing (and more specifically Eddington-Sweet meridional circulation) is the dominant process.
+
+During RLOF (second and third panel), the spin up due to accretion causes an increase in the rotational mixing (cyan line in the outer layers), and the accretion of nuclearly processed material progressively widens the thermohaline mixing region at the surface. Late during the mass transfer (third panel), thermohaline mixing dominates the outermost layers -- except within the sub-surface convective zone, but throughout most of the envelope rotation does the lion's share of the mixing. Thermohaline mixing and Eddington-Sweet circulations together mix inwards and dilute the CNO-enriched material coming from the donor's surface.
+
+At the same time, the increase in the accretor mass drives
+rejuvenation \citep[e.g.,][]{schneider:16}. This can be seen as a
+growth of the convective core from
+$\sim$$6\,M_\odot$ to almost $\sim$$8\,M_\odot$, plus the
+corresponding growth of the overshooting region. This mixes inward
+H-rich material resulting in an elongation of the accretor's lifetime,
+and at the same time mixes outward CNO-equilibrium matter, connecting
+the N-rich core with the outer envelope polluted from the top.
+
+\input{table.tex}
+
+\Tabref{tab:surf_prop} summarizes the surface properties of the
+accretor star at the time shown in the last panel of
+\Figref{fig:D_mix}, that is shortly after the RLOF phase, while the
+model is still roughly at the observed position of \zoph.
+
+Both the mass and radius agree reasonably well with the estimated from
+\cite{villamariz:05} and previous work, i.e.~$20\,M_\odot$ and
+$8.3\pm1.5\,R_\odot$, respectively. The surface rotational velocity in
+excess of $350\,\kms$ is also in the correct ballpark albeit possibly
+on the low end. We discuss further rotation and angular momentum
+transport in \Secref{sec:rot}. We report the surface H mass
+fraction\footnote{This is needed to convert mass fractions reported
+  here into $\varepsilon(X)=12+\log_{10}(N_X/N_H)$, where $N_X$ and
+  $N_H$ are the number fractions of species $X$ and H, respectively.},
+lower than primordial because of the accretion of nuclearly processed
+material, and the surface mass fraction of the most prominent species
+$^4\mathrm{He}$, $^{12}\mathrm{C}$, $^{14}\mathrm{N}$,
+$^{16}\mathrm{O}$.  Assuming our surface H mass fraction
+$X^1\mathrm{H}$, the corresponding mass fractions of $^4\mathrm{He}$,
+$^{12}\mathrm{C}$, $^{14}\mathrm{N}$, $^{16}\mathrm{O}$ reported in
+\cite{villamariz:05} are
+$0.335195955^{+0.1372628808583865}_{-0.0549051523433546}$,
+$0.0005894097903485333\pm0.0004071498590763836$,
+$0.0020766539621156497\pm0.001434501736942355$, and
+$0.0053131989971199976\pm0.003670227842063826$.  Our values are
+sensitive to the interplay between several poorly understood
+processes treated in one dimension: mass accretion efficiency, rotationally enhanced wind mass
+loss, thermohaline, and inward rotational mixing. Therefore, although
+not perfect, we consider the match with the mass fractions reported by
+\cite{villamariz:05} surprisingly satisfactory. \todo{fix numbers}
+
+We now turn to describe the difference between the mixing processes
+happening in a single rotating massive stars and in our accretor
+model. \Figref{fig:n14} shows the mass fraction of $^{14}\mathrm{N}$
+as a function of mass coordinate along the evolution of three
+$20\,M_\odot$ stars initialized with
+$\omega/\omega_\mathrm{crit}=0.2,0.3,0.4,0.5$ (computed with an
+otherwise identical setup as our binary model), and in the last panel
+our accretor model. The dotted red line marks the primordial mass
+fraction of $^{14}\mathrm{N}$ for the adopted $Z=0.01$, the thin
+dashed lines mark the surface value at TAMS. The colored tracks show
+selected profiles throughout the main sequence, with lighter colors
+corresponding to more evolved stars.
+
+\todo{define $\omega$ and $\omega_\mathrm{crit}$ somewhere}
+
+The solid red line, and red shaded area \todo{fix plot and numbers,
+  they don't correspond!!} across all panels show the
+$^{14}\mathrm{N}$ from \cite{villamariz:05} (assuming a surface
+hydrogen mass fraction of 0.7): the mass fraction of $^{14}\mathrm{N}$
+alone is not sufficient to distinguish with these models, and already
+a moderate $\omega/\omega_\mathrm{crit}\geq0.3$ is sufficient for
+models to reach the lower-limit of the error bar.
+
+The typical evolution
 
 
 \begin{figure*}[htbp]
@@ -483,6 +538,8 @@ the N-rich core with the outer envelope polluted from the top.
     the abundance of $^{14}\mathrm{N}$ alone is not strongly constraining.}
   \label{fig:n14}
 \end{figure*}
+
+\todo{maybe table with surface mass fractions at the last profile?}
 
 \subsection{Angular momentum transport and internal structure}
 \label{sec:rot}
