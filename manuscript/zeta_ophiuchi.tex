@@ -423,7 +423,7 @@ is generally lower than the RLOF mass transfer rate.
 \label{sec:mixing}
 
 \texttt{MESA} treats mixing processes in the diffusion approximation.
-To illustrate the dominant processes processes throughout the
+To illustrate the dominant processes throughout the
 accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
 coefficients as a function of mass coordinate at selected times. Each
 panel corresponds to one of the thin blue crosses in the bottom panel
@@ -543,9 +543,33 @@ physical parameters.
 \section{Discussion}
 \label{sec:discussio}
 
-\todo{no SN pollution/out of eq., but \cite{hirai:18} shows this is a
-  small effect. Hirai+18 gives relaxation times}
+\subsection{The explosion of the former companion}
+\label{sec:SN_comp}
 
+Throughout this study, we have assumed the ``binary SN scenario'':
+after the mass transfer phase, the explosion of the donor breaks the
+binary and ejects the accretor with roughly its pre-explosion velocity
+\citep[e.g.,][]{renzo:19walk}. \todo{neuhauser needs it for the fe60}
+However, we have so far neglected the impact of the explosion on the
+structure of the accretor star. The blast wave will hit the companion
+at a \todo{estimate solid angle} causing mass loss -- directly via
+ablation and by injecting energy in the envelope, inflating it and
+enhancing its wind \citep{wheeler:75, tauris:98, podsiadlowski:05, hirai:18}.
+\todo{estimate mass loss}
+
+
+Because of the SN shock, the new runaway star just ejected might
+appear bloated and redder. However, hydrodynamical simulations of a non-rotating
+star with a companion shock suggest that
+within \todo{X} the star returns in equilibrium \cite{hirai:18}. The
+impact of this brief out of thermal equilibrium phase on the stellar
+spin should be investigated further.
+
+The SN ejecta might also pollute the surface of the runaway depositing
+processed nuclear material \citep[e.g.][]{gvaramadze:08}. However,
+enhahnced mass loss, and rapid rotating might rapidly dilute the
+yields.
+\todo{improve this sec.}
 \section{Conclusions}
 \label{sec:conclusions}
 
@@ -605,22 +629,6 @@ tabulated weak reaction rates \citet{Fuller1985, Oda1994,
 \citet{Chugunov2007}.  Thermal neutrino loss rates are from
 \citet{Itoh1996}. We use a
 22-isotope nuclear network (\texttt{approx\_21\_plus\_cr56}).
-
-We treat convection using the Ledoux criterion, and include
-thermohaline mixing and semiconvection, both with an efficiency factor
-of 1. We assume $\alpha_\mathrm{MLT}=1.5$ and use \todo{fix}
-\cite{brott:11} overshooting for the convective core
-burning. \todo{fix} Moreover, we employ the MLT++ artificial
-enhancement of the convective flux \citep[e.g.,][]{paxton:15}. Stellar
-winds are included using the algorithms from \cite{vink:01} with an
-efficiency factor of
-1.% and \cite{nugis:00} when the surface en abundance
-% is below 0.4 and $T_\mathrm{eff}>10^{4.7}\,\mathrm{K}$. We use a
-% hyperbolic tangent interpolation between the two for
-% hydrogen-deficient surfaces with
-% $10^{4.5}\,\mathrm{K}\leq T_\mathrm{eff}\leq10^{4.7}\,\mathrm{K}$. In
-% both cases, we use an efficiency factor of 1, and our post-merger models never
-% become cool enough to use a cool wind algorithm \citep[e.g.,][]{renzo:17}.
 
 The inlists, processing scripts, and model output will be made available at~\href{link}{link}.
 
