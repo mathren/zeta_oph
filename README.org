@@ -230,4 +230,5 @@ redistribution in the star?
 
 *** TODO build python dependencies list with poetry
 
-*** TODO read wang + 2020 (effects of binarity on the main sequence width)
+*** TODO check out grid papers from
+    Van Rensbergen et al. 2006, 2008, 2011
