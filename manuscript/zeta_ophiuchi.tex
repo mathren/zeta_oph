@@ -408,8 +408,7 @@ causes the oscillations visible in the bottom panel, whose amplitude
 is generally lower than the RLOF mass transfer rate.
 
 % \subsection{Internal mixing and surface composition of the accretor}
-\subsection{Mixing and composition: comparison of accretors and single
-  fast-rotating stars}
+\subsection{Mixing and composition}
 \label{sec:mixing}
 
 \begin{figure*}[htbp]
@@ -438,30 +437,32 @@ is generally lower than the RLOF mass transfer rate.
     $\omega/\omega_\mathrm{crit}$ at birth (first four panels), and
     for the accretor of our fiducial binary. The dotted thick red line
     marks the primordial value, the thin dashed red line marks the
-    surface value at TAMS. In the last panel, the thin vertical dashed line shows the initial total mass of the accretor. The colors of each profile go from dark to
+    surface value at TAMS. In the last panel, the gray area highlights
+    mass accreted during RLOF. The colors of each profile go from dark to
     light at TAMS, and selected profiles along the main sequence are
-    shown. The solid red line and the shaded region correspond to the
+    shown. The solid red line and the shaded red region correspond to the
     mass fraction of $^{14}\mathrm{N}$ estimated by
-    \citetalias{villamariz:05} assuming a surface H mass fraction of 0.7:
-    the abundance of $^{14}\mathrm{N}$ alone is not strongly constraining.}
+    \citetalias{villamariz:05} assuming the surface mass fraction of H
+    from \Tabref{tab:surf_prop}. The abundance of $^{14}\mathrm{N}$ alone is not strongly constraining.}
   \label{fig:n14}
 \end{figure*}
 
 
-\texttt{MESA} treats mixing processes in the diffusion approximation \citep{paxton:11}.
-To illustrate the dominant processes throughout the
-accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
-coefficients as a function of mass coordinate at selected times. Each
-panel corresponds to one of the thin blue crosses in the bottom panel
-of \Figref{fig:HRD_both}, and the gray shaded areas mark mass that is
-accreted during RLOF. The last panel roughly represents the predicted
-internal structure of \zoph\ as observed today.
+\texttt{MESA} treats mixing processes in the diffusion approximation
+\citep{paxton:11}.  To illustrate the dominant processes throughout
+the accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
+coefficients for various mixing processes as a function of mass
+coordinate at selected times. Each panel corresponds to one of the
+thin blue crosses in the bottom panel of \Figref{fig:HRD_both}, and
+the gray shaded areas mark mass accreted during RLOF. The last
+panel roughly represents the predicted internal structure of \zoph\ as
+observed today.
 
 In \Figref{fig:D_mix}, the thin red lines correspond to convection,
 with the initial convective core of
 $\sim$$6\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The thin blue lines mark mixing processes that are not related to rotation, nor are any of the other processes explicitly shown, which here effectively means overshooting. The extension of the diffusion coefficient above the convective core in all panels is the typical behavior for an exponentially decreasing overshooting. Purple and pink represent semiconvection and thermohaline mixing, respectively. Before mass transfer (left-most panel), only a small amount of sub-surface thermohaline mixing occurs, with a mass extent comparable or smaller to the sub-surface convective zone, and no semiconvection occurs. The thick cyan line corresponds to the total diffusion coefficient, obtained as the sum of the diffusion coefficients for each process modeled: where the cyan line is not overlapping with the others, rotational mixing (and more specifically Eddington-Sweet meridional circulation) is the dominant process.
 
-During RLOF (second and third panel), the spin up due to accretion causes an increase in the rotational mixing (cyan line in the outer layers), and the accretion of nuclearly processed material progressively widens the thermohaline mixing region at the surface. Late during the mass transfer (third panel), thermohaline mixing dominates the outermost layers -- except within the sub-surface convective zone, but throughout most of the envelope rotation does the lion's share of the mixing. Thermohaline mixing and Eddington-Sweet circulations together mix inwards and dilute the CNO-enriched material coming from the donor's surface.
+During RLOF (second and third panel), the spin-up due to accretion causes an increase in the rotational mixing (see also \Secref{sec:rot}), and the accretion of nuclearly processed material progressively widens the thermohaline mixing region at the surface. Late during the mass transfer (third panel), thermohaline mixing dominates the outermost layers -- except within the sub-surface convective zone, but throughout most of the envelope rotation does the lion's share of the mixing. Thermohaline mixing and Eddington-Sweet circulations together mix inwards and dilute the CNO-enriched material coming from the donor's surface.
 
 At the same time, the increase in the accretor mass drives
 rejuvenation \citep[e.g.,][]{schneider:16}. This can be seen as a
@@ -480,11 +481,12 @@ accretor star at the time shown in the last panel of
 model is still roughly at the observed position of \zoph.
 
 Both the mass and radius agree reasonably well with the estimates from
-\citetalias{villamariz:05} and previous studies, i.e.~$20\,M_\odot$ and
+\citetalias{villamariz:05} and previous studies, that is~$20\,M_\odot$ and
 $8.3\pm1.5\,R_\odot$, respectively. The surface rotational velocity in
 excess of $350\,\kms$ is also in the correct ballpark albeit possibly
-on the low end. We discuss further rotation and angular momentum
-transport in \Secref{sec:rot}. We report the surface H mass
+on the low end. % We discuss further rotation and angular momentum
+% transport in \Secref{sec:rot}.
+We report the surface H mass
 fraction\footnote{This is needed to convert mass fractions reported
   here into $\varepsilon(X)=12+\log_{10}(N_X/N_H)$, where $N_X$ and
   $N_H$ are the number fractions of species $X$ and H, respectively.},
@@ -504,6 +506,9 @@ processes treated in one dimension: mass accretion efficiency, rotationally enha
 loss, thermohaline, and inward rotational mixing. Therefore, although
 not perfect, we consider the match with the mass fractions reported by
 \citetalias{villamariz:05} surprisingly satisfactory.
+
+\subsubsection{Comparison to single fast-rotating stars}
+
 
 We now compare the mixing processes
 happening in a single rotating massive stars and in our accretor
@@ -535,21 +540,23 @@ color in \Figref{fig:n14}.
 
 The first four panels of \Figref{fig:n14} show the typical rotational
 mixing profiles: $^{14}\mathrm{N}$ rapidly rises in the core because
-of the CNO burning cycle, and it is then mixed outwards in time
-producing a monotonically decreasing $^{14}\mathrm{N}$ profile. The
-higher the initial rotation, the higher the surface $^{14}\mathrm{N}$
-mass fraction reached at TAMS.
+of the CNO burning, and it is then mixed outwards. At any time
+the $^{14}\mathrm{N}$ profile is monotonically decreasing in mass
+coordinate, and the higher the initial rotation, the higher the
+surface $^{14}\mathrm{N}$ mass fraction reached at TAMS.
 
 Conversely, the $^{14}\mathrm{N}$ mass fraction profile of the
-accretor is \emph{not} monotonic and it is shaped not only by outward
+accretor is \emph{not} monotonic throughout the evolution. It is shaped not only by outward
 rotational mixing, but also by the accretion of matter from the outer
 layers of the donor's star core mixed inward by rotation and
-thermohaline mixing. Initially, the tidally synced secondary star
+thermohaline mixing.
+
+Initially, the tidally synced accretor star
 rotates too slowly for significant outward rotational mixing out of
-the core, and until the onset of RLOF no appreciable variation of the
-surface $X(^{14}\mathrm{N})$ occurs. During late RLOF (after the
-``v-shaped'' feature in \Figref{fig:HRD_both}), N-rich material from the
-donor's core piles onto the accretor's surface inside the gray area in
+the core, and until the onset of RLOF (roughly at 7.25\,Myr) no appreciable variation of the
+surface $X(^{14}\mathrm{N})$ occurs. During late RLOF after the
+``v-shaped'' feature in \Figref{fig:HRD_both}, N-rich material from the
+donor's core piles onto the accretor's surface -- inside the gray area in
 the rightmost panel of \Figref{fig:n14}. The close-to-critical
 rotation of the accretor and the inversion in the mean molecular
 weight $\mu$ then drive inward mixing (see also \Figref{fig:D_mix}) of
@@ -557,23 +564,21 @@ this N-rich material and dilute it in the envelope.
 
 Simultaneously, the mere growth in mass causes the steepening of the
 core-temperature gradient and increase in the convective core mass
-\citep[e.g.][]{schneider:16}, driving some outward convective mixing
+\citep[rejuvenation, e.g.,][]{schneider:16}, driving some outward convective mixing
 of N-rich material. Because convection turnover timescales are much
-shorter than evolutionary timescales.
+shorter than evolutionary timescales, the growth of the convective
+core produces ``steps'' at the outer edge of the core (slightly
+outside mass coordinate 10\,$M_\odot$). In the post-RLOF evolution,
+outward rotational mixing from the rejuvenated core and inward
+rotational mixing and thermohaline mixing from the surface connect the
+excess $^{14}\mathrm{N}$.
 
-
-
-
-
-The solid red line and red shaded area across all panels show the
+In \Figref{fig:n14}, the solid red line and red shaded area across all panels show the
 $^{14}\mathrm{N}$ from \citetalias{villamariz:05} (assuming the
 surface mass fraction from our model listed in \Tabref{tab:surf_prop}): the mass fraction of $^{14}\mathrm{N}$
 alone is not sufficient to distinguish with these models, and already
 a moderate $\omega/\omega_\mathrm{crit}\geq0.3$ is sufficient for
 models to reach the lower-limit of the error bar.
-
-\todo{describe typical evolution of rotating model and compare to accretor}
-The typical evolution
 
 
 \subsection{Angular momentum transport and surface rotation: comparison of accretors and single
