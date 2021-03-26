@@ -430,6 +430,24 @@ is generally lower than the RLOF mass transfer rate.
   \label{fig:D_mix}
 \end{figure*}
 
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{n14_struct_complete_zeta_ab}
+  \caption{$^{14}\mathrm{N}$ mass fraction as a function of mass
+    coordinate for $20\,M_\odot$ single star models with increasing
+    $\omega/\omega_\mathrm{crit}$ at birth (first four panels), and
+    for the accretor of our fiducial binary. The dotted thick red line
+    marks the primordial value, the thin dashed red line marks the
+    surface value at TAMS. In the last panel, the thin vertical dashed line shows the initial total mass of the accretor. The colors of each profile go from dark to
+    light at TAMS, and selected profiles along the main sequence are
+    shown. The solid red line and the shaded region correspond to the
+    mass fraction of $^{14}\mathrm{N}$ estimated by
+    \citetalias{villamariz:05} assuming a surface H mass fraction of 0.7:
+    the abundance of $^{14}\mathrm{N}$ alone is not strongly constraining.}
+  \label{fig:n14}
+\end{figure*}
+
+
 \texttt{MESA} treats mixing processes in the diffusion approximation \citep{paxton:11}.
 To illustrate the dominant processes throughout the
 accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
@@ -502,9 +520,49 @@ the gravitational constant. These rotating single stars have an otherwise identi
 setup as our binary model. The last panel of \Figref{fig:n14} shows
 our accretor model. The dotted red line marks the primordial mass
 fraction of $^{14}\mathrm{N}$ for the adopted $Z=0.01$, the thin
-dashed lines mark the surface value at TAMS. The colored tracks show
+dashed lines mark the surface value at TAMS.
+
+
+The colored tracks show
 selected profiles throughout the main sequence, with lighter colors
-corresponding to more evolved stars.
+corresponding to more evolved stars. The accretor model
+(rightmost panel) starts as a 17$\,M_\odot$ and is rejuvenated by
+binary interactions, thus it reaches TAMS at 11.24\,Myr. For
+comparison, the initially 20\,$M_\odot$ rotating models have a
+main-sequence lifetime of 9.2-9.6\,Myr (longer for higher initial
+rotation rates), hence their TAMS profile does not have an as light
+color in \Figref{fig:n14}.
+
+The first four panels of \Figref{fig:n14} show the typical rotational
+mixing profiles: $^{14}\mathrm{N}$ rapidly rises in the core because
+of the CNO burning cycle, and it is then mixed outwards in time
+producing a monotonically decreasing $^{14}\mathrm{N}$ profile. The
+higher the initial rotation, the higher the surface $^{14}\mathrm{N}$
+mass fraction reached at TAMS.
+
+Conversely, the $^{14}\mathrm{N}$ mass fraction profile of the
+accretor is \emph{not} monotonic and it is shaped not only by outward
+rotational mixing, but also by the accretion of matter from the outer
+layers of the donor's star core mixed inward by rotation and
+thermohaline mixing. Initially, the tidally synced secondary star
+rotates too slowly for significant outward rotational mixing out of
+the core, and until the onset of RLOF no appreciable variation of the
+surface $X(^{14}\mathrm{N})$ occurs. During late RLOF (after the
+``v-shaped'' feature in \Figref{fig:HRD_both}), N-rich material from the
+donor's core piles onto the accretor's surface inside the gray area in
+the rightmost panel of \Figref{fig:n14}. The close-to-critical
+rotation of the accretor and the inversion in the mean molecular
+weight $\mu$ then drive inward mixing (see also \Figref{fig:D_mix}) of
+this N-rich material and dilute it in the envelope.
+
+Simultaneously, the mere growth in mass causes the steepening of the
+core-temperature gradient and increase in the convective core mass
+\citep[e.g.][]{schneider:16}, driving some outward convective mixing
+of N-rich material. Because convection turnover timescales are much
+shorter than evolutionary timescales.
+
+
+
 
 
 The solid red line and red shaded area across all panels show the
@@ -516,24 +574,6 @@ models to reach the lower-limit of the error bar.
 
 \todo{describe typical evolution of rotating model and compare to accretor}
 The typical evolution
-
-
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{n14_struct_complete_zeta_ab}
-  \caption{$^{14}\mathrm{N}$ mass fraction as a function of mass
-    coordinate for $20\,M_\odot$ single star models with increasing
-    $\omega/\omega_\mathrm{crit}$ at birth (first four panels), and
-    for the accretor of our fiducial binary. The dotted thick red line
-    marks the primordial value, the thin dashed red line marks the
-    surface value at TAMS. In the last panel, the thin vertical dashed line shows the initial total mass of the accretor. The colors of each profile go from dark to
-    light at TAMS, and selected profiles along the main sequence are
-    shown. The solid red line and the shaded region correspond to the
-    mass fraction of $^{14}\mathrm{N}$ estimated by
-    \citetalias{villamariz:05} assuming a surface H mass fraction of 0.7:
-    the abundance of $^{14}\mathrm{N}$ alone is not strongly constraining.}
-  \label{fig:n14}
-\end{figure*}
 
 
 \subsection{Angular momentum transport and surface rotation: comparison of accretors and single
