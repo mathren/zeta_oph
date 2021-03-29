@@ -110,7 +110,7 @@ Despite their importance, accretor stars in binaries have so far
 received much less attention than the donor stars, with the pioneering
 work of \cite{hellings:83, hellings:84} and \cite{braun:95} as notable
 exceptions. Large grids of accretor models are lacking, most of the
-studies focus on lower mass early and late B-type donors
+studies focus on lower mass B-type donors
 (e.g., \citealt{vanrensbergen:06, vanrensbergen:11}, but see also
 \citealt{wang:20})  and only
 few sparse massive models exist \citep[e.g.,][]{cantiello:07}. This is because of the complexity of these models, where one
@@ -535,7 +535,7 @@ corresponding to more evolved stars. The accretor model
 binary interactions, thus it reaches TAMS at 11.24\,Myr. For
 comparison, the initially 20\,$M_\odot$ rotating models have a
 main-sequence lifetime of 9.2-9.6\,Myr (longer for higher initial
-rotation rates), hence their TAMS profile does not have an as light
+rotation rates), hence their TAMS profile does not have as light a
 color in \Figref{fig:n14}.
 
 The first four panels of \Figref{fig:n14} show the typical rotational
@@ -581,22 +581,61 @@ a moderate $\omega/\omega_\mathrm{crit}\geq0.3$ is sufficient for
 models to reach the lower-limit of the error bar.
 
 
-\subsection{Angular momentum transport and surface rotation: comparison of accretors and single
-  fast-rotating stars}
+\subsection{Angular momentum transport and surface rotation}
 \label{sec:rot}
 
-\todo{discuss rotation rate and radius}
+One of the main distinguishing features of \zoph\ is its extremely
+high surface rotation rate. Spectroscopic measurements of the
+projected rotational velocity exceed $v\sin(i)\gtrsim 400\,\kms$,
+which implies close to critical rotation. \cite{zehe:18} recently
+estimated $v\sin(i)=432\pm16\,\kms$ and $i\sim56$ degrees.
+
+\Figref{fig:surf_rot} shows the surface average rotation rate of our
+accretor model as a function of time (ignoring the projection angle
+$i$). The dark red band corresponds to the $v\sin(i)$ from
+\cite{zehe:18}, and the lighter band shows a range of 5 times their
+error bar.
+
+The initial binary is wide enough that the initial tidal
+synchronization implies a very low rotation. At 7.25\,Myr, RLOF
+rapidly spins up the accretor to critical rotation, up to
+$v_\mathrm{crit}\simeq520\,\kms$. The star remains fast rotating
+throughout the mass transfer phase, which ends at the black diamond in
+\Figref{fig:surf_rot}. In the remaining evolution, the star spins down
+progressively through wind mass loss, and within $\sim$2\,Myr its
+averaged surface rotational velocity drops below $350\,\kms$. Close to
+the end of the main sequence, the internal transport of angular
+momentum causes a change in the spin-down slope.
+
+\Figref{fig:surf_rot} shows that, without accounting for the
+inclination angle, our model can retain a significant surface rotation
+for a time comparable to the kinematic age of the star, which is
+shorter than the remaining main-sequence lifetime.  We emphasize that
+throughout its evolution this model is computed using the
+\cite{vink:00, vink:01} wind mass-loss rate with full
+efficiency. \cite{marcolino:09} found the predicted mass loss rate to
+exceed the observed one by $\sim$2 orders of magnitude. While this
+could impact the evolution of the binary even before RLOF, it
+certainly increases the spin-down rate of our model compared to the
+observations. We attempted running models with artificially decreased
+wind mass loss rate \citep[e.g.,][]{renzo:17}, but these resulted in
+super-critical $\omega/\omega_\mathrm{crit}>1$ accretor stars with
+untrustworthy numerical results. Nevertheless, we expect that an
+accreting star modeled with lower wind-mass loss rate post-RLOF would
+retain an even higher surface rotation for longer.
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
   \caption{Surface averaged rotation rate for the accretor
-    model. Shortly after $\sim$7\,Myr the mass transfer quickly spins
+    model. At $\sim$7.25\,Myr the mass transfer quickly spins
     up the accretor at critical rotation. By the time the donor
     detaches from the RLOF the accretor is still spinning at
     $\sim$$400\,\kms$. At this point (beginning of the dot-dashed line), we continue the evolution as a single star, and the accretor quickly spins down. Note however that we use a wind mass-loss rate from \cite{vink:01}, which is observed to be
-    $\sim$2 orders of magnitude too high.}
-  \label{fig:rot}
+    $\sim$2 orders of magnitude too high \citep{marcolino:09}.}
+  \label{fig:surf_rot}
 \end{figure}
+
+\subsubsection{Comparison to single fast-rotating stars}
 
 
 \begin{figure*}[htbp]
@@ -604,9 +643,65 @@ models to reach the lower-limit of the error bar.
   \includegraphics[width=\textwidth]{zeta_Rotational_struct}
   \caption{Internal rotational profile for $20\,M_\odot$ single star models with
     increasing $\omega/\omega_\mathrm{crit}$ at birth (first four
-    panels), and for the accretor of our fiducial binary. As in \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light at TAMS, and the thin dashed red line mark the TAMS surface rotation rate. In the last panel, the gray area indicates mass accreted during RLOG. The yellow lines (TAMS) in the last panel show that the core of the accretor is rotating almost as fast as its surface, and both are faster than the surface of single star models.}
+    panels), and for the accretor of our fiducial binary. As in
+    \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light
+    at TAMS, and the thin dashed red line mark the TAMS surface
+    rotation rate. In the last panel, the gray area indicates mass
+    accreted during RLOF. The yellow lines (TAMS) in the last panel
+    show that the core of the accretor is rotating almost as fast as
+    its surface, and both are faster than the surface of single star
+    models.}
+  \label{fig:struct_rot}
 \end{figure*}
 
+
+To illustrate the angular momentum transport in our accretor stars, it
+is helpful to compare with the single rotating $20\,M_\odot$
+models. The internal rotational profile of a single star rigidly rotating at
+birth is different than the profile obtained spinning up the secondary
+star at a later evolutionary stage and from its surface. This even within
+the framework of a specific model for the angular momentum transport
+in stars \citep{spruit:02}.
+
+\Figref{fig:struct_rot} shows the internal equatorial
+rotational velocity $v_\mathrm{rot}=\omega\times r$. As in
+\Figref{fig:n14}, the first four panels show single rotating stars
+with increasing initial $\omega/\omega_\mathrm{crit}$, the last panel
+shows our accretor model, and the colors go from dark (close to zero
+age main sequence, ZAMS) to light
+(TAMS), with the accretor reaching lighter colors because of its
+rejuvenation. The gray area in the last panel represents mass accreted
+during RLOF.
+
+The thin dashed red lines in each panel mark the TAMS surface rotation
+rates: all our single star models reach a TAMS surface
+$v_\mathrm{rot}\simeq50\,\kms$. Initially faster rotating models spin
+down more in their outer layers, have slightly longer main sequence
+lifetimes (because of rotational mixing increasing the available fuel), and develop stronger differential rotation which
+drives more inwards transport of angular momentum. The single star
+profiles show the progressive development of a core-envelope
+interface, and the core rotation rate is sensitive to the initial
+value of $\omega/\omega_\mathrm{crit}$.
+
+Conversely, the last panel shows that the entire interior of the
+accretor has a negligible equatorial rotational velocity until
+RLOF. Because of binary interactions, rotation does not start as
+rigid, but instead angular momentum is injected from the top. In our
+model, inward transport of angular momentum creates the monotonically
+increasing $v_\mathrm{rot}$ profile seen in the green lines of the
+last panel. When angular momentum is transported across the chemical
+gradient at the edge of the convective core, a discontinuity stronger
+than in the single stars arises.
+
+By the end of the main-sequence evolution of the accretor, the surface
+still spins with $v_\mathrm{rot}\simeq100\,\kms$ (twice as fast as the
+single star models). Perhaps more importantly, the outer-edge of the
+core has a similar rotational velocity as the surface, and much larger
+than the rotational velocity of the single star models. This might
+have important implications for the rotation rate of the compact
+objects formed by the initially less massive star in a binary, and the
+models of compact objects spins for gravitational-wave progenitors
+\citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
 
 \section{Robustness of the model}
 \label{sec:param_variations}
