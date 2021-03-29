@@ -108,7 +108,7 @@ phase \citep[e.g.][]{law-smith:20, klencki:21}.
 
 Despite their importance, accretor stars in binaries have so far
 received much less attention than the donor stars, with the pioneering
-work of \cite{hellings:83, hellings:84} and \cite{braun:95} as notable
+studies of \cite{ulrich:76, hellings:83, hellings:84}, and \cite{braun:95} as notable
 exceptions. Large grids of accretor models are lacking, most of the
 studies focus on lower mass B-type donors
 (e.g., \citealt{vanrensbergen:06, vanrensbergen:11}, but see also
@@ -375,16 +375,6 @@ The bottom panel shows instead the accreting star, which grows in mass
 because of the mass transfer. At peak the mass transfer rates reaches very high
 values above $10^{-2.5}\,M_\odot\ \mathrm{yr^{-1}}$, and taps into the
 optically thick matter of the donor.
-
-During RLOF, the total amount of mass lost by the donor is
-$\Delta M_\mathrm{donor} \simeq 10.6\,M_\odot$, of which only
-$\Delta M_\mathrm{accretor}\simeq 3.4\,M_\odot$ are successfully
-accreted. This corresponds to an overall mass
-transfer efficiency
-$\beta_\mathrm{RLOF}\equiv \Delta M_\mathrm{accretor}/\Delta M_\mathrm{donor} \simeq 0.3$,
-although the accretion efficiency is \emph{not} constant throughout the
-mass transfer \citep[e.g.,][]{vanrensbergen:06}, instead it depends on the radial and rotational evolution of
-the accreting star.
 
 At the end of RLOF, the donor star briefly expands again
 ($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
@@ -736,14 +726,71 @@ physical parameters.
 \section{Discussion}
 \label{sec:discussio}
 
-\subsection{Free parameters in the treatment of mass transfer}
+% \subsection{Free parameters in the treatment of mass transfer}
+\subsection{Uncertainties in the treatment of mass transfer}
 \label{sec:free_param}
 
 We regulate the accretion efficiency through the rotational
-enhancement of mass loss \citep[e.g.][]{langer:98}. \todo{maybe move
-  $\beta_\mathrm{RLOF}$ here}. However,
-\citep{popov:91, paczinski:91} argued that accretion of mass (but no
-angular momentum) might be possible even at critical rotation.
+enhancement of mass loss \citep[e.g.][]{langer:98}.
+However, whether critical rotation can effectively stop the accretion
+of matter is still unclear. \cite{popham:91} and \cite{paczynski:91}
+argued that accretion of mass (but no angular momentum) might be
+possible even at critical rotation.
+
+During RLOF, the
+total amount of mass lost by the donor is
+$\Delta M_\mathrm{donor} \simeq 10.6\,M_\odot$, of which only
+$\Delta M_\mathrm{accretor}\simeq 3.4\,M_\odot$ are successfully
+accreted. This corresponds to an overall mass transfer efficiency
+$\beta_\mathrm{RLOF}\equiv \Delta M_\mathrm{accretor}/\Delta M_\mathrm{donor} \simeq 0.3$,
+although the accretion efficiency is \emph{not} constant throughout
+the mass transfer \citep[e.g.,][]{vanrensbergen:06}, instead it
+depends on the radial and rotational evolution of the accreting
+star. In reality, the accretor will deviate from
+spherical simmetry because of centrifugal forces, and during the RLOF
+the accretor might be out of gravothermal equilibrium with significant
+impact on its radius and ultimately on the amount of mass transferred
+and its angular momentum.
+
+While the mass transfer efficiency $\beta_\mathrm{RLOF}$ and
+importantly its time-evolution need further studies, we emphasize that most studies, especially
+using rapid population synthesis tools, typically assume a
+constant $\beta_\mathrm{RLOF}$ and neglect to model the
+out-of-equilibrium phase of the accretor and how this can impact the
+binary and orbital evolution.
+
+Another free parameter in the treatment of mass transfer is the
+specific angular momentum of the accreted material. In our models, for
+the sake of numerical stability, we assume the incoming material
+and the stellar surface to have the same specific angular
+momentum. This approximation corresponds to a scenario where angular
+momentum transport in the circumstellar disk during RLOF quickly
+homogenizes the rotation rate.
+
+We also attempted calculations using the algorithm from
+\cite{demink:13} based on the fit from \cite{ulrich:76} to the
+numerical results of \cite{lubow:75}. This algorithm distinguishes between
+direct impact of the L1 stream and circumstellar disk
+formation and determines the specific angular momentum of the incoming
+material. However, these models proved numerically more unstable and
+providing less trustworthy results. Generally speaking, allowing for a
+faster accretion of angular momentum results in less radial expansion
+of the accretor (cf.~\Figref{fig:HRD_both}) and a lower overall mass
+transfer efficiency $\beta_\mathrm{RLOF}$ because of the faster
+achievement of critical rotation.
+
+Finally, while the composition of the transferred material is
+determined by the structure of the donor and the mass transfer rate
+calculated following \cite{kolb:90}, we still need to specify its
+specific entropy when it reaches the accretor surface. We follow the
+common practice of assuming the specific entropy of the incoming
+material to be same as the accreting surface. The scenario justifying
+this hypothesis is that during RLOF the matter is
+sufficiently optically thin so radiative processes can rapidly
+equalize the entropy between the RLOF stream and the accreting
+surface. However, the very large mass-transfer rates we find
+(cf.~\Figref{fig:MT}) might result in optically thick flows for which
+this approximation might not be appropriate.
 
 \subsection{The explosion of the former companion}
 \label{sec:SN_comp}
@@ -758,8 +805,8 @@ scenario \citep[e.g.,][]{blaauw:52, blaauw:61,
 successfully exploded producing the pulsar PSR B1706-16, but that the
 explosion produced radioactive $^{60}\mathrm{Fe}$ which polluted
 Earth. From kinematic and orbital considerations they estimated a
-natal kick of $\sim$250\,$\kms$, which would be sufficiently large to
-unbind the binary.\todo{check, be more precise}
+natal kick of $\sim$$253\pm54\,\kms$, which would be sufficiently large to
+unbind the binary.
 
 However, we have so far neglected the impact of the explosion on the
 structure of the accretor star. The blast wave will hit the companion
@@ -781,27 +828,22 @@ and the amount of mass removed by the SN shock is $\lesssim10^{-2}\,M_\odot$
 
 Because of the SN shock, the just ejected new runaway star might
 appear bloated and redder (long before it overtakes the slowing SN
-remnant). Hydrodynamical simulations of a non-rotating star
-with a SN shock suggest that within \todo{X} the star returns
-in equilibrium \cite{hirai:18}. The impact of this brief out of
+remnant). The impact of this brief out of
 thermal equilibrium phase on the stellar spin should be investigated
 further.
 
 The SN ejecta might also pollute the surface of the runaway depositing
 processed nuclear material \citep[e.g.][]{przybilla:08}. However,
-enhahnced mass loss, and rapid rotating might rapidly dilute the
-yields.
+enhahnced mass loss, rapid rotation and mixing might rapidly dilute
+the yields.
 
-\todo{improve this sec.}
-
-
-On top of the surface abundances, its extreme rotation rate, and the
-peculiar space velocity, \zoph\ poses a number of other
-puzzles: its wind mass-loss rate is about two orders of magnitude
-lower than theoretical predictions (weak wind problem,
-\citealt{marcolino:09}), the star exhibits spectral variability with
-occasional appearance of H$\alpha$ in emission
-\citep[e.g.,][]{walker:79}.
+% On top of the surface abundances, its extreme rotation rate, and the
+% peculiar space velocity, \zoph\ poses a number of other
+% puzzles: its wind mass-loss rate is about two orders of magnitude
+% lower than theoretical predictions (weak wind problem,
+% \citealt{marcolino:09}), the star exhibits spectral variability with
+% occasional appearance of H$\alpha$ in emission
+% \citep[e.g.,][]{walker:79}.
 
 
 \section{Conclusions}
