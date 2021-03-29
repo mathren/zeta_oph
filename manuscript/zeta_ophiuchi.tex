@@ -194,7 +194,7 @@ required for this kind of computations in
 
 
 
-\section{ \texttt{MESA} modeling of massive binaries}
+\section{Modeling massive binaries with \texttt{MESA}}
 \label{sec:methods}
 
 Modeling the evolution of massive binaries
@@ -693,38 +693,38 @@ objects formed by the initially less massive star in a binary, and the
 models of compact objects spins for gravitational-wave progenitors
 \citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
 
-\section{Robustness of the model}
-\label{sec:param_variations}
+% \section{Robustness of the model}
+% \label{sec:param_variations}
 
-In this section we investigate the sensitivity of our results to
-physical parameters.
+% In this section we investigate the sensitivity of our results to
+% physical parameters.
 
-\todo{How to present results? Table? Showing what? surface mass
-  fractions, rotation, L, Teff}
+% \todo{How to present results? Table? Showing what? surface mass
+%   fractions, rotation, L, Teff}
 
-\todo{
-  Binary parameters:
-  \begin{itemize}
-  \item $M_1$
-  \item $M_2$
-  \item $P$
-  \item J-accretion
-  \end{itemize}
-}
+% \todo{
+%   Binary parameters:
+%   \begin{itemize}
+%   \item $M_1$
+%   \item $M_2$
+%   \item $P$
+%   \item J-accretion
+%   \end{itemize}
+% }
 
-\todo{
-  Single star parameters:
-  \begin{itemize}
-  \item thermohaline mixing
-  \item Eddington-Sweet circulations
-  \item metallicity
-  \end{itemize}
-}
+% \todo{
+%   Single star parameters:
+%   \begin{itemize}
+%   \item thermohaline mixing
+%   \item Eddington-Sweet circulations
+%   \item metallicity
+%   \end{itemize}
+% }
 
-\todo{others?}
+% \todo{others?}
 
-\section{Discussion}
-\label{sec:discussio}
+\section{Robustness of the models and discussion}
+\label{sec:discussion}
 
 % \subsection{Free parameters in the treatment of mass transfer}
 \subsection{Uncertainties in the treatment of mass transfer}
@@ -791,6 +791,15 @@ equalize the entropy between the RLOF stream and the accreting
 surface. However, the very large mass-transfer rates we find
 (cf.~\Figref{fig:MT}) might result in optically thick flows for which
 this approximation might not be appropriate.
+
+\subsection{Uncertainties in the single-star physics}
+\label{sec:single_star_uncertainties}
+
+\todo{write about model variations}
+
+\subsection{Variations in the initial binary parameters}
+\label{sec:bin_params}
+\todo{discuss variations in M1, M2, P}
 
 \subsection{The explosion of the former companion}
 \label{sec:SN_comp}
@@ -890,7 +899,7 @@ version of chemically homogeneous evolution.
 We use \code{MESA} version 15140 to compute our models.  The
 \code{MESA} equation of state (EOS) is a blend of the OPAL \citet{Rogers2002}, SCVH
 \citet{Saumon1995}, PTEH \citet{Pols1995}, HELM \citet{Timmes2000},
-and PC \citet{Potekhin2010} EOSes. \todo{check if updated EOS?}
+and PC \citet{Potekhin2010} EOSes.
 
 OPAL \citep{Iglesias1993, Iglesias1996} provides the main radiative
 opacities, with low-temperature data from \citet{Ferguson2005} and the
@@ -910,7 +919,31 @@ The inlists, processing scripts, and model output will be made available at~\hre
 
 \section{Resolution tests}
 \label{sec:res_tests}
-\subsection{Spatial resolution}
+
+We extensively check the numerical convergence of our stellar evolution calculations with
+increasing number of mesh points. \Figref{fig:sp_test} shows that all
+the features described extensively here do not vary when increasing
+the spatial resolution by decreasing \texttt{mesh\_delta\_coeff}. The
+right panel shows the number of mesh points for the accretor (top) and
+donor (bottom), which are $\sim 20\%$ higher in the high resolution runs. The
+left panel shows the HRD evolution of the two accretor models
+(pink/red) and donor models (blue/cyan).
+
+Similarly, we tested the numerical convergence with decreasing
+timestep size. This can be done decreasing the parameter
+\texttt{mesh\_time\_coeff}. However, we were unable to successfully
+compute models at higher temporal resolution. Partial results show a
+good agreement with our fiducial model until they crash (typically
+during RLOF), and lower temporal resolution models showed a similar
+qualitative agreement but increased noisiness during the late RLOF
+phase. For our fiducial model the adaptive timestep size never exceeds
+$10^{3.8}$\,years with typical pre-RLOF timesteps of the order of $10^{3.2}$\,years
+and sub-decade during RLOF. The main factor limiting the timestep
+sizes is the change of surface angular momentum in both stars during
+the mass transfer.
+
+
+
 
 \begin{figure*}[htbp]
   \centering
@@ -922,7 +955,10 @@ The inlists, processing scripts, and model output will be made available at~\hre
 red/pink tracks show the accretor. Thicker dashed lines correspond to
 the models at higher resolution (i.e., lower $\Delta$ which indicates
 the value of \texttt{mesh\_delta\_coeff}).}
+\label{fig:sp_test}
 \end{figure*}
+
+
 
 
 \bibliographystyle{aasjournal}
