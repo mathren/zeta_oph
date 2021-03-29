@@ -250,8 +250,8 @@ def plot_surface_rotation_time(ax, hfile1, c="#77CCCC", hfile2="", label=""):
     # post binary evolution part is optional
     if hfile2 != "":
         t, v = get_surface_rotation_time(hfile2)
-        ax.plot(t, v, c=c, zorder=2, ls="-.")
-
+        ax.plot(t[0], v[0], c='k', zorder=2, marker='D', ms=10)
+        ax.plot(t, v, c=c, zorder=2, label=label)
 
 def get_omega_time(hfile):
     src, col = getSrcCol(hfile)
