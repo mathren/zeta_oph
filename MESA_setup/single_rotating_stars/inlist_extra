@@ -1,0 +1,34 @@
+&star_job
+
+
+! load_saved_model = .true.
+! saved_model_name = "../binary_to_postRLOF/accretor_postRLOF.mod"
+
+! don't overwrite age and model number
+set_initial_age = .false.
+set_initial_model_number = .false.
+! force small initial timestep
+! set_initial_dt = .true.
+! years_for_initial_dt = 0.1d0
+
+new_omega_div_omega_crit = 0.2d0
+set_initial_omega_div_omega_crit = .true.
+
+
+
+save_model_filename = 'single20_rot0.2.mod'
+
+change_initial_Z = .true.
+new_Z = 0.01d0
+
+/
+
+
+&kap
+Zbase = 0.01d0
+/
+
+&controls
+initial_mass = 20.0d0
+max_model_number = 50000
+/ ! end of controls namelist
