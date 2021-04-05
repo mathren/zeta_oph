@@ -185,7 +185,7 @@ massive binary systems.
 
 Here, we present self-consistent binary evolution models for
 $\zeta$ Oph computing simultaneously the coupled evolution of
-\emph{both} donor and accretor star and their orbit. \todo{fix order description} After presenting
+\emph{both} donor and accretor star and their orbit. After presenting
 our \texttt{MESA} setup in \Secref{sec:methods}, we show our best model which
 reproduces the majority of the salient features of this star in
 \Secref{sec:best_model}. %  In this model, the surface abundances of
@@ -194,7 +194,7 @@ reproduces the majority of the salient features of this star in
 We discuss the
 sensitivity of our results to the admittedly many free parameters
 required for this kind of computations in
-\Secref{sec:param_variations}. Finally, we conclude in
+\Secref{sec:discussion}. Finally, we conclude in
 \Secref{sec:conclusions}.
 
 
@@ -276,7 +276,8 @@ central mass fraction of H drops below $10^4$). From here onwards, % At this poi
 we continue the evolution of the accretor as a single star until its TAMS
 with the same setup.
 
-\todo{describe parameter variations in this sec.}
+We discuss some parameter variations for the physics of each star, the
+initial conditions, and the binary interactions in \Secref{sec:discussion}.
 
 \section{Massive binary evolution naturally explains $\zeta$
   Ophiuchi's properties}
@@ -349,7 +350,7 @@ Accounting for both wind mass loss and the amount of mass transferred, at the en
 $\sim$$9.4\,M_\odot$, likely to contract further and appear as a
 Wolf-Rayet star. It's surface H mass fraction is $\lesssim 0.2$ and
 most of the H is likely to be removed by further wind mass loss
-\citep[e.g.,][]{gotberg:17}. \todo{Ylva: want to expand?}.
+\citep[e.g.,][]{gotberg:17}.
 
 From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly different slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
 
@@ -604,19 +605,16 @@ momentum causes a change in the spin-down slope.
 \Figref{fig:surf_rot} shows that, without accounting for the
 inclination angle, our model can retain a significant surface rotation
 for a time comparable to the kinematic age of the star, which is
-shorter than the remaining main-sequence lifetime.  We emphasize that
+shorter than the remaining main-sequence lifetime. We emphasize that
 throughout its evolution this model is computed using the
-\cite{vink:00, vink:01} wind mass-loss rate with full
-efficiency. \cite{marcolino:09} found the predicted mass loss rate to
-exceed the observed one by $\sim$2 orders of magnitude. While this
-could impact the evolution of the binary even before RLOF, it
-certainly increases the spin-down rate of our model compared to the
-observations. We attempted running models with artificially decreased
-wind mass loss rate \citep[e.g.,][]{renzo:17}, but these resulted in
-super-critical $\omega/\omega_\mathrm{crit}>1$ accretor stars with
-untrustworthy numerical results. Nevertheless, we expect that an
-accreting star modeled with lower wind-mass loss rate post-RLOF would
-retain an even higher surface rotation for longer.
+\cite{vink:00, vink:01} wind mass-loss rate with full efficiency. This
+is two orders of magnitude higher than the wind mass loss rate
+reported by \cite{marcolino:09} (however, see
+\citealt{lucy:12}). While this may impact the evolution of the
+binary even before RLOF, it increases the spin-down rate of
+our model compared to the observations. We expect that an accreting star
+modeled with lower wind-mass loss rate post-RLOF would retain an even
+higher surface rotation for longer (see also \Secref{sec:single_star_uncertainties}).
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
@@ -697,48 +695,63 @@ objects formed by the initially less massive star in a binary, and the
 models of compact objects spins for gravitational-wave progenitors
 \citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
 
-% \section{Robustness of the model}
-% \label{sec:param_variations}
-
-% In this section we investigate the sensitivity of our results to
-% physical parameters.
-
-% \todo{How to present results? Table? Showing what? surface mass
-%   fractions, rotation, L, Teff}
-
-% \todo{
-%   Binary parameters:
-%   \begin{itemize}
-%   \item $M_1$
-%   \item $M_2$
-%   \item $P$
-%   \item J-accretion
-%   \end{itemize}
-% }
-
-% \todo{
-%   Single star parameters:
-%   \begin{itemize}
-%   \item thermohaline mixing
-%   \item Eddington-Sweet circulations
-%   \item metallicity
-%   \end{itemize}
-% }
-
-% \todo{others?}
-
 \section{Robustness of the models and discussion}
 \label{sec:discussion}
 
 \subsection{Uncertainties in the single-star physics}
 \label{sec:single_star_uncertainties}
 
-\todo{write about Z variation, no eddington sweet, higher thermohaline
-mixing, }
+Models of the interior evolution of stars require the choice of
+several poorly constrained parameters, the majority arising from the
+one-dimensional representation of multi-dimensional phenomena
+(convection, mixing, rotation, etc.). This remains true when modeling
+two stars in a binary, with the added caveat that even more free
+parameters enter in the treatment of binary interactions (and in
+particular mass transfer). We report here on exploration of parameter
+variations for each individual star, and discuss parameters governing the mass
+transfer phase in \Secref{sec:bin_param}.
 
-% \subsection{Free parameters in the treatment of mass transfer}
+For our model of \Secref{sec:best_model}, we have assumed an initial
+metallicity $Z=0.01$ informed by the asteroseismology of low mass
+stars in the parent association \citep[e.g.][]{murphy:21}. Moreover,
+we have assumed that elemental abundances scale with the Solar values
+\citep{grevesse:98}, which might not be appropriate especially for
+massive stars \citep[e.g.,][]{grasha:21}. With these assumptions, the
+initial mass fraction of $^{12}\mathrm{C}$ and $^{14}\mathrm{N}$ are
+lower than the observed values for \zoph. Even though their values at
+the surface of the accretor increase during mass transfer, our model
+still slightly under-predicts them. Improved agreement could be
+obtained changing the ratio of abundances to non-solar values, or by
+changing the efficiency of downward rotational and thermohaline mixing
+which dilutes the accreted material into the secondary's envelope.
+
+We also run a model identical to the one described in
+\Secref{sec:best_model}, except with $Z=Z_\odot=0.0142$
+\citep{asplund:09}. Qualitatively, the binary evolution remains
+similar, with the higher metallicity stars having slightly larger
+radii and cooler $T_\mathrm{eff}$ at a given luminosity. This still
+produces a stable case B RLOF, however, the accretor track is
+displaced on the right on the HRD. Thus, matching the high present-day
+$T_\mathrm{eff}=32\,000\pm2\,000$ of \zoph\ (e.g., \citetalias{villamariz:05}) requires more
+massive and hotter accretors (see also \Secref{sec:bin_init}).
+
+Rotation is a critical ingredient of our models. \todo{no Eddington
+  sweet, effect on R and thus $\omega/\omega_{crit}$ and mass transfer
+efficiency}.
+
+\todo{higher thermohaline mixing}
+
+\todo{wind mass loss}
+ We attempted running models
+with artificially decreased wind mass loss rate
+\citep[e.g.,][]{renzo:17}, but these resulted in super-critical
+$\omega/\omega_\mathrm{crit}>1$ accretor stars with untrustworthy
+numerical results.
+
+
+
 \subsection{Uncertainties in the treatment of mass transfer}
-\label{sec:free_param}
+\label{sec:bin_param}
 
 We regulate the accretion efficiency through the rotational
 enhancement of mass loss \citep[e.g.][]{langer:98}.
@@ -804,7 +817,7 @@ surface. However, the very large mass-transfer rates we find
 this approximation might not be appropriate.
 
 \subsection{Variations in the initial binary parameters}
-\label{sec:bin_params}
+\label{sec:bin_init}
 
 The initial donor mass $M_1$, mass ratio $q=M_2/M_1$, and the period of the progenitor binary of \zoph\ cannot be directly
 constrained. We have explored variation in these values, and the
@@ -886,6 +899,8 @@ $\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the
 \section{Conclusions}
 \label{sec:conclusions}
 
+\todo{improve conclusions}
+
 We have demonstrated that self-consistent 1D calculations
 of coupled stellar models with masses $\gtrsim 20\,M_\odot$ are
 possible with the \texttt{MESA} software instrument. As a first
@@ -918,7 +933,7 @@ evolution.
 }
 
 \acknowledgements{We are grateful to E.~Zapartas, A.~Jermyn,
-  M.~Cantiello for helpful discussions.}
+  M.~Cantiello, and R.~Neu\"auser for helpful discussions.}
 
 
 
@@ -927,9 +942,8 @@ evolution.
 \section{\texttt{MESA} setup}
 \label{sec:software}
 
-\todo{MLT--?}
+% \todo{MLT--?}
 
-\todo{possibly move to methods}
 We use \code{MESA} version 15140 to compute our models.  The
 \code{MESA} equation of state (EOS) is a blend of the OPAL \citet{Rogers2002}, SCVH
 \citet{Saumon1995}, PTEH \citet{Pols1995}, HELM \citet{Timmes2000},
@@ -948,7 +962,7 @@ tabulated weak reaction rates \citet{Fuller1985, Oda1994,
 \citet{Itoh1996}. We use a
 22-isotope nuclear network (\texttt{approx\_21\_plus\_cr56}).
 
-The inlists, processing scripts, and model output will be made available at~\href{link}{link}.
+The inlists, processing scripts, and model output will be made available at~\todo{link}.
 
 
 \section{Resolution tests}
