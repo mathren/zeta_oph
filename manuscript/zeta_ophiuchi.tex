@@ -255,25 +255,26 @@ Both stars are evolved simultaneously on the same timesteps until
 after the donor detaches from its Roche lobe. We follow \cite{kolb:90}
 to calculate the mass transfer rate from optically thick layers of the
 donor star during Roche lobe overflow (RLOF). Moreover, we assume that
-the transfered layers reach the accretor with the accretor's specific
-surface angular momentum and entropy, but the chemical composition is
-determined by the inner evolution of the donor star. Mass transfer is
+the specific angular momentum and entropy of the transferred layers
+match the surface, while the chemical composition is
+determined structure of the donor star. Mass transfer is
 conservative until the accretor reaches critical rotation, after which
 rotationally enhanced mass loss governs the accretion efficiency.
 
-To define RLOF detachment, we take advantage of the fact that we focus
-here on case B interactions among massive stars. After losing their
-envelope, massive donors are not expected to expand to hundreds of
-$R_\odot$ during He shell burning at the metallicity we consider
-\citep[e.g.,][]{laplace:20}. Thus, we define RLOF detachment as the moment
-after the onset of RLOF when the donor has a surface He mass fraction
-larger than 0.35 (indicating that a significant amount of envelope has
-been lost or transferred), a radius smaller than its terminal-age main
-sequence (TAMS, defined as when the central mass fraction of H drops
-below $10^4$) radius, and no mass is being transferred anymore. At
-this point in time, we save a model for the accreting star, and
-continue its evolution as a single star until TAMS with the same
-setup.
+% To define RLOF detachment, we take advantage of the fact that we focus
+% here on case B interactions among massive stars.
+After losing their envelope, massive donors are not expected to expand
+to hundreds of $R_\odot$ during He-shell burning at the metallicity we
+consider \citep[e.g.,][]{laplace:20}. Thus, we stop evolving a binary
+system when the donor's surface He mass fraction is larger than 0.35
+-- indicating that a significant amount of envelope has been lost or
+transferred, and the radius is smaller than both the Roche radius and
+the terminal-age main sequence radius (TAMS, defined as when the
+central mass fraction of H drops below $10^4$). From here onwards, % At this point in time,
+% we save a model for the accreting star, and continue its evolution
+% as
+we continue the evolution of the accretor as a single star until its TAMS
+with the same setup.
 
 \todo{describe parameter variations in this sec.}
 
@@ -328,8 +329,8 @@ track. This indicates that the partially processed outer layers of the donor's c
 uncovered by mass transfer. %  after the convective core recession in
 % mass during the main sequence.
 This late mass transfer puts material at high mean molecular weight
-$\mu$ on top of the primordial envelope of the accretor, modifying the morphology of the evolutionary track. Thermohaline mixing starts in the outer layers of the accreting star, and, together with rotational mixing, it progressively dilutes the surface He and N mass fractions and causes noisy features on the HR diagram \citep[e.g.,][]{cantiello:07}. \Secref{sec:mixing} describes in more detail the mixing processes inside the accretor, we emphasize here that the algorithmic choices made to model mixing (and rotation) might impact the morphology of the accretor's evolutionary track during RLOF. However, the entire duration of RLOF (and thus of the feature in the bottom panel of \Figref{fig:HRD_both} from the departure from the main-sequence to the black diamond) is only about
-$10^4$\,years.
+$\mu$ on top of the primordial envelope of the accretor, modifying the morphology of the evolutionary track. Thermohaline mixing starts in the outer layers of the accreting star, and, together with rotational mixing, it progressively dilutes the surface He and N mass fractions and causes noisy features on the HR diagram \citep[e.g.,][]{cantiello:07}. The (standard) algorithmic choices in modelling mixing and rotation might impact the morphology of the accretor's evolutionary track during RLOF. The entire duration of RLOF is only about
+$10^4$\,years, and therefore unlikely to be observable to probe directly the accuracy of our treatment of mixing. We expand on the mixing processes inside the accretor in \Secref{sec:mixing}.
 
 We evolve the binary system until the black diamonds in
 \Figref{fig:HRD_both}, which occurs well after the donor detaches from
@@ -344,15 +345,8 @@ $\sim$$9.4\,M_\odot$, likely to contract further and appear as a
 Wolf-Rayet star. It's surface H mass fraction is $\lesssim 0.2$ and
 most of the H is likely to be removed by further wind mass loss
 \citep[e.g.,][]{gotberg:17}. \todo{Ylva: want to expand?}.
-\todo{maybe move next paragraph to discussion?} For our assumed
-scenario to work, such donor needs to successfully explode in a SN,
-breaking the binary system and making a neutron star remnant. While
-the post-RLOF donor mass we obtain is rather high, recent studies
-suggest higher ``explodability'' of donor stars in binary systems
-\citep[e.g.,][]{schneider:21, laplace:21, vartanyan:21}. Furthermore,
-neither the initial donor mass $M_1$ nor the initial period are observable,
-and thus there is room to chose different values to obtain easier to
-explode donors and faster (or slower) accretors post-RLOF.
+\todo{maybe move next paragraph to discussion?}.
+% move to discussion SN paragraph, focus on the accretor here
 
 From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly different slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
 
@@ -360,11 +354,6 @@ The red errorbars in the bottom panel of \Figref{fig:HRD_both} mark the approxim
 $\sim$2\,Myr within the represented errorbars after the end of RLOF. Assuming the kinematic age of
 $1.78\pm0.21$ \citep{neuhauser:20}, and estimating a remaining lifetime of the donor of
 $\sim$0.5\,Myr, this gives the correct timescale for the binary SN scenario.
-The observed position of \zoph\ on the HRD, and especially
-its relatively high $T_\mathrm{eff}$ would be hard to reproduce
-assuming initially less massive accretors (which would remain too cool
-even after accreting mass), or more equal initial mass ratio (which
-would produce a too evolved accretor at the onset of mass transfer).
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{MT}
@@ -393,12 +382,12 @@ At the end of RLOF, the donor star briefly expands again
 ($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
 is due to the partial recombination of the now He-rich outer layers,
 which causes a transient surface convection layer. This causes the
-second broad peak in the mass transfer rates centered at $7.261$\,Myrs. We
-find this to be the culprit of difficulties in modeling massive
-binaries transferring mass in older \texttt{MESA} releases, because
-although only a very small amount of mass is involved, this would lead
-to large radial expansion much beyond the donor's Roche lobe, and
-cause numerical problems.
+second broad peak in the mass transfer rates centered at
+$7.261$\,Myrs. We find this to be the culprit of the numerical
+difficulties for massive mass-transferring binaries with older
+\texttt{MESA} releases: although only a very small amount of mass is
+involved, the onset of convection causes a large radius variation
+which impacts the mass transfer rate.
 
 The wind mass loss (in red) controls the accretion efficiency and thus
 the difference between the actual rate of change in mass of the
@@ -410,7 +399,6 @@ accreted mass. The interplay between the stellar radius and rotation
 causes the oscillations visible in the bottom panel, whose amplitude
 is generally lower than the RLOF mass transfer rate.
 
-% \subsection{Internal mixing and surface composition of the accretor}
 \subsection{Mixing and composition}
 \label{sec:mixing}
 
@@ -451,19 +439,19 @@ is generally lower than the RLOF mass transfer rate.
 \end{figure*}
 
 
-\texttt{MESA} treats mixing processes in the diffusion approximation
+\texttt{MESA} treats mixing in the diffusion approximation
 \citep{paxton:11}.  To illustrate the dominant processes throughout
 the accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
 coefficients for various mixing processes as a function of mass
 coordinate at selected times. Each panel corresponds to one of the
 thin blue crosses in the bottom panel of \Figref{fig:HRD_both}, and
-the gray shaded areas mark mass accreted during RLOF. The last
+the gray shaded areas highlight mass accreted during RLOF. The last
 panel roughly represents the predicted internal structure of \zoph\ as
 observed today.
 
 In \Figref{fig:D_mix}, the thin red lines correspond to convection,
 with the initial convective core of
-$\sim$$6\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The thin blue lines mark mixing processes that are not related to rotation, nor are any of the other processes explicitly shown, which here effectively means overshooting. The extension of the diffusion coefficient above the convective core in all panels is the typical behavior for an exponentially decreasing overshooting. Purple and pink represent semiconvection and thermohaline mixing, respectively. Before mass transfer (left-most panel), only a small amount of sub-surface thermohaline mixing occurs, with a mass extent comparable or smaller to the sub-surface convective zone, and no semiconvection occurs. The thick cyan line corresponds to the total diffusion coefficient, obtained as the sum of the diffusion coefficients for each process modeled: where the cyan line is not overlapping with the others, rotational mixing (and more specifically Eddington-Sweet meridional circulation) is the dominant process.
+$\sim$$6\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The thin blue lines show the exponentially decreasing overshooting above the convective core. Purple and pink represent semiconvection and thermohaline mixing, respectively. Before mass transfer (left-most panel), only a small amount of sub-surface thermohaline mixing occurs, with a mass extent comparable or smaller to the sub-surface convective zone, and no semiconvection occurs. The thick cyan line corresponds to the total diffusion coefficient, obtained as the sum of the diffusion coefficients for each process modeled: where the cyan line is not overlapping with the others, rotational mixing (and more specifically Eddington-Sweet meridional circulation) is the dominant process.
 
 During RLOF (second and third panel), the spin-up due to accretion causes an increase in the rotational mixing (see also \Secref{sec:rot}), and the accretion of nuclearly processed material progressively widens the thermohaline mixing region at the surface. Late during the mass transfer (third panel), thermohaline mixing dominates the outermost layers -- except within the sub-surface convective zone, but throughout most of the envelope rotation does the lion's share of the mixing. Thermohaline mixing and Eddington-Sweet circulations together mix inwards and dilute the CNO-enriched material coming from the donor's surface.
 
@@ -739,6 +727,11 @@ models of compact objects spins for gravitational-wave progenitors
 \section{Robustness of the models and discussion}
 \label{sec:discussion}
 
+\subsection{Uncertainties in the single-star physics}
+\label{sec:single_star_uncertainties}
+
+\todo{write about model variations}
+
 % \subsection{Free parameters in the treatment of mass transfer}
 \subsection{Uncertainties in the treatment of mass transfer}
 \label{sec:free_param}
@@ -757,13 +750,14 @@ $\Delta M_\mathrm{accretor}\simeq 3.4\,M_\odot$ are successfully
 accreted. This corresponds to an overall mass transfer efficiency
 $\beta_\mathrm{RLOF}\equiv \Delta M_\mathrm{accretor}/\Delta M_\mathrm{donor} \simeq 0.3$,
 although the accretion efficiency is \emph{not} constant throughout
-the mass transfer \citep[e.g.,][]{vanrensbergen:06}, instead it
+the mass transfer \citep[e.g.,][]{vanrensbergen:06}. In our models it
 depends on the radial and rotational evolution of the accreting
-star. In reality, the accretor will deviate from
-spherical simmetry because of centrifugal forces, and during the RLOF
-the accretor might be out of gravothermal equilibrium with significant
+star. During RLOF,
+the accretor is out of gravothermal equilibrium with significant
 impact on its radius and ultimately on the amount of mass transferred
-and its angular momentum.
+and its angular momentum. In reality, geometric distorsion of the
+outer layers because of the centrifugal forces would also occur, which
+is not modeled in a 1D code as \texttt{MESA}.
 
 While the mass transfer efficiency $\beta_\mathrm{RLOF}$ and
 importantly its time-evolution need further studies, we emphasize that most studies, especially
@@ -805,87 +799,93 @@ surface. However, the very large mass-transfer rates we find
 (cf.~\Figref{fig:MT}) might result in optically thick flows for which
 this approximation might not be appropriate.
 
-\subsection{Uncertainties in the single-star physics}
-\label{sec:single_star_uncertainties}
-
-\todo{write about model variations}
-
 \subsection{Variations in the initial binary parameters}
 \label{sec:bin_params}
 \todo{discuss variations in M1, M2, P}
+Since neither the initial donor mass
+$M_1$ nor the initial period can be directly constrained, it is
+possible that different values would result in easier-to-explode
+donors with a similar accretor on a and faster (or slower) orbit.
+
+The observed position of \zoph\ on the HRD, and especially
+its relatively high $T_\mathrm{eff}$ would be hard to reproduce
+assuming initially less massive accretors (which would remain too cool
+even after accreting mass), or more equal initial mass ratio (which
+would produce a too evolved accretor at the onset of mass transfer).
+
 
 \subsection{The explosion of the former companion}
 \label{sec:SN_comp}
 
 Throughout this study, we have assumed the ``binary SN scenario'':
 after the mass transfer phase, the explosion of the donor breaks the
-binary and ejects the accretor with roughly its pre-explosion velocity
-\citep[e.g.,][]{renzo:19walk}. This is the fate of the majority of
-massive binary systems, and \zoph\ might be the best example of this
-scenario \citep[e.g.,][]{blaauw:52, blaauw:61,
+binary and ejects the accretor at roughly its pre-explosion orbital
+velocity \citep[e.g.,][]{renzo:19walk}. This fate occurs to the
+majority of massive binary systems, and \zoph\ might be the best
+example of it \citep[e.g.,][]{blaauw:52, blaauw:61,
   hoogerwerf:00}. \cite{neuhauser:20} suggested not only the companion
 successfully exploded producing the pulsar PSR B1706-16, but that the
 explosion produced radioactive $^{60}\mathrm{Fe}$ which polluted
-Earth. From kinematic and orbital considerations they estimated a
-natal kick of $\sim$$253\pm54\,\kms$, which would be sufficiently large to
-unbind the binary.
+Earth.
 
-However, we have so far neglected the impact of the explosion on the
+From kinematic and orbital considerations they estimated the pulsar
+received a natal kick of
+$\sim$$253\pm54\,\kms$, which would be sufficiently large to unbind the binary.  The ejecta mass would depend on the post-RLOF wind mass loss of our donor star, which we do not model.  At the end of our binary model (black diamond in \Figref{fig:HRD_both}), our stripped donor is
+$\sim$$9.4\,M_\odot$, with a surface H fraction of $X\lesssim0.2$ for
+a layer of $\Delta M \simeq 2.5\,M_\odot$.  Its wind mass-loss rate is
+$\sim10^{-5}\,M_\odot \ \mathrm{yr^{-1}}$ (cf.~\Figref{fig:MT}),
+likely to increase as it contracts into a Wolf-Rayet star and
+increases its luminosity and effective temperature. We expect its
+explosion to appear as H-less type Ib SN. Although our stripped donor
+is rather massive, recent studies suggest a higher ``explodability''
+of donor stars in binary systems \citep[e.g.,][]{schneider:21,
+  laplace:21, vartanyan:21}.
+
+We have so far neglected the impact of the explosion on the
 structure of the accretor star. The blast wave will hit the companion
 at a \todo{estimate solid angle} causing mass loss -- directly via
 ablation and by injecting energy in the envelope, inflating it and
 enhancing its wind \citep{wheeler:75, tauris:98, podsiadlowski:03, hirai:18}.
-
-Using 2D hydrodynamic simulations of the star-SN ejecta interactions
-in close binaries ($a\lesssim 60\,R_\odot$,
-cf. $a\gtrsim 343\,R_\odot$ in our fiducial binary model),
-\cite{hirai:18} found that the companion star recovers its pre-explosion
-luminosity and effective temperature within a few years to decades,
-and the amount of mass removed by the SN shock is $\lesssim10^{-2}\,M_\odot$
-
-
-
-\todo{estimate mass loss}
-
-
 Because of the SN shock, the just ejected new runaway star might
 appear bloated and redder (long before it overtakes the slowing SN
 remnant). The impact of this brief out of
 thermal equilibrium phase on the stellar spin should be investigated
-further.
-
+further. Using 2D hydrodynamic simulations of the star-SN ejecta interactions
+in close binaries ($a\lesssim 60\,R_\odot$,
+cf. $a\gtrsim 343\,R_\odot$ in our fiducial binary model),
+\cite{hirai:18} found that the companion star recovers its pre-explosion
+luminosity and effective temperature within a few years to decades,
+and the amount of mass removed by the SN shock is $\lesssim10^{-2}\,M_\odot$.
 The SN ejecta might also pollute the surface of the runaway depositing
 processed nuclear material \citep[e.g.][]{przybilla:08}. However,
 enhahnced mass loss, rapid rotation and mixing might rapidly dilute
 the yields.
 
-% On top of the surface abundances, its extreme rotation rate, and the
-% peculiar space velocity, \zoph\ poses a number of other
-% puzzles: its wind mass-loss rate is about two orders of magnitude
-% lower than theoretical predictions (weak wind problem,
-% \citealt{marcolino:09}), the star exhibits spectral variability with
-% occasional appearance of H$\alpha$ in emission
-% \citep[e.g.,][]{walker:79}.
-
 
 \section{Conclusions}
 \label{sec:conclusions}
 
-We have demonstrated that self-consistent one-dimensional calculations
+We have demonstrated that self-consistent 1D calculations
 of coupled stellar models with masses $\gtrsim 20\,M_\odot$ are
 possible with the \texttt{MESA} software instrument. As a first
 application, we focused on finding a model for \zoph, assuming its
 runaway nature is explained by the binary SN scenario.
 
-We found that it is likely possible to explain its surface composition
-without assuming that the surface excess of He and N comes from within
-the star. Instead, this material comes from the receeding core of the
-donor star. Therefore, the present day abundances constrain the
-accretion efficiency and mixing in the accretor.
+We found that it is possible to qualitatively explain the observed
+nitrogen and helium rich surface composition without assuming that the
+surface excess of He and N comes entirely from within the
+star. Instead, this material is transferred from the receeding core of
+the donor star and mixed inwards but rotation, and to a smaller
+degree, thermohaline mixing.
 
-\zoph\ should therefore \emph{not} be used to test models of
-rotational mixing in single star evolution, nor its more extreme
-version of chemically homogeneous evolution.
+Thus, the present day surface mass fraction of \zoph\ put a coupled
+constrain the mass transfer efficiency and mixing in the
+accretor. Standard stellar physics assumptions common in the numerical
+modeling of these processes reproduce reasonably well the main
+observational features of \zoph. Therefore, such star should
+\emph{not} be used to calibrate models of rotational mixing in single
+star evolution, nor its more extreme version of chemically homogeneous
+evolution.
 
 \software{
   \texttt{mesaPlot} \citep{mesaplot},
