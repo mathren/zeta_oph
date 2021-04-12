@@ -37,10 +37,27 @@
 
 \begin{abstract}
   Binarity dominates the evolution of massive stars, and the nearest
-  O-type star to Earth, $\zeta$ Ophiuchi, has long been proposed to be
-  a product of binary evolution. Despite this, most stellar models
+  O-type star to Earth, $\zeta$ Ophiuchi (\zoph), has long been proposed to be
+  a product of binary evolution. Specifically, \zoph\ has likely
+  accreted mass from a former companion, before being ejected at the
+  time of the companion's explosion. Therefore, this star provides an
+  ideal test bed for models of accretors in binaries. Despite this, most stellar models
   have tried unsuccessfully to reproduce its observable properties
-  relying on single-star rotating models.  \todo{Here we do better}
+  relying on single-star rotating models. We use the open-source
+  stellar evolution code \texttt{MESA} to self-consistently model the
+  coupled evolution of two massive stars ($M_1\gtrsim 25\,M_\odot\geq M_2$) in a binary
+  evolving through a stable post-donor-main-sequence mass transfer. We find that adopting
+  common assumptions for the treatment of rotation, chemical mixing,
+  and mass transfer efficiency, our models of the accreting star
+  reproduce reasonably well the kinematic, spectroscopic, and
+  photometric properties of \zoph. We compare the internal structure
+  and evolution of our accretor to fast-rotating single stars, and
+  find that the late and extreme spin up by binary
+  interactions produces a faster-spinning core in the accretor than in
+  single stars. Our model demonstrates the impact that binary evolution
+  can have on the secondary star, with possible implications for the
+  spins of compact objects and the further evolution (either in a
+  binary or as single stars) as supernova and/or gravitational wave progenitors.
 \end{abstract}
 
 \vspace*{-10pt}
@@ -1036,7 +1053,7 @@ points. \Figref{fig:sp_test} shows that all the features described
 extensively here do not vary when increasing the spatial resolution by
 decreasing \texttt{mesh\_delta\_coeff}. The right panel shows the
 number of mesh points for the accretor (top) and donor (bottom), which
-are $\sim 20\%$ higher in the high resolution runs. The left panel
+are $\sim 20\%$ higher in the high resolution/low \texttt{mesh\_delta\_coeff} runs. The left panel
 shows the HRD evolution until the detachment of the binary for the two
 accretor models (pink/red) and the two donor models (blue/cyan).
 
@@ -1044,8 +1061,10 @@ Similarly, we tested the numerical convergence with decreasing
 timestep size. This can be done decreasing the parameter
 \texttt{mesh\_time\_coeff}. However, we were unable to successfully
 compute models at higher temporal resolution. Partial results show a
-good agreement with our fiducial model until they crash (typically
-during RLOF), and lower temporal resolution models showed a similar
+good agreement with our fiducial model until \texttt{MESA} becomes
+unable to find a satisfying numerical solution to the stellar
+structure equations (typically
+during RLOF). Lower temporal resolution models showed a similar
 qualitative agreement but increased noisiness during the late RLOF
 phase. For our fiducial model the adaptive timestep size never exceeds
 $10^{3.8}$\,years with typical pre-RLOF timesteps of the order of $10^{3.2}$\,years
