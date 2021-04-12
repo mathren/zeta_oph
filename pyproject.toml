@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "zeta_oph"
+version = "0.1.0"
+description = "MESA models of massive binaries for \\zeta Ophiuchi"
+authors = ["M. Renzo"]
+license = "GPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "1.17.2"
+os-sys = "^2.1.4"
+matplotlib = "3.1.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
