@@ -219,7 +219,8 @@ evolution of two massive stars in a binary system using \texttt{MESA}
 results are available at \todo{link}. We discuss here only the main
 relevant physical parameters and describe tests changing some of the
 fiducial values in \Secref{sec:discussion}. Appendix~\ref{sec:software} gives
-more details on our choice of input physics.
+more details on our choice of input physics, and
+appendix~\ref{sec:res_tests} discuss the numerical resolution in space and time.
 
 We adopt the Ledoux criterion to determine convective stability and a
 mixing length parameter of $1.5$. We include semiconvection and
@@ -759,24 +760,25 @@ Rotation is a critical ingredient of our models: it governs the
 equatorial radius extend and thus the $\omega/\omega_\mathrm{crit}$
 and mass transfer efficiency (see \Secref{sec:bin_param}), it
 determines outward mixing from the core, and more importantly inward
-mixing from the surface. We were
+mixing from the surface. We were unable to run models without
+Eddington-Sweet meridional circulations to test the sensitivity of our
+results to rotational mixing. \todo{check fi\_workstation/RUNS/.../ES\_10x\_lower}
 
+Similarly, during RLOF, thermohaline mixing in the envelope becomes
+important. We have explored models enhancing the efficiency of this
+mixing process by a factor of 100, however, this caused our models to
+crash during RLOF after the ``v-shaped'' feature corresponding to the
+accretion of nuclearly processed material.
 
-
-\todo{no Eddington
-  sweet, effect on R and thus $\omega/\omega_{crit}$ and mass transfer
-efficiency}.
-
-\todo{higher thermohaline mixing}
-
-
- We attempted running models
-with artificially decreased wind mass loss rate
+Finally, to address the ``weak wind problem'', we also attempted
+running models with artificially decreased wind mass loss rate
 \citep[e.g.,][]{renzo:17}, but these resulted in super-critical
 $\omega/\omega_\mathrm{crit}>1$ accretor stars with untrustworthy
 numerical results.
 
-
+While the number of free parameters resulting in a successful
+computation is rather limited, we emphasize that this remains often
+true for calculation of single massive star evolution.
 
 \subsection{Uncertainties in the treatment of mass transfer}
 \label{sec:bin_param}
@@ -926,8 +928,6 @@ $\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the
 \section{Conclusions}
 \label{sec:conclusions}
 
-\todo{improve conclusions}
-
 We have demonstrated that self-consistent 1D calculations
 of coupled stellar models with masses $\gtrsim 20\,M_\odot$ are
 possible with the \texttt{MESA} software instrument. As a first
@@ -935,20 +935,55 @@ application, we focused on finding a model for \zoph, assuming its
 runaway nature is explained by the binary SN scenario.
 
 We found that it is possible to qualitatively explain the observed
-nitrogen and helium rich surface composition without assuming that the
-surface excess of He and N comes entirely from within the
-star. Instead, this material is transferred from the receeding core of
-the donor star and mixed inwards but rotation, and to a smaller
-degree, thermohaline mixing.
+features of \zoph\ with a relatively wide and massive binary
+(initially $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and
+$P=100$\,days). Such system experiences a dynamically stable
+post-donor-main-sequence (case B) Roche lobe overflow. Standard
+stellar physics assumptions for modeling rotation, mixing, and mass
+transfer in binaries reproduce reasonably well the main observational
+features of \zoph\ in terms of its spatial velocity, its surface
+$^{14}\mathrm{N}$ and $^4\mathrm{He}$ enhancement, its rotation rate,
+age and position on the Hertzsprung-Russell diagram.
 
-Thus, the present day surface mass fraction of \zoph\ put a coupled
-constrain the mass transfer efficiency and mixing in the
-accretor. Standard stellar physics assumptions common in the numerical
-modeling of these processes reproduce reasonably well the main
-observational features of \zoph. Therefore, such star should
-\emph{not} be used to calibrate models of rotational mixing in single
-star evolution, nor its more extreme version of chemically homogeneous
-evolution.
+In contrast with \cite{vanrensbergen:96}, in our model, the
+$^{14}\mathrm{N}$ and $^4\mathrm{He}$ rich surface composition is
+\emph{not} the result of pure outward rotational mixing.  Instead,
+this material is transferred from the receeding core of the donor star
+and mixed inwards by rotation, and to a smaller degree, by thermohaline
+mixing.  Thus, the present day surface mass fractions of \zoph\ put a
+coupled constrain the mass transfer efficiency and mixing in the
+accretor. Therefore, such star should \emph{not} be used to calibrate models of
+rotational mixing in single star evolution, nor its more extreme
+version of chemically homogeneous evolution.
+
+The spin up of the accreting star occurs late in its evolution
+($t\gtrsim7.25$\,Myr), allowing the star to be simultaneously nitrogen
+rich and still fast rotating after the mass transfer phase. The
+treatment of close-to-critical rotation impacts the accretion
+efficiency, the radius evolution, and the inward mixing.
+
+An important difference we find between our accretor model and
+comparable fast-rotating single star models is their internal rotation
+profile. Single-stars rotating rapidly from birth are initialized as
+rigid rotators, and spin down significantly both at the surface and
+inside. Conversely, in our accretor models angular momentum is
+injected late and from the top. When this angular momentum is
+transported into the core by the Spruit-Tayler dynamo, it results in a
+much faster rotating helium core, with potential implications for the
+spin of the second compact object born in an interacting binary system.
+
+We also consider variations in the initial parameters and in the
+implementation of physical processes, discussed in
+\Secref{sec:discussion}.  Less massive secondaries remain too cool
+throughout the evolution to be compatible with \zoph, and more equal
+initial mass ratios lead to a more evolved accretor at the onset of
+mass-transfer, again resulting in too cool temperatures.
+
+The study of the evolution of the secondary stars in massive binary
+systems is crucial to understand population of massive stars,
+transients, and gravitational-wave progenitors: because of the binary
+interaction, the evolution of the accretor can differ from a single star.
+
 
 \software{
   \texttt{mesaPlot} \citep{mesaplot},
