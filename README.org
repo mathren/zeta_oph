@@ -182,7 +182,7 @@ in particular the last one seem to lead to noisiness in the spin down.
     the rotating GENEVA models.
 
 
-** TODO Questions
+** Questions
 
 *** Why left-ward HRD movement when becoming single star?
 
@@ -224,11 +224,3 @@ redistribution in the star?
 
      That is the damned surface convection layer that pops up because
      of partial recombination of He.
-
-
-** TODOs
-
-*** TODO build python dependencies list with poetry
-
-*** TODO check out grid papers from
-    Van Rensbergen et al. 2006, 2008, 2011
