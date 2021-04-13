@@ -254,7 +254,7 @@ enhancement of the convective flux in superadiabatic regions
 15140.
 
 We treat rotation in the ``shellular'' approximation of constant
-rotational frequency $\omega$ along equipotential surfaces, and we assume
+rotational frequency $\omega$ along isobaric surfaces, and we assume
 tidal synchronization at the beginning of our runs. For our fiducial period choice ($P=100$\,days), this effectively means both the stars in our binary are
 initially slow rotators. Our models include a diffusive approximation
 for Eddington-Sweet circulations
@@ -777,12 +777,22 @@ $T_\mathrm{eff}=32\,000\pm2\,000$ of \zoph\ (e.g., \citetalias{villamariz:05}) r
 massive and hotter accretors (see also \Secref{sec:bin_init}).
 
 Rotation is a critical ingredient of our models: it governs the
-equatorial radius extend and thus the $\omega/\omega_\mathrm{crit}$
-and mass transfer efficiency (see \Secref{sec:bin_param}), it
-determines outward mixing from the core, and more importantly inward
-mixing from the surface. We were unable to run models without
-Eddington-Sweet meridional circulations to test the sensitivity of our
-results to rotational mixing. \todo{check fi\_workstation/RUNS/.../ES\_10x\_lower}
+equatorial radius extent and thus the $\omega/\omega_\mathrm{crit}$
+and mass transfer efficiency (see \Secref{sec:bin_param}), through
+Eddington-Sweet meridional circulations it determines outward mixing
+from the core, and more importantly inward mixing from the surface.
+We emphasize that the shellular approximation used in one-dimensional
+stellar evolution codes might not be appropriate for
+$\omega/\omega_\mathrm{crit}\simeq 1$ which are reached by our
+accretor star during RLOF. Decreasing by a factor of 10 the diffusion
+coefficient for Eddington-Sweet meridional circulations has a very
+small effect on the HRD evolution. However, the noisiness during the
+late RLOF phase (for $T_\mathrm{eff}\gtrsim10^{4.5}$\,K in
+\Figref{fig:HRD_both}) increases in amplitude slightly, confirming
+that the details of this part of the evolution are sensitive to the
+treatment of rotational mixing. We were unable to run models turning
+completely off Eddington-Sweet meridional circulations past the
+``v-shaped'' feature in \Figref{fig:HRD_both}.
 
 Similarly, during RLOF, thermohaline mixing in the envelope becomes
 important. We have explored models enhancing the efficiency of this
