@@ -566,3 +566,41 @@ def MassVelocityEvolution(folder, convert=False, figName=""):
 
     if figName != "":
         plt.savefig(figName)
+
+
+#
+
+
+def get_age_from_profile(pfile):
+    # print(pfile)
+    with open(pfile, 'r') as f:
+        for i, line in enumerate(f):
+            if i == 1:
+                header_cols = line.split()
+                # print(header_cols)
+            if i == 2:
+                header_data = line.split()
+                break
+    age = float(header_data[header_cols.index('star_age')])*1e-6
+    return age # in Myr
+
+
+def get_modnum_from_profile(pfile):
+    # print(pfile)
+    with open(pfile, 'r') as f:
+        for i, line in enumerate(f):
+            if i == 1:
+                header_cols = line.split()
+                # print(header_cols)
+            if i == 2:
+                header_data = line.split()
+                break
+    mn = int(header_data[header_cols.index('model_number')])
+    return mn # in yr
+
+def get_ZAMS_abundances(hfile):
+    src, col = getSrcCol(hfile)
+    surface_c12 = src[0, col.index("surface_c12")]
+    surface_n14 = src[0, col.index("surface_n14")]
+    surface_o16 = src[0, col.index("surface_o16")]
+    return surface_c12, surface_n14, surface_o16
