@@ -37,27 +37,30 @@
 
 \begin{abstract}
   Binarity dominates the evolution of massive stars, and the nearest
-  O-type star to Earth, $\zeta$ Ophiuchi (\zoph), has long been proposed to be
-  a product of binary evolution. Specifically, \zoph\ has likely
-  accreted mass from a former companion, before being ejected at the
-  time of the companion's explosion. Therefore, this star provides an
-  ideal test bed for models of accretors in binaries. Despite this, most stellar models
+  O-type star to Earth, $\zeta$ Ophiuchi (\zoph), has long been
+  proposed to be a product of binary evolution. Specifically, \zoph\
+  has likely accreted mass from a former companion, before being
+  ejected at the time of the companion's supernova
+  explosion. Therefore, this star provides an ideal test bed for
+  models of accretors in binaries. Despite this, most stellar models
   have tried unsuccessfully to reproduce its observable properties
   relying on single-star rotating models. We use the open-source
   stellar evolution code \texttt{MESA} to self-consistently model the
-  coupled evolution of two massive stars ($M_1\gtrsim 25\,M_\odot\geq M_2$) in a binary
-  evolving through a stable post-donor-main-sequence mass transfer. We find that adopting
-  common assumptions for the treatment of rotation, chemical mixing,
-  and mass transfer efficiency, our models of the accreting star
-  reproduce reasonably well the kinematic, spectroscopic, and
+  coupled evolution of two massive stars
+  ($M_1\gtrsim 25\,M_\odot\geq M_2$) in a binary evolving through a
+  stable post-donor-main-sequence (case B) mass transfer. We find that
+  adopting common assumptions for the treatment of rotation, chemical
+  mixing, and mass transfer efficiency, our models of the accreting
+  star reproduce reasonably well the kinematic, spectroscopic, and
   photometric properties of \zoph. We compare the internal structure
   and evolution of our accretor to fast-rotating single stars, and
-  find that the late and extreme spin up by binary
-  interactions produces a faster-spinning core in the accretor than in
-  single stars. Our model demonstrates the impact that binary evolution
-  can have on the secondary star, with possible implications for the
-  spins of compact objects and the further evolution (either in a
-  binary or as single stars) as supernova and/or gravitational wave progenitors.
+  find that the late and extreme spin up by binary interactions yields
+  at the end of the main sequence a faster-spinning core in the
+  accretor than in single stars. Our model demonstrates the impact
+  that binary evolution can have on the secondary star, with possible
+  implications for the spins of compact objects and the further
+  evolution (either in a binary or as single stars) as supernova
+  and/or gravitational wave progenitors.
 \end{abstract}
 
 \vspace*{-10pt}
@@ -74,12 +77,12 @@ The overwhelming majority of massive stars is born in multiple systems
 \citep[e.g.,][]{mason:09, almeida:17}, and a large fraction will
 exchange mass or merge with a companion in their lifetime
 \citep[e.g.,][]{sana:12}. The most common type of interaction is a
-post-main-sequence stable mass transfer (case B) through Roche Lobe
-overflow (RLOF, \citealt{kippenhahn:67}).  Many studies
-\citep[e.g.,][]{gotberg:17, gotberg:18, laplace:20, laplace:21,
-  blagorodnova:21} \todo{more refs. from other groups} have focused on
-the dramatic impact these interactions have on the donor star. Often
-the binary companion is treated as a point mass.
+stable mass transfer through Roche Lobe overflow (RLOF) after the end of the donor's main sequence (case
+B, \citealt{kippenhahn:67}).  Many
+studies \citep[e.g.,][]{gotberg:17, gotberg:18, laplace:20,
+  laplace:21, blagorodnova:21} \todo{more refs. from other groups}
+have focused on the dramatic impact these interactions have on the
+donor star. Often the binary companion is treated as a point mass.
 
 However, binary interactions have a crucial impact on the initially
 less massive star too: during mass transfer, these are expected to
@@ -251,17 +254,19 @@ enhancement of the convective flux in superadiabatic regions
 15140.
 
 We treat rotation in the ``shellular'' approximation of constant
-rotational frequency $\omega$ along equipotential surfaces, and we assume
-tidal synchronization at the beginning of our runs. For our fiducial period choice ($P=100$\,days), this effectively means both the stars in our binary are
-initially slow rotators. Our models include a diffusive approximation
-for Eddington-Sweet circulations
+rotational frequency $\omega$ along isobaric surfaces, and we assume
+tidal synchronization at the beginning of our runs. For our fiducial
+period choice ($P=100$\,days), this effectively means both the stars
+in our binary are initially slow rotators. Our models include a
+diffusive approximation for Eddington-Sweet circulations
 \citep{sweet:50}, which dominates the chemical mixing due to
 rotation. We also include the secular and dynamical shear
 instabilities, and the Goldreich-Schubert-Fricke instability as in
-\cite{gotberg:17, gotberg:18, laplace:20, laplace:21}.  We assume a Spruit-Tayler
-dynamo for the transport of angular momentum \citep{spruit:02}, and chose the same free
-parameters as \cite{heger:00}. This also includes the rotational
-enhancement of wind mass loss as in \cite{langer:98}.
+\cite{gotberg:17, gotberg:18, laplace:20, laplace:21}.  We assume a
+Spruit-Tayler dynamo for the transport of angular momentum
+\citep{spruit:02}, and chose the same free parameters as
+\cite{heger:00}. This also includes the rotational enhancement of wind
+mass loss as in \cite{langer:98}.
 
 We assume a fiducial metallicity of $Z=0.01$ informed by the
 present-day $Z$ of the parent cluster \citep{murphy:21}, and assume
@@ -774,12 +779,22 @@ $T_\mathrm{eff}=32\,000\pm2\,000$ of \zoph\ (e.g., \citetalias{villamariz:05}) r
 massive and hotter accretors (see also \Secref{sec:bin_init}).
 
 Rotation is a critical ingredient of our models: it governs the
-equatorial radius extend and thus the $\omega/\omega_\mathrm{crit}$
-and mass transfer efficiency (see \Secref{sec:bin_param}), it
-determines outward mixing from the core, and more importantly inward
-mixing from the surface. We were unable to run models without
-Eddington-Sweet meridional circulations to test the sensitivity of our
-results to rotational mixing. \todo{check fi\_workstation/RUNS/.../ES\_10x\_lower}
+equatorial radius extent and thus the $\omega/\omega_\mathrm{crit}$
+and mass transfer efficiency (see \Secref{sec:bin_param}), through
+Eddington-Sweet meridional circulations it determines outward mixing
+from the core, and more importantly inward mixing from the surface.
+We emphasize that the shellular approximation used in one-dimensional
+stellar evolution codes might not be appropriate for
+$\omega/\omega_\mathrm{crit}\simeq 1$ reached by our accretor star
+during RLOF. Decreasing by a factor of 10 the diffusion coefficient
+for Eddington-Sweet meridional circulations has a very small effect on
+the HRD evolution of the accretor. However, the noisiness during the
+late RLOF phase (for $T_\mathrm{eff}\gtrsim10^{4.5}$\,K in
+\Figref{fig:HRD_both}) increases in amplitude slightly, confirming
+that the details of this part of the evolution are sensitive to the
+treatment of rotational mixing. We were unable to run models turning
+completely off Eddington-Sweet meridional circulations past the
+``v-shaped'' feature in \Figref{fig:HRD_both}.
 
 Similarly, during RLOF, thermohaline mixing in the envelope becomes
 important. We have explored models enhancing the efficiency of this
