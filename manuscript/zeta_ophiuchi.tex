@@ -36,33 +36,31 @@
 
 
 \begin{abstract}
-  \todo{maybe move accretors in general upfront}
-
-  Binarity dominates the evolution of massive stars, and the nearest
+  Most massive stars appear to be born in binary systems close enough
+  for mass-transfer episodes. These modify the appearance, internal
+  structure, and future evolution of both stars. However
+  self-consistent models of the accretors are rare.  The nearest
   O-type star to Earth, $\zeta$ Ophiuchi (\zoph), has long been
-  proposed to be a product of binary evolution. Specifically, \zoph\
-  has likely accreted mass from a former companion, before being
+  proposed to have accreted mass from a former companion, before being
   ejected at the time of the companion's supernova
   explosion. Therefore, this star provides an ideal test bed for
-  models of accretors in binaries. Despite this, most stellar models
-  have tried unsuccessfully to reproduce its observable properties
-  relying on single-star rotating models. We use the open-source
-  stellar evolution code \texttt{MESA} to self-consistently model the
-  coupled evolution of two massive stars
-  ($M_1\gtrsim 20\,M_\odot\geq M_2$) in a binary evolving through a
-  stable mass transfer after the donor evolved off the main sequence
-  (case B). We find that adopting common assumptions for the treatment
-  of rotation, chemical mixing, and mass transfer efficiency, our
-  models of the accreting star reproduce reasonably well the
-  kinematic, spectroscopic, and photometric properties of \zoph. We
-  compare the internal structure and evolution of our accretor to
-  fast-rotating single stars, and find that the late and extreme spin
-  up by binary interactions yields at the end of the main sequence a
-  faster-spinning core in the accretor than in rotating single stars. Our model
-  demonstrates the impact that binary evolution can have on the
-  secondary star, with possible implications for the spins of compact
-  objects and the further evolution (either in a binary or as single
-  stars) as supernova and/or gravitational wave progenitors.
+  models of accretors in binaries. We use the open-source stellar
+  evolution code \texttt{MESA} to self-consistently model the coupled
+  evolution of two massive stars ($M_1\gtrsim 20\,M_\odot\geq M_2$) in
+  a binary evolving through a stable mass transfer after the donor
+  evolved off the main sequence (case B). We find that adopting common
+  assumptions for the treatment of rotation, chemical mixing, and mass
+  transfer efficiency, our models of the accreting star reproduce
+  reasonably well the kinematic, spectroscopic, and photometric
+  properties of \zoph. We compare the internal structure and evolution
+  of our accretor to fast-rotating single stars, and find that the
+  late and extreme spin up by binary interactions yields at the end of
+  the main sequence a faster-spinning core in the accretor than in
+  rotating single stars. Our model demonstrates the impact that binary
+  evolution can have on the secondary star, with possible implications
+  for the spins of compact objects and the further evolution (either
+  in a binary or as single stars) as supernova and/or gravitational
+  wave progenitors.
 \end{abstract}
 
 \vspace*{-10pt}
@@ -83,7 +81,7 @@ stable mass transfer through Roche Lobe overflow (RLOF) after the end of the don
 B, \citealt{kippenhahn:67}).  Many
 studies %\todo{more refs. from other groups}
 have focused on the dramatic impact these interactions have on the
-donor star \citep[e.g., recently,][]{yoon:17, gotberg:17, gotberg:18, laplace:20,
+donor star \citep[e.g.,][]{morton:60, yoon:17, gotberg:17, gotberg:18, laplace:20,
   laplace:21, blagorodnova:21}. Often the binary companion is treated as a point mass.
 
 However, binary interactions have a crucial impact on the initially
@@ -275,8 +273,8 @@ rotational velocity is $\lesssim3\,\kms$ for both stars. Our models include a
 diffusive approximation for Eddington-Sweet circulations
 \citep{sweet:50}, which dominates the chemical mixing due to
 rotation. We also include the secular and dynamical shear
-instabilities, and the Goldreich-Schubert-Fricke instability as in
-\cite{gotberg:17, gotberg:18, laplace:20, laplace:21}.  We assume a
+instabilities, and the Goldreich-Schubert-Fricke instability, but
+these remain subdominant throughout the evolution of our models.  We assume a
 Spruit-Tayler dynamo for the transport of angular momentum
 \citep{spruit:02}, and chose the same free parameters as
 \cite{heger:00}. This also includes the rotational enhancement of wind
