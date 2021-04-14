@@ -36,6 +36,8 @@
 
 
 \begin{abstract}
+  \todo{maybe move accretors in general upfront}
+
   Binarity dominates the evolution of massive stars, and the nearest
   O-type star to Earth, $\zeta$ Ophiuchi (\zoph), has long been
   proposed to be a product of binary evolution. Specifically, \zoph\
@@ -79,10 +81,10 @@ exchange mass or merge with a companion in their lifetime
 \citep[e.g.,][]{sana:12}. The most common type of interaction is a
 stable mass transfer through Roche Lobe overflow (RLOF) after the end of the donor's main sequence (case
 B, \citealt{kippenhahn:67}).  Many
-studies \citep[e.g.,][]{yoon:17, gotberg:17, gotberg:18, laplace:20,
-  laplace:21, blagorodnova:21} %\todo{more refs. from other groups}
+studies %\todo{more refs. from other groups}
 have focused on the dramatic impact these interactions have on the
-donor star. Often the binary companion is treated as a point mass.
+donor star \citep[e.g., recently,][]{yoon:17, gotberg:17, gotberg:18, laplace:20,
+  laplace:21, blagorodnova:21}. Often the binary companion is treated as a point mass.
 
 However, binary interactions have a crucial impact on the initially
 less massive star too: during mass transfer, these are expected to
@@ -96,18 +98,24 @@ the convective core due to the increased mass leads to
 Understanding the evolution of accretors in massive binaries has wider
 and crucial implications for stellar populations, electromagnetic
 transient observations, and gravitational-wave progenitors. Accretors
-(and mergers) can appear as blue stragglers and thus impact cluster
+(and mergers) can appear as blue stragglers \citep[e.g.][]{chen:09, chen:10} and thus impact cluster
 populations and their age estimates and main sequence morphology
-\citep[e.g.,][]{pols_marinus:94, wang:20}. Moreover, the majority of
-massive binaries will be disrupted by the first supernova ejecting the
-companion \citep[``binary SN scenario'', ][]{blaauw:61, dedonder:97,
-  eldridge:11, boubert:18, renzo:19walk, evans:20}. Therefore, populations of
-field massive stars contain presently single O-type stars that
-accreted mass earlier on. The majority of these will be too slow to
-stand out in astrometric surveys. Assuming a constant star formation history,
-\cite{renzo:19walk} estimated that $10.1^{+4.6}_{-8.6}\%$ of O-type
-stars could be accretors released after a SN. %  -- where the errors span
+\citep[e.g.,][]{pols_marinus:94, wang:20}. The post-mass-transfer high
+rotation rate might be the dominant explanation for the origin of
+massive stars showing emission lines \citep[e.g.,][]{bodensteiner:20,
+  vinciguerra:20}. Moreover, the majority of massive binaries will be
+disrupted by the first supernova ejecting the companion
+\citep[``binary SN scenario'', ][]{blaauw:61, dedonder:97,
+  eldridge:11, boubert:18, renzo:19walk, evans:20}. Therefore,
+populations of field massive stars contain presently single O-type
+stars that accreted mass earlier on. A small fraction would be
+sufficiently fast to become runaway stars, but the majority of these will be too
+slow to stand out in astrometric surveys. Assuming a constant star
+formation history, \cite{renzo:19walk} estimated that
+$10.1^{+4.6}_{-8.6}\%$ of O-type stars could be `accretors released
+after a SN. % -- where the errors span
 % a range of parameter variations.
+
 
 From the transients
 perspective, massive accretor stars are also important: \cite{zapartas:19}
@@ -117,7 +125,7 @@ fact that they accreted mass before exploding can influence their
 helium (He) core mass and thus the explosion properties and the
 inferred progenitors \citep{zapartas:21}.
 
-Finally, the majorityof isolated binary evolutionary scenarios for
+Finally, the majority of isolated binary evolutionary scenarios for
 gravitational-wave progenitors include a common-envelope
 phase. This is initiated by the originally less massive accretor,
 after the formation of the first compact object
@@ -129,8 +137,6 @@ phase \citep[e.g.,][]{law-smith:20, klencki:21}. Specifically, the
 rotation rate, chemical composition, and innermost structure of the
 envelope (because of rejuvenation) might differ from a normal single
 star.
-
-\todo{mention pop. synth.}
 
 Despite their importance, accretor stars in binaries have so far
 received much less attention than the donor stars, with the pioneering
@@ -144,10 +150,15 @@ modeling accretor stars, which requires following in detail the coupled
 evolution of two rotating stars exchanging mass. Moreover, the
 admittedly large number of free parameters involved in the modeling of
 each individual star and their interactions makes robust predictions
-challenging to obtain. Here, we argue that the nearest O-type star to
+challenging to obtain. We emphasize that rapid population synthesis
+calculations typically cannot include the effects of binary mass
+transfer on the internal structure of the stars, and rely on the
+implicit assumption that the accretor is sufficiently well described
+by a (possibly fast-rotating) single star model.
+
+Here, we argue that the nearest O-type star to
 Earth, $\zeta$ Ophiuchi\footnote{also known as HD\,149\,757.} (\zoph)
 provides a unique opportunity to constrain these models.
-
 \zoph\ has a distance from Earth of $107\pm4$\,pc \citep[][and
 references therein]{neuhauser:20}, and a spectral type O9.5{\rm IVnn}
 \citep{sota:14}. It occasionally shows emission lines
@@ -187,20 +198,21 @@ kick, which in most cases would be sufficient to disrupt the binary
 
 Although the nature of \zoph\ as a binary product is well established,
 because of its observed large surface rotation rate, previous attempts
-to model it rely purely on rotational mixing to explain the surface composition
-\cite[e.g.,][]{maeder:00}. Even the binary models of
+to model it rely purely on rotational mixing to explain the surface
+composition \cite[e.g.,][]{maeder:00}. Even the binary models of
 \cite{vanrensbergen:96} assumed spin-up due to mass accretion to drive
 rotational mixing from the interior of the accreting star (see also
-\citealt{cantiello:07}). However, \cite{villamariz:05} (hereafter, \citetalias{villamariz:05}) were unable to
-find good fit for the stellar spectra using the rotating models from
-\cite{meynet:00}.
+\citealt{cantiello:07}). However, \cite{villamariz:05} (hereafter,
+\citetalias{villamariz:05}) were unable to find good fit for the
+stellar spectra using the rotating models from \cite{meynet:00}.
 
 This may not be surprising: rotational mixing has lower efficiency for
 metal-rich and relatively low mass stars because of the increased
 importance of mean molecular weight gradients and longer thermal
 timescales compared to more massive stars \citep[e.g.,][]{yoon:06,
-  perna:14}. The parent association has a metallicity $Z=0.01\simeq Z_\odot$
-\citep[based on asteroseismology from][]{murphy:21}, and mass estimates for \zoph\ range from
+  perna:14}. The parent association has a metallicity
+$Z=0.01\simeq Z_\odot$ \citep[based on asteroseismology
+from][]{murphy:21}, and mass estimates for \zoph\ range from
 $13-25\,M_\odot$, at the lower end of the range where efficient mixing
 might bring He and CNO-processed material to the surface (chemically
 homogeneous evolution, \citealt{maeder:00}).
@@ -257,8 +269,9 @@ enhancement of the convective flux in superadiabatic regions
 We treat rotation in the ``shellular'' approximation of constant
 rotational frequency $\omega$ along isobaric surfaces, and we assume
 tidal synchronization at the beginning of our runs. For our fiducial
-period choice ($P=100$\,days), this effectively means both the stars
-in our binary are initially slow rotators. Our models include a
+period choice ($P=100$\,days), this effectively means the stars
+in our binary are initially slow rotators: the surface averaged
+rotational velocity is $\lesssim3\,\kms$ for both stars. Our models include a
 diffusive approximation for Eddington-Sweet circulations
 \citep{sweet:50}, which dominates the chemical mixing due to
 rotation. We also include the secular and dynamical shear
@@ -342,7 +355,7 @@ assuming a metallicity of $Z=0.01$.
 of both stars. After $\sim$$7.24$\,Myr, the donor star (top panel) evolves off the main
 sequence and $\sim8400$\,years later, when the donor's effective
 temperature reaches about $T_\mathrm{eff}\simeq 10^4$\,K, mass transfer starts. This
-results in a stable case B RLOF. We refer to \cite{dewi:00, gotberg:17, laplace:21, blagorodnova:21}
+results in a stable case B RLOF. We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21}
 and references therein for a detailed description of the evolution of
 massive donor stars in binaries. Although our models are
 more massive, the qualitative behavior of the donor star is similar.
