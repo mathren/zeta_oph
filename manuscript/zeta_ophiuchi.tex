@@ -47,20 +47,20 @@
   relying on single-star rotating models. We use the open-source
   stellar evolution code \texttt{MESA} to self-consistently model the
   coupled evolution of two massive stars
-  ($M_1\gtrsim 25\,M_\odot\geq M_2$) in a binary evolving through a
-  stable post-donor-main-sequence (case B) mass transfer. We find that
-  adopting common assumptions for the treatment of rotation, chemical
-  mixing, and mass transfer efficiency, our models of the accreting
-  star reproduce reasonably well the kinematic, spectroscopic, and
-  photometric properties of \zoph. We compare the internal structure
-  and evolution of our accretor to fast-rotating single stars, and
-  find that the late and extreme spin up by binary interactions yields
-  at the end of the main sequence a faster-spinning core in the
-  accretor than in single stars. Our model demonstrates the impact
-  that binary evolution can have on the secondary star, with possible
-  implications for the spins of compact objects and the further
-  evolution (either in a binary or as single stars) as supernova
-  and/or gravitational wave progenitors.
+  ($M_1\gtrsim 20\,M_\odot\geq M_2$) in a binary evolving through a
+  stable mass transfer after the donor evolved off the main sequence
+  (case B). We find that adopting common assumptions for the treatment
+  of rotation, chemical mixing, and mass transfer efficiency, our
+  models of the accreting star reproduce reasonably well the
+  kinematic, spectroscopic, and photometric properties of \zoph. We
+  compare the internal structure and evolution of our accretor to
+  fast-rotating single stars, and find that the late and extreme spin
+  up by binary interactions yields at the end of the main sequence a
+  faster-spinning core in the accretor than in rotating single stars. Our model
+  demonstrates the impact that binary evolution can have on the
+  secondary star, with possible implications for the spins of compact
+  objects and the further evolution (either in a binary or as single
+  stars) as supernova and/or gravitational wave progenitors.
 \end{abstract}
 
 \vspace*{-10pt}
@@ -79,8 +79,8 @@ exchange mass or merge with a companion in their lifetime
 \citep[e.g.,][]{sana:12}. The most common type of interaction is a
 stable mass transfer through Roche Lobe overflow (RLOF) after the end of the donor's main sequence (case
 B, \citealt{kippenhahn:67}).  Many
-studies \citep[e.g.,][]{gotberg:17, gotberg:18, laplace:20,
-  laplace:21, blagorodnova:21} \todo{more refs. from other groups}
+studies \citep[e.g.,][]{yoon:17, gotberg:17, gotberg:18, laplace:20,
+  laplace:21, blagorodnova:21} %\todo{more refs. from other groups}
 have focused on the dramatic impact these interactions have on the
 donor star. Often the binary companion is treated as a point mass.
 
@@ -101,13 +101,12 @@ populations and their age estimates and main sequence morphology
 \citep[e.g.,][]{pols_marinus:94, wang:20}. Moreover, the majority of
 massive binaries will be disrupted by the first supernova ejecting the
 companion \citep[``binary SN scenario'', ][]{blaauw:61, dedonder:97,
-  eldridge:11, renzo:19walk, evans:20}. Therefore, populations of
+  eldridge:11, boubert:18, renzo:19walk, evans:20}. Therefore, populations of
 field massive stars contain presently single O-type stars that
 accreted mass earlier on. The majority of these will be too slow to
-stand out in astrometric surveys \citep[e.g.,][]{eldridge:11,
-  renzo:19walk}. Assuming a constant star formation history,
+stand out in astrometric surveys. Assuming a constant star formation history,
 \cite{renzo:19walk} estimated that $10.1^{+4.6}_{-8.6}\%$ of O-type
-stars might be accretors released after a SN. %  -- where the errors span
+stars could be accretors released after a SN. %  -- where the errors span
 % a range of parameter variations.
 
 From the transients
@@ -118,8 +117,8 @@ fact that they accreted mass before exploding can influence their
 helium (He) core mass and thus the explosion properties and the
 inferred progenitors \citep{zapartas:21}.
 
-Finally, the majority of isolated binary evolutionary scenarios for
-gravitational-wave progenitors go through a common-envelope
+Finally, the majorityof isolated binary evolutionary scenarios for
+gravitational-wave progenitors include a common-envelope
 phase. This is initiated by the originally less massive accretor,
 after the formation of the first compact object
 \citep[e.g.,][]{belczynski:16nat, tauris:17,
@@ -131,11 +130,13 @@ rotation rate, chemical composition, and innermost structure of the
 envelope (because of rejuvenation) might differ from a normal single
 star.
 
+\todo{mention pop. synth.}
+
 Despite their importance, accretor stars in binaries have so far
 received much less attention than the donor stars, with the pioneering
 studies of \cite{ulrich:76, hellings:83, hellings:84}, and
 \cite{braun:95} as notable exceptions. Large grids of accretor models
-are lacking, most of the studies focus on lower mass B-type donors
+are lacking, most of the studies focus on lower mass systems
 (e.g., \citealt{vanrensbergen:06, vanrensbergen:11}, but see also
 \citealt{wang:20}) and only few sparse massive models exist
 \citep[e.g.,][]{cantiello:07}. This is because of the difficulty of
@@ -202,7 +203,7 @@ timescales compared to more massive stars \citep[e.g.,][]{yoon:06,
 \citep[based on asteroseismology from][]{murphy:21}, and mass estimates for \zoph\ range from
 $13-25\,M_\odot$, at the lower end of the range where efficient mixing
 might bring He and CNO-processed material to the surface (chemically
-homogeneous evolution).
+homogeneous evolution, \citealt{maeder:00}).
 
 Given the challenges in explaining the surface composition of \zoph\
 with rotational mixing from the stellar interior and the strong
@@ -235,7 +236,7 @@ intricate role of several notoriously difficult stellar physics
 ingredients (differential rotation, mixing, high mass-loss rates,
 accretion, etc.). Here we follow self-consistently the coupled
 evolution of two massive stars in a binary system using \texttt{MESA}
-(version 15140). Our choice of input parameters and our numerical
+(version 15140, \citealt{paxton:11, paxton:13, paxton:15, paxton:18, paxton:19}). Our choice of input parameters and our numerical
 results are available at \todo{link}. We discuss here only the main
 relevant physical parameters and describe tests changing some of the
 fiducial values in \Secref{sec:discussion}. Appendix~\ref{sec:software} gives
@@ -246,7 +247,7 @@ We adopt the Ledoux criterion to determine convective stability and a
 mixing length parameter of $1.5$. We include semiconvection and
 thermohaline mixing following \cite{langer:83} and
 \cite{kippenhahn:80}, respectively, each with efficiency $1.0$. We use the exponential core overshooting from \cite{herwig:00}
-with free parameters $(f, f_0)=(4.25\times10^{-2}, 10^{-3})$
+with free parameters\footnote{See Eq.~2 in \cite{paxton:11}.} $(f, f_0)=(4.25\times10^{-2}, 10^{-3})$
 \citep{claret:17} which broadly reproduce the width of the main
 sequence from \cite{brott:11}. We also use the local implicit
 enhancement of the convective flux in superadiabatic regions
@@ -284,11 +285,11 @@ rate.
 
 Both stars are evolved simultaneously on the same timesteps until
 after the donor detaches from its Roche lobe. We follow \cite{kolb:90}
-to calculate the mass transfer rate from optically thick layers of the
+to calculate with an implicit scheme the mass transfer rate from optically thick layers of the
 donor star during Roche lobe overflow (RLOF). Moreover, we assume that
 the specific angular momentum and entropy of the transferred layers
 match the surface, while the chemical composition is
-determined structure of the donor star. Mass transfer is
+set by the stratification of the donor star. Mass transfer is
 conservative until the accretor reaches critical rotation, after which
 rotationally enhanced mass loss governs the accretion efficiency.
 
@@ -334,14 +335,14 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
 
 We describe here the evolution of a binary system where the accretor
 star can broadly reproduce all the observed features of \zoph. We assume initial masses
-$M_1=25\,M_\odot$, $M_2=17\,M_\odot$ on a period of $100$\,days at
-$Z=0.01$.
+$M_1=25\,M_\odot$, $M_2=17\,M_\odot$ and initial period of $100$\,days
+assuming a metallicity of $Z=0.01$.
 
 \Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams (HRD)
 of both stars. After $\sim$$7.24$\,Myr, the donor star (top panel) evolves off the main
 sequence and $\sim8400$\,years later, when the donor's effective
 temperature reaches about $T_\mathrm{eff}\simeq 10^4$\,K, mass transfer starts. This
-results in a stable case B RLOF. We refer to \cite{gotberg:17, laplace:21, blagorodnova:21}
+results in a stable case B RLOF. We refer to \cite{dewi:00, gotberg:17, laplace:21, blagorodnova:21}
 and references therein for a detailed description of the evolution of
 massive donor stars in binaries. Although our models are
 more massive, the qualitative behavior of the donor star is similar.
