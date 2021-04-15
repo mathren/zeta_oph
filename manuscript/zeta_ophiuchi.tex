@@ -96,7 +96,7 @@ the convective core due to the increased mass leads to
 Understanding the evolution of accretors in massive binaries has wider
 and crucial implications for stellar populations, electromagnetic
 transient observations, and gravitational-wave progenitors. Accretors
-(and mergers) can appear as blue stragglers \citep[e.g.][]{chen:09, chen:10} and thus impact cluster
+(and mergers) can appear as blue stragglers \citep[e.g.,][]{chen:09, chen:10} and thus impact cluster
 populations and their age estimates and main sequence morphology
 \citep[e.g.,][]{pols_marinus:94, wang:20}. The post-mass-transfer high
 rotation rate might be the dominant explanation for the origin of
@@ -771,7 +771,7 @@ explosion of the companion in \Secref{sec:SN_comp}.
 
 For our model of \Secref{sec:best_model}, we have assumed an initial
 metallicity $Z=0.01$ informed by the asteroseismology of low mass
-stars in the parent association \citep[e.g.][]{murphy:21}. Moreover,
+stars in the parent association \citep[e.g.,][]{murphy:21}. Moreover,
 we have assumed that elemental abundances scale with the Solar values
 \citep{grevesse:98}, which might not be appropriate especially for
 massive stars \citep[e.g.,][]{grasha:21}. With these assumptions, the
@@ -831,9 +831,11 @@ true for calculation of single massive star evolution.
 \label{sec:bin_param}
 
 We regulate the accretion efficiency through the rotational
-enhancement of mass loss \citep[e.g.][]{langer:98}.
+enhancement of mass loss \citep[e.g.,][]{langer:98}.
 However, whether critical rotation can effectively stop the accretion
-of matter is still unclear. \cite{popham:91} and \cite{paczynski:91}
+of matter is
+
+unclear. \cite{popham:91} and \cite{paczynski:91}
 argued that accretion of mass (but no angular momentum) might be
 possible even at critical rotation.
 
@@ -861,11 +863,12 @@ binary and orbital evolution.
 
 Another free parameter in the treatment of mass transfer is the
 specific angular momentum of the accreted material. In our models, for
-the sake of numerical stability, we assume the incoming material
-and the stellar surface to have the same specific angular
-momentum. This approximation corresponds to a scenario where angular
-momentum transport in the circumstellar disk during RLOF quickly
-homogenizes the rotation rate.
+the sake of numerical stability, we assume the incoming material and
+the stellar surface to have the same specific angular momentum. This
+approximation corresponds to a scenario where angular momentum
+transport in the circumstellar disk during RLOF quickly homogenizes
+the rotation rate. This provides a relatively slow spin-up of the
+accretor star.
 
 We also attempted calculations using the algorithm from
 \cite{demink:13} based on the fit from \cite{ulrich:76} to the
@@ -895,7 +898,7 @@ this approximation might not be appropriate.
 \label{sec:bin_init}
 
 The initial donor mass $M_1$, mass ratio $q=M_2/M_1$, and the period of the progenitor binary of \zoph\ cannot be directly
-constrained. We have explored variation in these values, and the
+constrained from observations. We have explored variation in these values, and the
 qualitative behavior of the models is similar.
 
 Shorter initial periods results in larger post-RLOF orbital
@@ -904,20 +907,17 @@ disrupted at the first SN (see \Secref{sec:SN_comp} and
 \citealt{renzo:19walk}). For example, taking $P$=75\,days
 (cf.~100\,days in our fiducial model in \Secref{sec:best_model}), the
 binary still experiences stable case B mass transfer, but the
-post-RLOF orbital velocity of the accretor is about $10\,\kms$ higher
-than the $50\,\kms$ of our fiducial model.
+post-RLOF orbital velocity of the accretor is about $60\,\kms$, that
+is $\sim$$10\,\kms$ higher
+than in our fiducial model.
 
-Increasing the donor mass also has a similar effect on the post-RLOF
-orbital velocity of the accretor. Using $M_1=30\,M_\odot$
-(cf. $25\,M_\odot$ in \Secref{sec:best_model}),
-$M_2=17\,M_\odot$, and $P$=100\,days, we obtain a post-RLOF velocity
-of $65\,\kms$. However, this produces a stripped donor of
-$\sim$16\,$M_\odot$ at RLOF detachment, with stronger wind mass
-loss. Therefore this binary is expected to widen relatively more than
-our fiducial model of \Secref{sec:best_model}, slowing down the
-secondary. The increased mass of the stripped star could also imply a
-lower chance of the star exploding (however, see
-\Secref{sec:SN_comp}).
+Increasing the donor mass also has a similar effect on the post-RLOF orbital velocity of the accretor. Using
+$M_1=30\,M_\odot$ (cf.
+$25\,M_\odot$ in \Secref{sec:best_model}),
+$M_2=17\,M_\odot$, and
+$P$=100\,days, we obtain a post-RLOF velocity of
+$65\,\kms$. However, this produces a stripped donor of
+$\sim$16\,$M_\odot$ at RLOF detachment, with stronger wind mass loss. Therefore this binary is expected to widen relatively more than our fiducial model of \Secref{sec:best_model}, slowing down the secondary. The increased mass of the stripped star could also imply a lower chance of exploding for the donor (however, see \Secref{sec:SN_comp}).
 
 The higher $M_1$ does not significantly change the post-RLOF total
 mass of the accretor, with $M_2$ remaining about $\sim$20.5\,$M_\odot$, since
@@ -957,7 +957,7 @@ $\sim10^{-5}\,M_\odot \ \mathrm{yr^{-1}}$ (cf.~\Figref{fig:MT}),
 likely to increase as it contracts into a Wolf-Rayet star and
 increases its luminosity and effective temperature. We expect its
 explosion to appear as H-less type Ib SN. Although our stripped donor
-is rather massive, recent studies suggest a higher ``explodability''
+is rather massive, recent studies hints at a higher ``explodability''
 of donor stars in binary systems \citep[e.g.,][]{schneider:21,
   laplace:21, vartanyan:21}.
 
@@ -965,10 +965,12 @@ We have neglected the impact of the explosion on the structure of the
 accretor star. At the time of the explosion, the accretor subtends a
 solid angle $\sim$$R^2/a^2\simeq
 0.05$\,degrees with $R$ the accretor radius and
-$a$ the binary separation. We neglect the post-RLOF wind-driven orbital widening for this estimate.  The blast wave will hit the accretor causing mass loss -- directly via ablation and by injecting energy in the envelope, inflating it and enhancing its wind \citep{wheeler:75, tauris:98, podsiadlowski:03, hirai:18}.  Because of the SN shock, the just ejected new runaway star might appear bloated and redder (long before it overtakes the slowing SN remnant). The impact of this brief out of thermal equilibrium phase on the stellar spin should be investigated further. Using 2D hydrodynamic simulations of the star-SN ejecta interactions in close binaries ($a\lesssim
+$a$ the binary separation. We neglect the post-RLOF wind-driven orbital widening for this estimate.  The blast wave will hit the accretor causing mass loss -- directly via ablation and by injecting energy in the envelope, inflating it and enhancing its wind \citep{wheeler:75, tauris:98, podsiadlowski:03, hirai:18}.  Because of the SN shock, the just ejected new runaway star might appear bloated and redder (long before it overtakes the slowing SN remnant). The impact of this brief out of thermal equilibrium phase on the stellar spin should be investigated further.
+
+Using 2D hydrodynamic simulations of the star-SN ejecta interactions in close binaries ($a\lesssim
 60\,R_\odot$, cf. $a\gtrsim
 343\,R_\odot$ in our fiducial binary model), \cite{hirai:18} found that the companion star recovers its pre-explosion luminosity and effective temperature within a few years to decades, and the amount of mass removed by the SN shock is
-$\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the runaway depositing processed nuclear material \citep[e.g.][]{przybilla:08}. However, enhahnced mass loss, rapid rotation and mixing might rapidly dilute the yields.
+$\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the runaway depositing processed nuclear material \citep[e.g.,][]{przybilla:08}. However, enhahnced mass loss, rapid rotation and mixing might rapidly dilute the yields.
 
 
 \section{Conclusions}
