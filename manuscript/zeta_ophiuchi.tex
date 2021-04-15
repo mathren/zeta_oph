@@ -158,8 +158,8 @@ Earth, $\zeta$ Ophiuchi\footnote{also known as HD\,149\,757.} (\zoph)
 provides a unique opportunity to constrain these models.
 \zoph\ has a distance from Earth of $107\pm4$\,pc \citep[][and
 references therein]{neuhauser:20}, and a spectral type O9.5{\rm IVnn}
-\citep{sota:14}. It occasionally shows emission lines
-\citep{walker:79, vink:09}, making it an Oe star. Its surface rotation
+\citep{sota:14}. It occasionally shows emission lines, making it an Oe
+star \citep{walker:79, vink:09}. Its surface rotation
 rate is extremely large, with most estimates of the projected
 rotational velocity from optical spectra exceeding
 $v\sin(i)\gtrsim 400\,\kms$ \citep[corresponding to the ``nn'' in the
@@ -202,7 +202,7 @@ composition \cite[e.g.,][]{maeder:00}. Even the binary models of
 rotational mixing from the interior of the accreting star (see also
 \citealt{cantiello:07}). However, \cite{villamariz:05} (hereafter,
 \citetalias{villamariz:05}) were unable to find good fit for the
-stellar spectra using the rotating models from \cite{meynet:00}.
+stellar spectra using the rotating models from \cite{meynet:00, meynet:03}.
 
 This may not be surprising: rotational mixing has lower efficiency for
 metal-rich and relatively low mass stars because of the increased
@@ -219,9 +219,7 @@ Given the challenges in explaining the surface composition of \zoph\
 with rotational mixing from the stellar interior and the strong
 evidence for its past as a member of a binary system, this star offers
 a unique opportunity to constrain the evolution of accreting stars in
-massive binary systems.
-
-Here, we present self-consistent binary evolution models for
+massive binary systems. Here, we present self-consistent binary evolution models for
 $\zeta$ Oph computing simultaneously the coupled evolution of
 \emph{both} donor and accretor star and their orbit. After presenting
 our \texttt{MESA} setup in \Secref{sec:methods}, we show our best model which
@@ -264,8 +262,8 @@ enhancement of the convective flux in superadiabatic regions
 (\texttt{MLT--}) introduced in \texttt{MESA}
 15140.
 
-We treat rotation in the ``shellular'' approximation of constant
-rotational frequency $\omega$ along isobaric surfaces, and we assume
+We treat rotation in the ``shellular'' approximation, that is we assume constant
+rotational frequency $\omega$ along isobaric surfaces. Furthermore, we assume
 tidal synchronization at the beginning of our runs. For our fiducial
 period choice ($P=100$\,days), this effectively means the stars
 in our binary are initially slow rotators: the surface averaged
@@ -302,7 +300,7 @@ the specific angular momentum and entropy of the transferred layers
 match the surface, while the chemical composition is
 set by the stratification of the donor star. Mass transfer is
 conservative until the accretor reaches critical rotation, after which
-rotationally enhanced mass loss governs the accretion efficiency.
+rotationally-enhanced mass loss governs the mass transfer efficiency.
 
 % To define RLOF detachment, we take advantage of the fact that we focus
 % here on case B interactions among massive stars.
@@ -345,18 +343,15 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
 
 
 We describe here the evolution of a binary system where the accretor
-star can broadly reproduce all the observed features of \zoph. We assume initial masses
-$M_1=25\,M_\odot$, $M_2=17\,M_\odot$ and initial period of $100$\,days
-assuming a metallicity of $Z=0.01$.
+star can broadly reproduce all the observed features of \zoph. We
+assume initial masses $M_1=25\,M_\odot$, $M_2=17\,M_\odot$ and initial
+period $P=100$\,days with a metallicity of $Z=0.01$.
 
-\Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams (HRD)
-of both stars. After $\sim$$7.24$\,Myr, the donor star (top panel) evolves off the main
-sequence and $\sim8400$\,years later, when the donor's effective
-temperature reaches about $T_\mathrm{eff}\simeq 10^4$\,K, mass transfer starts. This
-results in a stable case B RLOF. We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21}
-and references therein for a detailed description of the evolution of
-massive donor stars in binaries. Although our models are
-more massive, the qualitative behavior of the donor star is similar.
+\Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams (HRD) of
+both stars. After
+$\sim$$7.24$\,Myr, the donor star (top panel) evolves off the main sequence and
+$\sim8400$\,years later, when the donor's effective temperature reaches about $T_\mathrm{eff}\simeq
+10^4$\,K, mass transfer starts. This results in a stable case B RLOF. We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Differences in the details of the behavior might arise because of the complex behavior of the intermediate convective zone above the H-burning shell \citep[][]{klencki:21}.
 
 At the onset of RLOF, the accretor star (bottom panel of
 \Figref{fig:HRD_both}) is still on the main sequence with
