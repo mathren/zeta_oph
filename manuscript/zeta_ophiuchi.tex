@@ -84,7 +84,7 @@ donor star \citep[e.g.,][]{morton:60, yoon:17, gotberg:17, gotberg:18, laplace:2
 However, binary interactions have a crucial impact on the initially
 less massive star too: during mass transfer, these are expected to
 accrete mass, spin up to critical rotation
-\citep[e.g.,][]{packet:81, cantiello:07}, and possibly be polluted by
+\citep[e.g.,][]{packet:81}, and possibly be polluted by
 CNO-processed material from the inner core of the donor star
 \citep[e.g.,][]{blaauw:93}. The growth of
 the convective core due to the increased mass leads to
@@ -112,13 +112,15 @@ after a SN. % -- where the errors span
 % a range of parameter variations.
 
 
-From the transients
-perspective, massive accretor stars are also important: \cite{zapartas:19}
-showed that $14_{-11}^{+4}\%$ of hydrogen-rich (type II) SNe might
-come from these progenitors after being ejected from a binary. The
-fact that they accreted mass before exploding can influence their
-helium (He) core mass and thus the explosion properties and the
-inferred progenitors \citep{zapartas:21}.
+From the transients perspective, massive accretor stars are also
+important: \cite{zapartas:19} showed that $14_{-11}^{+4}\%$ of
+hydrogen-rich (type II) SNe might come from these progenitors after
+being ejected from a binary. The fact that they accreted mass before
+exploding can influence their helium (He) core mass and thus the
+explosion properties and the inferred progenitors
+\citep{zapartas:21}. The high post-mass transfer rotation rate of
+accretor stars in binaries might have implications for the formation
+of long gamma-ray bursts progenitors \citep{cantiello:07}.
 
 Finally, the majority of isolated binary evolutionary scenarios for
 gravitational-wave progenitors include a common-envelope
@@ -637,6 +639,24 @@ models to reach the lower-limit of the error bar.
   \label{fig:surf_rot}
 \end{figure}
 
+
+
+\begin{figure*}[tbp]
+  \centering
+  \includegraphics[width=\textwidth]{zeta_Rotational_struct}
+  \caption{Internal rotational profile for $20\,M_\odot$ single star models with
+    increasing $\omega/\omega_\mathrm{crit}$ at birth (first four
+    panels), and for the accretor of our fiducial binary. As in
+    \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light
+    at TAMS, and the thin dashed red line mark the TAMS surface
+    rotation rate. In the last panel, the gray area indicates mass
+    accreted during RLOF. The yellow lines (TAMS) in the last panel
+    show that the core of the accretor is rotating almost as fast as
+    its surface, and both are faster than the surface of single star
+    models.}
+  \label{fig:struct_rot}
+\end{figure*}
+
 One of the main distinguishing features of \zoph\ is its extremely
 high surface rotation rate. Spectroscopic measurements of the
 projected rotational velocity exceed $v\sin(i)\gtrsim 400\,\kms$,
@@ -675,24 +695,6 @@ binary even before RLOF, it increases the spin-down rate of
 our model compared to the observations. We expect that an accreting star
 modeled with lower wind-mass loss rate post-RLOF would retain an even
 higher surface rotation for longer (see also \Secref{sec:single_star_uncertainties}).
-
-
-
-\begin{figure*}[tbp]
-  \centering
-  \includegraphics[width=\textwidth]{zeta_Rotational_struct}
-  \caption{Internal rotational profile for $20\,M_\odot$ single star models with
-    increasing $\omega/\omega_\mathrm{crit}$ at birth (first four
-    panels), and for the accretor of our fiducial binary. As in
-    \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light
-    at TAMS, and the thin dashed red line mark the TAMS surface
-    rotation rate. In the last panel, the gray area indicates mass
-    accreted during RLOF. The yellow lines (TAMS) in the last panel
-    show that the core of the accretor is rotating almost as fast as
-    its surface, and both are faster than the surface of single star
-    models.}
-  \label{fig:struct_rot}
-\end{figure*}
 
 
 \subsubsection{Comparison to single fast-rotating stars}
@@ -742,11 +744,14 @@ By the end of the main-sequence evolution of the accretor, the surface
 still spins with $v_\mathrm{rot}\simeq100\,\kms$ (twice as fast as the
 single star models). Perhaps more importantly, the outer-edge of the
 core has a similar rotational velocity as the surface, and much larger
-than the rotational velocity of the single star models. This might
-have important implications for the rotation rate of the compact
-objects formed by the initially less massive star in a binary, and the
-models of compact objects spins for gravitational-wave progenitors
-\citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
+than the rotational velocity of the single star models. The fact that
+the accretor is spun-up late in its main-sequence evolution, to
+critical rotation, and from the top (instead of starting from rigid
+rotation) leads to faster spinning cores than fast rotating single
+stars. This might have important implications for the explosion of the
+initially less massive star and the rotation rate of
+the resulting compact objects, and the analysis of compact object
+spins from gravitational-wave events \citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
 
 \section{Robustness of the models and discussion}
 \label{sec:discussion}
@@ -809,6 +814,14 @@ that the details of this part of the evolution are sensitive to the
 treatment of rotational mixing. We were unable to run models turning
 completely off Eddington-Sweet meridional circulations past the
 ``v-shaped'' feature in \Figref{fig:HRD_both}.
+
+Our models assume a Spruit-Tayler dynamo \citep{spruit:02} for the
+transport of angular momentum throughout the evolution. Adopting the
+stronger angular momentum transport from \cite{fuller:19} might result
+in a more efficient spin-down of the surface during RLOF, possibly
+allowing for more accretion of mass. Moreover, this might enhance the
+differences between the internal rotational profile of single
+fast-rotating stars and accretors in binaries.
 
 Similarly, during RLOF, thermohaline mixing in the envelope becomes
 important. We have explored models enhancing the efficiency of this
