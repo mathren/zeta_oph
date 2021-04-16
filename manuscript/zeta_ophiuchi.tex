@@ -354,8 +354,12 @@ $\sim8400$\,years later, when the donor's effective temperature reaches about $T
 10^4$\,K, mass transfer starts. This results in a stable case B RLOF. We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of the complex behavior of the intermediate convective zone above the H-burning shell \citep[][]{klencki:21}, and its interplay with the mass transfer.
 
 At the onset of RLOF, the accretor star (bottom panel of \Figref{fig:HRD_both}) is still on the main sequence with
-$T_\mathrm{eff}\simeq10^{4.5}$\,K. Because of accretion, it is pushed out of thermal equilibrium and quickly becomes over-luminous to radiate away the excess internal energy and
-reaching $L\simeq10^{5.5}\,L_\odot$. Its radius increases dramatically from
+$T_\mathrm{eff}\simeq10^{4.5}$\,K. Because of accretion, it is pushed out of thermal equilibrium and quickly becomes over-luminous to radiate away the excess internal energy and reaches $L\simeq10^{5.5}\,L_\odot\gg
+L_\mathrm{nuc}\simeq
+10^{5.1}\,L_\odot$, with
+$L_\mathrm{nuc}$ the total energy released per unit time by nuclear burning.
+
+The radius of the accretor increases dramatically from
 $\sim7.5\,R_\odot$ to
 $\sim35\,R_\odot$, and only once the accretor reaches critical rotation (roughly at the lowest
 $T_\mathrm{eff}$ in the bottom panel of \Figref{fig:HRD_both}), the star begins contracting and its
@@ -490,7 +494,9 @@ which impacts the mass transfer rate.
     shown. The solid red line and the shaded red region correspond to the
     mass fraction of $^{14}\mathrm{N}$ estimated by
     \citetalias{villamariz:05} assuming the surface mass fraction of H
-    from \Tabref{tab:surf_prop}. The abundance of $^{14}\mathrm{N}$ alone is not strongly constraining.}
+    from \Tabref{tab:surf_prop}. The abundance of $^{14}\mathrm{N}$
+    alone is not strongly constraining. \Figref{fig:composition_huge}
+    shows a similar plot containing also $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$.}
   \label{fig:n14}
 \end{figure*}
 
@@ -998,22 +1004,43 @@ $\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the
 \section{Conclusions}
 \label{sec:conclusions}
 
-We have demonstrated that self-consistent 1D calculations
-of coupled stellar models with masses $\gtrsim 20\,M_\odot$ are
-possible with the \texttt{MESA} software instrument. As a first
-application, we focused on finding a model for \zoph, assuming its
-runaway nature is explained by the binary SN scenario.
+We presented self-consistent 1D calculations of coupled stellar models
+with masses $\gtrsim 20\,M_\odot$ with the \texttt{MESA} stellar
+evolution code. As a first application, we focused on finding a
+model for \zoph, assuming its runaway nature is explained by the
+binary SN scenario.
 
-We found that it is possible to qualitatively explain the observed
-features of \zoph\ with a relatively wide and massive binary
-(initially $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and
-$P=100$\,days). Such system experiences a dynamically stable
-post-donor-main-sequence (case B) Roche lobe overflow. Standard
-stellar physics assumptions for modeling rotation, mixing, and mass
-transfer in binaries reproduce reasonably well the main observational
-features of \zoph\ in terms of its spatial velocity, its surface
-$^{14}\mathrm{N}$ and $^4\mathrm{He}$ enhancement, its rotation rate,
-age and position on the Hertzsprung-Russell diagram.
+We found that it is possible to explain the observed features of
+\zoph\ with a relatively wide and massive binary initialized with
+$M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and $P=100$\,days at metallicity
+$Z=0.001$. This binary system experiences a dynamically stable Roche
+lobe overflow after the end of the most massive star main sequence
+(case B). Standard stellar physics assumptions for modeling rotation,
+mixing, and mass transfer in binaries reproduce reasonably well the
+main features of \zoph. Specifically,
+$\sim$$1.5-2$\,Myrs after the end of mass transfer, corresponding to the
+remaining donor's lifetime at the end of our simulations plus the kinematic age,
+the accretor star in our model has the following quantities in the correct ballpark:
+\begin{itemize}
+\item Luminosity and effective temperature;
+\item Total mass;
+\item Runaway space velocity;
+\item Fast surface rotation (albeit possibly on the low side);
+\item enhanced $^4\mathrm{He}$ and $
+  ^{14}\mathrm{N}$ surface mass fraction;
+\item small variations in $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$ surface mass fractions.
+\end{itemize}
+
+We emphasize that the surface composition alone would not be a smoking-gun,
+especially given the large uncertainties in the treatment of rotation
+and mixing in stellar evolution models. However, alternative scenarios where \zoph\
+evolved as a single fast-rotating star require ad-hoc explanations for the runaway velocity,
+and have been shown by \citetalias{villamariz:05} to struggle in reproducing
+surface mass fractions, apparent age, mass, and rotation rate simultaneously.
+
+%  in terms of its spatial velocity, its surface
+% $^{14}\mathrm{N}$ and $^4\mathrm{He}$ enhancement, its rotation rate,
+% age and position on the Hertzsprung-Russell diagram.
 
 In contrast with \cite{vanrensbergen:96}, in our model, the
 $^{14}\mathrm{N}$ and $^4\mathrm{He}$ rich surface composition is not
@@ -1042,13 +1069,13 @@ inside. Conversely, in our accretor models angular momentum is
 injected late and from the top. When this angular momentum is
 transported into the core by the Spruit-Tayler dynamo, it results in a
 much faster rotating helium core, with potential implications for the
-final explosion and the resulting of the second compact object born in
-an interacting binary system.  We emphasize that our models assume a
-Spruit-Tayler dynamo \citep{spruit:02} for the transport of angular
-momentum. Recently, \cite{fuller:19} proposed a stronger angular
-momentum transport which would presumably result in a faster spin down
-of the surface (possibly allowing for more accretion during mass
-transfer) and even more significant core spin-up in our accretor.
+final explosion and the resulting compact object born from the
+accretor star in an interacting binary system. %  We emphasize that our models assume a
+% Spruit-Tayler dynamo \citep{spruit:02} for the transport of angular
+% momentum. Recently, \cite{fuller:19} proposed a stronger angular
+% momentum transport which would presumably result in a faster spin down
+% of the surface (possibly allowing for more accretion during mass
+% transfer) and even more significant core spin-up in our accretor.
 
 
 
@@ -1105,6 +1132,32 @@ tabulated weak reaction rates \citet{Fuller1985, Oda1994,
 22-isotope nuclear network (\texttt{approx\_21\_plus\_cr56}).
 
 The inlists, processing scripts, and model output will be made available at~\todo{link}.
+
+\section{Internal composition profile evolution}
+\label{sec:X_fig}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{huge_composition}
+  \caption{Same as \Figref{fig:n14}, but for $^{12}\mathrm{C}$ (top
+    panel), and $^{16}\mathrm{O}$ (bottom panel). The first four
+    panels show single rotating stars of initially $20\,M_\odot$, the
+    rightmost panel shows the accretor in our fiducial binary. The middle panel is
+    exactly the same as \Figref{fig:n14}. Thick red dotted lines mark the
+    initial mass fractions, thin red dashed lines the TAMS surface mass
+    fraction, the solid red lines and the semi-transparent red bands
+    correspond to the values inferred by \citetalias{villamariz:05}
+    using the surface H mass fraction from our model. The tracks go
+    from dark (roughly corresponding to ZAMS) to light colors, with the
+    lightest color corresponds to TAMS.}
+  \label{fig:composition_huge}
+\end{figure*}
+
+\Figref{fig:composition_huge} compares the internal evolution of the composition
+profile of single rotating stars with our accretor model.
+We show mass fractions of $^{12}\mathrm{C}$  and $^{16}\mathrm{O}$ to complement the
+mass fraction of $^{14}\mathrm{N}$ shown in \Figref{fig:n14}, and
+reproduced also in the middle panel of \Figref{fig:composition_huge}.
 
 
 \section{Resolution tests}
