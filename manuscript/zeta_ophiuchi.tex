@@ -31,7 +31,7 @@
 \affiliation{Department of Physics, Columbia University, New York, NY 10027, USA}
 \affiliation{Center for Computational Astrophysics, Flatiron Institute, New York, NY 10010, USA}
 
-\author{Y.~G\"otberg}
+\author[0000-0002-6960-6911]{Y.~G\"otberg}
 \affiliation{The Observatories of the Carnegie Institution for Science, 813 Santa Barbara Street, Pasadena, CA 91101, USA}
 
 
@@ -52,7 +52,7 @@
   assumptions for the treatment of rotation, chemical mixing, and mass
   transfer efficiency, our models of the accreting star reproduce
   reasonably well the kinematic, spectroscopic, and photometric
-  properties of \zoph. We compare the internal structure and evolution
+  properties of $\zeta$ Ophiuchi. We compare the internal structure and evolution
   of our accretor to fast-rotating single stars, and find that the
   late and extreme spin up by binary interactions yields, at the end of
   the main sequence, a faster-spinning core in the accretor than in
@@ -245,7 +245,7 @@ ingredients (differential rotation, mixing, high mass-loss rates,
 accretion, etc.). Here we follow self-consistently the coupled
 evolution of two massive stars in a binary system using \texttt{MESA}
 (version 15140, \citealt{paxton:11, paxton:13, paxton:15, paxton:18, paxton:19}). Our choice of input parameters and our numerical
-results are available at \todo{link}. We discuss here only the main
+results are available at \url{10.5281/zenodo.4701565}. We discuss here only the main
 relevant physical parameters and describe tests changing some of the
 fiducial values in \Secref{sec:discussion}. Appendix~\ref{sec:software} gives
 more details on our choice of input physics, and
@@ -1013,11 +1013,11 @@ binary SN scenario.
 We found that it is possible to explain the observed features of
 \zoph\ with a relatively wide and massive binary initialized with
 $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and $P=100$\,days at metallicity
-$Z=0.01$. This binary system experiences dynamically-stable Roche
+$Z=0.01$ (see \Secref{sec:best_model}). This binary system experiences dynamically-stable Roche
 lobe overflow after the end of the main sequence of the initially more massive star
 (case B). Standard stellar physics assumptions for modeling rotation,
 mixing, and mass transfer in binaries reproduce reasonably well the
-main features of \zoph (see \Secref{sec:methods} and Appendix~\ref{sec:software}). Specifically,
+main features of \zoph\ (see \Secref{sec:methods} and Appendix~\ref{sec:software}). Specifically,
 $\sim$$1.5-2$\,Myrs after the end of mass transfer, corresponding to the
 remaining donor's lifetime at the end of our simulations plus the kinematic age of \zoph,
 the accretor star in our model has the following quantities in the correct ballpark:
@@ -1080,7 +1080,6 @@ accretor star in an interacting binary system. %  We emphasize that our models a
 % transfer) and even more significant core spin-up in our accretor.
 
 
-
 We also consider variations in the initial parameters and in the
 implementation of physical processes, discussed in
 \Secref{sec:discussion}.  Less massive secondaries remain too cool
@@ -1139,12 +1138,20 @@ tabulated weak reaction rates \citet{Fuller1985, Oda1994,
 \citet{Itoh1996}. We use a
 22-isotope nuclear network (\texttt{approx\_21\_plus\_cr56}).
 
-The inlists, processing scripts, and model output will be made available at~\todo{link}.
+The inlists, processing scripts, and model output will be made available at~\url{10.5281/zenodo.4701565}.
 
 \section{Internal composition profile evolution}
 \label{sec:X_fig}
 
-\begin{figure*}[htbp]
+
+\Figref{fig:composition_huge} compares the internal evolution of the composition
+profile of single rotating stars with our accretor model.
+We show mass fractions of $^{12}\mathrm{C}$  and $^{16}\mathrm{O}$ to complement the
+mass fraction of $^{14}\mathrm{N}$ shown in \Figref{fig:n14}, and
+reproduced also in the middle panel of \Figref{fig:composition_huge}.
+
+
+\begin{figure*}[hp]
   \centering
   \includegraphics[width=\textwidth]{huge_composition}
   \caption{Same as \Figref{fig:n14}, but for $^{12}\mathrm{C}$ (top
@@ -1161,15 +1168,24 @@ The inlists, processing scripts, and model output will be made available at~\tod
   \label{fig:composition_huge}
 \end{figure*}
 
-\Figref{fig:composition_huge} compares the internal evolution of the composition
-profile of single rotating stars with our accretor model.
-We show mass fractions of $^{12}\mathrm{C}$  and $^{16}\mathrm{O}$ to complement the
-mass fraction of $^{14}\mathrm{N}$ shown in \Figref{fig:n14}, and
-reproduced also in the middle panel of \Figref{fig:composition_huge}.
-
-
 \section{Resolution tests}
 \label{sec:res_tests}
+
+
+\begin{figure*}[hp]
+  \centering
+  \includegraphics[width=\textwidth]{spatial_res_plot}
+  \caption{Left: HRD comparison for our fiducial binary model varying
+  the number of mesh points. We only show the evolution until our definition
+  of RLOF detachment. Right: number of mesh points as a
+  function of timestep number. In both panels, the blue/cyan tracks show the donor stars, the
+red/pink tracks show the accretor. Thicker dashed lines correspond to
+the models at higher resolution (i.e., lower $\Delta$ which indicates
+the value of \texttt{mesh\_delta\_coeff}).}
+\label{fig:sp_test}
+\end{figure*}
+
+
 
 We extensively check the numerical convergence of our stellar
 evolution calculations with increasing number of mesh
@@ -1200,24 +1216,7 @@ sizes is the change of surface angular momentum in both stars during
 the mass transfer.
 
 
-
-
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{spatial_res_plot}
-  \caption{Left: HRD comparison for our fiducial binary model varying
-  the number of mesh points. We only show the evolution until our definition
-  of RLOF detachment. Right: number of mesh points as a
-  function of timestep number. In both panels, the blue/cyan tracks show the donor stars, the
-red/pink tracks show the accretor. Thicker dashed lines correspond to
-the models at higher resolution (i.e., lower $\Delta$ which indicates
-the value of \texttt{mesh\_delta\_coeff}).}
-\label{fig:sp_test}
-\end{figure*}
-
-
-
-
+\newpage
 \bibliographystyle{aasjournal}
 \bibliography{./zeta_ophiuchi.bib}
 
