@@ -791,8 +791,8 @@ explosion of the companion in \Secref{sec:SN_comp}.
 
 For our model of \Secref{sec:best_model}, we have assumed an initial
 metallicity $Z=0.01$ informed by the asteroseismology of low mass
-stars in the parent association \citep[e.g.,][]{murphy:21}. Moreover,
-we have assumed that elemental abundances scale with the Solar values
+stars in the parent association Upper-Centaurus-Lupus \citep[e.g.,][]{murphy:21}. Moreover,
+we have assumed that mass fractions of each element scale with the Solar values
 \citep{grevesse:98}, which might not be appropriate especially for
 massive stars \citep[e.g.,][]{grasha:21}. With these assumptions, the
 initial mass fraction of $^{12}\mathrm{C}$ and $^{14}\mathrm{N}$ are
@@ -861,26 +861,25 @@ true for calculation of single massive star evolution.
 We regulate the accretion efficiency through the rotational
 enhancement of mass loss \citep[e.g.,][]{langer:98}.
 However, whether critical rotation can effectively stop the accretion
-of matter is
-
-unclear. \cite{popham:91} and \cite{paczynski:91}
+of matter is unclear. \cite{popham:91} and \cite{paczynski:91}
 argued that accretion of mass (but no angular momentum) might be
-possible even at critical rotation.
+possible even at or beyond critical rotation.
 
 During RLOF, the total amount of mass lost by the donor is
 $\Delta M_\mathrm{donor} \simeq 10.6\,M_\odot$, of which only
 $\Delta M_\mathrm{accretor}\simeq 3.4\,M_\odot$ are successfully
 accreted. This corresponds to an overall mass transfer efficiency
-$\beta_\mathrm{RLOF}\equiv \Delta M_\mathrm{accretor}/\Delta M_\mathrm{donor} \simeq 0.3$,
+$\beta_\mathrm{RLOF}\equiv |\Delta M_\mathrm{accretor}|/|\Delta M_\mathrm{donor}| \simeq 0.3$,
 although the accretion efficiency is \emph{not} constant throughout
 the mass transfer \citep[e.g.,][]{vanrensbergen:06}. In our models,
 the mass transfer efficiency depends on the radial and rotational
 evolution of the accreting star. During RLOF, the accretor is out of
 gravothermal equilibrium with significant impact on its radius and
 ultimately on the amount of mass transferred and its angular
-momentum. In reality, geometric distorsion of the outer layers because
-of the centrifugal forces would also occur, which is not modeled in a
-1D code as \texttt{MESA}.
+momentum. In reality, the gas stream between the two stars, the
+formation of a disk, and the geometric distorsion of the outer layers because
+of the centrifugal forces would not follow the spherical symmetry
+imposed by 1D codes such as \texttt{MESA}.
 
 While the mass transfer efficiency $\beta_\mathrm{RLOF}$ and
 importantly its time-evolution need further attention, we emphasize that most studies, especially
@@ -895,7 +894,7 @@ the sake of numerical stability, we assume the incoming material and
 the stellar surface to have the same specific angular momentum. This
 approximation corresponds to a scenario where angular momentum
 transport in the circumstellar disk during RLOF quickly homogenizes
-the rotation rate. This provides a relatively slow spin-up of the
+the rotation rate and provides a relatively slow spin-up of the
 accretor star.
 
 We also attempted calculations using the algorithm from
@@ -931,8 +930,7 @@ qualitative behavior of the models is similar.
 
 Shorter initial periods results in larger post-RLOF orbital
 velocities, and thus larger runaway velocities if the binary is
-disrupted at the first SN (see \Secref{sec:SN_comp} and
-\citealt{renzo:19walk}). For example, taking $P$=75\,days
+disrupted at the first SN (see \Secref{sec:SN_comp}). For example, taking $P$=75\,days
 (cf.~100\,days in our fiducial model in \Secref{sec:best_model}), the
 binary still experiences stable case B mass transfer, but the
 post-RLOF orbital velocity of the accretor is about $60\,\kms$, that
@@ -965,7 +963,8 @@ evolved accretor at the onset of mass transfer).
 \subsection{The explosion of the former companion}
 \label{sec:SN_comp}
 
-Throughout this study, we have assumed the ``binary SN scenario'':
+Throughout this study, we have assumed the ``binary SN scenario'' to
+explain the runaway nature of \zoph:
 after the mass transfer phase, the explosion of the donor breaks the
 binary and ejects the accretor at roughly its pre-explosion orbital
 velocity \citep[e.g.,][]{renzo:19walk}. This fate occurs to the
@@ -978,7 +977,7 @@ Earth.
 
 From kinematic and orbital considerations they estimated the pulsar
 received a natal kick of
-$\sim$$253\pm54\,\kms$, which would be sufficiently large to unbind the binary \citep{kalogera:96, tauris:15}.  The ejecta mass would depend on the post-RLOF wind mass loss of our donor star, which we do not model.  At the end of our binary model (black diamond in \Figref{fig:HRD_both}), our stripped donor is
+$253\pm54\,\kms$, which would be sufficiently large to unbind the binary \citep{kalogera:96, tauris:15}.  The ejecta mass would depend on the post-RLOF wind mass loss of our donor star, which we do not model.  At the end of our binary model (black diamond in \Figref{fig:HRD_both}), our stripped donor is
 $\sim$$9.4\,M_\odot$, with a surface H fraction of $X\lesssim0.2$ for
 a layer of $\Delta M \simeq 2.5\,M_\odot$.  Its wind mass-loss rate is
 $\sim10^{-5}\,M_\odot \ \mathrm{yr^{-1}}$ (cf.~\Figref{fig:MT}),
@@ -998,7 +997,7 @@ $a$ the binary separation. We neglect the post-RLOF wind-driven orbital widening
 Using 2D hydrodynamic simulations of the star-SN ejecta interactions in close binaries ($a\lesssim
 60\,R_\odot$, cf. $a\gtrsim
 343\,R_\odot$ in our fiducial binary model), \cite{hirai:18} found that the companion star recovers its pre-explosion luminosity and effective temperature within a few years to decades, and the amount of mass removed by the SN shock is
-$\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the runaway depositing processed nuclear material \citep[e.g.,][]{przybilla:08}. However, enhahnced mass loss, rapid rotation and mixing might rapidly dilute the yields.
+$\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the runaway depositing processed nuclear material \citep[e.g.,][]{przybilla:08}. However, enhahnced mass loss, rapid rotation and mixing might quickly dilute the yields.
 
 
 \section{Conclusions}
