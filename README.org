@@ -224,3 +224,14 @@ redistribution in the star?
 
      That is the damned surface convection layer that pops up because
      of partial recombination of He.
+
+** TODO things to check
+
+*** Zenodo link works
+
+    link to modify: https://zenodo.org/deposit/4701565
+
+    *THIS SHOULD NOT BE THE LINK IN THE PAPER*
+
+
+*** link github-zenodo
