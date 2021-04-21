@@ -1016,11 +1016,11 @@ $\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the
 \section{Conclusions}
 \label{sec:conclusions}
 
-We presented self-consistent 1D calculations of coupled stellar models
-with masses $\gtrsim 20\,M_\odot$ with the \texttt{MESA} binary stellar
-evolution code. As a first application, we focused on finding a
-model for \zoph, assuming its runaway nature is explained by the
-binary SN scenario.
+We presented self-consistent spherically-symmetric \texttt{MESA}
+calculations of a binary system where both stars are evolved
+simultaneously and coupled. As a first application, we focused on
+finding a model for \zoph, assuming its runaway nature is explained by
+the binary SN scenario.
 
 We found that it is possible to explain the observed features of
 \zoph\ with a relatively wide and massive binary initialized with
@@ -1028,8 +1028,9 @@ $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and $P=100$\,days at metallicity
 $Z=0.01$ (see \Secref{sec:best_model}). This binary system experiences dynamically-stable Roche
 lobe overflow after the end of the main sequence of the initially more massive star
 (case B). Standard stellar physics assumptions for modeling rotation,
-mixing, and mass transfer in binaries reproduce reasonably well the
-main features of \zoph\ (see \Secref{sec:methods} and Appendix~\ref{sec:software}). Specifically,
+mixing, and mass transfer in binaries (see \Secref{sec:methods} and
+Appendix~\ref{sec:software}) reproduce reasonably well the
+main features of \zoph. Specifically,
 $\sim$$1.5-2$\,Myrs after the end of mass transfer, corresponding to the
 remaining donor's lifetime at the end of our simulations plus the kinematic age of \zoph,
 the accretor star in our model has the following quantities in the correct ballpark:
@@ -1038,8 +1039,7 @@ the accretor star in our model has the following quantities in the correct ballp
 \item Total mass;
 \item Runaway space velocity;
 \item Fast surface rotation (albeit possibly on the low side, cf.~weak wind problem);
-\item enhanced $^4\mathrm{He}$ and $
-  ^{14}\mathrm{N}$ surface mass fraction;
+\item enhanced $^4\mathrm{He}$ and $^{14}\mathrm{N}$ surface mass fraction;
 \item small variations in $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$ surface mass fractions.
 \end{itemize}
 
@@ -1050,12 +1050,8 @@ evolved as a single fast-rotating star require ad-hoc explanations for the runaw
 and have been shown by \citetalias{villamariz:05} to struggle in reproducing
 surface mass fractions, apparent age, mass, and rotation rate simultaneously.
 
-%  in terms of its spatial velocity, its surface
-% $^{14}\mathrm{N}$ and $^4\mathrm{He}$ enhancement, its rotation rate,
-% age and position on the Hertzsprung-Russell diagram.
-
 In contrast with \cite{vanrensbergen:96}, in our model the
-$^{14}\mathrm{N}$ and $^4\mathrm{He}$ rich surface composition is not
+$^{14}\mathrm{N}$- and $^4\mathrm{He}$-rich surface composition is not
 the result of pure outward rotational mixing.  Instead, this material
 is transferred from the receeding core of the donor star and mixed
 from the surface inwards by rotation and, to a smaller degree, by
@@ -1094,15 +1090,16 @@ accretor star in an interacting binary system. %  We emphasize that our models a
 
 We also consider variations in the initial parameters and in the
 implementation of physical processes, discussed in
-\Secref{sec:discussion}.  Less massive secondaries remain too cool
+\Secref{sec:discussion}.  Less massive accretors remain too cool
 throughout the evolution to be compatible with \zoph, and more equal
 initial mass ratios lead to a more evolved accretor at the onset of
-mass-transfer, again resulting in too cool temperatures.
+mass-transfer, again resulting in too cool temperatures. Increasing
+the donor's initial mass might result in stripped stars unlikely to
+form a neutron star in their final supernova explosion.
 
 Improving our understanding of the evolution of the initially less
 massive stars in massive binary systems is crucial for the upcoming
-large surveys (astrometric, photometric, time-domain and
-spectroscopic) and for the understanding of the evolution of
+large surveys (astrometric, photometric, spectroscopic, and in time domain) and for the understanding of the evolution of
 gravitational-wave progenitors in isolated binaries. Although
 presently single, the nearest O-type star to Earth, \zoph, can be used
 as an anchor point for the modeling of accretors. Our models
