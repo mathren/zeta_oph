@@ -34,3 +34,5 @@ __pycache__/
 *.pickle
 *.mod
 *.data
+
+manuscript/comments/.DS_Store
