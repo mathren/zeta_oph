@@ -141,7 +141,7 @@ def zeta_oph_HRD(ax):
     plots Zeta ophiuchi L and Teff on ax
     """
     log_L, err_log_L, log_Teff, err_log_Teff = get_zeta_oph_L_teff()
-    ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt="o", ms=20, color="r", zorder=10)
+    ax.errorbar(log_Teff, log_L, xerr=err_log_Teff, yerr=err_log_L, fmt="o", ms=15, color="r", zorder=10)
 
 def get_zeta_oph_surface_he(X=0.7):
     """
