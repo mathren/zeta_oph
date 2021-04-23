@@ -360,10 +360,11 @@ period $P=100$\,days with a metallicity of $Z=0.01$.
 \Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams (HRD) of
 both stars. After
 $\sim$$7.24$\,Myr, the donor star (top panel) evolves off the main sequence and
-$\sim8400$\,years later it overfills its Roche lobe (black outline of the curves). This results in a stable case B RLOF. We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of the complex behavior of the intermediate convective zone above the H-burning shell \citep[][]{klencki:21}, and its interplay with the mass transfer.
+$\sim8400$\,years later it overfills its Roche lobe (black outline of the curves). This results in a stable case B RLOF (see below). We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of the complex behavior of the intermediate convective zone above the H-burning shell \citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with the mass transfer.
 
 At the onset of RLOF, the accretor star (bottom panel of \Figref{fig:HRD_both}) is still on the main sequence with
-$T_\mathrm{eff}\simeq10^{4.5}$\,K. Because of accretion, it is pushed out of thermal equilibrium and quickly becomes over-luminous to radiate away the excess internal energy and reaches $L\simeq10^{5.5}\,L_\odot\gg
+$T_\mathrm{eff}\simeq10^{4.5}$\,K and its central mass fraction of hydrogen is $X(^1\mathrm{H})\simeq
+0.41$. Because of accretion, it is pushed out of thermal equilibrium and quickly becomes over-luminous to radiate away the excess internal energy and reaches $L\simeq10^{5.5}\,L_\odot\gg
 L_\mathrm{nuc}\simeq
 10^{5.1}\,L_\odot$, with
 $L_\mathrm{nuc}$ the total energy released per unit time by nuclear burning.
@@ -374,20 +375,24 @@ reaches critical rotation (roughly at the lowest $T_\mathrm{eff}$ in
 the bottom panel of \Figref{fig:HRD_both}), the star begins
 contracting and its $T_\mathrm{eff}$ increases. At
 $T_\mathrm{eff}\simeq 10^{4.43}$\,K the material transferred from the
-companion star becomes progressively more He-rich and CNO-processed,
-causing a ``v-shaped'' feature in the evolutionary track. This
-indicates that the partially processed outer layers of the donor's
+donor star becomes progressively more He-rich and CNO-processed,
+causing a ``v-shaped'' feature in the evolutionary
+track. \todo{why?cannot be density, must be opacity effect} This
+indicates that the partially processed outer layers\footnote{These are
+  left behind by the recession in mass coordinate of the core
+during the donor's main sequence.} of the donor's
 core are uncovered by mass
 transfer. % after the convective core recession in
 % mass during the main sequence.
-This late mass transfer puts material at high mean molecular weight
-$\mu$ on top of the primordial envelope of the accretor, modifying the
-morphology of the evolutionary track. Thermohaline mixing starts in
-the outer layers of the accreting star, and, together with rotational
-mixing, it progressively dilutes the surface He and N mass fractions
-and causes noisy features on the HR diagram
+The transfer of the innermost layers of the donor puts material at
+high mean molecular weight $\mu$ on top of the primordial envelope of
+the accretor, modifying the morphology of the evolutionary
+track. Because of the inverted $\mu$ gradient, thermohaline mixing
+starts in the outer layers of the accreting star, and, together with
+rotational mixing, it progressively dilutes the surface He and N mass
+fractions and causes noisy features on the HR diagram
 \citep[e.g.,][]{cantiello:07}. The (standard) algorithmic choices in
-modelling mixing and rotation might impact the morphology of the
+modeling mixing and rotation might impact the morphology of the
 accretor's evolutionary track during RLOF. The entire duration of RLOF
 is only about $10^4$\,years, and therefore unlikely to be observable
 to probe directly the accuracy of our treatment of mixing. We expand
@@ -399,18 +404,17 @@ the Roche Lobe. At this point, the accretor is a H-rich fast-rotating
 star of
 $\sim$$20.1\,M_\odot$. Available mass estimates for the presently single \zoph\ are highly uncertain, but most include
 $20\,M_\odot$ (e.g., \citealt{hoogerwerf:01}, \citetalias{villamariz:05}, \citealt{neuhauser:20}). The accretor's post-RLOF orbital velocity is
-$v_2\simeq52\,\kms$. In the subsequent evolution, wind mass loss from both stars will result in  widening of the binary and slowing down of the accretor: we computed one binary model until the donor's He core burning, and at that point the accretor's orbital velocity has decreased to
+$v_2\simeq52\,\kms$. In the subsequent evolution, wind mass loss from both stars will result in  widening of the binary and slowing down the orbital motion of the accretor: we computed one binary model until the donor's He core burning, and at that point the accretor's orbital velocity has decreased to
 $\sim$$40\,\kms$. Further decrease should be expected because of the
 post-He core burning wind mass loss, likely dominated by the
 (uncertain) mass-loss rate of the stripped donor star. Nevertheless,
 the value we obtain is in broad agreement with estimates of the
 observed runaway velocity of \zoph.
 
-Accounting for both wind mass loss and the amount of mass transferred, at the end of RLOF the donor becomes a He star of
-$\sim$$9.4\,M_\odot$, likely to contract further and appear as a
-Wolf-Rayet star. It's surface H mass fraction is $\lesssim 0.2$ and
-most of the H is likely to be removed by further wind mass loss
-\citep[e.g.,][]{gotberg:17}.
+Accounting for both wind mass loss and the amount of mass transferred,
+at the end of RLOF the donor becomes a He star of
+$\sim$$9.4\,M_\odot$, likely to contract further. Depending on its wind mass-loss rate, the stripped donor's spectrum might show only absorption lines, only emission lines, or a mixture of both \citep[e.g.][]{crowther:07, neugent:17, gotberg:18}. It's surface H mass fraction is $\lesssim
+0.2$ and, at this metallicity, most of the H is likely to be removed by further wind mass loss \citep[e.g.,][]{gotberg:17}.
 
 From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly different slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
 
