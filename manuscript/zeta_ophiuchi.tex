@@ -300,13 +300,17 @@ rate.
 
 Both stars are evolved simultaneously on the same timesteps until
 after the donor detaches from its Roche lobe. We follow \cite{kolb:90}
-to calculate with an implicit scheme the mass transfer rate from optically thick layers of the
-donor star during Roche lobe overflow (RLOF). Moreover, we assume that
-the specific angular momentum and entropy of the transferred layers
-match the surface, while the chemical composition is
-set by the stratification of the donor star. Mass transfer is
+to calculate with an implicit scheme the mass transfer rate from
+optically thick layers of the donor star during RLOF. Moreover, we
+assume that the specific angular momentum and entropy of the
+transferred layers match the surface, while the chemical composition
+is set by the stratification of the donor star. Mass transfer is
 conservative until the accretor reaches critical rotation, after which
 rotationally-enhanced mass loss governs the mass transfer efficiency.
+Transferred matter which is not successfully accreted by the second
+star carries away the specific angular momentum corresponding to the
+accretor's orbital motion.
+
 
 % To define RLOF detachment, we take advantage of the fact that we focus
 % here on case B interactions among massive stars.
@@ -414,9 +418,9 @@ observed runaway velocity of \zoph.
 Accounting for both wind mass loss and the amount of mass transferred,
 at the end of RLOF the donor becomes a He star of
 $\sim$$9.4\,M_\odot$, likely to contract further. Depending on its wind mass-loss rate, the stripped donor's spectrum might show only absorption lines, only emission lines, or a mixture of both \citep[e.g.][]{crowther:07, neugent:17, gotberg:18}. It's surface H mass fraction is $\lesssim
-0.2$ and, at this metallicity, most of the H is likely to be removed by further wind mass loss \citep[e.g.,][]{gotberg:17}.
+0.2$ and the layer still containing H will possibly be removed by further wind mass loss \citep[e.g.,][]{gotberg:17}.
 
-From the black diamond onwards, we evolve the accretor as a single star with the same \texttt{MESA} setup until TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly different slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
+After the donor detaches from its Roche lobe and contracts to a radius smaller than TAMS (black diamonds in \Figref{fig:HRD_both}), we continue the evolution of the accretor as a single star with the same \texttt{MESA} setup until its TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly steeper slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
 
 The red errorbars in the bottom panel of \Figref{fig:HRD_both} mark the approximate position of \zoph\ based on the analysis of \citetalias{villamariz:05}. The color of the track in \Figref{fig:HRD_both} indicate that our accreting star spends about
 $\sim$2\,Myr within the represented errorbars after the end of RLOF. Assuming the kinematic age of
@@ -446,8 +450,9 @@ rates reaches very high values above
 $10^{-2.5}\,M_\odot\ \mathrm{yr^{-1}}$ and taps into the optically
 thick matter of the donor.
 
-In the bottom panel, initially the mass transfer rate equals the rate
-of change of mass of the accretor. This shows that initially the
+
+Initially, the mass transfer rate equals the mass accretion rate
+(bottom panel of \Figref{fig:MT}), that is initially the
 accretion is (by construction) fully conservative. As the mass and
 surface rotation rate of the accretor increase, the wind mass-loss
 rate increases progressively by $\sim$5 orders of magnitude because of
