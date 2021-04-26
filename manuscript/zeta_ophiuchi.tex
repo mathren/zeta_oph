@@ -193,8 +193,8 @@ presence of a prominent bow-shock \citep[e.g.,][]{bodensteiner:18}.
 
 Because of its young apparent age, extremely fast rotation, and nitrogen
 (N) and He rich surface \citep[e.g.,][]{herrero:92, blaauw:93,
-  villamariz:05, marcolino:09}, \zoph\ is a prime candidate for the
-binary SN scenario \citep{blaauw:93}. Many studies have suggested
+  villamariz:05, marcolino:09}, \zoph\ is a prime example of the
+outcome of the binary SN scenario \citep{blaauw:93}. Many studies have suggested
 \zoph\ might have accreted mass from a companion before acquiring its
 large velocity, both from spectroscopic and kinematic considerations
 \citep[e.g.,][]{blaauw:93, hoogerwerf:00, hoogerwerf:01, tetzlaff:10,
@@ -212,9 +212,9 @@ Although the nature of \zoph\ as a binary product is well established,
 because of its observed large surface rotation rate, previous attempts
 to model it rely purely on rotational mixing to explain the N- and
 He-rich surface composition \cite[e.g.,][]{maeder:00}. Even the binary
-models of \cite{vanrensbergen:96} assumed mass-transfer spin-up of the
-accretor to drive rotational mixing from the interior of the accreting
-star (see also \citealt{cantiello:07}). However, \cite{villamariz:05}
+models of \cite{vanrensbergen:96} assumed rotational mixing from the
+inside of the accreting star driven by the spin-up during mass
+transfer (see also \citealt{cantiello:07}). However, \cite{villamariz:05}
 (hereafter, \citetalias{villamariz:05}) were unable to find good fit
 for the stellar spectra using the single-star rotating models from
 \cite{meynet:00, meynet:03}: by the time rotational mixing enriches
@@ -236,9 +236,11 @@ Given the challenges in explaining the surface composition of \zoph\
 as a rotating single star and the strong
 evidence for its past as a member of a binary system, this star offers
 a unique opportunity to constrain the evolution of accreting stars in
-massive binary systems. Here, we present self-consistent binary evolution models for
+massive binary systems.
+
+Here, we present self-consistent binary evolution models for
 $\zeta$ Oph computing simultaneously the coupled evolution of
-\emph{both} donor and accretor star and their orbit. After presenting
+\emph{both} donor and accretor star and their orbit. After describing
 our \texttt{MESA} setup in \Secref{sec:methods}, we show our best model which
 reproduces the majority of the salient features of this star in
 \Secref{sec:best_model}. %  In this model, the surface abundances of
@@ -258,15 +260,18 @@ required for this kind of computations in
 Modeling the evolution of massive binaries
 ($M_1\gtrsim 20\,M_\odot \geq M_2$) is challenging because of the
 intricate role of several notoriously difficult stellar physics
-ingredients (differential rotation, mixing, high mass-loss rates,
-accretion, etc.). Here we follow self-consistently the coupled
-evolution of two massive stars in a binary system using \texttt{MESA}
-(version 15140, \citealt{paxton:11, paxton:13, paxton:15, paxton:18, paxton:19}). Our choice of input parameters and our numerical
-results are available at \url{10.5281/zenodo.4701565}. We discuss here only the main
-relevant physical parameters and describe tests changing some of the
-fiducial values in \Secref{sec:discussion}. Appendix~\ref{sec:software} gives
-more details on our choice of input physics, and
-appendix~\ref{sec:res_tests} discuss the numerical resolution in space and time.
+ingredients (accretion, differential rotation, mixing, high mass-loss
+rates, etc.). We follow self-consistently the coupled evolution
+of two massive stars in a binary system using \texttt{MESA} (version
+15140, \citealt{paxton:11, paxton:13, paxton:15, paxton:18,
+  paxton:19}). Our choice of input parameters and our numerical
+results are available at \url{10.5281/zenodo.4701565}. We discuss here
+only the main relevant physical parameters and describe tests changing
+some of the fiducial values in
+\Secref{sec:discussion}. Appendix~\ref{sec:software} gives more
+details on our choice of input physics, and
+appendix~\ref{sec:res_tests} discuss the numerical resolution in space
+and time.
 
 We adopt the Ledoux criterion to determine convective stability and a
 mixing length parameter of $1.5$. We include semiconvection and
@@ -283,25 +288,23 @@ We treat rotation in the ``shellular'' approximation, that is we
 assume constant rotational frequency $\omega$ along isobaric
 surfaces. Furthermore, we assume tidal synchronization at zero age
 main sequence (ZAMS) -- the beginning of our runs. For our fiducial
-period choice ($P=100$\,days), this effectively means the stars in our
-binary are initially slow rotators: the surface averaged rotational
-velocity is $\lesssim3\,\kms$ for both stars. Our models include a
-diffusive approximation for Eddington-Sweet circulations
-\citep{sweet:50}, which dominates the chemical mixing due to
-rotation. We also include the secular and dynamical shear
-instabilities, and the Goldreich-Schubert-Fricke instability, but
-these remain subdominant throughout the evolution of our models.  We
-assume a Spruit-Tayler dynamo for the transport of angular momentum
-\citep{spruit:02}, and chose the same free parameters as
-\cite{heger:00}. This also includes the rotational enhancement of wind
-mass loss as in \cite{langer:98}.
+period choice ($P=100$\,days), this means the stars are initially slow
+rotators: the surface averaged rotational velocity is
+$\lesssim3\,\kms$ for both. Our models include a diffusive
+approximation for Eddington-Sweet circulations \citep{sweet:50}, which
+dominates the chemical mixing due to rotation. We also include the
+secular and dynamical shear instabilities, and the
+Goldreich-Schubert-Fricke instability, but these remain subdominant
+throughout the evolution of our models.  We assume a Spruit-Tayler
+dynamo for the transport of angular momentum \citep{spruit:02}, and
+chose the same free parameters as \cite{heger:00}. This also includes
+the rotational enhancement of wind mass loss as in \cite{langer:98}.
 
 We assume a fiducial metallicity of $Z=0.01$ informed by the
 present-day $Z$ of the parent cluster \citep{murphy:21}, and assume
-scaling of the relative element abundances with the solar abundances
-of \cite{grevesse:98}. We include wind mass loss following
-\cite{vink:00,vink:01} for $T_\mathrm{eff}\gtrsim10^{4.2}$\,K, and \cite{dejager:88} for effective
-temperature $T_\mathrm{eff}\lesssim10^{4.2}$\,K, both with a scaling
+solar scaling of the relative element abundances \citep{grevesse:98}. We include wind mass loss following
+\cite{vink:00,vink:01} for effective
+temperature $T_\mathrm{eff}\gtrsim10^{4.2}$\,K, and \cite{dejager:88} for  $T_\mathrm{eff}\lesssim10^{4.2}$\,K, both with a scaling
 factor of 1. Nominally, this means our wind mass-loss rate post-mass
 transfer is overestimated by almost a factor of 100 compared to
 observations \citep[weak wind problem, see][]{marcolino:09}.  However,
@@ -376,7 +379,7 @@ period $P=100$\,days with a metallicity of $Z=0.01$.
 \Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams (HRD) of
 both stars. After
 $\sim$$7.24$\,Myr, the donor star (top panel) evolves off the main sequence and
-$\sim8400$\,years later it overfills its Roche lobe (black outline of the curves). This results in a stable case B RLOF (see below). We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of the complex behavior of the intermediate convective zone above the H-burning shell \citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with the mass transfer.
+$\sim8400$\,years later it overfills its Roche lobe (black outline of the curves). This results in a stable case B RLOF (see below). We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of mixing above and in the H-burning shell \citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with the mass transfer.
 
 At the onset of RLOF, the accretor star (bottom panel of \Figref{fig:HRD_both}) is still on the main sequence with
 $T_\mathrm{eff}\simeq10^{4.5}$\,K and its central mass fraction of hydrogen is $X(^1\mathrm{H})\simeq
@@ -430,12 +433,13 @@ observed runaway velocity of \zoph.
 
 Accounting for both wind mass loss and the amount of mass transferred,
 at the end of RLOF the donor becomes a He star of
-$\sim$$9.4\,M_\odot$, likely to contract further. Depending on its wind mass-loss rate, the stripped donor's spectrum might show only absorption lines, only emission lines, or a mixture of both \citep[e.g.][]{crowther:07, neugent:17, gotberg:18}. It's surface H mass fraction is $\lesssim
+$\sim$$9.4\,M_\odot$, likely to contract further. Depending on its wind mass-loss rate, the stripped donor's spectrum might show only absorption lines, only emission lines, or a mixture of both \citep[e.g.,][]{crowther:07, neugent:17, gotberg:18}. It's surface H mass fraction is $\lesssim
 0.2$ and the layer still containing H will possibly be removed by further wind mass loss \citep[e.g.,][]{gotberg:17}.
 
 After the donor detaches from its Roche lobe and contracts to a radius smaller than TAMS (black diamonds in \Figref{fig:HRD_both}), we continue the evolution of the accretor as a single star with the same \texttt{MESA} setup until its TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly steeper slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
 
-The red errorbars in the bottom panel of \Figref{fig:HRD_both} mark the approximate position of \zoph\ based on the analysis of \citetalias{villamariz:05}. The color of the track in \Figref{fig:HRD_both} indicate that our accreting star spends about
+The red errorbars in the bottom panel of \Figref{fig:HRD_both} mark
+the approximate position of \zoph\ based on the spectral analysis of \citetalias{villamariz:05}. The color of the track in \Figref{fig:HRD_both} indicate that our accreting star spends about
 $\sim$2\,Myr within the represented errorbars after the end of RLOF. Assuming the kinematic age of
 $1.78\pm0.21$ \citep{neuhauser:20}, and estimating a remaining lifetime of the donor of
 $\sim$0.5\,Myr, this gives the correct timescale for the binary SN scenario.
