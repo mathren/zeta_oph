@@ -171,19 +171,21 @@ by a (possibly fast-rotating) single star model. % todo maybe cite
 % poseidon here
 \subsection{A prototypical example of accretor: $\zeta$ Ophiuchi}
 
-Here, we argue that the nearest O-type star to
-Earth, $\zeta$ Ophiuchi\footnote{also known as HD\,149\,757.} (\zoph)
-provides a unique opportunity to constrain these models.
-\zoph\ has a distance from Earth of $107\pm4$\,pc \citep[][and
-references therein]{neuhauser:20}, and a spectral type O9.5{\rm IVnn}
+Here, we argue that the nearest O-type star to Earth, $\zeta$
+Ophiuchi\footnote{also known as HD\,149\,757.} (\zoph) provides a
+unique opportunity to constrain these models.  \zoph\ has a distance
+from Earth of $107\pm4$\,pc \citep[][and references
+therein]{neuhauser:20}, and a spectral type O9.5{\rm IVnn}
 \citep{sota:14}. It occasionally shows emission lines, making it an Oe
-star \citep{walker:79, vink:09}. Its surface rotation
-rate is extremely large, with most estimates of the projected
-rotational velocity from optical spectra exceeding
-$v\sin(i)\gtrsim 400\,\kms$ \citep[corresponding to the ``nn'' in the
-spectral type, e.g.,][]{zehe:18}. Using optical
-interferometry, \cite{gordon:18} were able to measure its centrifugal
-distorsion, suggesting close-to-breakup rotation.
+star \citep{walker:79, vink:09}. Its surface rotation rate is
+extremely large, with most estimates of the projected rotational
+velocity from optical spectra exceeding $v\sin(i)\gtrsim 400\,\kms$
+\citep[corresponding to the ``nn'' in the spectral type,
+e.g.,][]{zehe:18}. Using optical interferometry, \cite{gordon:18} were
+able to measure the centrifugal distorsion of \zoph, suggesting
+close-to-breakup rotation.  By comparing the observed $v\sin(i)$ to
+the theoretical breakup rotation, \cite{zehe:18} also constrained the
+inclination angle to $i\gtrsim 56$\,degrees.
 
 \zoph\ was originally
 identified as a runaway because of its large proper motion by
@@ -473,7 +475,7 @@ $\sim$0.5\,Myr \todo{check}, this gives the correct timescale for the binary SN 
 \end{figure}
 
 \Figref{fig:MT} shows the rate of mass change for each star during
-RLOF. The top panel focuses on the donor star which loses mass to RLOF
+RLOF. The top panel focuses on the donor star which loses mass via RLOF
 (cyan line) and winds (thin red line). The dashed blue lines
 show their combination resulting in the actual rate of mass change of
 the stars. The bottom panel shows instead the accreting star, which
@@ -485,13 +487,13 @@ smaller than its photosphere $R_\mathrm{RL,1}<R_1$).
 
 
 Initially, the mass transfer rate equals the mass accretion rate
-(bottom panel of \Figref{fig:MT}), that is initially the
-accretion is (by construction) fully conservative. As the mass and
-surface rotation rate of the accretor increase, the wind mass-loss
-rate increases progressively by $\sim$5 orders of magnitude because of
-the rotational enhancement \citep{langer:98}. The
-rotationally-enhanced wind controls the accretion efficiency, and at
-$\sim$$7.254$\,Myr the mass transfer becomes briefly non-conservative (where the red solid line and the cyan line overlap): the majority of the transferred mass is ejected away in a wind by the accretor. Consequently, the accretor can slightly spin down and starts contracting (cf.~\Figref{fig:HRD_both}). In the remaining evolution, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) lead to the oscillations seen in the wind mass loss rate, but for most of the evolution accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
+(bottom panel of \Figref{fig:MT}), that is initially the accretion is
+(by construction) fully conservative. As the mass and surface rotation
+rate of the accretor increase, the assumed rotational-enhancement of
+the wind progressively increases the mass-loss rate by $\sim$5 orders
+of magnitude \citep{langer:98}. The rotationally-enhanced wind
+controls the accretion efficiency, and at
+$\sim$$7.254$\,Myr the mass transfer becomes briefly non-conservative (where the red solid line and the cyan line overlap): the majority of the transferred mass is ejected, here we assume as a wind from the vicinity of the accretor. Consequently, the accretor slightly spins down and starts contracting (cf.~\Figref{fig:HRD_both}). In the remaining evolution, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) trigger oscillations in the wind mass loss rate. Nevertherless, for most of the evolution, accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
 
 
 At the end of RLOF, the donor star briefly expands again
@@ -499,15 +501,16 @@ At the end of RLOF, the donor star briefly expands again
 is due to the partial recombination of the now He-rich outer layers,
 which causes a transient surface convection layer. This causes a
 radial expansion of the outer convective layers and an increase in the
-mass-transfer rate, despite at this point the donor is less massive
-than the accretor and the binary is widening.  During this phase, the
-mass transfer becomes fully non-conservative again (in the bottom
-panel the wind and the mass accretion rate briefly become equal again
-at $\sim7.261$\,Myr). We find this to be the culprit of the numerical
+mass-transfer rate\footnote{We find this to be the culprit of the numerical
 difficulties for massive mass-transferring binaries with older
 \texttt{MESA} releases: although only a very small amount of mass is
 involved, the onset of convection causes a large radius variation
-which impacts the mass transfer rate.
+which impacts the mass transfer rate.}
+, despite at this point the donor is less massive
+than the accretor and the binary is widening.  During this phase, the
+mass transfer becomes fully non-conservative again (in the bottom
+panel the wind and the mass accretion rate nearly cancel each other again
+at $\sim7.261$\,Myr).
 
 \subsection{Mixing and composition}
 \label{sec:mixing}
@@ -582,14 +585,13 @@ the N-rich core with the outer envelope polluted from the top.
 \Tabref{tab:surf_prop} summarizes the surface properties of the
 accretor star at the time shown in the last panel of
 \Figref{fig:D_mix}, that is shortly after the RLOF phase, while the
-model is still roughly at the observed position of \zoph.
-
-Both the mass and radius agree reasonably well with the estimates from
-\citetalias{villamariz:05} and previous studies, that is~$20\,M_\odot$ and
-$8.3\pm1.5\,R_\odot$, respectively. Recently, optical interferometry
-of \zoph\ suggested a polar radius of $7.5\,R_\odot$ and centrifugally
-increased equatorial radius of $9.1\,R_\odot$ \citep{gordon:18}, also
-in good agreement with our model.
+model is still roughly at the observed position of \zoph. Both the
+mass and radius agree reasonably well with the estimates from
+\citetalias{villamariz:05} and previous studies, that is~$20\,M_\odot$
+and $8.3\pm1.5\,R_\odot$, respectively. Recently, optical
+interferometry of \zoph\ suggested a polar radius of $7.5\,R_\odot$
+and centrifugally increased equatorial radius of $9.1\,R_\odot$
+\citep{gordon:18}, also in good agreement with our model.
 
 The surface rotational velocity in
 excess of $350\,\kms$ is also in the correct ballpark albeit possibly
