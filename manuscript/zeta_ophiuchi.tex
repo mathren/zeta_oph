@@ -100,12 +100,12 @@ transient observations, and gravitational-wave progenitors.
 
 Accretors
 (and merger products) can appear as blue stragglers \citep[e.g.,][]{chen:09, chen:10} and thus impact cluster
-populations, the cluster age estimates and its main sequence morphology
+populations, their age estimates, and their main sequence morphology
 \citep[e.g.,][]{pols_marinus:94, wang:20}. The high spin of the
 accretor post-mass-transfer might be the dominant explanation for the origin of
 hydrogen (H) rich massive stars showing emission lines \citep[e.g.,][]{bodensteiner:20,
   vinciguerra:20}. Rotationally-mixed accreting
-star at low metallicity enhance the ionizing flux of high-redshift
+star at low metallicity might also be important for the ionizing flux of high-redshift
 galaxies \citep[e.g.,][]{eldridge:12}.
 
 The majority of massive binaries will be
@@ -127,10 +127,12 @@ important: \cite{zapartas:19} showed that $14_{-11}^{+4}\%$ of H-rich
 (type II) SNe might come from progenitors ejected from a binary after
 the explosion of their companion. The fact that they accreted mass before exploding can
 influence their helium (He) core mass and thus the explosion
-properties and the inferred progenitors \citep{zapartas:21}. Some
-stars might not have been massive enough to reach core-collapse
-without accreting mass from a companion
-\citep[e.g.,][]{zapartas:17}. The high post-mass transfer rotation
+properties and the inferred progenitors \citep{zapartas:21}. % Some
+% stars might not have been massive enough to reach core-collapse
+% without accreting mass from a companion
+% \citep[e.g.,][]{zapartas:17}. The number of accretors is tiny, those
+% are mergers for the vast part
+The high post-mass transfer rotation
 rate of accretor stars in binaries might have implications for the
 formation of long gamma-ray burst progenitors \citep[e.g.,][]{cantiello:07}.
 
@@ -1185,51 +1187,6 @@ tabulated weak reaction rates \citet{Fuller1985, Oda1994,
 
 The inlists, processing scripts, and model output will be made available at~\url{10.5281/zenodo.4701565}.
 
-\section{Internal composition profile evolution}
-\label{sec:X_fig}
-
-
-\Figref{fig:composition_huge} compares the internal evolution of the composition
-profile of single rotating stars with our accretor model.
-We show mass fractions of $^{12}\mathrm{C}$  and $^{16}\mathrm{O}$ to complement the
-mass fraction of $^{14}\mathrm{N}$ shown in \Figref{fig:n14}, and
-reproduced also in the middle panel of \Figref{fig:composition_huge}.
-
-
-\begin{figure*}[hp]
-  \centering
-  \includegraphics[width=\textwidth]{huge_composition}
-  \caption{Same as \Figref{fig:n14}, but for $^{12}\mathrm{C}$ (top
-    panel), and $^{16}\mathrm{O}$ (bottom panel). The first four
-    panels show single rotating stars of initially $20\,M_\odot$, the
-    rightmost panel shows the accretor in our fiducial binary. The middle panel is
-    exactly the same as \Figref{fig:n14}. Thick red dotted lines mark the
-    initial mass fractions, thin red dashed lines the TAMS surface mass
-    fraction, the solid red lines and the semi-transparent red bands
-    correspond to the values inferred by \citetalias{villamariz:05}
-    using the surface H mass fraction from our model. The tracks go
-    from dark (roughly corresponding to ZAMS) to light colors, with the
-    lightest color corresponds to TAMS.}
-  \label{fig:composition_huge}
-\end{figure*}
-
-\section{Internal $\omega$ profile evolution}
-
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{omega_struct}
-  \caption{Same as \Figref{fig:struct_rot}, but the y axis shows the
-    rotational frequency. The single star models (first four panels)
-    are initialized as rigid rotators. The initial rotation rate of
-    the accretor (last panel) is initially low, then during mass
-    transfer, the star is spun-up from the surface inwards until
-    critical rotation is reached. A period of ridig rotation ensues
-    (flat $\omega$ profiles), until the surface spins down because of
-    wind mass loss, and more importantly the core spins significantly
-    up due to its contraction. }
-  \label{fig:omega}
-\end{figure*}
-
 \section{Resolution tests}
 \label{sec:res_tests}
 
@@ -1276,6 +1233,54 @@ $10^{3.8}$\,years with typical pre-RLOF timesteps of the order of $10^{3.2}$\,ye
 and sub-decade during RLOF. The main factor limiting the timestep
 sizes is the change of surface angular momentum in both stars during
 the mass transfer.
+
+
+\section{Internal composition profile evolution}
+\label{sec:X_fig}
+
+
+\Figref{fig:composition_huge} compares the internal evolution of the composition
+profile of single rotating stars with our accretor model.
+We show mass fractions of $^{12}\mathrm{C}$  and $^{16}\mathrm{O}$ to complement the
+mass fraction of $^{14}\mathrm{N}$ shown in \Figref{fig:n14}, and
+reproduced also in the middle panel of \Figref{fig:composition_huge}.
+
+
+\begin{figure*}[hp]
+  \centering
+  \includegraphics[width=\textwidth]{huge_composition}
+  \caption{Same as \Figref{fig:n14}, but for $^{12}\mathrm{C}$ (top
+    panel), and $^{16}\mathrm{O}$ (bottom panel). The first four
+    panels show single rotating stars of initially $20\,M_\odot$, the
+    rightmost panel shows the accretor in our fiducial binary. The middle panel is
+    exactly the same as \Figref{fig:n14}. Thick red dotted lines mark the
+    initial mass fractions, thin red dashed lines the TAMS surface mass
+    fraction, the solid red lines and the semi-transparent red bands
+    correspond to the values inferred by \citetalias{villamariz:05}
+    using the surface H mass fraction from our model. The tracks go
+    from dark (roughly corresponding to ZAMS) to light colors, with the
+    lightest color corresponds to TAMS.}
+  \label{fig:composition_huge}
+\end{figure*}
+
+\section{Internal $\omega$ profile evolution}
+\label{sec:omega_fig}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{omega_struct}
+  \caption{Same as \Figref{fig:struct_rot}, but the y axis shows the
+    rotational frequency. The single star models (first four panels)
+    are initialized as rigid rotators. The initial rotation rate of
+    the accretor (last panel) is initially low, then during mass
+    transfer, the star is spun-up from the surface inwards until
+    critical rotation is reached. A period of ridig rotation ensues
+    (flat $\omega$ profiles), until the surface spins down because of
+    wind mass loss, and more importantly the core spins significantly
+    up due to its contraction. }
+  \label{fig:omega}
+\end{figure*}
+
 
 
 \newpage
