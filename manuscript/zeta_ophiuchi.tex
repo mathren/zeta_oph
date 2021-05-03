@@ -393,7 +393,8 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
 We describe here the evolution of a binary system where the accretor
 star can broadly reproduce all the observed features of \zoph. We
 assume initial masses $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and initial
-period $P=100$\,days with a metallicity of $Z=0.01$.
+period $P=100$\,days (corresponding to a separation
+$a\simeq314\,R_\odot$) with a metallicity of $Z=0.01$.
 
 \Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams (HRD) of
 both stars. After
@@ -979,9 +980,10 @@ evolution of the accreting star. During RLOF, the accretor is out of
 gravothermal equilibrium with significant impact on its radius and
 ultimately on the amount of mass transferred and its angular
 momentum. In reality, the gas stream between the two stars, the
-formation of a disk, and the geometric distorsion of the outer layers
-because of the centrifugal forces would not follow the spherical
-symmetry imposed by 1D codes such as \texttt{MESA}.
+hot-spot due to the RLOF stream hitting the accretor's surface, and
+the geometric distorsion of the outer layers because of the
+centrifugal forces would not follow the spherical symmetry imposed by
+1D codes such as \texttt{MESA}.
 
 While the mass transfer efficiency $\beta_\mathrm{RLOF}$ and
 importantly its time-evolution need further attention, we emphasize that most studies, especially
@@ -999,6 +1001,7 @@ transport in the circumstellar disk during RLOF quickly homogenizes
 the rotation rate and provides a relatively slow spin-up of the
 accretor star.
 
+\todo{Ylva is right, there should be direct impact}
 We also attempted calculations using the algorithm from
 \cite{demink:13} based on the fit from \cite{ulrich:76} to the
 numerical results of \cite{lubow:75}. This algorithm distinguishes between
@@ -1045,7 +1048,7 @@ $25\,M_\odot$ in \Secref{sec:best_model}),
 $M_2=17\,M_\odot$, and
 $P$=100\,days, we obtain a post-RLOF velocity of
 $65\,\kms$. However, this produces a stripped donor of
-$\sim$16\,$M_\odot$ at RLOF detachment, with stronger wind mass loss. Therefore this binary is expected to widen relatively more than our fiducial model of \Secref{sec:best_model}, slowing down the secondary. The increased mass of the stripped star could also imply a lower chance of exploding for the donor (however, see \Secref{sec:SN_comp}).
+$\sim$16\,$M_\odot$ at RLOF detachment, with stronger wind mass loss. Therefore this binary is expected to widen relatively more than our fiducial model of \Secref{sec:best_model}, slowing down the secondary. The increased mass of the stripped star could also imply a lower chance of exploding for the donor, which might instead collapse to a black-hole instead (however, see \Secref{sec:SN_comp}).
 
 The higher $M_1$ does not significantly change the post-RLOF total
 mass of the accretor, with $M_2$ remaining about $\sim$20.5\,$M_\odot$, since
@@ -1062,12 +1065,12 @@ massive accretors (which would remain too cool even after accreting
 mass), or more equal initial mass ratio (which would produce a too
 evolved accretor at the onset of mass transfer).
 
-\subsection{The explosion of the former companion}
+\subsection{The explosion of the donor star}
 \label{sec:SN_comp}
 
 Throughout this study, we have assumed the ``binary SN scenario'' to
 explain the runaway nature of \zoph:
-after the mass transfer phase, the explosion of the donor breaks the
+after the mass transfer phase, the explosion of the donor disrupts the
 binary and ejects the accretor at roughly its pre-explosion orbital
 velocity \citep[e.g.,][]{renzo:19walk}. This fate occurs to the
 majority of massive binary systems, and \zoph\ might be the best
@@ -1093,7 +1096,7 @@ of donor stars in binary systems \citep[e.g.,][]{schneider:21,
 We have neglected the impact of the explosion on the structure of the
 accretor star. At the time of the explosion, the accretor subtends a
 solid angle $\sim$$R^2/a^2\simeq
-0.05$\,degrees with $R$ the accretor radius and
+2\times10^{-3}$\,steradians with $R$ the accretor radius and
 $a$ the binary separation. We neglect the post-RLOF wind-driven orbital widening for this estimate.  The blast wave will hit the accretor causing mass loss -- directly via ablation and by injecting energy in the envelope, inflating it and enhancing its wind \citep{wheeler:75, tauris:98, podsiadlowski:03, hirai:18}.  Because of the SN shock, the just ejected new runaway star might appear bloated and redder (long before it overtakes the slowing SN remnant). The impact of this brief out of thermal equilibrium phase on the stellar spin should be investigated further.
 
 Using 2D hydrodynamic simulations of the star-SN ejecta interactions in close binaries ($a\lesssim
