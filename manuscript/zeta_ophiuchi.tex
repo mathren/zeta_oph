@@ -479,7 +479,7 @@ timescale for the binary SN scenario.
   \label{fig:MT}
 \end{figure}
 
-\todo{update text with labels}
+\todo{maybe update text with labels}
 
 \Figref{fig:MT} shows the rate of mass change for each star during
 RLOF. The top panel focuses on the donor star which loses mass via RLOF
@@ -508,12 +508,9 @@ At the end of RLOF, the donor star briefly expands again
 is due to the partial recombination of the now He-rich outer layers,
 which causes a transient surface convection layer. This causes a
 radial expansion of the outer convective layers and an increase in the
-mass-transfer rate\footnote{We find this to be the culprit of the numerical
-difficulties for massive mass-transferring binaries with older
-\texttt{MESA} releases: although only a very small amount of mass is
+mass-transfer rate\footnote{With previous \texttt{MESA} releases, we found it challenging to compute our models beyond this phase: although only a very small amount of mass is
 involved, the onset of convection causes a large radius variation
-which impacts the mass transfer rate.}
-, despite at this point the donor is less massive
+which impacts the mass transfer rate.}, despite at this point the donor is less massive
 than the accretor and the binary is widening.  During this phase, the
 mass transfer becomes fully non-conservative again (in the bottom
 panel the wind and the mass accretion rate nearly cancel each other again
@@ -708,12 +705,13 @@ models to reach the lower-limit of the error bar.
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
-  \caption{Surface averaged rotation rate for the accretor
-    model. At $\sim$7.25\,Myr the mass transfer quickly spins
-    up the accretor at critical rotation. By the time the donor
-    detaches from the RLOF the accretor is still spinning at
-    $\sim$$400\,\kms$. At this point (beginning of the dot-dashed line), we continue the evolution as a single star, and the accretor quickly spins down. Note however that we use a wind mass-loss rate from \cite{vink:01}, which is observed to be
-    $\sim$2 orders of magnitude too high \citep{marcolino:09}.}
+  \caption{Surface averaged rotation rate for the accretor model. At
+    $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to
+    critical rotation. By the time the donor detaches from the RLOF
+    the accretor is still spinning at
+    $\sim$$400\,\kms$. From this point (black diamond) onwards, we continue the evolution as a single star, and the accretor spins down because of wind mass loss. Note however that we use the wind mass-loss rate from \cite{vink:01}, which might be
+    $\sim$2 orders of magnitude too high for \zoph\ \citep{marcolino:09}.
+  }
   \label{fig:surf_rot}
 \end{figure}
 
@@ -749,17 +747,19 @@ $i$). The dark red band corresponds to the $v\sin(i)$ from
 \cite{zehe:18}, and the lighter band shows a range of 5 times their
 error bar.
 
-The initial binary is wide enough that the initial tidal
-synchronization implies a very low rotation. At 7.25\,Myr, RLOF
-rapidly spins up the accretor to critical rotation, up to
+The initial binary is wide enough that assuming tidal synchronization
+at ZAMS implies a very low rotation. At 7.25\,Myr, RLOF rapidly spins
+up the accretor to critical rotation, up to
 $v_\mathrm{crit}\simeq520\,\kms$ (averaged over the surface of the
 star). The star remains fast rotating throughout the mass transfer
 phase, which ends at the black diamond in \Figref{fig:surf_rot}. In
 the remaining evolution, the star spins down progressively through
 wind mass loss, and within $\sim$2\,Myr its averaged surface
 rotational velocity drops below $350\,\kms$. Close to the end of the
-main sequence, the internal transport of angular momentum causes a
-change in the spin-down slope.
+main sequence, the increase in wind mass loss rate and internal
+transport of angular momentum causes a change in the spin-down
+slope. This effect is also seen in the late main-sequence evolution of
+single stars rotating rapidly from ZAMS.
 
 \Figref{fig:surf_rot} shows that, without accounting for the
 inclination angle, our model can retain a significant surface rotation
@@ -768,8 +768,8 @@ shorter than the remaining main-sequence lifetime. We emphasize that
 throughout its evolution this model is computed using the
 \cite{vink:00, vink:01} wind mass-loss rate with full efficiency. This
 is two orders of magnitude higher than the wind mass loss rate
-reported by \cite{marcolino:09} (however, see
-\citealt{lucy:12}). While this may impact the evolution of the
+reported by \cite{marcolino:09} (weak wind problem), however, see also
+\citealt{lucy:12, lagae:21}. While this may impact the evolution of the
 binary even before RLOF, it increases the spin-down rate of
 our model compared to the observations. We expect that an accreting star
 modeled with lower wind-mass loss rate post-RLOF would retain an even
@@ -781,10 +781,11 @@ higher surface rotation for longer (see also \Secref{sec:single_star_uncertainti
 
 To illustrate the angular momentum transport in our accretor stars, it
 is helpful to compare with the single rotating $20\,M_\odot$
-models. The internal rotational profile of a single star rigidly
-rotating at birth is different than the profile obtained spinning up
-the secondary star at a later evolutionary stage, from its surface,
-and to critical rotation.
+models. Typically, single stars are assumed to be rigid rotators at
+ZAMS \citep[e.g.,][]{ekstrom:12}. The internal rotational profile of a
+single star rigidly rotating at birth is different than the profile
+obtained spinning up the secondary star at a later evolutionary stage,
+from its surface, and to critical rotation.
 
 \Figref{fig:struct_rot} shows the internal
 rotational velocity $v_\mathrm{rot}=\omega\times r$, and
