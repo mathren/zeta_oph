@@ -291,7 +291,8 @@ enhancement of the convective flux in superadiabatic regions
 (\texttt{MLT--}) introduced in \texttt{MESA}
 15140.
 
-We treat rotation in the ``shellular'' approximation, that is we
+We treat rotation in the ``shellular'' approximation
+\citep[e.g.,][]{zahn:92, ekstrom:12}, that is we
 assume constant rotational frequency $\omega$ along isobaric
 surfaces. Furthermore, we assume tidal synchronization at zero age
 main sequence (ZAMS) -- the beginning of our runs. For our fiducial
@@ -720,16 +721,18 @@ models to reach the lower-limit of the error bar.
 \begin{figure*}[tbp]
   \centering
   \includegraphics[width=\textwidth]{zeta_Rotational_struct}
-  \caption{Internal rotational profile for $20\,M_\odot$ single star models with
-    increasing $\omega/\omega_\mathrm{crit}$ at birth (first four
-    panels), and for the accretor of our fiducial binary. As in
+  \includegraphics[width=\textwidth]{omega_struct}
+  \caption{Top: Internal rotational profile for $20\,M_\odot$ single
+    star models with increasing $\omega/\omega_\mathrm{crit}$ at birth
+    (first four panels), and for the accretor of our fiducial
+    binary. Bottom: internal rotational frequency profile. As in
     \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light
-    at TAMS, and the thin dashed red line mark the TAMS surface
-    rotation rate. In the last panel, the gray area indicates mass
-    accreted during RLOF. The yellow lines (TAMS) in the last panel
-    show that the core of the accretor is rotating almost as fast as
-    its surface, and both are faster than the surface of single star
-    models.}
+    at TAMS. In the top panel the thin dashed red line mark the TAMS
+    surface rotation rate. In the rightmost panel, the gray area
+    indicates mass accreted during RLOF. The yellow lines (TAMS) in
+    the last panel show that the core of the accretor is rotating
+    almost as fast as its surface despite its much smaller radius, and
+    both are faster than the surface of single star models.}
   \label{fig:struct_rot}
 \end{figure*}
 
@@ -781,44 +784,47 @@ higher surface rotation for longer (see also \Secref{sec:single_star_uncertainti
 
 To illustrate the angular momentum transport in our accretor stars, it
 is helpful to compare with the single rotating $20\,M_\odot$
-models. Typically, single stars are assumed to be rigid rotators at
-ZAMS \citep[e.g.,][]{ekstrom:12}. The internal rotational profile of a
-single star rigidly rotating at birth is different than the profile
+models. Typically, single stars are assumed to be solid-body rotators at
+ZAMS. Their internal rotational profile evolves differently than the profile
 obtained spinning up the secondary star at a later evolutionary stage,
 from its surface, and to critical rotation.
 
-\Figref{fig:struct_rot} shows the internal
-rotational velocity $v_\mathrm{rot}=\omega\times r$, and
-\Figref{fig:omega} shows the internal $\omega$ profile. As in
-\Figref{fig:n14}, the first four panels show single rotating stars
-with increasing initial $\omega/\omega_\mathrm{crit}$, the last panel
-shows our accretor model, and the colors go from dark (close to ZAMS) to light
-(TAMS), with the accretor reaching lighter colors because of its
-rejuvenation (see \Secref{sec:mix_comparison_single}). The gray area in the last panel represents mass accreted
-during RLOF.
+The top row of \Figref{fig:struct_rot} shows the internal rotational
+velocity $v_\mathrm{rot}=\omega\times r$, while the bottom row shows
+the $\omega$ profile. As in \Figref{fig:n14}, the first four panels in
+each row show single rotating stars with increasing initial
+$\omega/\omega_\mathrm{crit}$, the last panels shows our accretor
+model, and the colors go from dark (close to ZAMS) to light
+(TAMS). Because of rejuvenation, the accretor has a longer
+main-sequence life-time compared to a star of the same final mass,
+hence the lighter colors in the last panels (see
+\Secref{sec:mix_comparison_single}). The gray area in the rightmost
+panels highlights matter accreted during RLOF.
 
-The thin dashed red lines in each panel mark the TAMS surface rotation
-rates: all our single star models reach a TAMS surface
-$v_\mathrm{rot}\simeq50-60\,\kms$. Initially faster rotating models spin
-down more in their outer layers, have slightly longer main sequence
-lifetimes (because of rotational mixing increasing the available fuel), and develop stronger differential rotation. As the core
-contracts and spins up, the single star
-profiles show the progressive development of a core-envelope
-interface.
+The thin dashed red lines in each panel of the top row of
+\Figref{fig:struct_rot} mark the TAMS surface rotation rates: all our
+single star models reach a TAMS surface
+$v_\mathrm{rot}\simeq50-60\,\kms$. Initially faster rotating models
+spin down more in their outer layers, have slightly longer main
+sequence lifetimes (because of rotational mixing increasing the
+available fuel), and develop stronger differential rotation. As the
+core contracts and spins up, the single star profiles show the
+progressive development of a core-envelope interface.
 
 Conversely, the last panel shows that the entire interior of the
-accretor has a negligible rotational velocity until RLOF. Because of
-binary interactions, the accretor is spun up late in its evolution, up
-to critical rotation $\omega/\omega_\mathrm{crit}\simeq1$, and from
-the top. In our model, inward transport of angular momentum creates a
-$v_\mathrm{rot}$ profile monotonically increasing with mass seen in
-the green lines of the last panel. Late during mass transfer, the
-accretor achieves rigid and close to critical rotation (see
-\Figref{fig:omega}). After the end of RLOF, the accretors envelope
-spins down because of winds. By the end of the main-sequence evolution
-of the accretor, the surface still spins with
-$v_\mathrm{rot}\simeq100\,\kms$ (twice as fast as the single star
-models).
+accretor has a negligible rotational velocity until RLOF (starting at
+$7.25$\,Myr). Because of binary interactions, the accretor is spun up
+late in its evolution, up to critical rotation
+$\omega/\omega_\mathrm{crit}\simeq1$, and from the surface. In our model,
+inward transport of angular momentum creates a $v_\mathrm{rot}$
+profile monotonically increasing from the center to the surface (green lines of
+the last panel in the top row). Late during mass transfer, the accretor achieves rigid
+and close to critical rotation (flat profiles in the last panel on the
+bottom row of \Figref{fig:struct_rot}). After the end
+of RLOF, the accretors envelope spins down because of winds. By the
+end of the main-sequence evolution of the accretor, the surface still
+spins with $v_\mathrm{rot}\simeq100\,\kms$ (twice as fast as the
+single star models).
 
 Perhaps more importantly, the outer-edge of the core has a similar
 rotational velocity as the surface, and much larger than the
@@ -827,7 +833,7 @@ evolutionary contraction (decrease in $r$) of the core results in a
 significant increase of $\omega$ to conserve the angular momentum that
 cannot be transferred to the outer layers. The core-envelope interface
 of the accretor at TAMS is much more prominent than in single rotating
-stars.  The faster core rotation of binary accretors spun up late and
+stars. The faster core rotation of binary accretors spun up late and
 up to critical rotation might have important implications for the
 explosion of the initially less massive star of a binary, the
 spin of the resulting compact objects, and the analysis of
@@ -840,11 +846,23 @@ Models of the interior evolution of stars require the choice of
 several poorly constrained parameters, the majority arising from the
 one-dimensional representation of multi-dimensional phenomena
 (convection, mixing, rotation, etc.). This remains true when modeling
-two stars in a binary, with the added caveat that even more free
-parameters enter in the treatment of binary interactions (and in
-particular mass transfer). In \Secref{sec:single_star_uncertainties}
-We report on exploration of parameter variations for each individual
-star. We discuss parameters governing the mass transfer phase in
+two stars in a binary, with the added caveat that an even larger
+number of parameters enter in the treatment of binary interactions (and in
+particular mass transfer). This emphasizes the need for
+observational constraints and motivated us to compare our models to
+the well characterized \zoph.
+
+Accretor stars are expected in most populations of (massive)
+stars, both in clusters \citep[e.g.,][]{chen:09, wang:20} and in the field
+\citep[e.g.,][]{demink:11, demink:13}. However, these might not obviously stand
+out as binary products \citep[e.g.,][]{renzo:19walk}. Therefore, to
+inform the search for accretor stars in observed samples, it is
+also necessary to characterize the robustness of model predictions
+against numerical, physical, and algorithmic choices.
+
+In \Secref{sec:single_star_uncertainties}
+we report on exploration of parameter variations for each individual
+star in the binary. We discuss parameters governing the mass transfer phase in
 \Secref{sec:bin_param}, the initial binary architecture in
 \Secref{sec:bin_init}, and the consequences of the assumed SN
 explosion of the companion in \Secref{sec:SN_comp}.
@@ -1284,23 +1302,23 @@ reproduced also in the middle panel of \Figref{fig:composition_huge}.
   \label{fig:composition_huge}
 \end{figure*}
 
-\section{Internal $\omega$ profile evolution}
-\label{sec:omega_fig}
+% \section{Internal $\omega$ profile evolution}
+% \label{sec:omega_fig}
 
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{omega_struct}
-  \caption{Same as \Figref{fig:struct_rot}, but the y axis shows the
-    rotational frequency. The single star models (first four panels)
-    are initialized as rigid rotators. The initial rotation rate of
-    the accretor (last panel) is initially low, then during mass
-    transfer, the star is spun-up from the surface inwards until
-    critical rotation is reached. A period of ridig rotation ensues
-    (flat $\omega$ profiles), until the surface spins down because of
-    wind mass loss, and more importantly the core spins significantly
-    up due to its contraction. }
-  \label{fig:omega}
-\end{figure*}
+% \begin{figure*}[htbp]
+%   \centering
+%   \includegraphics[width=\textwidth]{omega_struct}
+%   \caption{Same as \Figref{fig:struct_rot}, but the y axis shows the
+%     rotational frequency. The single star models (first four panels)
+%     are initialized as rigid rotators. The initial rotation rate of
+%     the accretor (last panel) is initially low, then during mass
+%     transfer, the star is spun-up from the surface inwards until
+%     critical rotation is reached. A period of ridig rotation ensues
+%     (flat $\omega$ profiles), until the surface spins down because of
+%     wind mass loss, and more importantly the core spins significantly
+%     up due to its contraction. }
+%   \label{fig:omega}
+% \end{figure*}
 
 
 
