@@ -871,10 +871,68 @@ explosion of the companion in \Secref{sec:SN_comp}.
 \subsection{Uncertainties in the single-star physics}
 \label{sec:single_star_uncertainties}
 
-For our model of \Secref{sec:best_model}, we have assumed an initial
+% rotation
+Rotation is a critical ingredient of our models: it governs the
+equatorial radius and thus $\omega/\omega_\mathrm{crit}$
+and mass transfer efficiency (see \Secref{sec:bin_param}), through
+Eddington-Sweet meridional circulations it determines outward mixing
+from the core, and more importantly inward mixing from the surface.
+We emphasize that the shellular approximation used in one-dimensional
+stellar evolution codes might not be appropriate for
+$\omega/\omega_\mathrm{crit}\simeq 1$ reached by our accretor star
+during RLOF. Decreasing by a factor of 10 the diffusion coefficient
+for Eddington-Sweet meridional circulations has a very small effect on
+the HRD evolution of the accretor. However, the noisiness during the
+late RLOF phase (for $T_\mathrm{eff}\gtrsim10^{4.5}$\,K in
+\Figref{fig:HRD_both}) increases in amplitude slightly, confirming
+that the details of this part of the evolution are sensitive to the
+treatment of rotational mixing. We were unable to run models turning
+completely off Eddington-Sweet meridional circulations past the
+``v-shaped'' feature in \Figref{fig:HRD_both}, and refer the readers
+to appendix~\ref{sec:res_tests} for a discussion of our numerical resolution.
+
+Our models assume a Spruit-Tayler dynamo \citep{spruit:02} for the
+transport of angular momentum throughout the evolution. Adopting the
+stronger angular momentum transport from \cite{fuller:19} might result
+in a more efficient spin-down of the surface during RLOF, possibly
+allowing for more accretion of mass.
+
+The accretor is spun up late, from the surface inwards, and to
+critical rotation compared to single star models which are initialized
+at ZAMS with rigid rotation. Late during the mass transfer, even the
+weaker core-envelope coupling of \cite{spruit:02} is sufficient for
+the accretor to achieve rigid rotation. Subsequently, the envelope
+spins down because of wind mass loss and more importantly the core
+spins significantly up because of its evolutionary contraction. We
+expect that following \cite{fuller:19} the core would lose more
+angular momentum to the envelope, limiting its ability to spin up as
+it contracts and decreasing its rotational velocity.
+Nevertheless, we expect that the difference with single star
+rotational profiles would remain because of the shorter evolutionary time left.
+
+% thermohaline mixing
+During RLOF, thermohaline mixing in the envelope also becomes
+important. We have explored models enhancing the efficiency of this
+mixing process by a factor of 100 \citep{schootemeijer:19}, however,
+this caused our models to crash during RLOF after the ``v-shaped''
+feature corresponding to the accretion of nuclearly processed
+material, when thermohaline mixing becomes important.
+
+% weak wind
+\zoph\ is one of the low-luminosity O-type stars for which
+\cite{marcolino:09} found a lower-than-predicted mass loss rate.
+To address the ``weak wind problem'', we also attempted
+running models with artificially decreased wind mass loss rate
+\citep[e.g.,][]{renzo:17}, but these resulted in super-critical
+$\omega/\omega_\mathrm{crit}>1$ accretor stars with untrustworthy
+numerical results.
+
+%metallicity
+Our model presented in \Secref{sec:best_model}, assumes an initial
 metallicity $Z=0.01$ informed by the asteroseismology of low mass
-stars in the parent association Upper-Centaurus-Lupus \citep[e.g.,][]{murphy:21}. Moreover,
-we have assumed that mass fractions of each element scale with the Solar values
+stars in the parent association Upper-Centaurus-Lupus
+\citep[e.g.,][]{murphy:21}. Moreover, we have assumed that mass
+fractions of each element scale with the Solar values
 \citep{grevesse:98}, which might not be appropriate especially for
 massive stars \citep[e.g.,][]{grasha:21}. With these assumptions, the
 initial mass fraction of $^{12}\mathrm{C}$ and $^{14}\mathrm{N}$ are
@@ -893,59 +951,11 @@ radii and cooler $T_\mathrm{eff}$ at a given luminosity. This still
 produces a stable case B RLOF, however, the accretor track is
 displaced on the right on the HRD. Thus, matching the high present-day
 $T_\mathrm{eff}=32\,000\pm2\,000$ of \zoph\ (e.g., \citetalias{villamariz:05}) requires more
-massive and hotter accretors (see also \Secref{sec:bin_init}).
+massive and hotter accretors at higher $Z$ (see also \Secref{sec:bin_init}).
 
-Rotation is a critical ingredient of our models: it governs the
-equatorial radius and thus $\omega/\omega_\mathrm{crit}$
-and mass transfer efficiency (see \Secref{sec:bin_param}), through
-Eddington-Sweet meridional circulations it determines outward mixing
-from the core, and more importantly inward mixing from the surface.
-We emphasize that the shellular approximation used in one-dimensional
-stellar evolution codes might not be appropriate for
-$\omega/\omega_\mathrm{crit}\simeq 1$ reached by our accretor star
-during RLOF. Decreasing by a factor of 10 the diffusion coefficient
-for Eddington-Sweet meridional circulations has a very small effect on
-the HRD evolution of the accretor. However, the noisiness during the
-late RLOF phase (for $T_\mathrm{eff}\gtrsim10^{4.5}$\,K in
-\Figref{fig:HRD_both}) increases in amplitude slightly, confirming
-that the details of this part of the evolution are sensitive to the
-treatment of rotational mixing. We were unable to run models turning
-completely off Eddington-Sweet meridional circulations past the
-``v-shaped'' feature in \Figref{fig:HRD_both}.
-
-Our models assume a Spruit-Tayler dynamo \citep{spruit:02} for the
-transport of angular momentum throughout the evolution. Adopting the
-stronger angular momentum transport from \cite{fuller:19} might result
-in a more efficient spin-down of the surface during RLOF, possibly
-allowing for more accretion of mass.
-
-The accretor is spun up late, from the surface inwards, and to
-critical rotation compared to single star models which are initialized
-at ZAMS with rigid rotation. Late during the mass transfer, even the
-weaker core-envelope coupling of \cite{spruit:02} is sufficient for
-the accretor to achieve rigid rotation. Subsequently, the envelope
-spins down because of wind mass loss and more importantly the core
-spins significantly up because of its evolutionary contraction. We
-expect that following \cite{fuller:19} the core would lose more
-angular momentum to the envelope, decreasing its rotational velocity.
-Nevertheless, we expect that the difference with single star
-rotational profiles would remain because of the shorter evolutionary time left.
-
-During RLOF, thermohaline mixing in the envelope also becomes
-important. We have explored models enhancing the efficiency of this
-mixing process by a factor of 100 \citep{schootemeijer:19}, however, this caused our models to
-crash during RLOF after the ``v-shaped'' feature corresponding to the
-accretion of nuclearly processed material.
-
-Finally, to address the ``weak wind problem'', we also attempted
-running models with artificially decreased wind mass loss rate
-\citep[e.g.,][]{renzo:17}, but these resulted in super-critical
-$\omega/\omega_\mathrm{crit}>1$ accretor stars with untrustworthy
-numerical results.
-
-While the number of free parameters resulting in a successful
-computation is rather limited, we emphasize that this remains often
-true for calculation of single massive star evolution.
+% While the number of free parameters resulting in a successful
+% computation is rather limited, we emphasize that this remains often
+% true for calculation of single massive star evolution.
 
 \subsection{Uncertainties in the treatment of mass transfer}
 \label{sec:bin_param}
@@ -969,9 +979,9 @@ evolution of the accreting star. During RLOF, the accretor is out of
 gravothermal equilibrium with significant impact on its radius and
 ultimately on the amount of mass transferred and its angular
 momentum. In reality, the gas stream between the two stars, the
-formation of a disk, and the geometric distorsion of the outer layers because
-of the centrifugal forces would not follow the spherical symmetry
-imposed by 1D codes such as \texttt{MESA}.
+formation of a disk, and the geometric distorsion of the outer layers
+because of the centrifugal forces would not follow the spherical
+symmetry imposed by 1D codes such as \texttt{MESA}.
 
 While the mass transfer efficiency $\beta_\mathrm{RLOF}$ and
 importantly its time-evolution need further attention, we emphasize that most studies, especially
