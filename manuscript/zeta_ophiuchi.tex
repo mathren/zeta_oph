@@ -181,12 +181,14 @@ therein]{neuhauser:20}, and a spectral type O9.5{\rm IVnn}
 star \citep{walker:79, vink:09}. Its surface rotation rate is
 extremely large, with most estimates of the projected rotational
 velocity from optical spectra exceeding $v\sin(i)\gtrsim 400\,\kms$
-\citep[corresponding to the ``nn'' in the spectral type,
-e.g.,][]{zehe:18}. Using optical interferometry, \cite{gordon:18} were
-able to measure the centrifugal distorsion of \zoph, suggesting
-close-to-breakup rotation.  By comparing the observed $v\sin(i)$ to
-the theoretical breakup rotation, \cite{zehe:18} also constrained the
-inclination angle to $i\gtrsim 56$\,degrees.
+(corresponding to the ``nn'' in the spectral type, \citealt{zehe:18}
+and references therein). By comparing the
+observed $v\sin(i)=432\pm16\,\kms$ to the theoretical breakup
+rotation, \cite{zehe:18} constrained the inclination angle to
+$i\gtrsim 56$\,degrees. Using optical interferometry, \cite{gordon:18}
+were able to measure the centrifugal distorsion of \zoph, and found a
+polar radius of $7.5\,R_\odot$ and centrifugally increased equatorial
+radius of $9.1\,R_\odot$, corresponding to a $v\sin(i)=348\,\kms$.
 
 \zoph\ was originally
 identified as a runaway because of its large proper motion by
@@ -372,7 +374,7 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
 
 \begin{figure}[bp]
   \includegraphics[width=0.5\textwidth]{HRD_both}
-  \caption{HRD for the donor star (top) and accretor star (bottom) of
+  \caption{\todo{update: this one has one dot per model} HRD for the donor star (top) and accretor star (bottom) of
     the progenitor binary of \zoph. Each point is separated by 50
     years of evolution, and the part with a black outline corresponds
     to the RLOF phase. The colors represent the stellar age, the red
@@ -603,14 +605,12 @@ accretor star at the time shown in the last panel of
 model is still roughly at the observed position of \zoph. Both the
 mass and radius agree reasonably well with the estimates from
 \citetalias{villamariz:05} and previous studies, that is~$20\,M_\odot$
-and $8.3\pm1.5\,R_\odot$, respectively. Recently, optical
-interferometry of \zoph\ suggested a polar radius of $7.5\,R_\odot$
-and centrifugally increased equatorial radius of $9.1\,R_\odot$
-\citep{gordon:18}, also in good agreement with our model.
-The surface rotational velocity in
-excess of $350\,\kms$ is also in the correct ballpark albeit possibly
-on the low end. We discuss further rotation and angular momentum
-transport in \Secref{sec:rot}.
+and $8.3\pm1.5\,R_\odot$, respectively. Our radius of $9.6\,R_\odot$
+also falls in between the polar and equatorial radii recently measured
+by \cite{gordon:18}. The surface rotational velocity in excess of
+$350\,\kms$ is also in the correct ballpark albeit possibly on the low
+end. We discuss further rotation and angular momentum transport in
+\Secref{sec:rot}.
 
 We report the surface H mass fraction\footnote{We obtain the mass
   fractions of individual elements inverting the definition
@@ -707,7 +707,7 @@ models to reach the lower-limit of the error bar.
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
-  \caption{Surface averaged rotation rate for the accretor model. At
+  \caption{Equatorial surface rotation rate for the accretor model. At
     $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to
     critical rotation. By the time the donor detaches from the RLOF
     the accretor is still spinning at
@@ -738,46 +738,48 @@ models to reach the lower-limit of the error bar.
 \end{figure*}
 
 One of the main distinguishing features of \zoph\ is its extremely
-high surface rotation rate. Spectroscopic measurements of the
-projected rotational velocity exceed $v\sin(i)\simeq 400\,\kms$,
-which implies close to critical rotation. \cite{zehe:18} recently
-estimated $v\sin(i)=432\pm16\,\kms$ and $i\sim56$ degrees. The
-extremely fast rotation rate is confirmed by the centrifugal
-deformation found by \cite{gordon:18}.
-
-\Figref{fig:surf_rot} shows the surface average rotation rate of our
-accretor model as a function of time (ignoring the projection angle
-$i$). The dark red band corresponds to the $v\sin(i)$ from
-\cite{zehe:18}, and the lighter band shows a range of 5 times their
-error bar.
+high surface rotation rate.
+%REPETITION:
+% Spectroscopic measurements of the
+% projected rotational velocity exceed $v\sin(i)\simeq 400\,\kms$,
+% which implies close to critical rotation. \cite{zehe:18} recently
+% estimated $v\sin(i)=432\pm16\,\kms$ and $i\sim56$ degrees. The
+% extremely fast rotation rate is confirmed by the centrifugal
+% deformation found by \cite{gordon:18}.
+\Figref{fig:surf_rot} shows the evolution of the equatorial rotational
+velocity $v_\mathrm{rot}$ for our accretor model, not including any
+projection effect. More precisely,
+$v_\mathrm{rot}$ is a mass-weighted average of the rotation rate of
+the stellar layers with opacity $\tau\leq 100$. The dark horizontal red band
+corresponds to the $v\sin(i)=432\pm16\,\kms$ measured by \cite{zehe:18}, and the lighter
+band shows a range of 5 times their error bar, which roughly encloses
+the majority of the estimated $v\sin(i)$ for \zoph\ in the literature.
 
 The initial binary is wide enough that assuming tidal synchronization
 at ZAMS implies a very low rotation. At 7.25\,Myr, RLOF rapidly spins
 up the accretor to critical rotation, up to
-$v_\mathrm{crit}\simeq520\,\kms$ (averaged over the surface of the
-star). The star remains fast rotating throughout the mass transfer
-phase, which ends at the black diamond in \Figref{fig:surf_rot}. In
-the remaining evolution, the star spins down progressively through
-wind mass loss, and within $\sim$2\,Myr its averaged surface
-rotational velocity drops below $350\,\kms$. Close to the end of the
-main sequence, the increase in wind mass loss rate and internal
-transport of angular momentum causes a change in the spin-down
-slope. This effect is also seen in the late main-sequence evolution of
-single stars rotating rapidly from ZAMS.
+$v_\mathrm{crit}\simeq520\,\kms$ (this value is also mass-averaged
+over the region with $\tau<100$). The star remains fast rotating
+throughout the mass transfer phase, which ends at the black diamond in
+\Figref{fig:surf_rot}. In the remaining evolution, the star spins down
+progressively through wind mass loss, and within $\sim$2\,Myr its
+averaged surface rotational velocity drops below
+$\sim$$350\,\kms$. Close to the end of the main sequence, the increase in wind mass loss rate and internal transport of angular momentum strengthen the surface spin-down. This effect is also seen in the late main-sequence evolution of single stars rotating rapidly from ZAMS.
 
-\Figref{fig:surf_rot} shows that, without accounting for the
-inclination angle, our model can retain a significant surface rotation
-for a time comparable to the kinematic age of the star, which is
-shorter than the remaining main-sequence lifetime. We emphasize that
-throughout its evolution this model is computed using the
-\cite{vink:00, vink:01} wind mass-loss rate with full efficiency. This
-is two orders of magnitude higher than the wind mass loss rate
-reported by \cite{marcolino:09} (weak wind problem), however, see also
-\citealt{lucy:12, lagae:21}. While this may impact the evolution of the
-binary even before RLOF, it increases the spin-down rate of
-our model compared to the observations. We expect that an accreting star
-modeled with lower wind-mass loss rate post-RLOF would retain an even
-higher surface rotation for longer (see also \Secref{sec:single_star_uncertainties}).
+\Figref{fig:surf_rot} shows that our model can retain a significant surface rotation for a time comparable to the kinematic age of the star, which is shorter than the remaining main-sequence lifetime. Since the spin up of the accretor happens roughly half-way through its main-sequence, the star is much faster rotating than single stars of the same (post-RLOF) mass initialized as fast rotators at ZAMS. Although \Figref{fig:surf_rot} does not account for the projection angle, \cite{zehe:18} argued for
+$i\geq56$\,degrees, corresponding to an upward shift of the red band in \Figref{fig:surf_rot} of $\lesssim
+20\%$. This has the same impact on our accretor model and on single star models of \zoph.
+
+We emphasize that our model is computed using the \cite{vink:00,
+  vink:01} wind mass-loss rate with full efficiency throughout its
+evolution. This is two orders of magnitude higher than the wind mass
+loss rate reported by \cite{marcolino:09} (weak wind problem),
+however, see also \citealt{lucy:12, lagae:21}. While this may impact
+the evolution of the binary even before RLOF, it increases the
+spin-down rate of our model compared to the observations. We expect
+that an accreting star modeled with lower wind-mass loss rate
+post-RLOF would retain an even higher surface rotation for longer (see
+also \Secref{sec:single_star_uncertainties}).
 
 
 \subsubsection{Comparison to single fast-rotating stars}
