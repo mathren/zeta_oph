@@ -36,3 +36,4 @@ __pycache__/
 *.data
 
 manuscript/comments/.DS_Store
+manuscript/.DS_Store
