@@ -104,8 +104,9 @@ Accretors
 populations, their age estimates, and their main sequence morphology
 \citep[e.g.,][]{pols_marinus:94, wang:20}. The high spin of the
 accretor post-mass-transfer might be the dominant explanation for the origin of
-hydrogen (H) rich massive stars showing emission lines \citep[e.g.,][]{bodensteiner:20,
-  vinciguerra:20}. Rotationally-mixed accreting
+hydrogen (H) rich massive stars showing emission lines
+\citep[e.g.,][]{pols:91, bodensteiner:20,
+  vinciguerra:20, wang:21_sdOBe}. Rotationally-mixed accreting
 star at low metallicity might also be important for the ionizing flux of high-redshift
 galaxies \citep[e.g.,][]{eldridge:12}.
 
@@ -989,13 +990,13 @@ We regulate the accretion efficiency through the rotational
 enhancement of mass loss \citep[e.g.,][]{langer:98}.
 However, whether critical rotation can effectively stop the accretion
 of matter is unclear. \cite{popham:91} and \cite{paczynski:91}
-argued that accretion of mass (but no angular momentum) might be
+argued that accretion of mass (but not angular momentum) might be
 possible even at or beyond critical rotation.
 
 During RLOF, the total amount of mass lost by the donor is
 $\Delta M_\mathrm{donor} \simeq 10.6\,M_\odot$, of which only
 $\Delta M_\mathrm{accretor}\simeq 3.4\,M_\odot$ are successfully
-accreted. This corresponds to an overall mass transfer efficiency
+accreted by the companion. This corresponds to an overall mass transfer efficiency
 $\beta_\mathrm{RLOF}\equiv |\Delta M_\mathrm{accretor}|/|\Delta M_\mathrm{donor}| \simeq 0.32$,
 although the accretion efficiency is \emph{not} constant throughout
 the mass transfer \citep[e.g.,][]{vanrensbergen:06}. In our models,
@@ -1010,11 +1011,23 @@ centrifugal forces would not follow the spherical symmetry imposed by
 1D codes such as \texttt{MESA}.
 
 While the mass transfer efficiency $\beta_\mathrm{RLOF}$ and
-importantly its time-evolution need further attention, we emphasize that most studies, especially
-using rapid population synthesis tools, typically assume a
-constant $\beta_\mathrm{RLOF}$ and neglect to model the
-out-of-equilibrium phase of the accretor and how this can impact the
-binary and orbital evolution.
+importantly its time-evolution need further attention, it is also
+likely that this parameter and its evolution depend on the details of
+the system (masses, mass ratio, period, etc.). For instance, to
+explain the lower mass sdO+Be binaries found by \cite{wang:21_sdOBe} it is likely
+that a larger mass transfer efficiency would be required.
+
+
+We emphasize that most studies, especially using rapid population
+synthesis tools, typically assume a constant $\beta_\mathrm{RLOF}$ and
+neglect to model the out-of-equilibrium phase of the accretor and how
+this can impact the binary and orbital evolution. Alternatively, rapid
+population synthesis can limit the accretion rate based on the thermal
+timescale of the accretor (calculated from models in gravothermal
+equilibrium). Based on this approach, \cite{schneider:15} found a
+higher $\beta_\mathrm{RLOF}\simeq 0.7$ for a binary comparable to ours
+(initially $M_1=20\,M_\odot$, $M_2=0.7M_1$, and initial separation of
+$a\simeq300\,R_\odot$).
 
 Another free parameter in the treatment of mass transfer is the
 specific angular momentum of the accreted material. This is an
@@ -1074,8 +1087,9 @@ in their models, which impedes the growth of the core.
 \subsection{Variations in initial binary parameters}
 \label{sec:bin_init}
 
-The initial donor mass $M_1$, mass ratio $q=M_2/M_1$, and the period of the progenitor binary of \zoph\ cannot be directly
-constrained from observations. We have explored variation in these values, and the
+The initial donor mass $M_1$, mass ratio $q=M_2/M_1$, and the period
+of the progenitor binary of \zoph\ cannot be directly constrained from
+observations. We have explored variation in these values, and the
 qualitative behavior of the models is similar.
 
 Shorter initial periods results in larger post-RLOF orbital
