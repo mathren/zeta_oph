@@ -375,13 +375,12 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
 
 \begin{figure}[bp]
   \includegraphics[width=0.5\textwidth]{HRD_both}
-  \caption{\todo{update: this one has one dot per model} HRD for the donor star (top) and accretor star (bottom) of
+  \caption{HRD for the donor star (top) and accretor star (bottom) of
     the progenitor binary of \zoph. Each point is separated by 50
     years of evolution, and the part with a black outline corresponds
     to the RLOF phase. The colors represent the stellar age, the red
     data point shows the position of \zoph\ according to
-    \citetalias{villamariz:05}, the thin blue crosses mark the
-    position of the profiles shown in \Figref{fig:D_mix}, and the
+    \citetalias{villamariz:05}, and the
     black diamonds mark the end of the binary run. We
     continue the accretor evolution as a single star from there until
     core H depletion, hence the bottom panel shows a longer time. We
@@ -392,7 +391,6 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
   \label{fig:HRD_both}
 \end{figure}
 
-\todo{discuss wiggle = development of convective layer above the core}
 We describe here the evolution of a binary system where the accretor
 star can broadly reproduce all the observed features of \zoph. We
 assume initial masses $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and initial
@@ -400,11 +398,11 @@ period $P=100$\,days (corresponding to a separation
 $a\simeq314\,R_\odot$) with a metallicity of $Z=0.01$.
 
 \Figref{fig:HRD_both} shows the Hertzsprung-Russell diagrams (HRD) of
-both stars. After
-$\sim$$7.24$\,Myr, the donor star (top panel) evolves off the main sequence and
-$\sim8400$\,years later it overfills its Roche lobe (black outline of the curves). This results in a stable case B RLOF (see below). We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of mixing above and in the H-burning shell \citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with the mass transfer.
+both stars, the donor and accretor are shown separately on the top and
+bottom panel, respectively (see \Figref{fig:sp_test} for an HRD of both stars on the same scale). After $\sim$$7.24$\,Myr, the donor star evolves off the main sequence and
+$\sim8400$\,years later, at point A in \Figref{fig:HRD_both}, it overfills its Roche lobe. This results in a stable case B RLOF on a thermal timescale from point A to F (black outline of the curves). We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of mixing above and in the H-burning shell \citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with the mass transfer.
 
-At the onset of RLOF, the accretor star (bottom panel of \Figref{fig:HRD_both}) is still on the main sequence with
+At the onset of RLOF at point A, the accretor star is still on the main sequence with
 $T_\mathrm{eff}\simeq10^{4.5}$\,K and its central mass fraction of hydrogen is $X(^1\mathrm{H})\simeq
 0.41$. Because of accretion, it is pushed out of thermal equilibrium and quickly becomes over-luminous to radiate away the excess internal energy and reaches $L\simeq10^{5.5}\,L_\odot\gg
 L_\mathrm{nuc}\simeq
@@ -413,10 +411,10 @@ $L_\mathrm{nuc}$ the total energy released per unit time by nuclear burning.
 
 The radius of the accretor increases dramatically from
 $\sim7.5\,R_\odot$ to $\sim35\,R_\odot$, and only once the accretor
-reaches critical rotation (see annotation in the bottom panel of
+reaches critical rotation (point B in the bottom panel of
 \Figref{fig:HRD_both}, roughly at the lowest $T_\mathrm{eff}$), the
 star begins contracting and its $T_\mathrm{eff}$ increases. At
-$T_\mathrm{eff}\simeq 10^{4.43}$\,K the material transferred from the
+$T_\mathrm{eff}\simeq 10^{4.43}$\,K, slightly after point C, the material transferred from the
 donor star becomes progressively more He-rich and CNO-processed,
 changing the opacity in the outer-layers of the accretor and causing a
 kink in its evolutionary track. This indicates that the partially
@@ -429,18 +427,19 @@ Thus, late during the mass transfer material at high mean molecular
 weight $\mu$ is put on top of the primordial envelope of the accretor,
 modifying the morphology of the evolutionary track.
 
-Because of the
-inverted $\mu$ gradient, thermohaline mixing starts in the outer
-layers of the accreting star, and, together with rotational mixing, it
-progressively dilutes the surface He and N mass fractions and causes
-noisy features on the HR diagram \citep[e.g.,][]{cantiello:07}. The
-(standard) algorithmic choices in modeling mixing and rotation might
-impact the morphology of the accretor's evolutionary track during
-RLOF. The entire duration of RLOF is only about $10^4$\,years - of
-the order of the thermal timescale of the donor star, and therefore
-unlikely to be observable to probe directly the accuracy of our
-treatment of mixing. We expand on the mixing processes inside the
-accretor in \Secref{sec:mixing}.
+Because of the inverted $\mu$ gradient, thermohaline mixing starts in
+the outer layers of the accreting star, and, together with rotational
+mixing, it progressively dilutes the surface He and N mass fractions
+and causes noisy features from point D to F on the HR diagram of the accretor
+\citep[e.g.,][]{cantiello:07}. The (standard) algorithmic choices in
+modeling mixing and rotation might impact the morphology of the
+accretor's evolutionary track during RLOF. The entire duration of RLOF
+from A to F is only about $10^4$\,years - of the order of the thermal timescale of
+the donor star. Moreover, the accretor spends most of this time close
+to the final, post-RLOF position (black diamond in the bottom
+panel). Therefore, the RLOF phase is unlikely to be observable to
+probe directly the accuracy of our treatment of mixing. We expand on
+the mixing processes inside the accretor in \Secref{sec:mixing}.
 
 We evolve the binary system until the black diamonds in
 \Figref{fig:HRD_both}, which occurs well after the donor detaches from
@@ -485,8 +484,6 @@ timescale for the binary SN scenario.
   \label{fig:MT}
 \end{figure}
 
-\todo{maybe update text with labels}
-
 \Figref{fig:MT} shows the rate of mass change for each star during
 RLOF. The top panel focuses on the donor star which loses mass via RLOF
 (cyan line) and winds (thin red line). The dashed blue lines
@@ -499,7 +496,7 @@ thick matter of the donor (i.e., the donor Roche radius becomes
 smaller than its photosphere $R_\mathrm{RL,1}<R_1$).
 
 
-Initially, the mass transfer rate equals the mass accretion rate
+Initially, between point A and B, the mass transfer rate equals the mass accretion rate
 (bottom panel of \Figref{fig:MT}), that is initially the accretion is
 (by construction) fully conservative. The bulk of the mass is accreted
 during this initial phase which lasts about $\sim{}2\times10^3$\,years. As the mass and surface rotation
@@ -507,11 +504,11 @@ rate of the accretor increase, the assumed rotational-enhancement of
 the wind progressively increases the mass-loss rate by $\sim$5 orders
 of magnitude \citep{langer:98}. The rotationally-enhanced wind
 controls the accretion efficiency, and at
-$\sim$$7.254$\,Myr the mass transfer becomes briefly non-conservative (where the red solid line and the cyan line overlap): the majority of the mass transferred during this phase is ejected, we assume as a fast wind from the vicinity of the accretor. Consequently, the accretor slightly spins down and starts contracting (cf.~\Figref{fig:HRD_both}). In the remaining evolution, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) trigger oscillations in the wind mass loss rate. Nevertherless, for most of the evolution, accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
+$\sim$$7.254$\,Myr (from B to C, where the red solid line and the cyan line overlap) the mass transfer becomes briefly non-conservative: the majority of the mass transferred during this phase is ejected, we assume as a fast wind from the vicinity of the accretor. Consequently, the accretor slightly spins down and starts contracting (cf.~\Figref{fig:HRD_both}). Point D corresponds to the minimum of the mass-transfer rate because of the reaction of the donor's envelope to the mass transfer. In the remaining evolution from C to F, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) trigger oscillations in the wind mass loss rate. Nevertherless, for most of the evolution, accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
 
 
 At the end of RLOF, the donor star briefly expands again
-($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
+(from D-E, $T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
 is due to the partial recombination of the now He-rich outer layers,
 which causes a transient surface convection layer. This causes a
 radial expansion of the outer convective layers and an increase in the
@@ -521,7 +518,7 @@ which impacts the mass transfer rate.}, despite at this point the donor is less 
 than the accretor and the binary is widening.  During this phase, the
 mass transfer becomes fully non-conservative again (in the bottom
 panel the wind and the mass accretion rate nearly cancel each other again
-at $\sim7.261$\,Myr).
+at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at point F.
 
 \subsection{Mixing and composition}
 \label{sec:mixing}
