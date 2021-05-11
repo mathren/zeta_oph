@@ -504,11 +504,11 @@ rate of the accretor increase, the assumed rotational-enhancement of
 the wind progressively increases the mass-loss rate by $\sim$5 orders
 of magnitude \citep{langer:98}. The rotationally-enhanced wind
 controls the accretion efficiency, and at
-$\sim$$7.254$\,Myr (from B to C, where the red solid line and the cyan line overlap) the mass transfer becomes briefly non-conservative: the majority of the mass transferred during this phase is ejected, we assume as a fast wind from the vicinity of the accretor. Consequently, the accretor slightly spins down and starts contracting (cf.~\Figref{fig:HRD_both}). Point D corresponds to the minimum of the mass-transfer rate because of the reaction of the donor's envelope to the mass transfer. In the remaining evolution from C to F, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) trigger oscillations in the wind mass loss rate. Nevertherless, for most of the evolution, accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
+$\sim$$7.254$\,Myr (from B to C, where the red solid line and the cyan line overlap) the mass transfer becomes briefly non-conservative: the majority of the mass transferred during this phase is ejected, we assume as a fast wind from the vicinity of the accretor. Consequently, the accretor slightly spins down and starts contracting (cf.~\Figref{fig:HRD_both}).
+In the remaining evolution from C to F, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) trigger oscillations in the wind mass loss rate. Nevertherless, for most of the evolution, accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
 
-
-At the end of RLOF, the donor star briefly expands again
-(from D-E, $T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
+The minimum of the mass transfer rate in point D corresponds to a brief phase of contraction (see also \Figref{fig:HRD_both}). However, from D-E, the donor star briefly expands again
+($T_\mathrm{eff}\simeq10^{4.1}$\,K, $L\simeq10^{5.5}\,L_\odot$). This
 is due to the partial recombination of the now He-rich outer layers,
 which causes a transient surface convection layer. This causes a
 radial expansion of the outer convective layers and an increase in the
@@ -719,30 +719,32 @@ high surface rotation rate.
 % estimated $v\sin(i)=432\pm16\,\kms$ and $i\sim56$ degrees. The
 % extremely fast rotation rate is confirmed by the centrifugal
 % deformation found by \cite{gordon:18}.
-The black line in \Figref{fig:surf_rot} shows the evolution of the
-equatorial rotational velocity $v_\mathrm{eq}$ for our accretor model,
-not including any projection effect. More precisely, $v_\mathrm{eq}$
-is a mass-weighted average of the rotation rate of the stellar layers
-with opacity $\tau\leq 100$. The dark horizontal red band corresponds
-to the $v\sin(i)=432\pm16\,\kms$ measured by \cite{zehe:18}, and the
-lighter band shows a range of 5 times their error bar, which roughly
-encloses the majority of the estimated $v\sin(i)$ for \zoph\ in the
-literature down to $\sim$$350\,\kms$.  For comparison, the colored solid lines show also
-$v_\mathrm{eq}$ for single rotating $20\,M_\odot$ stars of varying
-$\omega/\omega_\mathrm{crit}$.
-
+The black line in the top panel of \Figref{fig:surf_rot} shows the
+evolution of the equatorial rotational velocity $v_\mathrm{eq}$ for
+our accretor model, not including any projection effect. More
+precisely, $v_\mathrm{eq}$ is a mass-weighted average of the rotation
+rate of the stellar layers with opacity $\tau\leq 100$. The dark
+horizontal red band corresponds to the $v\sin(i)=432\pm16\,\kms$
+measured by \cite{zehe:18}, and the lighter band shows a range of 5
+times their error bar, which roughly encloses the majority of the
+estimated $v\sin(i)$ for \zoph\ in the literature down to
+$\sim$$350\,\kms$.  For comparison, the colored solid lines show also
+$v_\mathrm{eq}$ for single rotating
+$20\,M_\odot$ stars of varying $\omega/\omega_\mathrm{crit}$.
+The bottom panel of \Figref{fig:surf_rot} shows instead the ratio
+$\omega/\omega_\mathrm{crit}$ at the surface of these models.
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
-  \caption{Equatorial surface rotation rate for the accretor model. At
-    $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to
-    critical rotation. By the time the donor detaches from the RLOF
-    the accretor is still spinning at
-    $\sim$$400\,\kms$. From this point (black diamond) onwards, we continue the evolution as a single star, and the accretor spins down because of wind mass loss.
-    Note however that we use the wind mass-loss rate from \cite{vink:01}, which might be
-    $\sim$2 orders of magnitude too high for \zoph\ \citep{marcolino:09}.
-    Colored solid lines show the equatorial surface rotation rate of single $20\,M_\odot$ stars.
-  }
+  \caption{Equatorial surface rotational velocity (top panel) and
+    $\omega/\omega_\mathrm{crit}$ (bottom panel) for the accretor model (black) and single rotating
+    $20\,M_\odot$ stars (colored lines). At
+    $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to critical rotation: the dashed horizontal line in the bottom panel shows the upper-limit we impose in our runs. By the time the donor detaches from the RLOF the accretor is still spinning at
+    $\sim$$400\,\kms$. From this point (black diamonds) onwards, we
+    continue the evolution as a single star, and the accretor spins
+    down because of wind mass loss.  Note however that we use the wind
+    mass-loss rate from \cite{vink:01}, which might be $\sim$2 orders
+    of magnitude too high for \zoph\ \citep{marcolino:09}.}
   \label{fig:surf_rot}
 \end{figure}
 
@@ -752,12 +754,21 @@ The initial binary is wide enough that assuming tidal synchronization
 at ZAMS implies a very low rotation. At 7.25\,Myr, RLOF rapidly spins
 up the accretor to critical rotation, up to
 $v_\mathrm{crit}\simeq520\,\kms$ (this value is also mass-averaged
-over the region with $\tau<100$). The star remains fast rotating
-throughout the mass transfer phase, which ends at the black diamond in
-\Figref{fig:surf_rot}. In the remaining evolution, the star spins down
-progressively through wind mass loss, and within $\sim$2\,Myr its
-averaged surface rotational velocity drops below
-$\sim$$350\,\kms$. Close to the end of the main sequence, the increase in wind mass loss rate and internal transport of angular momentum strengthen the surface spin-down. This effect is also seen in the late main-sequence evolution of single stars rotating rapidly from ZAMS.
+over the region with $\tau<100$). This corresponds to
+$\omega/\omega_\mathrm{crit}\simeq 0.95$ (dashed horizontal line in
+the bottom panel of \Figref{fig:surf_rot}), which is the upper-limit
+we impose in our runs.
+
+The star remains fast rotating throughout the mass transfer phase,
+which ends at the black diamond in \Figref{fig:surf_rot}. In the
+remaining evolution, the star spins down progressively through wind
+mass loss, and within $\sim$2\,Myr its averaged surface rotational
+velocity drops below
+$\sim$$350\,\kms$. Both the single star models and our accretor (after being spun up) evolve to higher
+$\omega/\omega_\mathrm{crit}$ because of the increase in stellar radii and corresponding decrease in
+$\omega_\mathrm{crit}$ \citep[e.g.,][]{langer:98, zhao:20}. However, our accretor remains at a higher
+$\omega/\omega_\mathrm{crit}$ for a significantly longer time: the chance of observing a single rotating star at very high
+$\omega/\omega_\mathrm{crit}$ is lower than for an accretor from a massive binary system. Close to the end of the main sequence, the increase in wind mass loss rate and internal transport of angular momentum strengthen the surface spin-down. This effect is also seen in the late main-sequence evolution of single stars rotating rapidly from ZAMS.
 
 \Figref{fig:surf_rot} shows that our model can retain a significant surface rotation for a time comparable to the kinematic age of the star, which is shorter than the remaining main-sequence lifetime. Since the spin up of the accretor happens roughly half-way through its main-sequence, the star is much faster rotating than single stars of the same (post-RLOF) mass initialized as fast rotators at ZAMS. Although \Figref{fig:surf_rot} does not account for the projection angle, \cite{zehe:18} argued for
 $i\geq56$\,degrees, corresponding to an upward shift of the red band in \Figref{fig:surf_rot} of $\lesssim
