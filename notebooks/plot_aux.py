@@ -604,3 +604,13 @@ def get_ZAMS_abundances(hfile):
     surface_n14 = src[0, col.index("surface_n14")]
     surface_o16 = src[0, col.index("surface_o16")]
     return surface_c12, surface_n14, surface_o16
+
+
+def get_profile(num, LOGS):
+    """ returns the closest profile number to time t """
+    index = LOGS+'/profiles.index'
+    src = np.genfromtxt(index, skip_header=1)
+    profile_num = src[:, -1]
+    model_num = src[:, 0]
+    i = np.argmin(np.absolute(model_num-num))
+    return LOGS+'profile'+str(int(profile_num[i]))+'.data'
