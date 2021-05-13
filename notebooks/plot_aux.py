@@ -606,8 +606,8 @@ def get_ZAMS_abundances(hfile):
     return surface_c12, surface_n14, surface_o16
 
 
-def get_profile(num, LOGS):
-    """ returns the closest profile number to time t """
+def get_profile_from_modnum(num, LOGS):
+    """ returns the closest profile number to the model number wanted """
     index = LOGS+'/profiles.index'
     src = np.genfromtxt(index, skip_header=1)
     profile_num = src[:, -1]
