@@ -37,3 +37,6 @@ __pycache__/
 
 manuscript/comments/.DS_Store
 manuscript/.DS_Store
+
+# frames of movies
+movie/*/*.png
