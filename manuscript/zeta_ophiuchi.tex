@@ -81,12 +81,12 @@ studies %\todo{more refs. from other groups}
 have focused on the dramatic impact these interactions have on the
 donor star \citep[e.g.,][]{morton:60, yoon:17, gotberg:17, gotberg:18, laplace:20,
   laplace:21, blagorodnova:21}. Often the binary companion is treated as a point mass.
+However, binary interactions have a crucial impact on the initially
+less massive star too.
 
 \subsection{The importance of accretor stars}
 
-However, binary interactions have a crucial impact on the initially
-less massive star: %too:
-during mass transfer, these are expected to
+During mass transfer, the initially less massive star is expected to
 accrete mass, spin-up to critical rotation
 \citep[e.g.,][]{packet:81}, and possibly be polluted by
 nuclearly processed material from the inner core of the donor star
@@ -101,8 +101,9 @@ transient observations, and gravitational-wave progenitors.
 Accretors
 (and merger products) can appear as blue stragglers
 \citep[e.g.,][]{chen:09, chen:10, rain:21} and thus impact cluster
-populations, their age estimates, and their main sequence morphology
-\citep[e.g.,][]{pols_marinus:94, wang:20}. The high spin of the
+populations, their age estimates, and their main sequence
+\citep[e.g.,][]{pols_marinus:94, wang:20} and post main sequence morphology
+\citep[e.g.,][]{wei:21}. The high spin of the
 accretor post-mass-transfer might be the dominant explanation for the origin of
 hydrogen (H) rich massive stars showing emission lines
 \citep[e.g.,][]{pols:91, bodensteiner:20,
@@ -283,13 +284,14 @@ details on our choice of input physics, and
 appendix~\ref{sec:res_tests} discuss the numerical resolution in space
 and time.
 
-We adopt the Ledoux criterion to determine convective stability and a
+We adopt the \cite{ledoux:47} criterion to determine convective stability and a
 mixing length parameter of $1.5$. We include semiconvection and
 thermohaline mixing following \cite{langer:83} and
 \cite{kippenhahn:80}, respectively, each with efficiency $1.0$. We use the exponential core overshooting from \cite{herwig:00}
 with free parameters $(f, f_0)=(4.25\times10^{-2}, 10^{-3})$
 \citep{claret:17} which broadly reproduce the width of the main
-sequence from \cite{brott:11}. We also use the local implicit
+sequence from \cite{brott:11}. We do not use over/undershooting for
+off-center convective shells. We also use the local implicit
 enhancement of the convective flux in superadiabatic regions
 (\texttt{MLT--}) introduced in \texttt{MESA}
 15140.
@@ -525,23 +527,17 @@ at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at
 
 \todo{thermohaline at late times = ES mixing, fix: add panel where
   thermohaline =ES}
-
+\todo{we have not accounted for convective overshoot above non-burning layers, which could affect the convective layer and its impact on the composition profile of the star.}
 
 \begin{figure*}[htbp]
-  \includegraphics[width=\textwidth]{D_mix}
-  \caption{Mixing diffusion coefficients in the accretor star. From
-    left to right, each panel shows times during the main sequence
-    (2.71\,Myr), right before the ``v-shaped'' feature during RLOF
-    (7.25\,Myr), close to the end of RLOF (7.26\,Myr), and after mass
-    transfer (8.38\,Myr) -- see the corresponding thin blue crosses in
-    \Figref{fig:HRD_both}. The total diffusion coefficient (thick cyan
-    line) is obtained as the sum of overshooting (thin blue line),
-    convection (shown in red), thermohaline mixing (pink) and
-    semiconvection (in purple), and rotational mixing -- which is
-    largely dominated by Eddington-Sweet circulations. The gray area corresponds to mass
-    accreted during
-    RLOF. \todo{remove semiconvection and mention messiness in text,
-      change panel 3 with one with ICZ}}
+  \includegraphics[width=\textwidth]{D_mix_vertical}
+  \caption{Mixing diffusion coefficients in the accretor star. The
+    gray area on the left highlights accreted material. From
+    top to bottom, each panel shows a profile during the main sequence
+    (before point A in \Figref{fig:HRD_both}),
+    early during RLOF (close to point C), mid-RLOF (close to
+    point D), late during RLOF (between point D and E), and after RLOF
+    (point G).}
   \label{fig:D_mix}
 \end{figure*}
 
@@ -620,7 +616,7 @@ end. We discuss further rotation and angular momentum transport in
 We report the surface H mass fraction\footnote{We obtain the mass
   fractions of individual elements inverting the definition
   $\varepsilon(X)=12+\log_{10}(N_X/N_H)$, where $N_X$ and $N_H$ are
-  the number fractions of species $X$ and H, respectively.}, lower
+  the number fractions of species $X$ and H, respectively \citep[e.g.,][]{lodders:19}.}, lower
 than primordial because of the accretion of nuclearly processed
 material, and the surface mass fraction of the most prominent species
 $^4\mathrm{He}$, $^{12}\mathrm{C}$, $^{14}\mathrm{N}$,
@@ -720,19 +716,20 @@ high surface rotation rate.
 % extremely fast rotation rate is confirmed by the centrifugal
 % deformation found by \cite{gordon:18}.
 The black line in the top panel of \Figref{fig:surf_rot} shows the
-evolution of the equatorial rotational velocity $v_\mathrm{eq}$ for
-our accretor model, not including any projection effect. More
-precisely, $v_\mathrm{eq}$ is a mass-weighted average of the rotation
-rate of the stellar layers with opacity $\tau\leq 100$. The dark
-horizontal red band corresponds to the $v\sin(i)=432\pm16\,\kms$
-measured by \cite{zehe:18}, and the lighter band shows a range of 5
-times their error bar, which roughly encloses the majority of the
-estimated $v\sin(i)$ for \zoph\ in the literature down to
+evolution of the surface equatorial rotational velocity
+$v_\mathrm{eq}$ for our accretor model, not including any projection
+effect. More precisely, $v_\mathrm{eq}$ is a mass-weighted average of
+the rotational velocity of layers with opacity
+$\tau\leq 100$. The dark horizontal red band corresponds to the
+$v\sin(i)=432\pm16\,\kms$ measured by \cite{zehe:18}, and the lighter
+band shows a range of 5 times their error bar, which roughly encloses
+the majority of the estimated $v\sin(i)$ for \zoph\ in the literature
+down to
 $\sim$$350\,\kms$.  For comparison, the colored solid lines show also
 $v_\mathrm{eq}$ for single rotating
-$20\,M_\odot$ stars of varying $\omega/\omega_\mathrm{crit}$.
-The bottom panel of \Figref{fig:surf_rot} shows instead the ratio
-$\omega/\omega_\mathrm{crit}$ at the surface of these models.
+$20\,M_\odot$ stars of varying initial
+$\omega/\omega_\mathrm{crit}$.  The bottom panel of \Figref{fig:surf_rot} shows instead the ratio
+of the surface rotational frequency $\omega_\mathrm{surf}$ to $\omega_\mathrm{crit}$.
 
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
