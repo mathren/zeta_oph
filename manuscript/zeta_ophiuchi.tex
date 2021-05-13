@@ -284,17 +284,19 @@ details on our choice of input physics, and
 appendix~\ref{sec:res_tests} discuss the numerical resolution in space
 and time.
 
-We adopt the \cite{ledoux:47} criterion to determine convective stability and a
-mixing length parameter of $1.5$. We include semiconvection and
-thermohaline mixing following \cite{langer:83} and
-\cite{kippenhahn:80}, respectively, each with efficiency $1.0$. We use the exponential core overshooting from \cite{herwig:00}
-with free parameters $(f, f_0)=(4.25\times10^{-2}, 10^{-3})$
-\citep{claret:17} which broadly reproduce the width of the main
-sequence from \cite{brott:11}. We do not use over/undershooting for
-off-center convective shells. We also use the local implicit
-enhancement of the convective flux in superadiabatic regions
-(\texttt{MLT--}) introduced in \texttt{MESA}
-15140.
+We adopt the \cite{ledoux:47} criterion to determine convective
+stability and a mixing length parameter of $1.5$. We allow for
+time-dependent convection as in \cite{renzo:20:ppi_conv} based on
+\cite{arnett:69}. We include semiconvection and thermohaline mixing
+following \cite{langer:83} and \cite{kippenhahn:80}, respectively,
+each with efficiency $1.0$. We use the exponential core overshooting
+from \cite{herwig:00} with free parameters
+$(f, f_0)=(4.25\times10^{-2}, 10^{-3})$ \citep{claret:17} which
+broadly reproduce the width of the main sequence from
+\cite{brott:11}. We do not use over/undershooting for off-center
+convective shells. We also use the local implicit enhancement of the
+convective flux in superadiabatic regions (\texttt{MLT--}) introduced
+in \texttt{MESA} 15140.
 
 We treat rotation in the ``shellular'' approximation
 \citep[e.g.,][]{zahn:92, ekstrom:12}, that is we
@@ -375,7 +377,7 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
   Ophiuchi's properties}
 \label{sec:best_model}
 
-\begin{figure}[bp]
+\begin{figure}[tp]
   \includegraphics[width=0.5\textwidth]{HRD_both}
   \caption{HRD for the donor star (top) and accretor star (bottom) of
     the progenitor binary of \zoph. Each point is separated by 50
@@ -394,7 +396,7 @@ initial conditions, and the binary interactions in \Secref{sec:discussion}.
 \end{figure}
 
 We describe here the evolution of a binary system where the accretor
-star can broadly reproduce all the observed features of \zoph. We
+star can broadly reproduces all the observed features of \zoph. We
 assume initial masses $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and initial
 period $P=100$\,days (corresponding to a separation
 $a\simeq314\,R_\odot$) with a metallicity of $Z=0.01$.
@@ -404,12 +406,12 @@ both stars, the donor and accretor are shown separately on the top and
 bottom panel, respectively (see \Figref{fig:sp_test} for an HRD of both stars on the same scale). After $\sim$$7.24$\,Myr, the donor star evolves off the main sequence and
 $\sim8400$\,years later, at point A in \Figref{fig:HRD_both}, it overfills its Roche lobe. This results in a stable case B RLOF on a thermal timescale from point A to F (black outline of the curves). We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of mixing above and in the H-burning shell \citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with the mass transfer.
 
-At the onset of RLOF at point A, the accretor star is still on the main sequence with
+At the onset of RLOF (point A in \Figref{fig:HRD_both}), the accretor star is still on the main sequence with
 $T_\mathrm{eff}\simeq10^{4.5}$\,K and its central mass fraction of hydrogen is $X(^1\mathrm{H})\simeq
-0.41$. Because of accretion, it is pushed out of thermal equilibrium and quickly becomes over-luminous to radiate away the excess internal energy and reaches $L\simeq10^{5.5}\,L_\odot\gg
+0.41$. Because of accretion, it is pushed out of thermal equilibrium and quickly becomes over-luminous to radiate away the excess internal energy. The accretor reaches $L\simeq10^{5.5}\,L_\odot\gg
 L_\mathrm{nuc}\simeq
 10^{5.1}\,L_\odot$, with
-$L_\mathrm{nuc}$ the total energy released per unit time by nuclear burning.
+$L_\mathrm{nuc}$ the total energy released per unit time by nuclear burning (integrated throughout the star).
 
 The radius of the accretor increases dramatically from
 $\sim7.5\,R_\odot$ to $\sim35\,R_\odot$, and only once the accretor
@@ -433,7 +435,15 @@ Because of the inverted $\mu$ gradient, thermohaline mixing starts in
 the outer layers of the accreting star, and, together with rotational
 mixing, it progressively dilutes the surface He and N mass fractions
 and causes noisy features from point D to F on the HR diagram of the accretor
-\citep[e.g.,][]{cantiello:07}. The (standard) algorithmic choices in
+\citep[e.g.,][]{cantiello:07}. From D to E the donor star briefly expands
+again: by point D the surface is He-rich, and partial recombination of
+He drives a convective layer which is extremely thin in mass
+($\lessim 10^4\,M_\odot$) but can expand to significantly large
+radii\footnote{With previous \texttt{MESA} releases, we found it
+  challenging to compute our models beyond this phase: the large radius variation
+  impacts significantly the mass transfer rate.}.
+
+We emphasize that the (standard) algorithmic choices in
 modeling mixing and rotation might impact the morphology of the
 accretor's evolutionary track during RLOF. The entire duration of RLOF
 from A to F is only about $10^4$\,years - of the order of the thermal timescale of
@@ -449,9 +459,9 @@ the Roche Lobe. At this point, the accretor is a H-rich fast-rotating
 star of
 $\sim$$20.1\,M_\odot$. Available mass estimates for the presently single \zoph\ are highly uncertain, but most include
 $20\,M_\odot$ (e.g., \citealt{hoogerwerf:01}, \citetalias{villamariz:05}, \citealt{neuhauser:20}). The accretor's post-RLOF orbital velocity is
-$v_2\simeq52\,\kms$. In the subsequent evolution, wind mass loss from both stars will result in  widening of the binary and slowing down the orbital motion of the accretor: we computed one binary model until the donor's He core burning, and at that point the accretor's orbital velocity has decreased to
-$\sim$$40\,\kms$. Further decrease should be expected because of the
-post-He core burning wind mass loss, likely dominated by the
+$v_2\simeq52\,\kms$. In the subsequent evolution, wind mass loss from both stars will result in widening of the binary and slowing down the orbital motion of the accretor. We computed one binary until the end of the donor's He core burning, and at that point the accretor's orbital velocity has decreased to
+$\sim$$40\,\kms$. Further decrease during the remaining evolution
+is expected because of wind mass loss from both stars, likely dominated by the
 (uncertain) mass-loss rate of the stripped donor star. Nevertheless,
 the value we obtain is in broad agreement with estimates of the
 observed runaway velocity of \zoph.
@@ -473,6 +483,8 @@ RLOF. Assuming the kinematic age of $1.78\pm0.21$
 donor of $\sim$0.5\,Myr, our model approximately produces the correct
 timescale for the binary SN scenario.
 
+
+
 \begin{figure}[htbp]
   \includegraphics[width=0.47\textwidth]{MT}
   \caption{Mass transfer rates as a function of time during RLOF. The top (bottom) panel
@@ -491,12 +503,11 @@ RLOF. The top panel focuses on the donor star which loses mass via RLOF
 (cyan line) and winds (thin red line). The dashed blue lines
 show their combination resulting in the actual rate of mass change of
 the stars. The bottom panel shows instead the accreting star, which
-grows in mass because of the mass transfer. At peak, the mass transfer
-rates reaches very high values above
+grows in mass because of the mass transfer. At peak (point C), the mass transfer
+rates reaches values above
 $10^{-2}\,M_\odot\ \mathrm{yr^{-1}}$ and taps into the optically
 thick matter of the donor (i.e., the donor Roche radius becomes
 smaller than its photosphere $R_\mathrm{RL,1}<R_1$).
-
 
 Initially, between point A and B, the mass transfer rate equals the mass accretion rate
 (bottom panel of \Figref{fig:MT}), that is initially the accretion is
@@ -504,7 +515,7 @@ Initially, between point A and B, the mass transfer rate equals the mass accreti
 during this initial phase which lasts about $\sim{}2\times10^3$\,years. As the mass and surface rotation
 rate of the accretor increase, the assumed rotational-enhancement of
 the wind progressively increases the mass-loss rate by $\sim$5 orders
-of magnitude \citep{langer:98}. The rotationally-enhanced wind
+of magnitude. The rotationally-enhanced wind
 controls the accretion efficiency, and at
 $\sim$$7.254$\,Myr (from B to C, where the red solid line and the cyan line overlap) the mass transfer becomes briefly non-conservative: the majority of the mass transferred during this phase is ejected, we assume as a fast wind from the vicinity of the accretor. Consequently, the accretor slightly spins down and starts contracting (cf.~\Figref{fig:HRD_both}).
 In the remaining evolution from C to F, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) trigger oscillations in the wind mass loss rate. Nevertherless, for most of the evolution, accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
@@ -514,23 +525,19 @@ The minimum of the mass transfer rate in point D corresponds to a brief phase of
 is due to the partial recombination of the now He-rich outer layers,
 which causes a transient surface convection layer. This causes a
 radial expansion of the outer convective layers and an increase in the
-mass-transfer rate\footnote{With previous \texttt{MESA} releases, we found it challenging to compute our models beyond this phase: although only a very small amount of mass is
-involved, the onset of convection causes a large radius variation
-which impacts the mass transfer rate.}, despite at this point the donor is less massive
+mass-transfer rate, despite at this point the donor is less massive
 than the accretor and the binary is widening.  During this phase, the
-mass transfer becomes fully non-conservative again (in the bottom
+mass transfer becomes non-conservative again (in the bottom
 panel the wind and the mass accretion rate nearly cancel each other again
 at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at point F.
 
 \subsection{Mixing and composition}
 \label{sec:mixing}
 
-\todo{thermohaline at late times = ES mixing, fix: add panel where
-  thermohaline =ES}
 \todo{we have not accounted for convective overshoot above non-burning layers, which could affect the convective layer and its impact on the composition profile of the star.}
 
-\begin{figure*}[htbp]
-  \includegraphics[width=\textwidth]{D_mix_vertical}
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{D_mix_vertical}
   \caption{Mixing diffusion coefficients in the accretor star. The
     gray area on the left highlights accreted material. From
     top to bottom, each panel shows a profile during the main sequence
@@ -539,7 +546,7 @@ at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at
     point D), late during RLOF (between point D and E), and after RLOF
     (point G).}
   \label{fig:D_mix}
-\end{figure*}
+\end{figure}
 
 
 \begin{figure*}[htbp]
@@ -569,18 +576,40 @@ at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at
 \citep{paxton:11}.  To illustrate the dominant processes throughout
 the accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
 coefficients for various mixing processes as a function of mass
-coordinate at selected times. Each panel corresponds to one of the
-thin blue crosses in the bottom panel of \Figref{fig:HRD_both}, and
-the gray shaded areas highlight mass accreted during RLOF. The last
-panel roughly represents the predicted internal structure of \zoph\ as
-observed today.
+coordinate at selected times, from top to bottom: main sequence before
+RLOF (i.e., before point A in \Figref{fig:HRD_both} and\
+\ref{fig:MT}), at the beginning of RLOF (between point A and B),
+late during RLOF (between point C-D), close to the predicted
+present-day structure of \zoph\ (post-RLOF within the red error-bar on
+\Figref{fig:HRD_both}), and close to TAMS (point G in \Figref{fig:HRD_both}).\todo{check}
+In each panel, the gray shaded areas highlight mass accreted during
+RLOF.
 
-In \Figref{fig:D_mix}, the thin red lines correspond to convection,
-with the initial convective core of
-$\sim$$6\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The thin blue lines show the exponentially decreasing overshooting above the convective core, which extends slightly above
-$\sim$8\,$M_\odot$. Purple and pink represent semiconvection and thermohaline mixing, respectively. Before mass transfer (left-most panel), only a small amount of sub-surface thermohaline mixing occurs, with a mass extent comparable or smaller to the sub-surface convective zone, and no semiconvection occurs. The thick cyan line corresponds to the total diffusion coefficient, obtained as the sum of the diffusion coefficients for each process modeled: where the cyan line is not overlapping with the others, rotational mixing is the dominant process.
 
-During RLOF (second and third panel), the spin-up due to accretion causes an increase in the rotational mixing (see also \Secref{sec:rot}). Among the rotational mixing processes we include (meridional currents, secular and dynamical shear instabilities, Goldreich-Schubert-Fricke instability), meridional currents represented by Eddington-Sweet circulations are the dominant process throughout the star. The diffusion coefficient for Eddington-Sweet circulations exceeds by about two orders of mangitude the diffusion for other processes (rotationally-driven and non). The only exception is at the core-envelope interface just outside the overshooting region, during and after RLOF. In the spun-up accretor, the evolutionary contraction of the core increases its rotational frequency and leads to the formation of a shearing layer between the core and the envelope. There, from the third panel of \Figref{fig:D_mix} onwards, the dynamical shear instability locally dominates producing the spike in the cyan curve (accompanied by some semiconvection in the last panel).
+In \Figref{fig:D_mix}, red areas correspond to convection, with the
+initial convective core of
+$\sim$$7\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The dark blue areas show the exponentially decreasing overshooting above the convective core, which extends slightly above
+$\sim$$9\,M_\odot$ in the first panel. Pink and light blue represent
+thermohaline and rotational mixing, respectively. The latter is the
+combination of the various rotational instability included in our
+model (meridional currents, secular and dynamical shear instabilities,
+Goldreich-Schubert-Fricke instability), but is it strongly dominated
+by Eddington-Sweet meridional circulations throughout the evolution,
+except at the interface between core and envelope.
+
+
+
+
+After the onset of
+RLOF and spin-up of the accretor, the evolutionary contraction of the core increases its
+rotational frequency and leads to the formation of a shearing layer
+between the core and the envelope (see also \Secref{sec:rot}). There, from the third panel of
+\Figref{fig:D_mix} onwards, the dynamical shear instability locally
+dominates producing the spikes in the light blue at the edge of the core.
+For clarity, we do not show semiconvection
+which is never the dominant mixing process.
+
+% During RLOF (second and third panel), the spin-up due to accretion causes an increase in the rotational mixing (see also \Secref{sec:rot}). Among the rotational mixing processes we include (meridional currents, secular and dynamical shear instabilities, Goldreich-Schubert-Fricke instability), meridional currents represented by Eddington-Sweet circulations are the dominant process throughout the star. The diffusion coefficient for Eddington-Sweet circulations exceeds by about two orders of magnitude the diffusion for other processes (rotationally-driven and non). The only exception is at the core-envelope interface just outside the overshooting region, during and after RLOF. In the spun-up accretor, the evolutionary contraction of the core increases its rotational frequency and leads to the formation of a shearing layer between the core and the envelope. There, from the third panel of \Figref{fig:D_mix} onwards, the dynamical shear instability locally dominates producing the spike in the cyan curve (accompanied by some semiconvection in the last panel).
 
 Late during the mass transfer (third panel), the accretion of
 nuclearly processed material progressively widens the thermohaline
@@ -731,7 +760,7 @@ $20\,M_\odot$ stars of varying initial
 $\omega/\omega_\mathrm{crit}$.  The bottom panel of \Figref{fig:surf_rot} shows instead the ratio
 of the surface rotational frequency $\omega_\mathrm{surf}$ to $\omega_\mathrm{crit}$.
 
-\begin{figure}[htbp]
+\begin{figure}[tbp]
   \includegraphics[width=0.5\textwidth]{zeta_rot}
   \caption{Equatorial surface rotational velocity (top panel) and
     $\omega/\omega_\mathrm{crit}$ (bottom panel) for the accretor model (black) and single rotating
