@@ -534,8 +534,6 @@ at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at
 \subsection{Mixing and composition}
 \label{sec:mixing}
 
-\todo{we have not accounted for convective overshoot above non-burning layers, which could affect the convective layer and its impact on the composition profile of the star.}
-
 \begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{D_mix_vertical}
   \caption{Mixing diffusion coefficients in the accretor star. The
@@ -544,10 +542,122 @@ at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at
     (before point A in \Figref{fig:HRD_both}),
     early during RLOF (close to point C), mid-RLOF (close to
     point D), late during RLOF (between point D and E), and after RLOF
-    (point G).}
+    (point G). A movie of the entire evolution is available at \url{https://github.com/mathren90/zeta_oph/blob/main/movies/movie_nice/mixing_movie.mp4}.}
   \label{fig:D_mix}
 \end{figure}
 
+\texttt{MESA} treats mixing in the diffusion approximation
+\citep{paxton:11}. To illustrate the dominant processes throughout the
+accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
+coefficients for various mixing processes as a function of mass
+coordinate at selected times. Specifically, we show from top to
+bottom:
+\begin{itemize}
+\item main sequence before RLOF (i.e., before point A in
+  \Figref{fig:HRD_both} and \Figref{fig:MT});
+\item beginning of RLOF (between point A and B);
+\item late during RLOF (between point C and D);
+\item predicted present-day structure of \zoph\ (post-RLOF within the
+  red error-bar on \Figref{fig:HRD_both});
+\item close to TAMS (point G in \Figref{fig:HRD_both}).
+\end{itemize}
+In each panel, the gray shaded areas highlight mass accreted during RLOF.
+
+The colors in \Figref{fig:D_mix} show convection (red), overshooting
+(dark blue), rotational mixing (light blue), and thermohaline mixing
+(pink). Rotational mixing includes all the rotational instabilities
+that we consider -- meridional currents, secular and dynamical shear instabilities,
+and Goldreich-Schubert-Fricke instability, but throughout the evolution
+it strongly dominated by Eddington-Sweet meridional circulations,
+except at the interface between core-envelope (i.e., at the outer edge
+of the overshooting region), where dynamical shear can dominate due to
+the post-RLOF contraction and spin-up of the core (see \Secref{sec:rot}).
+For clarity, we do not show semiconvection
+which is never the dominant mixing process in our model.
+
+The top panel shows the typical structure of a main sequence massive star:
+the convective core initially extending to mass coordinate
+$\sim$$7\,M_\odot$ with the overshooting extension to $\sim$$9\,M_\odot$. The
+slow rotation imparted by the assumed initial tidal synchronization
+causes a meridional circulation in the envelope. A small sub-surface
+convective zone is also appreciable at the very surface (see, e.g., \citealt{cantiello:21}).
+
+In the second panel from the top, the star has already accreted
+$\sim$$2\,M_\odot$ (extending in the gray region), and its surface is already spun up to $\sim
+330\,\kms$. Thermohaline mixing has started in the newly accreted layers, but it is subdominant compared to rotational mixing due to meridional circulations in the envelope.  Angular momentum transport (by the Spruit-Tayler dynamo) has already imparted some rotation to the inner layers of the envelope. This leads to the disconnected spike in rotational mixing at the outer edge of the core, dominated by dynamical shears.  We note that between the top panel and the onset of RLOF, the convective core receeds in mass coordinate, but, by the time shown in the second panel, the accretion of mass has caused the core to grow back to its initial size.
+
+In the third panel, the star has already accreted roughly the total amount that it will, including CNO-enriched layers. Thermohaline mixing takes over the dominant role in the envelope (although meridional circulations persist behind it). The increase in core-mass causing the rejuvenation effect is still going on, and the mixing at the core-envelope boundary is partially still due to dynamical shear, but an off center convective region also appears. We do not include
+over/undershooting for off-center convective layers, which could increase the coupling between this layer and the core.
+
+By the fourth panel, roughly corresponding to \zoph's structure today,
+thermohaline mixing is progressively shutting down, but some residual
+mixing at the core edge still remains.
+
+Finally, the last panel shows that has the post-RLOF evolution
+proceeds, a long-lived convective region $\sim 1\,M_\odot$ wide
+develops above the core. This can affect the density profile at the
+base of the envelope. If the binary system remains bound after the
+explosion of the companion and goes through a common envelope
+\citep[e.g.,][]{paczynski:76}, this layer will be crucial to determine
+the success or failure of the common envelope ejection.
+
+We emphasize that the core growth due to the accretion of mass, the
+consequent ingestion in the burning region of fresh H-rich material, and the
+consequent rejuvenation are strongly dependent on the presence of
+convective boundary mixing. In our model this is initially provided by
+overshooting and to a lesser extent dynamical shear (between the top
+and second panel), at later times, the development of a convective
+layer above the overshooting region dominates this mixing.
+
+Instead, in the envelope, Eddington-Sweet circulations first dominate,
+then (roughly from the kink after point C in \Figref{fig:HRD_both}
+until the end of RLOF) thermohaline mixing takes over. The combination
+of these two processes mixes inward material CNO processed in the
+donor star and accreted from the surface, and outward CNO processed
+material from the core of the accretor.
+
+\input{table.tex}
+
+\Tabref{tab:surf_prop} summarizes the surface properties of the
+accretor star at the time shown in the fourth panel of
+\Figref{fig:D_mix}, roughly corresponding to \zoph\ today. Both the
+mass and radius agree reasonably well with the estimates from
+\citetalias{villamariz:05} and previous studies, that is~$20\,M_\odot$
+and $8.3\pm1.5\,R_\odot$, respectively. Our radius of $9.8\,R_\odot$
+is larger by $\sim0.6\,R_\odot$ than the equatorial radius recently
+measured by \cite{gordon:18}, and our model has a
+$T_\mathrm{eff}\simeq31\,300$\,K, on the lower end of the range considered by
+\citetalias{villamariz:05} suggesting that maybe our model has evolved
+slightly too much compared to \zoph. On the other hand, the age of
+$8.5$\,Myr is on the lower hand of the range comparible with \zoph\
+kinematic age. The surface rotational velocity in excess
+of $350\,\kms$ is also in the correct ballpark albeit possibly on the
+low end. We discuss further rotation and angular momentum transport in
+\Secref{sec:rot}.
+
+We report the surface H mass fraction\footnote{We obtain the mass
+  fractions of individual elements inverting the definition
+  $\varepsilon(X)=12+\log_{10}(N_X/N_H)$, where $N_X$ and $N_H$ are
+  the number fractions of species $X$ and H, respectively
+  \citep[e.g.,][]{lodders:19}.}, lower than primordial because of the
+accretion of nuclearly processed material, and the surface mass
+fraction of the most prominent species $^4\mathrm{He}$,
+$^{12}\mathrm{C}$, $^{14}\mathrm{N}$, $^{16}\mathrm{O}$.  Assuming our
+surface H mass fraction $X(^1\mathrm{H})$, the corresponding mass
+fractions of $^4\mathrm{He}$, $^{12}\mathrm{C}$, $^{14}\mathrm{N}$,
+$^{16}\mathrm{O}$ obtained by \citetalias{villamariz:05} are
+$0.34^{+0.14}_{-0.05}$, $0.0006\pm0.0004$, $0.002\pm0.001$, and
+$0.005\pm0.004$.  By the accretor's TAMS, rotational mixing (in the
+form of Eddington-Sweet circulations) and thermohaline mixing nearly
+homogenize the composition of the envelope of our accretor's
+model. The surface mass fractions we obtain are sensitive to the
+interplay between several poorly understood processes treated in one
+dimension: mass accretion efficiency, rotationally enhanced wind mass
+loss, thermohaline, and inward rotational mixing. These also impact
+the composition of the envelope, and thus its radius and
+$T_\mathrm{eff}$. Therefore, although not perfect, we consider the
+match with the mass fractions reported by \citetalias{villamariz:05}
+surprisingly satisfactory.
 
 \begin{figure*}[htbp]
   \centering
@@ -570,111 +680,6 @@ at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at
     $^{16}\mathrm{O}$.}
   \label{fig:n14}
 \end{figure*}
-
-
-\texttt{MESA} treats mixing in the diffusion approximation
-\citep{paxton:11}.  To illustrate the dominant processes throughout
-the accretor's evolution, we show in \Figref{fig:D_mix} the diffusion
-coefficients for various mixing processes as a function of mass
-coordinate at selected times, from top to bottom: main sequence before
-RLOF (i.e., before point A in \Figref{fig:HRD_both} and\
-\ref{fig:MT}), at the beginning of RLOF (between point A and B),
-late during RLOF (between point C-D), close to the predicted
-present-day structure of \zoph\ (post-RLOF within the red error-bar on
-\Figref{fig:HRD_both}), and close to TAMS (point G in \Figref{fig:HRD_both}).\todo{check}
-In each panel, the gray shaded areas highlight mass accreted during
-RLOF.
-
-
-In \Figref{fig:D_mix}, red areas correspond to convection, with the
-initial convective core of
-$\sim$$7\,M_\odot$ clearly visible in the first panel. In all models, a tiny sub-surface convective region is also visible in the outermost layers (see e.g., \citealt{cantiello:21}).  The dark blue areas show the exponentially decreasing overshooting above the convective core, which extends slightly above
-$\sim$$9\,M_\odot$ in the first panel. Pink and light blue represent
-thermohaline and rotational mixing, respectively. The latter is the
-combination of the various rotational instability included in our
-model (meridional currents, secular and dynamical shear instabilities,
-Goldreich-Schubert-Fricke instability), but is it strongly dominated
-by Eddington-Sweet meridional circulations throughout the evolution,
-except at the interface between core and envelope.
-
-After the onset of
-RLOF and spin-up of the accretor, the evolutionary contraction of the core increases its
-rotational frequency and leads to the formation of a shearing layer
-between the core and the envelope (see also \Secref{sec:rot}). There, from the third panel of
-\Figref{fig:D_mix} onwards, the dynamical shear instability locally
-dominates producing the spikes in the light blue at the edge of the core.
-For clarity, we do not show semiconvection
-which is never the dominant mixing process.
-
-% During RLOF (second and third panel), the spin-up due to accretion
-% causes an increase in the rotational mixing (see also
-% \Secref{sec:rot}). Among the rotational mixing processes we include
-% (meridional currents, secular and dynamical shear instabilities,
-% Goldreich-Schubert-Fricke instability), meridional currents
-% represented by Eddington-Sweet circulations are the dominant process
-% throughout the star. The diffusion coefficient for Eddington-Sweet
-% circulations exceeds by about two orders of magnitude the diffusion
-% for other processes (rotationally-driven and non). The only
-% exception is at the core-envelope interface just outside the
-% overshooting region, during and after RLOF. In the spun-up accretor,
-% the evolutionary contraction of the core increases its rotational
-% frequency and leads to the formation of a shearing layer between the
-% core and the envelope. There, from the third panel of
-% \Figref{fig:D_mix} onwards, the dynamical shear instability locally
-% dominates producing the spike in the cyan curve (accompanied by some
-% semiconvection in the last panel).
-
-Late during the mass transfer (third panel), the accretion of
-nuclearly processed material progressively widens the thermohaline
-mixing region at the surface.  This dominates in the outermost layers
--- except within the sub-surface convective zone. Thermohaline mixing
-and Eddington-Sweet circulations together mix inwards and dilute the
-CNO-enriched material coming from the donor's surface.
-
-At the same time, the increase in the accretor mass drives
-rejuvenation \citep[e.g.,][]{schneider:16}. This can be seen as a
-growth of the convective core from
-$\sim$$6\,M_\odot$ to almost $\sim$$8\,M_\odot$, plus the
-corresponding growth of the overshooting region. This mixes inward
-H-rich material resulting in an elongation of the accretor's lifetime,
-and at the same time mixes outward CNO-equilibrium matter, connecting
-the N-rich core with the outer envelope polluted from the top.
-
-\input{table.tex}
-
-\Tabref{tab:surf_prop} summarizes the surface properties of the
-accretor star at the time shown in the last panel of
-\Figref{fig:D_mix}, that is shortly after the RLOF phase, while the
-model is still roughly at the observed position of \zoph. Both the
-mass and radius agree reasonably well with the estimates from
-\citetalias{villamariz:05} and previous studies, that is~$20\,M_\odot$
-and $8.3\pm1.5\,R_\odot$, respectively. Our radius of $9.6\,R_\odot$
-also falls in between the polar and equatorial radii recently measured
-by \cite{gordon:18}. The surface rotational velocity in excess of
-$350\,\kms$ is also in the correct ballpark albeit possibly on the low
-end. We discuss further rotation and angular momentum transport in
-\Secref{sec:rot}.
-
-We report the surface H mass fraction\footnote{We obtain the mass
-  fractions of individual elements inverting the definition
-  $\varepsilon(X)=12+\log_{10}(N_X/N_H)$, where $N_X$ and $N_H$ are
-  the number fractions of species $X$ and H, respectively \citep[e.g.,][]{lodders:19}.}, lower
-than primordial because of the accretion of nuclearly processed
-material, and the surface mass fraction of the most prominent species
-$^4\mathrm{He}$, $^{12}\mathrm{C}$, $^{14}\mathrm{N}$,
-$^{16}\mathrm{O}$.  Assuming our surface H mass fraction
-$X(^1\mathrm{H})$, the corresponding mass fractions of
-$^4\mathrm{He}$, $^{12}\mathrm{C}$, $^{14}\mathrm{N}$,
-$^{16}\mathrm{O}$ obtained by \citetalias{villamariz:05} are
-$0.33^{+0.14}_{-0.05}$, $0.0006\pm0.0004$, $0.002\pm0.001$, and
-$0.005\pm0.004$.  By the accretor's TAMS, rotational mixing (and to a
-lesser degree thermohaline mixing) nearly homogenize the composition
-of the envelope of our accretor's model. The surface mass fractions we obtain are sensitive to
-the interplay between several poorly understood processes treated in
-one dimension: mass accretion efficiency, rotationally enhanced wind
-mass loss, thermohaline, and inward rotational mixing. Therefore,
-although not perfect, we consider the match with the mass fractions
-reported by \citetalias{villamariz:05} surprisingly satisfactory.
 
 \subsubsection{Comparison to single fast-rotating stars}
 \label{sec:mix_comparison_single}
