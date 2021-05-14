@@ -614,3 +614,52 @@ def get_profile_from_modnum(num, LOGS):
     model_num = src[:, 0]
     i = np.argmin(np.absolute(model_num-num))
     return LOGS+'profile'+str(int(profile_num[i]))+'.data'
+
+
+def plot_Dmix(pfile, ax="", legend=False):
+    if ax == "":
+        fig = plt.figure(figsize=(10,10))
+        gs = gridspec.GridSpec(100, 100)
+        ax = fig.add_subplot(gs[:, :])
+    age = get_age_from_profile(pfile)
+    timestamp = f"${age:.2f}"+r"\,\mathrm{Myr}$"
+
+    src, col = getSrcCol(pfile)
+    mass = src[:, col.index("mass")]
+    D_mix = 10**(src[:, col.index('log_D_mix')])
+    D_mix_non_rotation = 10.0**(src[:, col.index('log_D_mix_non_rotation')])
+    D_conv = 10.0**(src[:, col.index('log_D_conv')])
+    D_semi = 10.0**(src[:, col.index('log_D_semi')])
+    D_thrm = 10.0**(src[:, col.index('log_D_thrm')])
+
+    D_ov = D_mix_non_rotation - D_thrm - D_semi
+    D_rot = D_mix - D_mix_non_rotation
+
+    # ax.scatter(mass, D_mix, lw=10, label="$\mathrm{Total}$", c="c")
+    ax.scatter(mass, D_rot, lw=0, s=5, label="$\mathrm{Rotation}$", c='#77AADD')
+    ax.fill_between(mass, D_rot, alpha=0.75, fc='#77AADD')
+
+    ax.scatter(mass, D_ov, lw=0, s=5, label="$\mathrm{Overshooting}$", c='b')
+    ax.fill_between(mass, D_ov, alpha=0.75, fc='b')
+
+    ax.scatter(mass, D_conv, lw=0, s=5, label="$\mathrm{Convection}$", c="r")
+    ax.fill_between(mass, D_conv, alpha=0.75, fc='r')
+
+    # ax.scatter(mass, D_semi, lw=0, s=5, label="$\mathrm{Semiconvection}$", c="#DDDD77")
+    # ax.fill_between(mass, D_semi, alpha=0.75, fc='#DDDD77')
+
+    ax.scatter(mass, D_thrm, lw=0, s=5, label="$\mathrm{Thermohaline}$", c="#CC99BB")
+    ax.fill_between(mass, D_thrm, alpha=0.75, fc='#CC99BB')
+
+    ax.text(0.05,0.1, timestamp, fontsize=30, va="center",
+            transform=ax.transAxes, bbox=dict(facecolor='w',
+                                              edgecolor='black', boxstyle='round,pad=0.2', alpha=0.9))
+    ax.set_yscale('log')
+    if legend:
+        conv, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='r',label="$\mathrm{Convection}$")
+        ov, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='b',label="$\mathrm{Overshooting}$")
+        rot, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='#77AADD',label="$\mathrm{Rotation}$")
+        thrm, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='#CC99BB',label="$\mathrm{Thermohaline}$")
+        # semiconv, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='#DDDD77',label="$\mathrm{Semiconvection}$")
+        ax.legend(handles=[conv, ov, rot, thrm], loc='lower left', bbox_to_anchor= (0, 1.01), ncol=2,
+            borderaxespad=0, frameon=False, handlelength=0.5)
