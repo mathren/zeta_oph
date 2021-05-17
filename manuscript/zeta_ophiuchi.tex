@@ -545,7 +545,7 @@ at $\sim7.261$\,Myr), until the donor completely detaches from its Roche lobe at
     (before point A in \Figref{fig:HRD_both}),
     early during RLOF (close to point C), mid-RLOF (close to
     point D), late during RLOF (between point D and E), and after RLOF
-    (point G). A movie of the entire evolution is available at \url{https://github.com/mathren90/zeta_oph/blob/main/movies/movie_nice/mixing_movie.mp4}.}
+    (point G). A movie of the entire evolution is available at \todo{zenodo}.}
   \label{fig:D_mix}
 \end{figure}
 
@@ -593,13 +593,13 @@ $\sim$$2\,M_\odot$ (extending in the gray region), and its surface is already sp
 
 In the third panel, the star has already accreted all the mass that it will, including CNO-enriched layers from the donor's interior. Thermohaline mixing takes over the dominant role in the envelope (although meridional circulations persist behind it). The increase in core-mass causing the rejuvenation effect is still going on, and the mixing at the core-envelope boundary is partially still due to dynamical shear, but an off center convective region also appears. Because we adopt an exponentially decreasing overshooting, the diffusion coefficient at the outer edge of the overshooting region is small, and the mixing between the core and the off-center convective region is weak. We do not include over/undershooting for off-center convective layers, which could increase the coupling between these layers. By the fourth panel, roughly corresponding to \zoph's structure today, thermohaline mixing is progressively shutting down, but some residual mixing at the core edge still remains.
 
-
 \input{table.tex}
 
 Finally, the last panel shows that as the post-RLOF evolution
 proceeds, the convection at the outer-edge of the core advances
 further and remains as a long-lived
-$\sim$$1\,M_\odot$ wide above the core, but disconnected from it. This is a consequence of core growth because of accretion, and can affect the density profile at the base of the envelope.
+$\sim$$1\,M_\odot$ wide above the core, but disconnected from it. This is a consequence of core growth because of accretion, and can affect the density profile at the base of the envelope (see
+also \Figref{fig:rho} for its effect on the density profile).
 
 The core growth caused by the accretion of mass, the
 consequent ingestion in the burning region of fresh H-rich material, and the
@@ -666,17 +666,18 @@ surprisingly satisfactory.
     $\omega/\omega_\mathrm{crit}$ at birth (first four panels), and
     for the accretor of our fiducial binary (last panel). In each
     panel, the darkest flat line marks the primordial value for
-    $Z=0.01$, the dashed red line marks the surface value at
-    TAMS. In the last panel, the gray area highlights mass accreted
-    during RLOF. The colors of each profile go from dark to light at
-    TAMS, and selected profiles along the main sequence are shown. The
-    solid red line and the shaded red region correspond to the mass
-    fraction of $^{14}\mathrm{N}$ estimated by
-    \citetalias{villamariz:05} assuming the surface mass fraction of H
-    from \Tabref{tab:surf_prop}. The abundance of $^{14}\mathrm{N}$
-    alone is not strongly constraining. \Figref{fig:composition_huge}
-    shows a similar plot containing also $^{12}\mathrm{C}$ and
-    $^{16}\mathrm{O}$.}
+    $Z=0.01$, the dashed red line marks the surface value at TAMS. The
+    colors of each profile go from dark to light at TAMS, and selected
+    profiles along the main sequence are shown.  In
+    the last panel, the gray area highlights mass accreted during
+    RLOF, and the black dotted profile corresponds to the black
+    diamond in \Figref{fig:HRD_both}. The solid red line and
+    the shaded red region correspond to the mass fraction of
+    $^{14}\mathrm{N}$ estimated by \citetalias{villamariz:05} assuming
+    the surface mass fraction of H from \Tabref{tab:surf_prop}. The
+    abundance of $^{14}\mathrm{N}$ alone is not strongly
+    constraining. \Figref{fig:composition_huge} shows a similar plot
+    containing also $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$.}
   \label{fig:n14}
 \end{figure*}
 
@@ -684,7 +685,8 @@ surprisingly satisfactory.
 \label{sec:mix_comparison_single}
 
 We now compare the mixing processes
-in our accretor and in single rotating massive star models. \Figref{fig:n14} shows the mass fraction of $^{14}\mathrm{N}$
+in our accretor and in single rotating massive star models. The first
+four panels of \Figref{fig:n14} show the mass fraction of $^{14}\mathrm{N}$
 as a function of mass coordinate along the evolution of four
 $20\,M_\odot$ stars initialized with
 $\omega/\omega_\mathrm{crit}=0.2,0.3,0.4,0.5$. Except for the initial rotation rate and
@@ -723,21 +725,24 @@ by rotational mixing triggered by the accretion-driven spin-up.
 Initially, the tidally synchronized accretor star
 rotates too slowly ($\lesssim 3\,\kms$) for significant outward rotational mixing out of
 the core, and until the onset of RLOF (roughly at 7.25\,Myr) no appreciable variation of the
-surface $^{14}\mathrm{N}$ mass fraction occurs. During late RLOF after the
+envelope $^{14}\mathrm{N}$ mass fraction occurs. During late RLOF after the
 ``kink'' feature bewteen C and D in \Figref{fig:HRD_both}, N-enriched material from the
-donor's core piles onto the accretor's surface -- inside the gray area in
-the rightmost panel of \Figref{fig:n14}. The close-to-critical
-rotation of the accretor and the inversion in the mean molecular
-weight $\mu$ drive inward mixing of
+donor's core piles onto the accretor's surface -- inside the gray
+area. The close-to-critical
+rotation (through Eddington-Sweet circulations) and the inversion in the mean molecular
+weight $\mu$ (through thermohaline mixing) drive inward mixing of
 the N-rich material and dilute it in the envelope (see also \Figref{fig:D_mix}).
 
 Simultaneously, the mere growth in mass causes the steepening of the
 core-temperature gradient and increase in the convective core mass
-\citep[rejuvenation, e.g.,][]{schneider:16}, driving some outward convective mixing
-of N-rich material. Because convection turnover timescales are much
-shorter than evolutionary timescales, the growth of the convective
-core produces ``steps'' at the outer edge of the core (slightly
-outside mass coordinate 10\,$M_\odot$).
+\citep[rejuvenation, e.g.,][]{schneider:16}, driving some outward
+convective mixing of N-rich material. This also causes the formation
+of an off-center convective region (cf.~\Figref{fig:D_mix}) which
+persists until TAMS. Because convection turnover timescale is much
+shorter than evolutionary timescales, convection homogenizes the
+composition of this region and produces ``steps'' at
+the outer edge of the core (slightly outside mass coordinate
+10\,$M_\odot$).
 
 In \Figref{fig:n14}, the solid red line and red shaded area across all panels show the
 $^{14}\mathrm{N}$ from \citetalias{villamariz:05} (assuming the
@@ -753,13 +758,6 @@ models to reach the lower-limit of the error bar.
 
 One of the main distinguishing features of \zoph\ is its extremely
 high surface rotation rate.
-%REPETITION:
-% Spectroscopic measurements of the
-% projected rotational velocity exceed $v\sin(i)\simeq 400\,\kms$,
-% which implies close to critical rotation. \cite{zehe:18} recently
-% estimated $v\sin(i)=432\pm16\,\kms$ and $i\sim56$ degrees. The
-% extremely fast rotation rate is confirmed by the centrifugal
-% deformation found by \cite{gordon:18}.
 The black line in the top panel of \Figref{fig:surf_rot} shows the
 evolution of the surface equatorial rotational velocity
 $v_\mathrm{eq}$ for our accretor model, not including any projection
@@ -798,7 +796,7 @@ $v_\mathrm{crit}\simeq520\,\kms$ (this value is also mass-averaged
 over the region with $\tau<100$). This corresponds to
 $\omega/\omega_\mathrm{crit}\simeq 0.95$ (dashed horizontal line in
 the bottom panel of \Figref{fig:surf_rot}), which is the upper-limit
-we impose in our runs.
+we impose in our models.
 
 The star remains fast rotating throughout the mass transfer phase,
 which ends at the black diamond in \Figref{fig:surf_rot}. In the
@@ -808,8 +806,8 @@ velocity drops below
 $\sim$$350\,\kms$. Both the single star models and our accretor (after being spun up) evolve to higher
 $\omega/\omega_\mathrm{crit}$ because of the increase in stellar radii and corresponding decrease in
 $\omega_\mathrm{crit}$ \citep[e.g.,][]{langer:98, zhao:20}. However, our accretor remains at a higher
-$\omega/\omega_\mathrm{crit}$ for a significantly longer time: the chance of observing a single rotating star at very high
-$\omega/\omega_\mathrm{crit}$ is lower than for an accretor from a massive binary system. Close to the end of the main sequence, the increase in wind mass loss rate and internal transport of angular momentum strengthen the surface spin-down. This effect is also seen in the late main-sequence evolution of single stars rotating rapidly from ZAMS.
+$\omega_\mathrm{surf}/\omega_\mathrm{crit}$ for a significantly longer time: the chance of observing a single rotating star at very high
+$\omega_\mathrm{surf}/\omega_\mathrm{crit}$ is lower than for an accretor from a massive binary system. Close to the end of the main sequence, the increase in wind mass loss rate and internal transport of angular momentum strengthen the surface spin-down. This effect is also seen in the late main-sequence evolution of single stars rotating rapidly from ZAMS.
 
 \Figref{fig:surf_rot} shows that our model can retain a significant surface rotation for a time comparable to the kinematic age of the star, which is shorter than the remaining main-sequence lifetime. Since the spin up of the accretor happens roughly half-way through its main-sequence, the star is much faster rotating than single stars of the same (post-RLOF) mass initialized as fast rotators at ZAMS. Although \Figref{fig:surf_rot} does not account for the projection angle, \cite{zehe:18} argued for
 $i\geq56$\,degrees, corresponding to an upward shift of the red band in \Figref{fig:surf_rot} of $\lesssim
@@ -820,7 +818,7 @@ We emphasize that our model is computed using the \cite{vink:00,
 evolution. This is two orders of magnitude higher than the wind mass
 loss rate reported by \cite{marcolino:09} (weak wind problem,
 however, see also \citealt{lucy:12, lagae:21}). While this may impact
-the evolution of the binary even before RLOF, it increases the
+the evolution of the binary even before RLOF, it presumably increases the
 spin-down rate of our model compared to the observations. We expect
 that an accreting star modeled with lower wind-mass loss rate
 post-RLOF would retain an even higher surface rotation for longer (see
