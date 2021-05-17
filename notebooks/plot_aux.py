@@ -616,6 +616,14 @@ def get_profile_from_modnum(num, LOGS):
     return LOGS+'profile'+str(int(profile_num[i]))+'.data'
 
 
+def get_center_h1(pfile):
+    """ returns central value of h1 mass fraction of a profile"""
+    src, col = getSrcCol(pfile)
+    h1_center = src[-1, col.index("h1")]
+    return h1_center
+
+
+
 def plot_Dmix(pfile, ax="", legend=False):
     if ax == "":
         fig = plt.figure(figsize=(10,10))
