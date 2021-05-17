@@ -836,23 +836,23 @@ also \Secref{sec:single_star_uncertainties}).
     (first four panels), and for the accretor of our fiducial
     binary. Bottom: internal rotational frequency profile. As in
     \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light
-    at TAMS. In the top panel the thin dashed red line mark the TAMS
-    surface rotation rate. In the rightmost panel, the gray area
-    indicates mass accreted during RLOF. The yellow lines (TAMS) in
-    the last panel show that the core of the accretor is rotating
-    almost as fast as its surface despite its much smaller radius, and
-    both are faster than the surface of single star
-    models. \todo{annotate rigid rotation and mention exact age in
-      text, maybe show less profiles on last panel}}
+    at TAMS. The dashed black line emphasizes the profile
+    corresponding to the black diamond in \Figref{fig:HRD_both}. In
+    the top panel the thin dashed red line mark the TAMS surface
+    rotation rate. In the rightmost panels, the gray areas indicate
+    mass accreted during RLOF. The yellow lines (TAMS) in the last
+    panel show that the core of the accretor is rotating almost as
+    fast as its surface despite its much smaller radius, and both are
+    faster than the surface of single star models.}
   \label{fig:struct_rot}
 \end{figure*}
 
 To illustrate the angular momentum transport in our accretor stars, it
-is helpful to compare with the single rotating $20\,M_\odot$
-models. Typically, single stars are assumed to be solid-body rotators at
-ZAMS. Their internal rotational profile evolves differently than the profile
-obtained spinning up the secondary star at a later evolutionary stage,
-from its surface, and to critical rotation.
+is again helpful to compare with single rotating $20\,M_\odot$
+models. Typically, single stars are assumed to be solid-body rotators
+at ZAMS. Their internal rotational profile evolves differently than
+the profile obtained spinning up the secondary star at a later
+evolutionary stage, from its surface, and to critical rotation.
 
 The top row of \Figref{fig:struct_rot} shows the internal rotational
 velocity $v_\mathrm{rot}=\omega\times r$, while the bottom row shows
@@ -880,23 +880,26 @@ Conversely, the last panel shows that the entire interior of the
 accretor has a negligible rotational velocity until RLOF (starting at
 $7.25$\,Myr). Because of binary interactions, the accretor is spun up
 late in its evolution, up to critical rotation
-$\omega/\omega_\mathrm{crit}\simeq1$, and from the surface. In our model,
-inward transport of angular momentum creates a $v_\mathrm{rot}$
-profile monotonically increasing from the center to the surface (green lines of
-the last panel in the top row). Late during mass transfer, the accretor achieves rigid
-and close to critical rotation (flat profiles in the last panel on the
-bottom row of \Figref{fig:struct_rot}). After the end
-of RLOF, the accretors envelope spins down because of winds. By the
-end of the main-sequence evolution of the accretor, the surface still
-spins with $v_\mathrm{rot}\simeq100\,\kms$ (twice as fast as the
-single star models).
+$\omega/\omega_\mathrm{crit}\simeq1$, and from the surface. In our
+model, inward transport of angular momentum creates a $v_\mathrm{rot}$
+profile monotonically increasing from the center to the surface (green
+lines of the last panel in the top row). Late during mass transfer,
+the accretor achieves rigid and close to critical rotation (flat
+profiles in the last panel on the bottom row of
+\Figref{fig:struct_rot}). Rigid rotation persists for
+$\sim10^{4}$\,years, until and beyond the black diamond in the bottom
+panel of \Figref{fig:HRD_both} where we stop the evolution in a
+binary. Afterwards, the accretor's envelope spins down
+because of winds. By the end of the main-sequence evolution of the
+accretor, the surface still spins with $v_\mathrm{rot}\simeq100\,\kms$
+(twice as fast as the single star models).
 
 Perhaps more importantly, the outer-edge of the core has a similar
-rotational velocity as the surface, and much larger than the
-rotational velocity of the single star models. This is because the
+rotational velocity as the surface, and a much larger rotational frequency than the
+cores of single star models. This is because the
 evolutionary contraction (decrease in $r$) of the core results in a
 significant increase of $\omega$ to conserve the angular momentum that
-cannot be transferred to the outer layers. The core-envelope interface
+cannot be efficiently transferred to the outer layers. The core-envelope interface
 of the accretor at TAMS is much more prominent than in single rotating
 stars. The faster core rotation of binary accretors spun up late and
 up to critical rotation might have important implications for the
@@ -908,11 +911,11 @@ gravitational-wave events \citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
 \label{sec:discussion}
 
 Models of the interior evolution of stars require the choice of
-several poorly constrained parameters, the majority arising from the
+several poorly constrained parameters, most arising from the
 one-dimensional representation of multi-dimensional phenomena
 (convection, mixing, rotation, etc.). This remains true when modeling
 two stars in a binary, with the added caveat that an even larger
-number of parameters enter in the treatment of binary interactions (and in
+number of parameters enters in the treatment of binary interactions (and in
 particular mass transfer). This emphasizes the need for
 observational constraints and motivated us to compare our models to
 the observationally well characterized \zoph.
@@ -949,12 +952,12 @@ $\omega/\omega_\mathrm{crit}\simeq 1$ reached by our accretor star
 during RLOF. Decreasing by a factor of 10 the diffusion coefficient
 for Eddington-Sweet meridional circulations has a very small effect on
 the HRD evolution of the accretor. However, the noisiness during the
-late RLOF phase (for $T_\mathrm{eff}\gtrsim10^{4.5}$\,K in
+late RLOF phase (beyond point B in
 \Figref{fig:HRD_both}) increases in amplitude, confirming
 that the details of this part of the evolution are sensitive to the
 treatment of rotational mixing. We were unable to run models turning
 completely off Eddington-Sweet meridional circulations past the
-``v-shaped'' feature in \Figref{fig:HRD_both}, and refer the readers
+``kink'' feature in \Figref{fig:HRD_both}, and refer the readers
 to appendix~\ref{sec:res_tests} for a discussion of our numerical resolution.
 
 Our models assume a Spruit-Tayler dynamo \citep{spruit:02} for the
@@ -984,13 +987,23 @@ diffusion coefficient, and they are then summed together
 processes are independent from each other. This is typically
 reasonable since locally one process dominates the mixing.
 
-In the envelope of our accretor model, Eddington-Sweet circulations are
-typically dominant, however thermohaline mixing reaches comparable
+In the envelope of our accretor model, initially Eddington-Sweet circulations are
+dominant, however thermohaline mixing reaches and exceeds their
 diffusivity late during the mass transfer. If fast rotation can
 physically modify thermohaline mixing processes, this might impact our
 accretor models.  We also tried models enhancing the efficiency of
 thermohaline mixing by a factor of 100 \citep{schootemeijer:19} but
 these proved too unstable when accreting CNO-processed material.
+
+We have also explored models with a step overshooting following
+\cite{brott:11}. Our fiducial exponential overshooting was chosen to
+reproduce the width of the main-sequence of the models of
+\cite{brott:11}, and not-surprisingly, the qualitative evolution of
+our fiducial model and our models with step overshooting is
+similar. However, adopting a step overshooting provides a higher
+diffusivity at the outer edge of the core which ultimately impacts the
+details of the chemical profile at the outer edge of the core, and the
+morphology of the evolutionary tracks during late RLOF.
 
 % weak wind
 \zoph\ is one of the low-luminosity O-type stars for which
