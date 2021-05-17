@@ -591,10 +591,7 @@ In the second panel from the top, the star has already accreted
 $\sim$$2\,M_\odot$ (extending in the gray region), and its surface is already spun up to $\sim
 330\,\kms$. Thermohaline mixing has started in the newly accreted layers, but it is subdominant compared to rotational mixing due to meridional circulations in the envelope.  Angular momentum transport (by the Spruit-Tayler dynamo) has already imparted some rotation to the inner layers of the envelope. This leads to the disconnected spike in rotational mixing at the outer edge of the core, dominated by dynamical shears.  We note that between the top panel and the onset of RLOF, the convective core receeds in mass coordinate, but, by the time shown in the second panel, the accretion of mass has caused the core to grow back to its initial size.
 
-In the third panel, the star has already accreted all the mass that it will, including CNO-enriched layers from the donor's interior. Thermohaline mixing takes over the dominant role in the envelope (although meridional circulations persist behind it). The increase in core-mass causing the rejuvenation effect is still going on, and the mixing at the core-envelope boundary is partially still due to dynamical shear, but an off center convective region also appears. We do not include
-over/undershooting for off-center convective layers, which could increase the coupling between this layer and the core. By the fourth panel, roughly corresponding to \zoph's structure today,
-thermohaline mixing is progressively shutting down, but some residual
-mixing at the core edge still remains.
+In the third panel, the star has already accreted all the mass that it will, including CNO-enriched layers from the donor's interior. Thermohaline mixing takes over the dominant role in the envelope (although meridional circulations persist behind it). The increase in core-mass causing the rejuvenation effect is still going on, and the mixing at the core-envelope boundary is partially still due to dynamical shear, but an off center convective region also appears. Because we adopt an exponentially decreasing overshooting, the diffusion coefficient at the outer edge of the overshooting region is small, and the mixing between the core and the off-center convective region is weak. We do not include over/undershooting for off-center convective layers, which could increase the coupling between these layers. By the fourth panel, roughly corresponding to \zoph's structure today, thermohaline mixing is progressively shutting down, but some residual mixing at the core edge still remains.
 
 
 \input{table.tex}
@@ -1082,8 +1079,9 @@ population synthesis can limit the accretion rate based on the thermal
 timescale of the accretor (calculated from models in gravothermal
 equilibrium). Based on this approach, \cite{schneider:15} found a
 higher $\beta_\mathrm{RLOF}\simeq 0.7$ for a binary comparable to ours
-(initially $M_1=20\,M_\odot$, $M_2=0.7M_1$, and initial separation of
-$a\simeq300\,R_\odot$).
+(initially $M_1=20\,M_\odot$, $M_2=0.7M_1$ with separation
+$a\simeq300\,R_\odot$), although their $\beta_\mathrm{RLOF}$ is very
+sensitive to the initial mass ratio and period in this regime.
 
 Another free parameter in the treatment of mass transfer is the
 specific angular momentum of the accreted material. This is an
@@ -1105,7 +1103,7 @@ momentum accretion and consequent spin-up of the surface.
 We also attempted calculations using for specific angular momentum of
 the incoming material $\sqrt{1.7GM_\mathrm{accretor}R_\mathrm{min}}$
 \citep{lubow:75} for direct impact of the incoming stream with the
-accretor (see \citealt{demink:13}). This is typically much larger than
+accretor. This is typically much larger than
 the specific angular momentum of the accretor's surface. However,
 these models proved numerically more unstable and providing less
 trustworthy results after the accretor is spun up
@@ -1121,7 +1119,7 @@ specific entropy when it reaches the accretor surface. We follow the
 common practice of assuming the specific entropy of the incoming
 material to be same as the accreting surface. The scenario justifying
 this hypothesis is that during RLOF the matter is
-sufficiently optically thin so radiative processes can rapidly
+sufficiently optically thin so that radiative processes can rapidly
 equalize the entropy between the RLOF stream and the accreting
 surface. However, the very large mass-transfer rates we find
 (cf.~\Figref{fig:MT}) might result in optically thick flows for which
@@ -1130,15 +1128,45 @@ this approximation might not be appropriate.
 
 Because of the increase in mass, our accretor star is rejuvenated: its
 total main-sequence lifetime is longer than the lifetime of a single
-star born with the final post-RLOF mass of the accretor
+star born with the final post-RLOF mass of the accretor\footnote{But
+  not longer than the lifetime of a single star of its initial,
+  pre-RLOF mass.}
 \citep[e.g.,][]{schneider:16}. The rejuvenation is due to the increase
-- in mass coordinate - of the core region, which brings inward fresh
+- in mass - of the core region, which brings inward fresh
 nuclear fuel. Our results are in agreement with \cite{hellings:83},
 while \cite{braun:95} did not find any rejuvenation in their accretor
 models. We attribute this difference to the lack of convective
 boundary mixing (e.g., overshooting, efficient semiconvection, shear)
 in their models, which impedes the growth of the core.
 
+\begin{figure}[htbp]
+  \includegraphics[width=0.47\textwidth]{rho_comparison}
+  \caption{Comparison of the density profiles of the accretor model
+    (black) and single $20\,M_\odot$ rotating stars (colors). The models are
+    compared when they reach the same central H mass fraction of
+    $X_c=0.085$ (point G in \Figref{fig:HRD_both} for the accretor). The inset magnifies the region above the core, where the outcome of common envelope events is
+    decided. Because of the growth of the core, the density profile of
+  the accretor in this region is significantly different.}
+  \label{fig:rho}
+\end{figure}
+
+In our models, the growth of the core is initially driven by
+convection and overshooting, and to a lesser extent to dynamical
+shear. Later on, a convective region above the overshooting region
+develops (third panel onwards in \Figref{fig:D_mix}) and remains as an off-center feature until and beyond point G
+in \Figref{fig:HRD_both}. \Figref{fig:rho} shows a density comparison
+between the accretor in the last panel of \Figref{fig:D_mix} and four
+initially $20\,M_\odot$ single rotating stars. The off-center
+convective region significantly alters the density profile above the core of the
+accretor compared to a single star.
+If the binary system
+remains bound after the explosion of the companion, and if the
+evolutionary expansion of the accretor leads to a common envelope
+\citep[e.g.,][]{paczynski:76}, the layer above the He core is crucial
+to determine the success or failure of the common envelope ejection.
+Common envelope simulations have so far neglected the impact of
+previous RLOF phase(s) on the density structure of the stars
+initiating the dynamically unstable mass transfer.
 
 \subsection{Variations in initial binary parameters}
 \label{sec:bin_init}
@@ -1431,30 +1459,6 @@ reproduced also in the middle panel of \Figref{fig:composition_huge}.
 
 \bibliographystyle{aasjournal}
 \bibliography{./zeta_ophiuchi.bib}
-
-\todo{maybe move to discussion these two paragraphs below}
-
-\Figref{fig:rho} shows a density comparison between the accretor in the last panel of \Figref{fig:D_mix} and for initially
-$20\,M_\odot$ single rotating stars. These were computed with the same setup except for the initial rotation rate, initialized as labelled. If the binary system remains bound after the explosion of the companion, and the evolutionary expansion of the accretor leads to a common envelope \citep[e.g.,][]{paczynski:76}, the layer above the He core is crucial to determine the success or failure of the common envelope ejection.
-
-Common envelope simulations have so far neglected the impact of
-previous RLOF phase(s) on the density structure of the stars
-initiating the dynamically unstable mass transfer. Depending on the post-main-sequence
-evolution of this model, this effect might be important in determining
-the outcome of common envelope events.
-
-\begin{figure}[htbp]
-  \includegraphics[width=0.47\textwidth]{rho_comparison}
-  \caption{Comparison of the density profiles of the accretor model
-    (black) and single $20\,M_\odot$ rotating stars (colors). The models are
-    compared when they reach the same central H mass fraction of
-    $X_c=0.085$. The inset magnifies the region above the core, where the outcome of common envelope events is
-    decided. Because of the growth of the core, the density profile of
-  the accretor in this region is significantly different.}
-  \label{fig:rho}
-\end{figure}
-
-
 
 
 \end{document}
