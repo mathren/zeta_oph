@@ -622,7 +622,7 @@ def plot_Dmix(pfile, ax="", legend=False):
         gs = gridspec.GridSpec(100, 100)
         ax = fig.add_subplot(gs[:, :])
     age = get_age_from_profile(pfile)
-    timestamp = f"${age:.2f}"+r"\,\mathrm{Myr}$"
+    timestamp = f"${age:.6f}"+r"\,\mathrm{Myr}$"
 
     src, col = getSrcCol(pfile)
     mass = src[:, col.index("mass")]
