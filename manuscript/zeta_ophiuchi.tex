@@ -25,8 +25,8 @@
 \graphicspath{{./figures/}}
 
 
-\title{Testing models of accreting stars in
-  massive binaries on $\zeta$ Ophiuchi}
+\title{Accretor stars in massive binaries: testing models on  $\zeta$ Ophiuchi}
+
 \author[0000-0002-6718-9472]{M.~Renzo}
 \affiliation{Department of Physics, Columbia University, New York, NY 10027, USA}
 \affiliation{Center for Computational Astrophysics, Flatiron Institute, New York, NY 10010, USA}
@@ -46,18 +46,19 @@
   explosion. Therefore, this star provides an ideal test bed for
   models of accretors in binaries. We use % the open-source stellar
   % evolution code
-  \texttt{MESA} to model the evolution of a massive binary evolving
-  through a stable mass transfer after the donor's main sequence (case
-  B, initial period 100\,days). Adopting common assumptions for the
-  treatment of rotation, chemical mixing, and mass transfer
-  efficiency, our models of the accreting star reproduce reasonably
-  well the kinematic, spectroscopic, and photometric properties of
-  $\zeta$ Ophiuchi. We compare the internal structure and evolution of
-  our accretor to fast-rotating single stars, and find that the late
-  and extreme spin up by binary interactions yields, at the end of the
-  main sequence, a faster-spinning core in the accretor than in
-  rotating single stars. Our models demonstrate the impact of mass
-  accretion on the secondary star in a binary, with possible
+  \texttt{MESA} to model the evolution of a massive binary (initially
+  $M_1=25\,M_\odot$, $M_2=17\,M_\odot$) evolving through a stable mass
+  transfer after the donor's main sequence (case B, initial period
+  100\,days). Adopting common assumptions for the treatment of
+  rotation, chemical mixing, and mass transfer, our accreting star
+  reproduces reasonably well the kinematic, spectroscopic, and
+  photometric properties of $\zeta$ Ophiuchi. We compare our accretor
+  to fast-rotating single stars: the late spin-up through
+  mass transfer causes the accretor core to spin faster at the end of
+  the main sequence, and the rejuvenation causes an off-center
+  convective layer which impacts the density structure at the envelope base.
+  Our models demonstrate the impact of
+  mass accretion on the secondary star in a binary, with possible
   implications for its further evolution (either in a binary or as
   single stars), the final collapse, and the resulting spins of the
   compact object formed.
@@ -72,7 +73,7 @@
 
 
 The overwhelming majority of massive stars is born in multiple systems
-\citep[e.g.,][]{mason:09, almeida:17}, and a large fraction will
+\citep[e.g.,][]{mason:09, almeida:17, moe:17}, and a large fraction will
 exchange mass or merge with a companion in their lifetime
 \citep[e.g.,][]{sana:12}. The most common type of interaction is a
 stable mass transfer through Roche Lobe overflow (RLOF) after the end of the donor's main sequence (case
@@ -87,16 +88,15 @@ less massive star too.
 \subsection{The importance of accretor stars}
 
 During mass transfer, the initially less massive star is expected to
-accrete mass, spin-up to critical rotation
-\citep[e.g.,][]{packet:81}, and possibly be polluted by
-nuclearly processed material from the inner core of the donor star
-\citep[e.g.,][]{blaauw:93}. The growth of
+accrete mass, spin-up to critical rotation \citep[e.g.,][]{packet:81},
+and possibly be polluted by nuclearly processed material from the
+inner core of the donor star \citep[e.g.,][]{blaauw:93}. The growth of
 the convective core due to the increased mass leads to
-``rejuvenation'' of the accretor \citep[e.g.,][]{neo:77, schneider:16}.
-
-Understanding the evolution of accretors in massive binaries has wide
-and crucial implications for stellar populations, electromagnetic
-transient observations, and gravitational-wave progenitors.
+``rejuvenation'' of the accretor \citep[e.g.,][]{neo:77,
+  schneider:16}. Understanding the evolution of accretors in massive
+binaries has wide and crucial implications for stellar populations,
+electromagnetic transient observations, and gravitational-wave
+progenitors.
 
 Accretors
 (and merger products) can appear as blue stragglers
@@ -105,29 +105,27 @@ populations, their age estimates, and their main sequence
 \citep[e.g.,][]{pols_marinus:94, wang:20} and post main sequence morphology
 \citep[e.g.,][]{wei:21}. The high spin of the
 accretor post-mass-transfer might be the dominant explanation for the origin of
-hydrogen (H) rich massive stars showing emission lines
-\citep[e.g.,][]{pols:91, bodensteiner:20,
+Oe and Be stars \citep[i.e., stars showing emission lines, e.g.,][]{pols:91, bodensteiner:20,
   vinciguerra:20, dorigo-jones:20, wang:21_sdOBe}. Rotationally-mixed accreting
-star at low metallicity might also be important for the ionizing flux of high-redshift
+stars at low metallicity might also be important for the ionizing flux of high-redshift
 galaxies \citep[e.g.,][]{eldridge:12}.
 
-The majority of massive binaries will be
-disrupted by the first supernova ejecting the companion
-\citep[``binary SN scenario'', ][]{blaauw:61, dedonder:97,
-  eldridge:11, boubert:18, renzo:19walk, evans:20}. Therefore,
-populations of field massive stars contain presently single O-type
-stars that accreted mass earlier on. A small fraction would be
-sufficiently fast to become runaway stars, but the majority of these will be too
-slow to stand out in astrometric surveys. Assuming a constant star
+After mass transfer, the majority of massive binaries will be
+disrupted by the first supernova, and eject the accretor \citep[``binary SN
+scenario'', ][]{blaauw:61, dedonder:97, eldridge:11, boubert:18,
+  renzo:19walk, evans:20}.  A small fraction of these would be
+sufficiently fast to become runaway stars, but the majority will be
+too slow to stand out in astrometric surveys. Assuming a constant star
 formation history, \cite{renzo:19walk} estimated that
 $10.1^{+4.6}_{-8.6}\%$ ($0.5^{+2.1}_{-0.5}\%$) of O-type stars could
-be slow ``walkaway'' (runaway) accretors
-ejected after the companion's SN explosion.
-
+be slow ``walkaway'' (runaway) accretors ejected after the companion's
+SN explosion.  Therefore, populations of field massive stars contain
+presently single O-type stars that accreted mass earlier on.
 
 From the transients perspective, massive accretor stars are also
-important: \cite{zapartas:19} showed that $14_{-11}^{+4}\%$ of H-rich
-(type II) SNe might come from progenitors ejected from a binary after
+important: \cite{zapartas:19} showed that $14_{-11}^{+4}\%$ of
+hydrogen (H) rich
+type II SNe might come from progenitors ejected from a binary after
 the explosion of their companion. The fact that they accreted mass before exploding can
 influence their helium (He) core mass and thus the explosion
 properties and the inferred progenitors \citep{zapartas:21}. % Some
@@ -161,22 +159,22 @@ neglect the crucial impact of rotation (e.g., \citealt{sravan:19}, but see also
 \citealt{wang:20}) and only few sparse massive models exist
 \citep[e.g.,][]{cantiello:07}.
 
-This is because of the difficulty of
-modeling accretor stars, which requires following in detail the coupled
-evolution of two rotating stars exchanging mass. Moreover, the
-admittedly large number of free parameters involved in the modeling of
-each individual star and their interactions makes robust predictions
-challenging to obtain. We emphasize that rapid population synthesis
-calculations typically cannot include the effects of binary mass
-transfer on the internal structure of the stars, and rely on the
+Modeling accretor stars requires following the coupled evolution of
+two rotating stars exchanging mass. Making robust predictions is
+challenging because of the admittedly large number of free parameters
+necessary to model each individual star and their interactions. Rapid
+population synthesis typically cannot include the effects of binary
+mass transfer on the internal structure of the stars, and rely on the
 implicit assumption that the accretor is sufficiently well described
-by a (possibly fast-rotating) single star model. % todo maybe cite
-% poseidon here
+by a (possibly fast-rotating) single star model. Here, we compute
+detailed evolutionary models of both stars in a binary and compare our
+accretor to rotating single star models to test this assumption.
+
 \subsection{A prototypical example of accretor: $\zeta$ Ophiuchi}
 
-Here, we argue that the nearest O-type star to Earth, $\zeta$
+The nearest O-type star to Earth, $\zeta$
 Ophiuchi\footnote{also known as HD\,149\,757.} (\zoph) provides a
-unique opportunity to constrain these models.  \zoph\ has a distance
+unique opportunity to constrain massive binary evolution models.  \zoph\ has a distance
 from Earth of $107\pm4$\,pc \citep[][and references
 therein]{neuhauser:20}, and a spectral type O9.5{\rm IVnn}
 \citep{sota:14}. It occasionally shows emission lines, making it an Oe
@@ -204,19 +202,18 @@ presence of a prominent bow-shock \citep[e.g.,][]{bodensteiner:18}.
 
 Because of its young apparent age, extremely fast rotation, and nitrogen
 (N) and He rich surface \citep[e.g.,][]{herrero:92, blaauw:93,
-  villamariz:05, marcolino:09}, \zoph\ is a prime example of the
-outcome of the binary SN scenario \citep{blaauw:93}. Many studies have suggested
+  villamariz:05, marcolino:09}, \zoph\ is a prime example of runaway from the binary SN scenario \citep{blaauw:93}. Many studies have suggested
 \zoph\ might have accreted mass from a companion before acquiring its
 large velocity, both from spectroscopic and kinematic considerations
 \citep[e.g.,][]{blaauw:93, hoogerwerf:00, hoogerwerf:01, tetzlaff:10,
   neuhauser:20} and using stellar modeling arguments
 \citep[e.g.,][]{vanrensbergen:96}. Recently, \cite{neuhauser:20}
-suggested that $1.78\pm0.21$\,Myr ago a supernova (SN) in
+suggested that $1.78\pm0.21$\,Myr ago a SN in
 Upper-Centaurus-Lupus produced the pulsar PSR B1706-16, ejected \zoph,
 and also injected the short-lived radioactive isotope
 $^{60}\mathrm{Fe}$ on Earth. This argues strongly for a successful
-SN explosion of the companion with a large $\sim 250\,\kms$ natal
-kick, which in most cases would be sufficient to disrupt the binary
+SN explosion of the companion with a $\sim 250\,\kms$ natal
+kick, sufficient in most cases to disrupt the binary
 \citep[e.g.,][]{tauris:15, renzo:19walk, evans:20}.
 
 Although the nature of \zoph\ as a binary product is well established,
@@ -244,10 +241,9 @@ efficient mixing might bring He and CNO-processed material to the
 surface (chemically homogeneous evolution, \citealt{maeder:00}).
 
 Given the challenges in explaining the surface composition of \zoph\
-as a rotating single star and the strong
-evidence for its past as a member of a binary system, this star offers
-a unique opportunity to constrain the evolution of accreting stars in
-massive binary systems.
+as a rotating single star and the evidence for its past as a member of
+a binary system, this star offers a unique opportunity to constrain
+the evolution of accreting stars in massive binary systems.
 
 Here, we present self-consistent binary evolution models for
 $\zeta$ Oph computing simultaneously the coupled evolution of
@@ -259,8 +255,9 @@ reproduces the majority of the salient features of this star in
 % than upward mixing from the interior of \zoph\ itself.
 We discuss the
 sensitivity of our results to the admittedly many free parameters
-required for this kind of computations in
-\Secref{sec:discussion}. Finally, we conclude in
+% required for this kind of computations
+in
+\Secref{sec:discussion}, before concluding in
 \Secref{sec:conclusions}.
 
 
@@ -276,7 +273,7 @@ rates, etc.). We follow self-consistently the coupled evolution
 of two massive stars in a binary system using \texttt{MESA} (version
 15140, \citealt{paxton:11, paxton:13, paxton:15, paxton:18,
   paxton:19}). Our choice of input parameters and our numerical
-results are available at \url{10.5281/zenodo.4701565}. We discuss here
+results are available at \todo{zenodo}. We discuss here
 only the main relevant physical parameters and describe tests changing
 some of the fiducial values in
 \Secref{sec:discussion}. Appendix~\ref{sec:software} gives more
@@ -306,11 +303,10 @@ main sequence (ZAMS) -- the beginning of our runs. For our fiducial
 period choice ($P=100$\,days), this means the stars are initially slow
 rotators: the surface averaged rotational velocity is
 $\lesssim3\,\kms$ for both. Our models include a diffusive
-approximation for meridional currents (Eddington-Sweet circulations, \citep{sweet:50}), which
+approximation for meridional currents (Eddington-Sweet circulations, \citealt{sweet:50}), which
 dominate the chemical mixing due to rotation. We also include the
 secular and dynamical shear instabilities, and the
-Goldreich-Schubert-Fricke instability, but these remain subdominant
-throughout the evolution of our models.  We assume a Spruit-Tayler
+Goldreich-Schubert-Fricke (GSF) instability.  We assume a Spruit-Tayler
 dynamo for the transport of angular momentum \citep{spruit:02}, and
 chose the same free parameters as \cite{heger:00}. This also includes
 the implicit rotational enhancement of wind mass loss to keep the
@@ -341,10 +337,9 @@ rate.
 
 Both stars are evolved simultaneously on the same timesteps until
 after the donor detaches from its Roche lobe. We follow \cite{kolb:90}
-to calculate with an implicit scheme the mass transfer rate from
-optically thick layers of the donor star during RLOF. Moreover, we
+to calculate with an implicit scheme the mass transfer rate. Moreover, we
 assume that the specific angular momentum and entropy of the
-transferred layers match the surface, while the chemical composition
+transferred layers match the surface of the accretor, while the chemical composition
 is set by the stratification of the donor star. Mass transfer is
 conservative until the accretor reaches critical rotation, after which
 rotationally-enhanced mass loss governs the mass transfer efficiency.
@@ -370,8 +365,9 @@ onwards, % At this point in time,
 we continue the evolution of the accretor as a single star until its TAMS
 with the same setup.
 
-We discuss some parameter variations for the physics of each star, the
-initial conditions, and the binary interactions in \Secref{sec:discussion}.
+%repetition
+% We discuss some parameter variations for the physics of each star, the
+% initial conditions, and the binary interactions in \Secref{sec:discussion}.
 
 \section{Massive binary evolution naturally explains $\zeta$
   Ophiuchi's properties}
@@ -418,15 +414,14 @@ $\sim7.5\,R_\odot$ to $\sim35\,R_\odot$, and only once the accretor
 reaches critical rotation (point B in the bottom panel of
 \Figref{fig:HRD_both}, roughly at the lowest $T_\mathrm{eff}$), the
 star begins contracting and its $T_\mathrm{eff}$ increases. At
-$T_\mathrm{eff}\simeq 10^{4.43}$\,K, slightly after point C, the material transferred from the
-donor star becomes progressively more He-rich and CNO-processed,
-changing the opacity in the outer-layers of the accretor and causing a
-kink in its evolutionary track. This indicates that the partially
-processed outer layers\footnote{These are left behind by the recession
-  in mass coordinate of the core during the donor's main sequence.} of
-the donor's core are uncovered by mass
-transfer. % after the convective core recession in
-% mass during the main sequence.
+$T_\mathrm{eff}\simeq 10^{4.43}$\,K, slightly after point C, the
+material transferred from the donor star becomes progressively more
+He-rich and CNO-processed, changing the opacity in the outer-layers of
+the accretor and causing a kink in its evolutionary track. This
+indicates that the partially processed outer layers\footnote{These are
+  left behind by the recession in mass coordinate of the core during
+  the donor's main sequence.} of the donor's core are uncovered by
+mass transfer.
 Thus, late during the mass transfer material at high mean molecular
 weight $\mu$ is put on top of the primordial envelope of the accretor,
 modifying the morphology of the evolutionary track.
@@ -434,14 +429,14 @@ modifying the morphology of the evolutionary track.
 Because of the inverted $\mu$ gradient, thermohaline mixing starts in
 the outer layers of the accreting star, and, together with rotational
 mixing, it progressively dilutes the surface He and N mass fractions
-and causes noisy features from point D to F on the HR diagram of the accretor
-\citep[e.g.,][]{cantiello:07}. From D to E the donor star briefly expands
-again: by point D the surface is He-rich, and partial recombination of
-He drives a convective layer which is extremely thin in mass
-($\lesssim 10^4\,M_\odot$) but can expand to significantly large
-radii\footnote{With previous \texttt{MESA} releases, we found it
-  challenging to compute our models beyond this phase: the large radius variation
-  impacts significantly the mass transfer rate.}.
+and causes noisy features from point D to F on the HR diagram of the
+accretor \citep[e.g.,][]{cantiello:07}. From D to E the donor star
+briefly expands again: by point D the surface is He-rich, and partial
+recombination of He drives a convective layer which is extremely thin
+in mass ($\lesssim 10^{-4}\,M_\odot$) but can expand to significantly
+large radii\footnote{With previous \texttt{MESA} releases, we found it
+  challenging to compute our models beyond this phase: the large
+  radius variation impacts significantly the mass transfer rate.}.
 
 We emphasize that the (standard) algorithmic choices in
 modeling mixing and rotation might impact the morphology of the
@@ -518,7 +513,7 @@ Initially, between point A and B, the mass transfer rate equals the mass accreti
 during this initial phase which lasts about $\sim{}2\times10^3$\,years. As the mass and surface rotation
 rate of the accretor increase, the assumed rotational-enhancement of
 the wind progressively increases the mass-loss rate by $\sim$5 orders
-of magnitude. The rotationally-enhanced wind
+of magnitude. The mechanically-enhanced wind
 controls the accretion efficiency, and at
 $\sim$$7.254$\,Myr (from B to C, where the red solid line and the cyan line overlap) the mass transfer becomes briefly non-conservative: the majority of the mass transferred during this phase is ejected, we assume as a fast wind from the vicinity of the accretor. Consequently, the accretor slightly spins down and starts contracting (cf.~\Figref{fig:HRD_both}).
 In the remaining evolution from C to F, the interplay between the wind mass loss rate, the spin-up due to accretion and the spin-down due to inward transport of angular momentum (see \Secref{sec:rot}) trigger oscillations in the wind mass loss rate. Nevertherless, for most of the evolution, accretion, albeit not-fully conservative, still occurs. This allows for CNO-processed material from the donor to reach the surface of the accretor during late stages of mass transfer.
@@ -566,19 +561,20 @@ bottom:
 \end{itemize}
 In each panel, the gray shaded areas highlight mass accreted during RLOF.
 The colors in \Figref{fig:D_mix} show convection (red), overshooting
-(dark blue), rotational mixing (yellow), and thermohaline mixing
+(blue), rotational mixing (yellow), and thermohaline mixing
 (pink). Rotational mixing includes all the rotational instabilities
 that we consider -- meridional currents, secular and dynamical shear instabilities,
-and Goldreich-Schubert-Fricke instability, but throughout the evolution
+and GSF instability, but throughout the evolution
 it strongly dominated by Eddington-Sweet meridional circulations,
 except at the interface between core-envelope (i.e., at the outer edge
 of the overshooting region), where the post-RLOF contraction and
-spin-up of the core (see \Secref{sec:rot}) can lead to significant dynamical shear.
+spin-up of the core (see \Secref{sec:rot}) can lead to significant
+dynamical shear (and GSF mixing to a lesser extent).
 For clarity, we do not show semiconvection
 which is never the dominant mixing process in our model.
 
 The top panel shows the typical structure of a main sequence massive star:
-the convective core initially extending to mass coordinate
+the convective core initially reaching
 $\sim$$7\,M_\odot$ with the overshooting extension to $\sim$$9\,M_\odot$. The
 slow rotation imparted by the assumed initial tidal synchronization
 causes a meridional circulation in the envelope. Meridional
@@ -598,7 +594,7 @@ In the third panel, the star has already accreted all the mass that it will, inc
 Finally, the last panel shows that as the post-RLOF evolution
 proceeds, the convection at the outer-edge of the core advances
 further and remains as a long-lived
-$\sim$$1\,M_\odot$ wide above the core, but disconnected from it. This is a consequence of core growth because of accretion, and can affect the density profile at the base of the envelope (see
+$\sim$$1\,M_\odot$ wide region above the core, but disconnected from it. This is a consequence of core growth because of accretion, and can affect the density profile at the base of the envelope (see
 also \Figref{fig:rho} for its effect on the density profile).
 
 The core growth caused by the accretion of mass, the
@@ -627,7 +623,7 @@ measured by \cite{gordon:18}, and our model has a
 $T_\mathrm{eff}\simeq31\,300$\,K, on the lower end of the range considered by
 \citetalias{villamariz:05}. On the other hand, the age of
 $8.5$\,Myr is maybe slightly lower than \zoph's
-kinematic age. The surface rotational velocity in excess
+kinematic age plus the entire donor's lifetime. The surface rotational velocity in excess
 of $350\,\kms$ is also in the correct ballpark albeit possibly on the
 low end. We discuss further rotation and angular momentum transport in
 \Secref{sec:rot}.
@@ -670,7 +666,8 @@ surprisingly satisfactory.
     colors of each profile go from dark to light at TAMS, and selected
     profiles along the main sequence are shown.  In
     the last panel, the gray area highlights mass accreted during
-    RLOF, and the black dotted profile corresponds to the black
+    RLOF, and the black dashed line corresponds to the internal
+    structure at the black
     diamond in \Figref{fig:HRD_both}. The solid red line and
     the shaded red region correspond to the mass fraction of
     $^{14}\mathrm{N}$ estimated by \citetalias{villamariz:05} assuming
@@ -716,11 +713,11 @@ surface $^{14}\mathrm{N}$ mass fraction reached at TAMS.
 
 Conversely, the $^{14}\mathrm{N}$ mass fraction profile of the
 accretor is \emph{not} monotonic throughout the evolution.  The
-profile is shaped by two main processes: (i) accretion and inward
-mixing of CNO-processed material
-from the donor star by meridional circulations and thermohaline mixing, (ii) outward
-mixing of the CNO-processed material from the accretor's core caused
-by rotational mixing triggered by the accretion-driven spin-up.
+profile is shaped by two main processes: (i) accretion of
+CNO-processed material from the donor star mixed inwards by meridional
+circulations and thermohaline mixing, (ii) outward mixing of the
+CNO-processed material from the accretor's core caused by rotational
+mixing and rejuvenation.
 
 Initially, the tidally synchronized accretor star
 rotates too slowly ($\lesssim 3\,\kms$) for significant outward rotational mixing out of
@@ -778,7 +775,7 @@ of the surface rotational frequency $\omega_\mathrm{surf}$ to $\omega_\mathrm{cr
   \caption{Equatorial surface rotational velocity (top panel) and
     $\omega/\omega_\mathrm{crit}$ (bottom panel) for the accretor model (black) and single rotating
     $20\,M_\odot$ stars (colored lines). At
-    $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to critical rotation: the dashed horizontal line in the bottom panel shows the upper-limit we impose in our runs. By the time the donor detaches from the RLOF the accretor is still spinning at
+    $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to critical rotation: the dashed horizontal line in the bottom panel shows the upper-limit we impose. By the time the donor detaches from the RLOF the accretor is still spinning at
     $\sim$$400\,\kms$. From this point (black diamonds) onwards, we
     continue the evolution as a single star, and the accretor spins
     down because of wind mass loss.  Note however that we use the wind
@@ -838,8 +835,8 @@ also \Secref{sec:single_star_uncertainties}).
     \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light
     at TAMS. The dashed black line emphasizes the profile
     corresponding to the black diamond in \Figref{fig:HRD_both}. In
-    the top panel the thin dashed red line mark the TAMS surface
-    rotation rate. In the rightmost panels, the gray areas indicate
+    the top (bottom) panel the thin dashed red line mark the TAMS surface
+    rotation rate (surface rotation frequency). In the rightmost panels, the gray areas indicate
     mass accreted during RLOF. The yellow lines (TAMS) in the last
     panel show that the core of the accretor is rotating almost as
     fast as its surface despite its much smaller radius, and both are
@@ -938,27 +935,26 @@ explosion of the companion in \Secref{sec:SN_comp}.
 
 \subsection{Uncertainties in the single-star physics}
 \label{sec:single_star_uncertainties}
-\todo{add Brott+11 discussion}
-
 % rotation
 Rotation is a critical ingredient of our models: it governs the
-equatorial radius and thus $\omega/\omega_\mathrm{crit}$
-and mass transfer efficiency (see \Secref{sec:bin_param}). Through
-Eddington-Sweet meridional circulations, rotation determines outward mixing
-from the core, and more importantly inward mixing from the surface.
-We emphasize that the shellular approximation used in one-dimensional
-stellar evolution codes might not be appropriate for
+equatorial radius and thus $\omega/\omega_\mathrm{crit}$, therefore by
+assumption it also controls the mass transfer efficiency through
+mechanical enhancement of the accretor's wind (see
+\Secref{sec:bin_param}). Through Eddington-Sweet meridional
+circulations, rotation determines outward mixing from the core, and
+more importantly inward mixing from the surface.  We emphasize that
+the shellular approximation used in one-dimensional stellar evolution
+codes might not be appropriate for
 $\omega/\omega_\mathrm{crit}\simeq 1$ reached by our accretor star
 during RLOF. Decreasing by a factor of 10 the diffusion coefficient
 for Eddington-Sweet meridional circulations has a very small effect on
 the HRD evolution of the accretor. However, the noisiness during the
-late RLOF phase (beyond point B in
-\Figref{fig:HRD_both}) increases in amplitude, confirming
-that the details of this part of the evolution are sensitive to the
-treatment of rotational mixing. We were unable to run models turning
-completely off Eddington-Sweet meridional circulations past the
-``kink'' feature in \Figref{fig:HRD_both}, and refer the readers
-to appendix~\ref{sec:res_tests} for a discussion of our numerical resolution.
+late RLOF phase (beyond point B in \Figref{fig:HRD_both}) increases in
+amplitude, confirming that the details of this part of the evolution
+are sensitive to the treatment of rotational mixing (and its interplay
+with other processes). % We were unable to run models turning completely
+% off Eddington-Sweet meridional circulations past the ``kink'' feature
+% in \Figref{fig:HRD_both}.
 
 Our models assume a Spruit-Tayler dynamo \citep{spruit:02} for the
 transport of angular momentum throughout the evolution. Adopting the
@@ -993,7 +989,7 @@ diffusivity late during the mass transfer. If fast rotation can
 physically modify thermohaline mixing processes, this might impact our
 accretor models.  We also tried models enhancing the efficiency of
 thermohaline mixing by a factor of 100 \citep{schootemeijer:19} but
-these proved too unstable when accreting CNO-processed material.
+these proved numerically unstable when accreting CNO-processed material.
 
 We have also explored models with a step overshooting following
 \cite{brott:11}. Our fiducial exponential overshooting was chosen to
