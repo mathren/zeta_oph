@@ -563,12 +563,8 @@ def MassVelocityEvolution(folder, convert=False, figName=""):
     ax.set_ylabel(r"$M \ [M_\odot]$")
     bx.set_ylabel(r"$v_2 \ [\mathrm{km\ s^{-1}}]$")
     bbx.set_ylabel(r"$P \ \mathrm{[days]}$", color="b")
-
     if figName != "":
         plt.savefig(figName)
-
-
-#
 
 
 def get_age_from_profile(pfile):
@@ -616,21 +612,13 @@ def get_profile_from_modnum(num, LOGS):
     return LOGS+'profile'+str(int(profile_num[i]))+'.data'
 
 
-def get_center_h1(pfile):
-    """ returns central value of h1 mass fraction of a profile"""
-    src, col = getSrcCol(pfile)
-    h1_center = src[-1, col.index("h1")]
-    return h1_center
-
-
-
 def plot_Dmix(pfile, ax="", legend=False):
     if ax == "":
         fig = plt.figure(figsize=(10,10))
         gs = gridspec.GridSpec(100, 100)
         ax = fig.add_subplot(gs[:, :])
     age = get_age_from_profile(pfile)
-    timestamp = f"${age:.6f}"+r"\,\mathrm{Myr}$"
+    timestamp = f"${age:.2f}"+r"\,\mathrm{Myr}$"
 
     src, col = getSrcCol(pfile)
     mass = src[:, col.index("mass")]
