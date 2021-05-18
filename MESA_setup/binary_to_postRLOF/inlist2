@@ -51,8 +51,8 @@ delta_HR_ds_Teff = 1d-5
 ! delta_HR_limit = 0.5
 ! delta_HR_hard_limit = 1
 
-max_num_profile_models = 1000
-profile_interval = 100
+max_num_profile_models = 100000
+profile_interval = 1
 photo_interval = 500
 
 

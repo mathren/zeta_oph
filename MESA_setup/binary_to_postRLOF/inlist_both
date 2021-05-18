@@ -8,7 +8,7 @@ load_saved_model = .false.
 
 change_net = .true.
 change_initial_net = .true.
-new_net_name =  "approx21_plus_co56.net" !"basic.net" ! for testing!!
+new_net_name =  "approx21_plus_co56.net"
 
 change_rotation_flag = .true.
 change_initial_rotation_flag = .true.
@@ -60,18 +60,14 @@ use_superad_reduction = .true.
 xa_central_lower_limit_species(1) = 'he4'
 xa_central_lower_limit(1) = 0.001d0
 
-max_model_number = 10000 ! for testing this is more than enough
+max_model_number = 10000
 redo_limit = 300
 
 !wind
-! use_other_wind = .true.
-! hot_wind_scheme = 'other'
-! cool_wind_RGB_scheme = 'other'
-! cool_wind_AGB_scheme = 'other'
 hot_wind_scheme = 'Dutch'
 cool_wind_RGB_scheme = 'Dutch'
 cool_wind_AGB_scheme = 'Dutch'
-Dutch_scaling_factor = 1.0 !0.8 ! from Gleebeek et al 2013
+Dutch_scaling_factor = 1.0
 mdot_omega_power = 0.43d0
 
 ! mixing
@@ -125,7 +121,7 @@ history_interval = 1
 terminal_interval = 1
 
 ! resolution
-! timesteps
+! time
 min_timestep_limit = 1e-6 !sec ! 1e-10 !to be able to reach CC
 varcontrol_target = 1d-4
 time_delta_coeff = 1.0d0
@@ -133,7 +129,7 @@ max_timestep_factor = 1.05d0
 retry_hold = 5
 min_J_div_delta_J = 50d0 ! 15d0
 
-! spatial resolution
+! space
 mesh_delta_coeff = 1.0d0 !0.8d0
 max_dq = 2d-3 ! at least 1000 zones
 max_allowed_nz = 20000

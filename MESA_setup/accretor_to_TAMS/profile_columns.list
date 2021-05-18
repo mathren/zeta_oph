@@ -559,13 +559,13 @@
 
 
 !# Oscillations
-   !brunt_N2 ! brunt-vaisala frequency squared
-   !brunt_N2_structure_term
-   !brunt_N2_composition_term
+   brunt_N2 ! brunt-vaisala frequency squared
+   brunt_N2_structure_term
+   brunt_N2_composition_term
    !log_brunt_N2_structure_term
    !log_brunt_N2_composition_term
-   !brunt_A ! = N^2*r/g
-   !brunt_A_div_x2 ! x = r(k)/r(1)
+   brunt_A ! = N^2*r/g
+   brunt_A_div_x2 ! x = r(k)/r(1)
    !brunt_N2_dimensionless ! N2 in units of 3GM/R^3
    !brunt_N_dimensionless ! N in units of sqrt(3GM/R^3)
    !brunt_frequency ! cycles per day
@@ -574,10 +574,10 @@
    !log_brunt_N2 ! log10(brunt_N2)
    !log_brunt_N2_dimensionless ! log10(brunt_N2_dimensionless)
 
-   !brunt_B ! smoothed numerical difference
-   !brunt_nonB ! = grada - gradT
-   !log_brunt_B ! smoothed numerical difference
-   !log_brunt_nonB ! = grada - gradT
+   brunt_B ! smoothed numerical difference
+   brunt_nonB ! = grada - gradT
+   log_brunt_B ! smoothed numerical difference
+   log_brunt_nonB ! = grada - gradT
 
    !sign_brunt_N2 ! sign of brunt_N2 (+1 for Ledoux stable; -1 for Ledoux unstable)
    !lamb_S2 ! for l=1: S = 2*(csound/r)^2
