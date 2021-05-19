@@ -715,7 +715,8 @@ Conversely, the $^{14}\mathrm{N}$ mass fraction profile of the
 accretor is \emph{not} monotonic throughout the evolution.  The
 profile is shaped by two main processes: (i) accretion of
 CNO-processed material from the donor star mixed inwards by meridional
-circulations and thermohaline mixing, (ii) outward mixing of the
+circulations and thermohaline mixing -- emphasized by the gray arrow
+in the last panel, (ii) outward mixing of the
 CNO-processed material from the accretor's core caused by rotational
 mixing and rejuvenation.
 
@@ -883,7 +884,10 @@ profile monotonically increasing from the center to the surface (green
 lines of the last panel in the top row). Late during mass transfer,
 the accretor achieves rigid and close to critical rotation (flat
 profiles in the last panel on the bottom row of
-\Figref{fig:struct_rot}). Rigid rotation persists for
+\Figref{fig:struct_rot}). Rigid rotation\footnote{We define rigid
+  rotation with a tolerance of
+$\Delta \omega \lesssim 10^{-2}\,\mathrm{days^{-1}}$ between the minimum and maximum
+rotational frequency throughout the star.} persists for
 $\sim10^{4}$\,years, until and beyond the black diamond in the bottom
 panel of \Figref{fig:HRD_both} where we stop the evolution in a
 binary. Afterwards, the accretor's envelope spins down
@@ -1274,28 +1278,27 @@ $\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the surface of the
 \section{Conclusions}
 \label{sec:conclusions}
 
-The impact of mass transfer on the accretor stars in massive binaries
-has received little attention so far. We have ran self-consistent
-spherically-symmetric \texttt{MESA} calculations of massive binary
-systems evolving both stars simultaneously and coupled, including
-parameter variations to test the robustness of our results to varying
-algorithmic physics.  As a first
-application, we focused on finding a model qualitatively matching
-observations of the nearest O-type star to Earth, the runaway \zoph,
-assuming its runaway nature is explained by the binary SN scenario
-\citep{blaauw:61}.
+The impact of mass transfer on the structure of the accretor stars in
+massive binaries has received little attention so far. We have ran
+self-consistent spherically-symmetric \texttt{MESA} calculations of
+massive binaries evolving two coupled stars simultaneously,
+including parameter variations to test the robustness of our results
+to varying algorithmic physics.  As a first application, we focused on
+finding a model qualitatively matching observations of the nearest
+O-type star to Earth, the runaway \zoph, assuming its runaway nature
+is explained by the binary SN scenario \citep{blaauw:61}.
 
 We found that the observed features of
 \zoph\ can broadly be reproduced with a relatively wide and massive
 binary initialized with
 $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and $P=100$\,days at metallicity
-$Z=0.01$ (see \Secref{sec:best_model}). We computed this fiducial
-model with standard stellar physics
+$Z=0.01$ (see \Secref{sec:best_model}). This fiducial
+model adopts common stellar physics
 assumptions for rotation, mixing, and mass transfer in
 binaries (see \Secref{sec:methods} and Appendix~\ref{sec:software}).
 % reproduce reasonably well the main features of \zoph.
 
-This binary system experiences stable thermal-timescale Roche lobe
+The binary experiences stable thermal-timescale Roche lobe
 overflow after the end of the main sequence of the donor (case B). About $1.5-2$\,Myrs after the end of mass
 transfer, corresponding to the remaining donor's lifetime at the end
 of our simulations plus the kinematic age of \zoph, the accretor star
@@ -1305,8 +1308,8 @@ in our model has the following quantities in the correct ballpark:
 \item Total mass;
 \item Runaway space velocity;
 \item Fast surface rotation (albeit possibly on the low side, cf.~weak wind problem);
-\item enhanced $^4\mathrm{He}$ and $^{14}\mathrm{N}$ surface mass fraction;
-\item small variations in $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$ surface mass fractions.
+\item Enhanced $^4\mathrm{He}$ and $^{14}\mathrm{N}$ surface mass fraction;
+\item Close to primordial $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$ surface mass fractions.
 \end{itemize}
 
 We emphasize that the surface composition alone would not be a smoking-gun,
@@ -1323,10 +1326,10 @@ In contrast with \cite{vanrensbergen:96}, in our model the
 $^{14}\mathrm{N}$- and $^4\mathrm{He}$-rich surface composition is not
 the result of pure outward rotational mixing.  Instead, this material
 is transferred from the receeding core of the donor star and mixed
-from the surface inwards by meridional circulations and
+from the surface inwards into the accretor by meridional circulations and
 thermohaline mixing.  Thus, the present day surface mass fractions of
 \zoph\ put a coupled constrain the mass transfer efficiency and mixing
-in the accretor. Therefore, such star should \emph{not} be used to
+in the accretor. \zoph\ should \emph{not} be used to
 calibrate models of rotational mixing in single star models.
 
 An important difference we find between our accretor model and
@@ -1337,9 +1340,9 @@ surface, and reaches to critical surface rotation
 $\omega/\omega_\mathrm{crit}\simeq 1$. This allows the accretor star
 to be simultaneously $^{14}\mathrm{N}$ rich and still fast rotating
 after the mass transfer phase, while single rotating stars spin down
-as they mix upward $^{14}\mathrm{N}$ from their core. The treatment of
-close-to-critical rotation impacts the accretion efficiency, the
-radius evolution, and the inward mixing.
+as they mix upward $^{14}\mathrm{N}$ from their core. %REPETITION % The treatment of
+% close-to-critical rotation impacts the accretion efficiency, the
+% radius evolution, and the inward mixing.
 
 Single-stars rotating rapidly from birth are initialized as
 rigid rotators, and spin down significantly both at the surface and
@@ -1418,17 +1421,17 @@ system.
 % impacts the accretion efficiency, the radius evolution, and the inward
 % mixing.
 
-An important difference we find between our accretor model and
-comparable fast-rotating single star models is their internal rotation
-profile. Single-stars rotating rapidly from birth are initialized as
-rigid rotators, and spin down significantly both at the surface and
-inside. Conversely, in our accretor models angular momentum is
-injected late and from the surface. When this angular momentum is
-transported into the core by the Spruit-Tayler dynamo, it results in a
-much faster rotating helium core, with potential implications for the
-final explosion and the resulting compact object born from the
-accretor star in an interacting binary
-system.
+% An important difference we find between our accretor model and
+% comparable fast-rotating single star models is their internal rotation
+% profile. Single-stars rotating rapidly from birth are initialized as
+% rigid rotators, and spin down significantly both at the surface and
+% inside. Conversely, in our accretor models angular momentum is
+% injected late and from the surface. When this angular momentum is
+% transported into the core by the Spruit-Tayler dynamo, it results in a
+% much faster rotating helium core, with potential implications for the
+% final explosion and the resulting compact object born from the
+% accretor star in an interacting binary
+% system.
 
 Another important difference is the density structure (cf.\ \Figref{fig:rho}):\todo{finish}
 
