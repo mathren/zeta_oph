@@ -86,8 +86,10 @@ if __name__ == "__main__":
     profiles_single = sorted(glob.glob(LOGS_single+'/profile*.data'), key=get_age_from_profile)
     profiles = profiles_bin+profiles_single
 
-    for p in profiles_bin:
-        wrapper(p)
-    for p in profiles_single:
-        wrapper(p)
+    for p in profiles_bin[::-1]:
+        if get_age_from_profile(p) > 7.2:
+            wrapper(p)
+    # for p in profiles_single[::-1]:
+    #     wrapper(p)
+    # Parallel(n_jobs=2)(delayed(wrapper)(p) for p in profiles)
     print("done!")
