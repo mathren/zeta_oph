@@ -1301,9 +1301,19 @@ assumptions for the treatment of mass transfer, chemical mixing, and
 rotation (see \Secref{sec:methods} and
 Appendix~\ref{sec:software}).
 
-Our fiducial model (see \Secref{sec:best_model}) is a binary starting with
-$M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and $P=100$\,days at metallicity
-$Z=0.01$ (see \Secref{sec:best_model}). It experiences stable thermal-timescale Roche lobe
+Our fiducial model (see \Secref{sec:best_model}) is a binary starting
+with $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and $P=100$\,days at
+metallicity $Z=0.01$ (see \Secref{sec:best_model}). We also consider
+variations in the initial parameters and in the implementation of
+physical processes, discussed in \Secref{sec:discussion}. Less massive
+accretors remain too cool throughout the evolution to be compatible
+with \zoph, and more equal initial mass ratios lead to a more evolved
+accretor at the onset of mass-transfer, again resulting in too cool
+temperatures. Increasing the donor's initial mass might result in
+stripped stars unlikely to form a neutron star in their final SN
+explosion.
+
+Our fiducial binary experiences stable thermal-timescale Roche lobe
 overflow after the end of the main sequence of the donor (case
 B). Our model of the accretor compares rather well with observations
 of \zoph\ about $1.5-2$\,Myrs after the end of mass transfer,
@@ -1347,61 +1357,6 @@ binaries and stars evolving as single throughout their life.
 \item above core structure and implications for CE
 \end{itemize}
 
-
-% The impact of mass transfer on the structure of the accretor stars in
-% massive binaries has received little attention so far. We have ran
-% self-consistent spherically-symmetric \texttt{MESA} calculations of
-% massive binaries evolving two coupled stars simultaneously,
-% including parameter variations to test the robustness of our results
-% to varying algorithmic physics.  As a first application, we focused on
-% finding a model qualitatively matching observations of the nearest
-% O-type star to Earth, the runaway \zoph, assuming its runaway nature
-% is explained by the binary SN scenario \citep{blaauw:61}.
-
-% We found that the observed features of
-% \zoph\ can broadly be reproduced with a relatively wide and massive
-% binary initialized with
-% $M_1=25\,M_\odot$, $M_2=17\,M_\odot$, and $P=100$\,days at metallicity
-% $Z=0.01$ (see \Secref{sec:best_model}). This fiducial
-% model adopts common stellar physics
-% assumptions for rotation, mixing, and mass transfer in
-% binaries (see \Secref{sec:methods} and Appendix~\ref{sec:software}).
-% % reproduce reasonably well the main features of \zoph.
-
-% The binary experiences stable thermal-timescale Roche lobe
-% overflow after the end of the main sequence of the donor (case B). About $1.5-2$\,Myrs after the end of mass
-% transfer, corresponding to the remaining donor's lifetime at the end
-% of our simulations plus the kinematic age of \zoph, the accretor star
-% in our model has the following quantities in the correct ballpark:
-% \begin{itemize}
-% \item Luminosity and effective temperature;
-% \item Total mass;
-% \item Runaway space velocity;
-% \item Fast surface rotation (albeit possibly on the low side, cf.~weak wind problem);
-% \item Enhanced $^4\mathrm{He}$ and $^{14}\mathrm{N}$ surface mass fraction;
-% \item Close to primordial $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$ surface mass fractions.
-% \end{itemize}
-
-% We emphasize that the surface composition alone would not be a smoking-gun,
-% especially given the large uncertainties in the treatment of rotation
-% and mixing in stellar evolution models. However, alternative scenarios where \zoph\
-% evolved as a single fast-rotating star require ad-hoc explanations for the runaway velocity,
-% and have been shown by \citetalias{villamariz:05} to struggle in reproducing
-% surface mass fractions, apparent age, mass, and rotation rate simultaneously.
-
-% Our model of \zoph\ differs significantly from previous studies, and
-% highlights some general differences between accretors in massive
-% binaries and stars evolving as single throughout their life.
-% In contrast with \cite{vanrensbergen:96}, in our model the
-% $^{14}\mathrm{N}$- and $^4\mathrm{He}$-rich surface composition is not
-% the result of pure outward rotational mixing.  Instead, this material
-% is transferred from the receeding core of the donor star and mixed
-% from the surface inwards into the accretor by meridional circulations and
-% thermohaline mixing.  Thus, the present day surface mass fractions of
-% \zoph\ put a coupled constrain the mass transfer efficiency and mixing
-% in the accretor. \zoph\ should \emph{not} be used to
-% calibrate models of rotational mixing in single star models.
-
 % An important difference we find between our accretor model and
 % comparable fast-rotating single star models is their internal rotation
 % profile. The spin up of the accreting star occurs late in its
@@ -1415,85 +1370,6 @@ binaries and stars evolving as single throughout their life.
 % % radius evolution, and the inward mixing.
 
 % Single-stars rotating rapidly from birth are initialized as
-% rigid rotators, and spin down significantly both at the surface and
-% inside. Conversely, in our accretor models angular momentum is
-% injected late and from the surface. When this angular momentum is
-% transported into the core by the Spruit-Tayler dynamo, it results in a
-% much faster rotating helium core, with potential implications for the
-% final explosion and the resulting compact object born from the
-% accretor star in an interacting binary
-% system.
-
-
-
-
-% \todo{
-%   \begin{itemize}
-%   % \item \zoph is well reproduced
-%   \item difference with single stars (core rotation, convective layer
-%     above the core)
-%   \item lessons for accretors in general and way forward
-%   \end{itemize}
-% }
-
-
-
-% We presented self-consistent spherically-symmetric \texttt{MESA}
-% calculations of a binary system where both stars are evolved
-% simultaneously and coupled. As a first application, we focused on
-% finding a model for \zoph, assuming its runaway nature is explained by
-% the binary SN scenario.
-
-%  This binary system experiences
-% stable thermal-timescale Roche
-% lobe overflow after the end of the main sequence of the initially more massive star
-% (case B). Standard stellar physics assumptions for modeling rotation,
-% mixing, and mass transfer in binaries (see \Secref{sec:methods} and
-% Appendix~\ref{sec:software}) reproduce reasonably well the
-% main features of \zoph. Specifically,
-% $\sim$$1.5-2$\,Myrs after the end of mass transfer, corresponding to the
-% remaining donor's lifetime at the end of our simulations plus the kinematic age of \zoph,
-% the accretor star in our model has the following quantities in the correct ballpark:
-% \begin{itemize}
-% \item Luminosity and effective temperature;
-% \item Total mass;
-% \item Runaway space velocity;
-% \item Fast surface rotation (albeit possibly on the low side, cf.~weak wind problem);
-% \item enhanced $^4\mathrm{He}$ and $^{14}\mathrm{N}$ surface mass fraction;
-% \item small variations in $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$ surface mass fractions.
-% \end{itemize}
-
-% We emphasize that the surface composition alone would not be a smoking-gun,
-% especially given the large uncertainties in the treatment of rotation
-% and mixing in stellar evolution models. However, alternative scenarios where \zoph\
-% evolved as a single fast-rotating star require ad-hoc explanations for the runaway velocity,
-% and have been shown by \citetalias{villamariz:05} to struggle in reproducing
-% surface mass fractions, apparent age, mass, and rotation rate simultaneously.
-
-% In contrast with \cite{vanrensbergen:96}, in our model the
-% $^{14}\mathrm{N}$- and $^4\mathrm{He}$-rich surface composition is not
-% the result of pure outward rotational mixing.  Instead, this material
-% is transferred from the receeding core of the donor star and mixed
-% from the surface inwards by rotation and, to a smaller degree, by
-% thermohaline mixing.  Thus, the present day surface mass fractions of
-% \zoph\ put a coupled constrain the mass transfer efficiency and mixing
-% in the accretor. Therefore, such star should \emph{not} be used to
-% calibrate models of rotational mixing in single star evolution, nor
-% its more extreme version of chemically homogeneous evolution.
-
-% The spin up of the accreting star occurs late in its evolution
-% ($t\gtrsim7.25$\,Myr for our fiducial binary) and
-% reaches to critical surface rotation
-% $\omega/\omega_\mathrm{crit}\simeq 1$. % This allows the accretor star
-% % to be simultaneously nitrogen rich and still fast rotating after the
-% % mass transfer phase.
-% The treatment of close-to-critical rotation
-% impacts the accretion efficiency, the radius evolution, and the inward
-% mixing.
-
-% An important difference we find between our accretor model and
-% comparable fast-rotating single star models is their internal rotation
-% profile. Single-stars rotating rapidly from birth are initialized as
 % rigid rotators, and spin down significantly both at the surface and
 % inside. Conversely, in our accretor models angular momentum is
 % injected late and from the surface. When this angular momentum is
