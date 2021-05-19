@@ -89,7 +89,7 @@ if __name__ == "__main__":
     for p in profiles_bin[::-1]:
         if get_age_from_profile(p) > 7.2:
             wrapper(p)
-    # for p in profiles_single[::-1]:
-    #     wrapper(p)
+    for p in profiles_single[::-1]:
+        wrapper(p)
     # Parallel(n_jobs=2)(delayed(wrapper)(p) for p in profiles)
     print("done!")
