@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from plotDefaults import *
 # plot_aux defines many auxiliary functions to make plots
 from plot_aux import *
-set_plotDefaults()
+
 
 def plot_Dmix(pfile, ax="", legend=False):
     if ax == "":
@@ -14,7 +14,7 @@ def plot_Dmix(pfile, ax="", legend=False):
         gs = gridspec.GridSpec(100, 100)
         ax = fig.add_subplot(gs[:, :])
     age = get_age_from_profile(pfile)
-    timestamp = f"${age:.5f}"+r"\,\mathrm{Myr}$"
+    timestamp = f"${age:.6f}"+r"\,\mathrm{Myr}$"
 
     src, col = getSrcCol(pfile)
     mass = src[:, col.index("mass")]
@@ -28,8 +28,8 @@ def plot_Dmix(pfile, ax="", legend=False):
     D_rot = D_mix - D_mix_non_rotation
 
     # ax.scatter(mass, D_mix, lw=10, label="$\mathrm{Total}$", c="c")
-    ax.scatter(mass, D_rot, lw=0, s=5, label="$\mathrm{Rotation}$", c='#77AADD')
-    ax.fill_between(mass, D_rot, alpha=0.75, fc='#77AADD')
+    ax.scatter(mass, D_rot, lw=0, s=5, label="$\mathrm{Rotation}$", c='#FFCE54')
+    ax.fill_between(mass, D_rot, alpha=0.75, fc='#FFCE54')
 
     ax.scatter(mass, D_ov, lw=0, s=5, label="$\mathrm{Overshooting}$", c='b')
     ax.fill_between(mass, D_ov, alpha=0.75, fc='b')
@@ -50,7 +50,7 @@ def plot_Dmix(pfile, ax="", legend=False):
     if legend:
         conv, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='r',label="$\mathrm{Convection}$")
         ov, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='b',label="$\mathrm{Overshooting}$")
-        rot, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='#77AADD',label="$\mathrm{Rotation}$")
+        rot, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='#FFCE54',label="$\mathrm{Rotation}$")
         thrm, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='#CC99BB',label="$\mathrm{Thermohaline}$")
         # semiconv, = ax.plot(np.nan, np.nan, lw=30, ls='-', c='#DDDD77',label="$\mathrm{Semiconvection}$")
         ax.legend(handles=[conv, ov, rot, thrm], loc='lower left', bbox_to_anchor= (0, 1.01), ncol=2,
@@ -77,6 +77,7 @@ def wrapper(p):
 
 
 if __name__ == "__main__":
+    set_plotDefaults()
     root = "/mnt/home/mrenzo/RUNS/zeta_ophiuchi/M1_25_M2_17_P100_Z0.01/re-run_exponential/"
     LOGS = root+"binary_to_postRLOF/LOGS2/"
     LOGS_single = root+"accretor_to_TAMS/LOGS/"
