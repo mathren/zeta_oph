@@ -41,3 +41,6 @@ manuscript/.DS_Store
 # frames of movies
 movie/*/*.png
 movie/*.png
+
+*_*
+*.DS*
