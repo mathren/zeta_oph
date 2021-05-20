@@ -39,10 +39,10 @@
   Most massive stars are born in binary systems close enough
   for mass-transfer episodes. These modify the appearance, internal
   structure, and future evolution of both stars. However,
-  self-consistent models of the accretors are rare.  The nearest
+  models of the accretors are rare.  The nearest
   O-type star to Earth, $\zeta$ Ophiuchi, has long been
   proposed to have accreted mass from a former companion, before being
-  ejected at the time of the companion's supernova
+  ejected as a runaway by the companion's supernova
   explosion. Therefore, this star provides an ideal test bed for
   models of accretors in binaries. We use % the open-source stellar
   % evolution code
@@ -81,7 +81,7 @@ B, \citealt{kippenhahn:67}).  Many
 studies %\todo{more refs. from other groups}
 have focused on the dramatic impact these interactions have on the
 donor star \citep[e.g.,][]{morton:60, yoon:17, gotberg:17, gotberg:18, laplace:20,
-  laplace:21, blagorodnova:21}. Often the binary companion is treated as a point mass.
+  laplace:21, blagorodnova:21}. Often the accreting companion is treated as a point mass.
 However, binary interactions have a crucial impact on the initially
 less massive star too.
 
@@ -119,11 +119,11 @@ too slow to stand out in astrometric surveys. Assuming a constant star
 formation history, \cite{renzo:19walk} estimated that
 $10.1^{+4.6}_{-8.6}\%$ ($0.5^{+2.1}_{-0.5}\%$) of O-type stars could
 be slow ``walkaway'' (runaway) accretors ejected after the companion's
-SN explosion.  Therefore, populations of field massive stars contain
-presently single O-type stars that accreted mass earlier on.
+SN explosion.  Therefore, presently single O-type stars that accreted
+mass earlier on contribute to the populations of field massive stars.
 
 From the transients perspective, massive accretor stars are also
-important: \cite{zapartas:19} showed that $14_{-11}^{+4}\%$ of
+important: \cite{zapartas:19} estimated that $14_{-11}^{+4}\%$ of
 hydrogen (H) rich
 type II SNe might come from progenitors ejected from a binary after
 the explosion of their companion. The fact that they accreted mass before exploding can
@@ -139,8 +139,8 @@ formation of long gamma-ray burst progenitors \citep[e.g.,][]{cantiello:07}.
 
 Finally, the majority of isolated binary evolution scenarios for
 gravitational-wave progenitors include a common-envelope
-phase. This is initiated by the originally less massive accretor,
-after the formation of the first compact object
+phase. This is initiated by the originally less massive star, who
+accretes mass from its companion before the formation of the first compact object
 \citep[e.g.,][]{belczynski:16nat, tauris:17,
   broekgaarden:21}. Therefore, it is possible that accretion of mass
 before the formation of the first compact object could modify the
@@ -237,14 +237,13 @@ stars \citep[e.g.,][]{yoon:06, perna:14}. The parent association of
 \zoph\ has a metallicity $Z=0.01\simeq Z_\odot$ \citep[based on
 asteroseismology from][]{murphy:21}, and mass estimates for \zoph\
 range from $13-25\,M_\odot$, at the lower end of the range where
-efficient mixing might bring He and CNO-processed material to the
+rotational mixing can efficiently bring He and CNO-processed material to the
 surface (chemically homogeneous evolution, \citealt{maeder:00}).
 
 Given the challenges in explaining the surface composition of \zoph\
 as a rotating single star and the evidence for its past as a member of
 a binary system, this star offers a unique opportunity to constrain
-the evolution of accreting stars in massive binary systems.
-
+the evolution of accretors in massive binaries.
 Here, we present self-consistent binary evolution models for
 $\zeta$ Oph computing simultaneously the coupled evolution of
 \emph{both} donor and accretor star and their orbit. After describing
@@ -292,15 +291,16 @@ $(f, f_0)=(4.25\times10^{-2}, 10^{-3})$ \citep{claret:17} which
 broadly reproduce the width of the main sequence from
 \cite{brott:11}. We do not use over/undershooting for off-center
 convective shells. We also use the local implicit enhancement of the
-convective flux in superadiabatic regions (\texttt{MLT--}) introduced
+convective flux in superadiabatic regions introduced
 in \texttt{MESA} 15140.
 
 We treat rotation in the ``shellular'' approximation
 \citep[e.g.,][]{zahn:92, ekstrom:12}, that is we
 assume constant rotational frequency $\omega$ along isobaric
-surfaces. Furthermore, we assume tidal synchronization at zero age
+surfaces. Furthermore, we assume tidal synchronization and rigid
+rotation at zero age
 main sequence (ZAMS) -- the beginning of our runs. For our fiducial
-period choice ($P=100$\,days), this means the stars are initially slow
+period of $P=100$\,days, this means the stars are initially slow
 rotators: the surface averaged rotational velocity is
 $\lesssim3\,\kms$ for both. Our models include a diffusive
 approximation for meridional currents (Eddington-Sweet circulations, \citealt{sweet:50}), which
@@ -323,12 +323,12 @@ this limit.
 
 
 We assume a fiducial metallicity of $Z=0.01$ informed by the
-present-day $Z$ of the parent cluster \citep{murphy:21}, and assume
-solar scaling of the relative element abundances \citep{grevesse:98}. We include wind mass loss following
+present-day $Z$ of \zoph's parent cluster \citep{murphy:21}, and assume
+the relative element abundances to scale with solar values \citep{grevesse:98}. We include wind mass loss following
 \cite{vink:00,vink:01} for effective
 temperature $T_\mathrm{eff}\gtrsim10^{4.2}$\,K, and \cite{dejager:88} for  $T_\mathrm{eff}\lesssim10^{4.2}$\,K, both with a scaling
 factor of 1. Nominally, this means our wind mass-loss rate post-mass
-transfer is overestimated by almost a factor of 100 compared to
+transfer is overestimated by about a factor of 100 compared to
 observations \citep[weak wind problem, see][]{marcolino:09}.  However,
 \cite{lucy:12} and \cite{lagae:21} proposed that the temperature
 structure of the winds of low-luminosity O-type stars might affect the
