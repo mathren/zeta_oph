@@ -866,7 +866,7 @@ hence the lighter colors in the last panels (see
 \Secref{sec:mix_comparison_single}). The gray area in the rightmost
 panels highlights matter accreted during RLOF.
 
-The thin dashed red lines in each panel of the top row of
+The thin horizontal dashed red lines in each panel of the top row of
 \Figref{fig:struct_rot} mark the TAMS surface rotation rates: all our
 single star models reach a TAMS surface
 $v_\mathrm{rot}\simeq50-60\,\kms$. Initially faster rotating models
@@ -886,29 +886,30 @@ profile monotonically increasing from the center to the surface (green
 lines of the last panel in the top row). Late during mass transfer,
 the accretor achieves rigid and close to critical rotation (flat
 profiles in the last panel on the bottom row of
-\Figref{fig:struct_rot}). Rigid rotation\footnote{We define rigid
-  rotation with a tolerance of
-$\Delta \omega \lesssim 10^{-2}\,\mathrm{days^{-1}}$ between the minimum and maximum
-rotational frequency throughout the star.} persists for
-$\sim10^{4}$\,years, until and beyond the blue diamond in the bottom
-panel of \Figref{fig:HRD_both} where we stop the evolution in a
-binary. Afterwards, the accretor's envelope spins down
+\Figref{fig:struct_rot}). At the end of our binary run (dashed blue
+line, corresponding to the blue diamonds in \Figref{fig:HRD_both}),
+the accretor is still rigidly rotating, and persists\footnote{To
+  calculate the duration, we consider rotation to be rigid
+  if the difference between the minimum and maximum
+  frequency throughout the star is $\Delta \omega \lesssim 10^{-2}\,\mathrm{days^{-1}}$.} for
+$\sim10^{4}$\,years. Afterwards, the accretor's envelope spins down
 because of winds. By the end of the main-sequence evolution of the
 accretor, the surface still spins with $v_\mathrm{rot}\simeq100\,\kms$
 (twice as fast as the single star models).
 
 Perhaps more importantly, the outer-edge of the core has a similar
-rotational velocity as the surface, and a much larger rotational frequency than the
-cores of single star models. This is because the
+rotational velocity as the surface, and a much larger rotational
+frequency than the cores of single star models. This is because the
 evolutionary contraction (decrease in $r$) of the core results in a
 significant increase of $\omega$ to conserve the angular momentum that
-cannot be efficiently transferred to the outer layers. The core-envelope interface
-of the accretor at TAMS is much more prominent than in single rotating
-stars. The faster core rotation of binary accretors spun up late and
-up to critical rotation might have important implications for the
-explosion of the initially less massive star of a binary, the
-spin of the resulting compact objects, and the analysis of
-gravitational-wave events \citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
+cannot be efficiently transferred to the outer layers. The
+core-envelope interface in the rotation profile of the accretor at
+TAMS is much more prominent than in single rotating stars. The higher
+core spin of accretors spun-up late and up to critical
+rotation might have important implications for the explosion of the
+accretors, the spin of the resulting
+compact objects, and the analysis of gravitational-wave events
+\citep[e.g.,][]{zaldarriaga:18, qin:18, callister:21}.
 
 \section{Robustness of the models and discussion}
 \label{sec:discussion}
@@ -930,7 +931,6 @@ out as binary products \citep[e.g.,][]{renzo:19walk}. Therefore, to
 inform the search for accretor stars in observed samples, it is
 also necessary to characterize the robustness of model predictions
 against numerical, physical, and algorithmic choices.
-
 In \Secref{sec:single_star_uncertainties}
 we report on exploration of parameter variations for each individual
 star in the binary. We discuss parameters governing the mass transfer phase in
