@@ -44,3 +44,5 @@ movie/*.png
 
 *_*
 *.DS*
+
+CLEAN/*
