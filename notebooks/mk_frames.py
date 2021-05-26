@@ -78,7 +78,7 @@ def wrapper(p):
 
 if __name__ == "__main__":
     set_plotDefaults()
-    root = "/mnt/home/mrenzo/RUNS/zeta_ophiuchi/M1_25_M2_17_P100_Z0.01/re-run_exponential/"
+    root = "/mnt/home/mrenzo/RUNS/zeta_ophiuchi/M1_25_M2_17_P100_Z0.01/Brott+11_ov/"
     LOGS = root+"binary_to_postRLOF/LOGS2/"
     LOGS_single = root+"accretor_to_TAMS/LOGS/"
 
