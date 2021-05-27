@@ -676,3 +676,44 @@ def get_center_h1(pfile):
     src, col = getSrcCol(pfile)
     h1_center = src[-1, col.index("h1")]
     return h1_center
+
+
+
+def get_three_colormaps(z1, z2, z3):
+    import matplotlib as mpl
+    """
+    returns three smoothly transitioning colormaps
+    covering the intervals [0, z1], [z1, z2], and [z2, z3]
+
+    parameters: z1, z2, z3 that define the edges of three color regions
+
+    returns three colormaps with their vmin, vmax, and normalizations
+    """
+    # colors that work
+    c1 = 'r'
+    c2 = 'gold'
+    c3 = 'c'
+    c4 = 'fuchsia'
+
+    cmap1 =  mpl.colors.LinearSegmentedColormap.from_list('cmap1', [c1,c2])
+    vmin1 = 0
+    vmax1 = z1
+    Ncolors1 = 10
+    bounds1 = np.linspace(vmin1, vmax1, Ncolors1)
+    norm1 = mpl.colors.BoundaryNorm(bounds1, cmap1.N)
+
+    cmap2 = mpl.colors.LinearSegmentedColormap.from_list('cmap2', [c2, c3])
+    vmin2 = vmax1
+    vmax2 = z2
+    Ncolors2 = 10
+    bounds2 = np.linspace(vmin2, vmax2, Ncolors2)
+    norm2 = mpl.colors.BoundaryNorm(bounds2, cmap2.N)
+
+    cmap3 = mpl.colors.LinearSegmentedColormap.from_list('cmap3', [c3, c4])
+    vmin3 = vmax2
+    vmax3 = z3
+    Ncolors3 = 10
+    bounds3 = np.linspace(vmin3, vmax3, Ncolors3)
+    norm3 = mpl.colors.BoundaryNorm(bounds3, cmap3.N)
+
+    return(cmap1, vmin1, vmax1, norm1, cmap2, vmin2, vmax2, norm2, cmap3, vmin3, vmax3, norm3)
