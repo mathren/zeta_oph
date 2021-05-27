@@ -1,6 +1,6 @@
 # Authors:
 #          Mathieu Renzo <mrenzo@flatironinstitute.org>
-#          Ylva Gotberg
+
 # Keywords: files
 
 # Copyright (C) 2020-2021 Mathieu Renzo
