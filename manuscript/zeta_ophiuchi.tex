@@ -376,19 +376,20 @@ with the same setup.
 
 \begin{figure}[tp]
   \includegraphics[width=0.5\textwidth]{HRD_colored}
-  \caption{HR diagram for the donor star (top) and accretor star (bottom) of
-    the progenitor binary of \zoph. Each point is separated by 50
-    years of evolution, and the part with a black outline corresponds
-    to the RLOF phase. The colors represent the stellar age, the red
-    data point shows the position of \zoph\ according to
-    \citetalias{villamariz:05}, and the
-    blue diamonds mark the end of the binary run. We
-    continue the accretor evolution as a single star from there until
-    core H depletion, hence the bottom panel shows a longer time. We
-    emphasize the different scales on the two panels. The thin gray
-    dashed line show the main sequence evolution of non-rotating
-    single stars of 15, 17, 20, 25, and 30\,$M_\odot$ at $Z=0.01$ for
-    comparison.}
+  \caption{HR diagram for the donor star (top) and accretor star
+    (bottom) of the progenitor binary of \zoph. Each point is
+    separated by 50\,years, and the black outline corresponds to the
+    RLOF phase. The colors show the age on a non-uniform scale: we use
+    smaller time-bins during RLOF
+    ($7.25\,\mathrm{Myr}\lesssim t \lesssim 7.26\,\mathrm{Myr}$).  The
+    red data point shows the position of \zoph\ according to
+    \citetalias{villamariz:05}, and the blue diamonds mark the end of
+    the binary run. We continue the accretor evolution as a single
+    star from there until core H depletion, hence the bottom panel
+    shows a longer time. We emphasize the different scales on the two
+    panels. The thin gray dashed line show the main sequence evolution
+    of non-rotating single stars of 15, 17, 20, 25, and 30\,$M_\odot$
+    at $Z=0.01$ for comparison.}
   \label{fig:HRD_both}
 \end{figure}
 
@@ -400,8 +401,19 @@ $a\simeq314\,R_\odot$) with a metallicity of $Z=0.01$.
 
 \Figref{fig:HRD_both} shows the Hertzsprung-Russell (HR) diagrams of
 both stars, the donor and accretor are shown separately on the top and
-bottom panel, respectively (see \Figref{fig:sp_test} for an HR diagram of both stars on the same scale). After $\sim$$7.24$\,Myr, the donor star evolves off the main sequence and
-$\sim8400$\,years later, at point A in \Figref{fig:HRD_both}, it overfills its Roche lobe. This results in a stable case B RLOF on a thermal timescale from point A to F (black outline of the curves). We refer to \cite{gotberg:17, klencki:20, laplace:21, blagorodnova:21} and references therein for a detailed description of the evolution of massive donor stars in binaries. Although our models are more massive, the qualitative behavior of the donor star is similar. Minor differences might arise because of mixing above and in the H-burning shell \citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with the mass transfer.
+bottom panel, respectively (see \Figref{fig:sp_test} for an HR diagram
+of both stars on the same scale). After $\sim{}7.24$\,Myr, the donor
+star evolves off the main sequence and $\sim{}8400$\,years later, at
+point A in \Figref{fig:HRD_both}, it overfills its Roche lobe. This
+results in a stable case B RLOF on a thermal timescale from point A to
+F (black outline of the curves). We refer to \cite{gotberg:17,
+  klencki:20, laplace:21, blagorodnova:21} and references therein for
+a detailed description of the evolution of massive donor stars in
+binaries. Although our models are more massive, the qualitative
+behavior of the donor star is similar. Minor differences might arise
+because of mixing above and in the H-burning shell
+\citep[e.g.,][]{schootemeijer:19, klencki:21}, and its interplay with
+the mass transfer.
 
 At the onset of RLOF (point A in \Figref{fig:HRD_both}), the accretor star is still on the main sequence with
 $T_\mathrm{eff}\simeq10^{4.5}$\,K and its central mass fraction of hydrogen is $X(^1\mathrm{H})\simeq
@@ -427,17 +439,17 @@ Thus, late during the mass transfer material at high mean molecular
 weight $\mu$ is put on top of the primordial envelope of the accretor,
 modifying the morphology of the evolutionary track.
 
-Because of the inverted $\mu$ gradient, thermohaline mixing starts in
+Because of the inverted $\mu$-gradient, thermohaline mixing starts in
 the outer layers of the accreting star, and, together with rotational
-mixing, it progressively dilutes the surface He and N mass fractions
+mixing, it progressively dilutes the surface $^4\mathrm{He}$ and $^{14}\mathrm{N}$ mass fractions
 and causes noisy features from point D to F on the HR diagram of the
 accretor \citep[e.g.,][]{cantiello:07}. From D to E the donor star
 briefly expands again: by point D the surface is He-rich, and partial
-recombination of He drives a convective layer which is extremely thin
+recombination of $^4\mathrm{He}$ drives a convective layer which is extremely thin
 in mass ($\lesssim 10^{-4}\,M_\odot$) but can expand to significantly
 large radii\footnote{With previous \texttt{MESA} releases, we found it
-  challenging to compute our models beyond this phase: the large
-  radius variation impacts significantly the mass transfer rate.}.
+  challenging to compute models beyond this phase: the large
+  increase in radius impacts significantly the mass transfer rate.}.
 
 We emphasize that the (standard) algorithmic choices in
 modeling mixing and rotation might impact the morphology of the
@@ -445,8 +457,9 @@ accretor's evolutionary track during RLOF. The entire duration of RLOF
 from A to F is only about $10^4$\,years - of the order of the thermal timescale of
 the donor star. Moreover, the accretor spends most of this time close
 to the final, post-RLOF position (blue diamond in the bottom
-panel). Therefore, the RLOF phase is unlikely to be observable to
-probe directly the accuracy of our treatment of mixing. We expand on
+panel). Therefore, it is unlikely to probe directly the accuracy of
+our treatment of mixing by observing the RLOF phase or a population of
+mass-transferring binaries. We expand on
 the mixing processes inside the accretor in \Secref{sec:mixing}.
 
 We evolve the binary system until the blue diamonds in
@@ -465,13 +478,13 @@ observed runaway velocity of \zoph.
 Accounting for both wind mass loss and the amount of mass transferred,
 at the end of RLOF the donor becomes a He star of
 $\sim$$9.4\,M_\odot$, likely to contract further. Depending on its wind mass-loss rate, the stripped donor's spectrum might show only absorption lines, only emission lines, or a mixture of both \citep[e.g.,][]{crowther:07, neugent:17, gotberg:18}. It's surface H mass fraction is $\lesssim
-0.2$ and the layer still containing H will possibly be removed by further wind mass loss \citep[e.g.,][]{gotberg:17}.
+0.2$ and the layer still containing H will possibly be removed by further wind mass loss \citep[e.g.,][]{yoon:17, gotberg:17}.
 
-After the donor detaches from its Roche lobe and contracts to a radius smaller than TAMS (blue diamonds in \Figref{fig:HRD_both}), we continue the evolution of the accretor as a single star with the same \texttt{MESA} setup until its TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly steeper slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
+After the donor detaches from its Roche lobe and contracts to a radius smaller than at TAMS (blue diamonds in \Figref{fig:HRD_both}), we continue the evolution of the accretor as a single star with the same \texttt{MESA} setup until its TAMS. The main-sequence track on which the accretor settles post-RLOF has a higher luminosity compared to the original track because of the accretion of mass, and it has also a slightly steeper slope due to the close-to-critical rotation and the accretion of partially nuclearly processed material (He- and N-rich) material.
 
 The red errorbars in the bottom panel of \Figref{fig:HRD_both} mark
 the approximate position of \zoph\ based on the spectral analysis of
-\citetalias{villamariz:05}. The color of the track in
+\citetalias{villamariz:05}. The colors of the track in
 \Figref{fig:HRD_both} indicate that our accreting star spends about
 $\sim$2\,Myr within the represented errorbars after the end of
 RLOF. Assuming the kinematic age of $1.78\pm0.21$
@@ -663,17 +676,14 @@ surprisingly satisfactory.
   \caption{$^{14}\mathrm{N}$ mass fraction as a function of mass
     coordinate for $20\,M_\odot$ single star models with increasing
     $\omega/\omega_\mathrm{crit}$ at birth (first four panels), and
-    for the accretor of our fiducial binary (last panel). In each
-    panel, the darkest flat line marks the primordial value for
-    $Z=0.01$, the dashed red line marks the surface value at TAMS. The
-    colors of each profile go from dark to light at TAMS, and selected
-    profiles along the main sequence are shown.  In
+    for the accretor of our fiducial binary (last panel). The colorbar
+    is is non-uniform and allows for more color variation during
+    RLOF. In each
+    panel, the red flat line marks the primordial value for
+    $Z=0.01$, the thin dashed black line marks the surface value at TAMS. In
     the last panel, the gray area highlights mass accreted during
-    RLOF, and the blue dashed line corresponds to the internal
-    structure at the blue
-    diamond in \Figref{fig:HRD_both}. The solid red line and
-    the shaded red region correspond to the mass fraction of
-    $^{14}\mathrm{N}$ estimated by \citetalias{villamariz:05} assuming
+    RLOF. The black errorbar in the first panel shows the surface
+    $^{14}\mathrm{N}$ of \zoph\ estimated by \citetalias{villamariz:05} assuming
     the surface mass fraction of H from \Tabref{tab:surf_prop}. The
     abundance of $^{14}\mathrm{N}$ alone is not strongly
     constraining. \Figref{fig:composition_huge} shows a similar plot
@@ -693,20 +703,15 @@ $20\,M_\odot$ stars initialized with
 $\omega/\omega_\mathrm{crit}=0.2,0.3,0.4,0.5$. Except for the initial rotation rate and
 being single, these stars have the same \texttt{MESA}
 setup as our binary model. The last panel of \Figref{fig:n14} shows
-our accretor model. The thin
-dashed lines mark the surface mass
-fraction of $^{14}\mathrm{N}$ at TAMS, while the primordial value for
-the adopted $Z=0.01$ is shown by the ZAMS profiles (dark purple).
+our accretor model.
 
-The colored tracks show selected profiles throughout the main
-sequence, with lighter colors corresponding to more evolved stars. The
-accretor model (rightmost panel) starts as a 17$\,M_\odot$ and is
-rejuvenated by binary interactions, reaching TAMS at
-11.2\,Myr. For comparison, the lifetime of a non-rotating single star
-of 17\,$M_\odot$ is $\sim$11.1\,Myr, while the initially 20\,$M_\odot$
-rotating models have a main-sequence lifetime of $\sim$9.2-9.6\,Myr (longer
-for higher initial rotation rates), hence their TAMS profile does not
-have as light a color in \Figref{fig:n14}.
+The accretor starts as a 17$\,M_\odot$ and is
+rejuvenated by binary interactions, reaching TAMS at 11.2\,Myr. For
+comparison, the lifetime of a non-rotating single star of
+17\,$M_\odot$ is $\sim$11.1\,Myr, while the initially 20\,$M_\odot$
+rotating models have a main-sequence lifetime of $\sim$9.2-9.6\,Myr
+(longer for higher initial rotation rates), hence their TAMS profile
+are a shade of purple rather than pink in \Figref{fig:n14}.
 
 The first four panels of \Figref{fig:n14} show the typical rotational
 mixing profiles: $^{14}\mathrm{N}$ rapidly rises in the core because
@@ -747,8 +752,8 @@ composition of this region and produces ``steps'' at
 the outer edge of the core (slightly outside mass coordinate
 10\,$M_\odot$).
 
-In \Figref{fig:n14}, the solid red line and red shaded area across all panels show the
-$^{14}\mathrm{N}$ from \citetalias{villamariz:05} (assuming the
+In \Figref{fig:n14}, the black errorbar in the first panel shows
+\zoph's surface $^{14}\mathrm{N}$ from \citetalias{villamariz:05} (assuming the
 surface H mass fraction from our model listed in
 \Tabref{tab:surf_prop}). The mass fraction of $^{14}\mathrm{N}$
 alone is not sufficient to distinguish between these models, and already
@@ -837,15 +842,13 @@ also \Secref{sec:single_star_uncertainties}).
     star models with increasing $\omega/\omega_\mathrm{crit}$ at birth
     (first four panels), and for the accretor of our fiducial
     binary. Bottom: internal rotational frequency profile. As in
-    \Figref{fig:n14}, the colors go from dark (close to ZAMS) to light
-    at TAMS. The blue dashed line emphasizes the profile
-    corresponding to the blue diamond in \Figref{fig:HRD_both}. In
-    the top (bottom) panel the thin dashed red line mark the TAMS surface
-    rotation rate (surface rotation frequency). In the rightmost panels, the gray areas indicate
-    mass accreted during RLOF. The yellow lines (TAMS) in the last
-    panel show that the core of the accretor is rotating almost as
-    fast as its surface despite its much smaller radius, and both are
-    faster than the surface of single star models.}
+    \Figref{fig:n14}, the colorbar is non-uniform. In the top (bottom) panel the thin dashed black
+    line mark the TAMS surface rotation rate (surface rotation
+    frequency). In the rightmost panels, the gray areas indicate mass
+    accreted during RLOF. The pink lines (TAMS) in the last panel
+    show that the core of the accretor is rotating almost as fast as
+    its surface despite its much smaller radius, and both are faster
+    than the surface of single star models.}
   \label{fig:struct_rot}
 \end{figure*}
 
@@ -861,14 +864,14 @@ velocity $v_\mathrm{rot}=\omega\times r$, while the bottom row shows
 the $\omega$ profile. As in \Figref{fig:n14}, the first four panels in
 each row show single rotating stars with increasing initial
 $\omega/\omega_\mathrm{crit}$, the last panels shows our accretor
-model, and the colors go from dark (close to ZAMS) to light
-(TAMS). Because of rejuvenation, the accretor has a longer
-main-sequence life-time compared to a star of the same final mass,
-hence the lighter colors in the last panels (see
-\Secref{sec:mix_comparison_single}). The gray area in the rightmost
-panels highlights matter accreted during RLOF.
+model. % REPETITION: Because of rejuvenation, the accretor has a longer
+% main-sequence life-time compared to a star of the same final mass,
+% hence the lighter colors in the last panels (see
+% \Secref{sec:mix_comparison_single}).
+% The gray area in the rightmost
+% panels highlights matter accreted during RLOF.
 
-The thin horizontal dashed red lines in each panel of the top row of
+The thin horizontal dashed black lines in each panel of the top row of
 \Figref{fig:struct_rot} mark the TAMS surface rotation rates: all our
 single star models reach a TAMS surface
 $v_\mathrm{rot}\simeq50-60\,\kms$. Initially faster rotating models
@@ -880,7 +883,7 @@ progressive development of a core-envelope interface.
 
 Conversely, the last panel shows that the entire interior of the
 accretor has a negligible rotational velocity until RLOF (starting at
-$7.25$\,Myr). Because of binary interactions, the accretor is spun up
+$\sim{}7.25$\,Myr). Because of binary interactions, the accretor is spun up
 late in its evolution, up to critical rotation
 $\omega/\omega_\mathrm{crit}\simeq1$, and from the surface. In our
 model, inward transport of angular momentum creates a $v_\mathrm{rot}$
@@ -1427,6 +1430,7 @@ systems.
   \texttt{mesaPlot} \citep{mesaplot},
   \texttt{NumPy} \citep{numpy}.
 }
+
 \acknowledgements{We are grateful to E.~Zapartas, A.~Jermyn,
   M.~Cantiello, and R.~Neuh\"auser for helpful discussions.}
 
