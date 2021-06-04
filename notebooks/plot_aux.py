@@ -18,6 +18,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see http://www.gnu.org/licenses/.
 
+__author__ = ['Mathieu Renzo <mrenzo@flatironinstitute.org']
+
+
 import sys
 
 # the line below import stuff from git@github.com:mathren90/plotFunc.git
