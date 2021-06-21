@@ -2,3 +2,4 @@
 authors: [[mailto:mrenzo@flatironinstitute.org][Mathieu Renzo]], Ylva Goetberg
 
 Code for reproducing the numerical results of [arXiv:].
+We used [[http://mesa.sourceforge.net/][MESA]] version r15140 with the [[http://www.astro.wisc.edu/~townsend/static.php?ref=mesasdk][MESA SDK]] x86_64-linux-20.12.1.
