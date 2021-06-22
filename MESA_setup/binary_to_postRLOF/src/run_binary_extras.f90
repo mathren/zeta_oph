@@ -189,7 +189,7 @@
          end if
 
          ! find donor's TAMS
-         if ((b% s_donor% xa(ih1, b% s_donor% nz) < 1d-4) .and. &
+         if ((b% s_donor% xa(b% s_donor% net_iso(ih1), b% s_donor% nz) < 1d-4) .and. &
               (b% lxtra(1) .eqv. .false.)) then
             b% lxtra(1) =.true.
             b% xtra(1) = b% s_donor% r(1)
