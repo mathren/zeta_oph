@@ -45,4 +45,4 @@ movie/*.png
 *_*
 *.DS*
 
-CLEAN/*
+CLEAN/*.tar.xz
