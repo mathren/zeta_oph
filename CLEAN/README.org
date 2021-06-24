@@ -1,0 +1,51 @@
+Each tarball contains the MESA input files (=inlists= and
+=src/run_star_extras.f=, =src/run_binary_extra.f=), the output, and checkpoints across the evolution.
+The numerical results (selected =profiles= files, and =history= files) are
+also included, together with =pgstar= plots (inside =png/=).
+
+The simulations were computed with MESA version 15140.
+
+* fiducial.tar.xz
+
+  Contains the fiducial model described in Sec. 3 (M1=25Msn,
+  M2=17Msun, P=100, Z=0.01)
+
+* AM_accretion.tar.xz
+
+  Contains the model following de Mink et al. 2013 for the spin up
+
+* donor30Msun.tar.gz
+
+  Contains the model with M1=30Msun (the rest being equal to the fiducial
+  model)
+
+* period75days.tar.xz
+
+  Contains the model with P=75days (the rest being equal to the fiducial
+  model)
+
+* Z_0.0142.tar.xz
+
+  Contains the model with Z=0.0142 (the rest being equal to the fiducial
+  model)
+
+* lower_ES_mixing.tar.xz
+
+  Contains the model reducing the efficiency of Eddington-Sweet
+  circulations by a factor of 10 compared to the fiducial model, down
+  to 0.033.
+
+* single_stars.tar.xz
+
+  Contains all the single stars shown in the paper: non-rotating stars
+  of varying mass (dashed gray lines in Fig. 1), and rotating stars of
+  20Msun with varying initial rotation rates.
+
+* space_res.tar.xz
+
+  Contains the higher spatial resolution models from appendix A (only
+  binary evolution)
+
+* mix_movie.mp4
+
+  Movie of the mixing processes inside the accretor star (cf. Fig. 4)
