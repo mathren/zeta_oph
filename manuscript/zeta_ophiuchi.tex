@@ -257,11 +257,10 @@ reproduces the majority of the salient features of this star in
 We discuss the
 sensitivity of our results to the admittedly many free parameters
 % required for this kind of computations
-in
-\Secref{sec:discussion}, before concluding in
+in \Secref{sec:discussion}, before concluding in
 \Secref{sec:conclusions}.
 
-
+\newpage
 
 \section{Modeling massive binaries with \texttt{MESA}}
 \label{sec:methods}
@@ -777,6 +776,39 @@ models to reach the lower-limit of the error bar.
 \subsection{Angular momentum transport and surface rotation}
 \label{sec:rot}
 
+\begin{figure}[tbp]
+  \includegraphics[width=0.5\textwidth]{zeta_rot}
+  \caption{Equatorial surface rotational velocity (top panel) and
+    $\omega/\omega_\mathrm{crit}$ (bottom panel) for the accretor model (black) and single rotating
+    $20\,M_\odot$ stars (colored lines). At
+    $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to critical rotation: the dashed horizontal line in the bottom panel shows the upper-limit we impose. By the time the donor detaches from the RLOF the accretor is still spinning at
+    $\sim$$400\,\kms$. From this point (blue diamonds) onwards, we
+    continue the evolution as a single star, and the accretor spins
+    down because of wind mass loss.  Note however that we use the wind
+    mass-loss rate from \cite{vink:01}, which might be $\sim$2 orders
+    of magnitude too high for \zoph\ \citep{marcolino:09}.}
+  \label{fig:surf_rot}
+\end{figure}
+
+\begin{figure*}[tbp]
+  \centering
+  \includegraphics[width=\textwidth]{zeta_Rotational_struct_colored}
+  \includegraphics[width=\textwidth]{omega_struct_colored}
+  \caption{Top: Internal rotational profile for $20\,M_\odot$ single
+    star models with increasing $\omega/\omega_\mathrm{crit}$ at birth
+    (first four panels), and for the accretor of our fiducial
+    binary. Bottom: internal rotational frequency profile. As in
+    \Figref{fig:n14}, the colorbar is non-uniform. In the top (bottom) panel the thin dashed black
+    line mark the TAMS surface rotation rate (surface rotation
+    frequency). In the rightmost panels, the gray areas indicate mass
+    accreted during RLOF. The pink lines (TAMS) in the last panel
+    show that the core of the accretor is rotating almost as fast as
+    its surface despite its much smaller radius, and both are faster
+    than the surface of single star models.}
+  \label{fig:struct_rot}
+\end{figure*}
+
+
 One of the main distinguishing features of \zoph\ is its extremely
 high surface rotation rate.
 The black line in the top panel of \Figref{fig:surf_rot} shows the
@@ -793,22 +825,6 @@ $v_\mathrm{eq}$ for single rotating
 $20\,M_\odot$ stars of varying initial
 $\omega/\omega_\mathrm{crit}$.  The bottom panel of \Figref{fig:surf_rot} shows instead the ratio
 of the surface rotational frequency $\omega_\mathrm{surf}$ to $\omega_\mathrm{crit}$.
-
-\begin{figure}[tbp]
-  \includegraphics[width=0.5\textwidth]{zeta_rot}
-  \caption{Equatorial surface rotational velocity (top panel) and
-    $\omega/\omega_\mathrm{crit}$ (bottom panel) for the accretor model (black) and single rotating
-    $20\,M_\odot$ stars (colored lines). At
-    $\sim$7.25\,Myr the mass transfer quickly spins up the accretor to critical rotation: the dashed horizontal line in the bottom panel shows the upper-limit we impose. By the time the donor detaches from the RLOF the accretor is still spinning at
-    $\sim$$400\,\kms$. From this point (blue diamonds) onwards, we
-    continue the evolution as a single star, and the accretor spins
-    down because of wind mass loss.  Note however that we use the wind
-    mass-loss rate from \cite{vink:01}, which might be $\sim$2 orders
-    of magnitude too high for \zoph\ \citep{marcolino:09}.}
-  \label{fig:surf_rot}
-\end{figure}
-
-
 
 The initial binary is wide enough that assuming tidal synchronization
 at ZAMS implies a very low $v_\mathrm{eq}\lesssim 3\,\kms$. At 7.25\,Myr, RLOF rapidly spins
@@ -844,26 +860,7 @@ that an accreting star modeled with lower wind-mass loss rate
 post-RLOF would retain an even higher surface rotation for longer (see
 also \Secref{sec:single_star_uncertainties}).
 
-
 \subsubsection{Comparison to single fast-rotating stars}
-
-\begin{figure*}[tbp]
-  \centering
-  \includegraphics[width=\textwidth]{zeta_Rotational_struct_colored}
-  \includegraphics[width=\textwidth]{omega_struct_colored}
-  \caption{Top: Internal rotational profile for $20\,M_\odot$ single
-    star models with increasing $\omega/\omega_\mathrm{crit}$ at birth
-    (first four panels), and for the accretor of our fiducial
-    binary. Bottom: internal rotational frequency profile. As in
-    \Figref{fig:n14}, the colorbar is non-uniform. In the top (bottom) panel the thin dashed black
-    line mark the TAMS surface rotation rate (surface rotation
-    frequency). In the rightmost panels, the gray areas indicate mass
-    accreted during RLOF. The pink lines (TAMS) in the last panel
-    show that the core of the accretor is rotating almost as fast as
-    its surface despite its much smaller radius, and both are faster
-    than the surface of single star models.}
-  \label{fig:struct_rot}
-\end{figure*}
 
 To illustrate the angular momentum transport in our accretor stars, it
 is again helpful to compare with single rotating $20\,M_\odot$
@@ -1446,8 +1443,8 @@ systems.
   \texttt{NumPy} \citep{numpy}.
 }
 
-% \acknowledgements{We are grateful to E.~Zapartas, A.~Jermyn,
-%   M.~Cantiello, R.~Neuh\"auser, and B.~D.~Metzger for helpful discussions.}
+\acknowledgements{We are grateful to E.~Zapartas, A.~Jermyn,
+  M.~Cantiello, R.~Neuh\"auser, and B.~D.~Metzger for helpful discussions.}
 
 \appendix
 
