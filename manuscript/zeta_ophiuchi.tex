@@ -27,12 +27,6 @@
 
 \graphicspath{{./figures/}}
 
-% With a name of a star in the title, I worry that it will be easy to
-% glance over this paper, it may look more like a model of yet another
-% star type of paper - this is more unique than that \title{Accretor
-% stars in massive binaries: testing models on $\zeta$ Ophiuchi} % I
-% DON'T CARE IF PEOPLE DON'T WANT TO READ. To bad for them. If I
-% wanted to work in marketing I could work for google.
 \title{Evolution of accretor stars in massive binaries: broader
   implications from modeling $\zeta$ Ophiuchi}
 
@@ -71,7 +65,7 @@
   further evolution (either in a binary or as single stars), the final
   collapse, and the resulting spins of the compact object.
 \end{abstract}
-\vspace*{-50pt}
+
 \keywords{stars: individual: $\zeta$ Ophiuchi  -- stars: massive --
   stars: binaries} %% check keywords exist
 
@@ -259,11 +253,15 @@ the evolution of accretors in massive binaries.  Here, we present
 self-consistent binary evolution models of the coupled evolution of
 both stars and their orbit. After describing our \texttt{MESA} setup
 in \Secref{sec:methods}, we present a model which reproduces the
-majority of the salient features of \zoph\ in \Secref{sec:best_model}
-and compare it extensively to fast rotating single star models. We
-discuss the sensitivity of our results to the many free parameters in
-\Secref{sec:discussion}, before concluding in
-\Secref{sec:conclusions}. \todo{check structure}
+majority of the salient features of \zoph\ in
+\Secref{sec:best_model}. We show the binary mass transfer evolution in
+\Secref{sec:MT}, before focusing on the accretor's rotational
+evolution in \Secref{sec:rot} (compared to single stars in
+\Secref{sec:rot_comparison_single}), and its internal mixing processes
+in \Secref{sec:mixing} (again compared to single star models in
+\Secref{sec:mix_comparison_single}). We discuss the sensitivity of our
+results to the many free parameters in \Secref{sec:discussion}, before
+concluding in \Secref{sec:conclusions}.
 
 
 \section{Modeling massive binaries with \texttt{MESA}}
@@ -563,42 +561,28 @@ scatter of the region, and the unknown systematics in age
 measurements, we consider our model broadly compatible with the
 existing constraints.
 
-\todo{smooth below}
-After presenting the evolution of the masses and mass transfer rate in
-\Secref{sec:MT}, we discuss in \Secref{sec:rot} the internal and
-surface rotation of our accretor model, and in \Secref{sec:mixing} its
-composition. As a brief summary, the accretor in our binary accretes
-about 3.4\Msun\ material during mass transfer (out of
-$\sim 10.6$\Msun\ total transferred). This causes rejuvenation and
-comparing to the single stellar tracks in the HR diagram
-(\Figref{fig:HRD_both}) the star appears to be X Myr after detachment,
-instead of the actual 7.3 Myr. After detachment, the core and the
-envelope are disconnected and the core rigidly rotates rapidly at a
-roughly constant spin rate until TAMS, while the envelope spins down
-but also rotates rigidly. } \YG{Here, I am thinking we can check what
-is the age of the 20\Msun single star model that the track overlaps
-with at detachment. }
-
- As a brief summary of the results presented there, we
-find that both the surface rotation and surface composition of \zoph\
-are more easily explained by our accretor model than by single
-rotating stellar models.
-
-The accretor starts as a
-17$\,M_\odot$ and is rejuvenated by binary interactions (see
-\Secref{sec:mixing}), reaching TAMS at 11.2\,Myr. For comparison, the
+We discuss in detail the mass and mass-transfer evolution in
+\Secref{sec:MT}, the internal and surface rotation in
+\Secref{sec:rot}, and the chemical composition in
+\Secref{sec:mixing}. As a summary, the accretor in our binary starts
+as a 17$\,M_\odot$ and accretes about 3.4\Msun\ material during mass
+transfer (out of $\sim 10.6$\Msun\ total transferred). This causes
+rejuvenation, and our accretor reaches TAMS 11.2\,Myr. For comparison, the
 lifetime of a non-rotating single star of 17\,$M_\odot$ is
 $\sim$11.1\,Myr, while the initially 20\,$M_\odot$ rotating models
 have a main-sequence lifetime of $\sim$9.2-9.6\,Myr (longer for higher
-initial rotation rates), hence their TAMS profile are
-purple rather than pink in \Figref{fig:struct_rot}.
-
-
+initial rotation rates). After mass the mass transfer, the accretor
+star spins rapidly (see \Secref{sec:surf_rot}), and its surface
+composition is determined by the accretion of material from the
+donor's core progressively mixed inwards (see
+\Secref{sec:surf_comp}). We find that the rotation and surface
+composition of \zoph\ are more easily explained by accretor models
+than single rotating stars (e.g., \citetalias{villamariz:05}).
 
 \section{Mass and mass transfer rate evolution}
 \label{sec:MT}
 
-\begin{figure}[htbp]
+\begin{figure}[bp]
   \includegraphics[width=0.47\textwidth]{MT}
   \caption{The top panel shows the total mass of each star as a
     function of time during RLOF. The middle and bottom panel show the
@@ -668,7 +652,28 @@ until the donor completely detaches from its Roche lobe at point F.
 
 \section{Rotation and angular momentum transport in the accretor}
 \label{sec:rot}
+
 \subsection{Surface rotation}
+\label{sec:surf_rot}
+
+\begin{figure}[tbp]
+  \includegraphics[width=0.5\textwidth]{zeta_rot}
+  \caption{Equatorial surface rotational velocity (top panel) and
+    $\omega/\omega_\mathrm{crit}$ (bottom panel) for the accretor
+    model (black) and single rotating $20\,M_\odot$ stars (colored
+    lines). At $\sim{}7.25$\,Myr the mass transfer quickly spins up
+    the accretor to critical rotation: the dashed horizontal line in
+    the bottom panel shows the upper-limit we impose. By the time the
+    donor detaches from the RLOF the accretor is still spinning at
+    $\sim{}400\,\kms$. From this point (diamonds) onwards, we continue
+    the evolution as a single star, and the accretor spins down
+    because of wind mass loss.  Note however that we use the wind
+    mass-loss rate from \cite{vink:01}, which might be $\sim$2 orders
+    of magnitude too high for \zoph\ \citep{marcolino:09}.}
+  \label{fig:surf_rot}
+\end{figure}
+
+
 
 Rapid rotation is one of the main properties expected as a result of
 spin up due to mass accretion \citep{packet:81}.  One of the main
@@ -699,25 +704,6 @@ $\omega/\omega_\mathrm{crit}\simeq 0.95$ (dashed horizontal line in
 the bottom panel of \Figref{fig:surf_rot}), which is the upper-limit
 we impose in our models (see \Secref{sec:methods}).
 
-
-\begin{figure}[bp]
-  \includegraphics[width=0.5\textwidth]{zeta_rot}
-  \caption{Equatorial surface rotational velocity (top panel) and
-    $\omega/\omega_\mathrm{crit}$ (bottom panel) for the accretor
-    model (black) and single rotating $20\,M_\odot$ stars (colored
-    lines). At $\sim{}7.25$\,Myr the mass transfer quickly spins up
-    the accretor to critical rotation: the dashed horizontal line in
-    the bottom panel shows the upper-limit we impose. By the time the
-    donor detaches from the RLOF the accretor is still spinning at
-    $\sim{}400\,\kms$. From this point (diamonds) onwards, we continue
-    the evolution as a single star, and the accretor spins down
-    because of wind mass loss.  Note however that we use the wind
-    mass-loss rate from \cite{vink:01}, which might be $\sim$2 orders
-    of magnitude too high for \zoph\ \citep{marcolino:09}.}
-  \label{fig:surf_rot}
-\end{figure}
-
-
 The star remains fast rotating throughout the mass transfer phase, and
 the remaining evolution in a binary which ends at the black diamond in
 \Figref{fig:surf_rot} (corresponding to the blue diamonds in
@@ -739,8 +725,10 @@ agreement with the observationally constrained values for typical Oe
 and Be stars \citep[see][for a review]{rivinius:13}.
 
 Close to the end of the main sequence, the increase in wind mass loss
-rate strengthens the surface spin-down. This effect is also seen in
-the late main-sequence evolution of single stars rotating rapidly at
+rate as the stars cross the bistability jump \citep[due to iron recombination
+at $T_\mathrm{eff}\simeq25\,000\,\mathrm{K}$, e.g.,][]{vink:00}
+strengthens the surface spin-down. This effect is also seen in the
+late main-sequence evolution of single stars rotating rapidly at
 birth.
 
 \Figref{fig:surf_rot} shows that our model retains a significant
@@ -768,6 +756,7 @@ also \Secref{sec:single_star_uncertainties}).
 
 \subsection{Internal rotation -- comparison to
   single stars}
+\label{sec:rot_comparison_single}
 
 \begin{figure*}[tbp]
   \centering
@@ -1020,7 +1009,7 @@ neglected the impact of previous RLOF phase(s) on the density
 structure of the stars initiating the dynamically unstable mass
 transfer.
 
-\begin{figure*}[htbp]
+\begin{figure*}[tbp]
   \centering
   \includegraphics[width=\textwidth]{n14_colored} % struct_complete_zeta_ab
   \caption{$^{14}\mathrm{N}$ mass fraction as a function of mass
@@ -1042,7 +1031,6 @@ transfer.
 \end{figure*}
 
 \subsection{Internal composition profile -- comparison to single stars}
-
 \label{sec:mix_comparison_single}
 
 We now compare the composition profiles in our accretor and in single
@@ -1096,10 +1084,8 @@ homogenizes the composition of this region and produces ``steps'' at
 the outer edge of the core (slightly outside mass coordinate
 10\,$M_\odot$).
 
-\subsection{Comparison to \zoph}
-
-\todo{this section is now floating}
-% Table containing ??
+\subsection{Comparison to \zoph's composition, radius, and rotation rate}
+\label{sec:surf_comp}
 \input{table.tex}
 
 
@@ -1120,9 +1106,7 @@ is~$20\,M_\odot$ and $8.3\pm1.5\,R_\odot$, respectively. Our radius of
 $9.8\,R_\odot$ is larger by $\sim0.6\,R_\odot$ than the equatorial
 radius recently measured by \cite{gordon:18}, and our model has a
 $T_\mathrm{eff}\simeq31\,300$\,K, on the lower end of the range
-considered by \citetalias{villamariz:05}. On the other hand, the age
-of $8.5$\,Myr is maybe slightly lower than the estimate for \zoph's
-age (the kinematic age plus the entire donor's lifetime). The surface
+considered by \citetalias{villamariz:05}. The surface
 rotational velocity in excess of $350\,\kms$ is also in the correct
 ballpark albeit possibly on the low end.
 
@@ -1174,10 +1158,10 @@ accretor stars in observed samples, it is also necessary to
 characterize the robustness of model predictions against numerical,
 physical, and algorithmic choices.  In
 \Secref{sec:single_star_uncertainties} we report on exploration of
-parameter variations for each individual star in the binary. We
-discuss parameters governing the mass transfer phase in
-\Secref{sec:bin_param}, the initial binary architecture in
-\Secref{sec:bin_init}, and the consequences of the assumed SN
+parameter variations for each individual star in the binary and our
+single star models. We
+discuss parameters governing the binary evolution
+\Secref{sec:bin_param}, and the consequences of the assumed SN
 explosion of the companion in \Secref{sec:SN_comp}.
 
 
@@ -1260,7 +1244,6 @@ chemical profile at the outer edge of the core, and the morphology of
 the evolutionary tracks during late RLOF.
 
 \paragraph{Stellar winds}
-% weak wind
 \zoph\ is one of the low-luminosity O-type stars for which
 \cite{marcolino:09} found a lower-than-predicted wind mass loss rate.
 To address the ``weak wind problem'', we also attempted running models
@@ -1273,6 +1256,18 @@ problem'' is not currently known, but \cite{lucy:12} and
 underestimated, suggesting that the theoretically motivated hot star
 wind mass loss rate might still be appropriate to model low luminosity
 O-type stars.
+
+Our models use the \cite{vink:00} mass-loss rate on the main sequence,
+which includes the enhancement due to the bistability jump at
+$T_\mathrm{eff}\simeq25\,000\,\mathrm{K}$. This results in the
+dramatic increase in the surface spin down at late times in
+\Figref{fig:surf_rot}. However, the mass-loss (and consequently
+spin-down) enhancement at the bistability jump has recently been
+questioned by \cite{bjorklund:21}. If such enhancement does not occur,
+it is possible our models would retain a higher surface rotation rate,
+and higher $\omega/\omega_\mathrm{crit}$. This would influence in a
+similar way our single star models and our accretor, suggesting the
+relative comparison between these models would still remain valid.
 
 \paragraph{Metallicity}
 %metallicity
@@ -1300,11 +1295,7 @@ radii and cooler $T_\mathrm{eff}$ at a given luminosity. This still
 produces a stable case B RLOF, however, matching the high present-day
 $T_\mathrm{eff}=32\,000\pm2\,000$ of \zoph\ (e.g.,
 \citetalias{villamariz:05}) requires more massive and hotter accretors
-at higher $Z$ (see also \Secref{sec:bin_init}).
-
-% While the number of free parameters resulting in a successful
-% computation is rather limited, we emphasize that this remains often
-% true for calculation of single massive star evolution.
+at higher $Z$ (see also \Secref{sec:bin_param}).
 
 \subsection{Uncertainties in the treatment of mass transfer}
 \label{sec:bin_param}
@@ -1416,38 +1407,26 @@ semiconvection, shear) in their models, which impedes the growth of
 the core. In our models, the growth of the core is initially driven by
 convection and overshooting, and to a lesser extent to dynamical
 shear, while the off-center convective layer of \Figref{fig:D_mix} and
-\Figref{fig:rho} does not contribute to the inward mixing of H-rich
-material and the rejuvenation itself. We cannot exclude that in the
-presence of a strong shell undershooting that convective layer would
-also mix efficiently with the core, enhancing further the rejuvenation
-effect
-
-\todo{smooth below or cut}
-
-The core growth caused by the accretion of mass, the consequent
-ingestion in the burning region of fresh H-rich material, and the
-resulting rejuvenation of the accretor are strongly dependent on the
-presence of convective boundary mixing. In our model, this is
-initially provided by overshooting and to a lesser extent dynamical
-shear (between the top and second panel of \Figref{fig:D_mix})
+\Figref{fig:rho} does not contribute significantly to the inward
+mixing of H-rich material and the rejuvenation itself. We cannot
+exclude that in the presence of a strong shell undershooting that
+convective layer would also mix efficiently with the core, enhancing
+further the rejuvenation effect
 
 
-\subsection{Comparing to \zoph}
-\subsubsection{Variations of initial binary parameters}
-\label{sec:bin_init}
-
+\paragraph{Initial binary parameters}
 The initial donor mass $M_1$, mass ratio $q\equiv M_2/M_1$, and the
 period of the progenitor binary of \zoph\ cannot be directly
-constrained from observations. We have explored variation in these
-values, and the qualitative behavior of the models is similar.
-Shorter initial periods results in larger post-RLOF orbital
-velocities, and thus larger runaway velocities if the binary is
-disrupted at the first SN (see \Secref{sec:SN_comp}). For example,
-taking $P$=75\,days (cf.\ 100\,days in our fiducial model), the binary
-still experiences stable case B mass transfer, but the post-RLOF
-orbital velocity of the accretor is about $60\,\kms$, that is
-$\sim{}10\,\kms$ higher than in our fiducial model, because of the
-larger orbital velocity in the tighter binary system.
+constrained from observations. We have explored variation in these,
+and the qualitative behavior of the models is similar.  Shorter
+initial periods results in larger post-RLOF orbital velocities, and
+thus larger runaway velocities if the binary is disrupted at the first
+SN (see \Secref{sec:SN_comp}). For example, taking $P$=75\,days (cf.\
+100\,days in our fiducial model), the binary still experiences stable
+case B mass transfer, but the post-RLOF orbital velocity of the
+accretor is about $60\,\kms$, that is $\sim{}10\,\kms$ higher than in
+our fiducial model, because of the larger orbital velocity in the
+tighter binary system.
 
 Increasing the donor mass also has a similar effect on the post-RLOF
 orbital velocity of the accretor. Using $M_1=30\,M_\odot$ (cf.\
@@ -1478,7 +1457,7 @@ produce an accretor that is too evolved and cool at the onset of mass
 transfer).
 
 
-\subsubsection{The explosion of the donor star}
+\subsection{The explosion of the donor star}
 \label{sec:SN_comp}
 
 Throughout this study, we have assumed the ``binary SN scenario'' to
@@ -1502,12 +1481,8 @@ will decrease further in the remaining time to the donor's
 core-collapse \citep{kalogera:96, tauris:15}.
 
 The SN ejecta mass would depend on the post-RLOF wind mass loss of our
-donor star, which is very uncertain \citep[e.g.,][]{renzo:17, vink:17,
-  gilkis:19}. \YG{Vink 2017 and Gilkis+19 don't say that the wind mass
-  loss rate for stripped stars are uncertain, but they create/use a
-  new prescription for wind mass loss rate. I would suggest a simple
-  change to "for a comparison of different wind mass loss rates, see
-  Gilkis+19". } At the end of our binary evolution simulation, our
+donor star, which is uncertain \citep[see also][]{renzo:17, vink:17,
+  gilkis:19, sander:20}. At the end of our binary evolution simulation, our
 stripped donor is $\sim{}9.4\,M_\odot$, with a surface H fraction of
 $X\lesssim0.2$ for a layer of $\Delta M \simeq 2.5\,M_\odot$.  Its
 wind mass-loss rate is $\sim10^{-5}\,M_\odot \mathrm{yr^{-1}}$,
@@ -1604,20 +1579,11 @@ smoking-gun of a past in a binary, especially given the large
 uncertainties in the treatment of rotation and mixing in stellar
 evolution models. In our models, the accretion of $^{14}\mathrm{N}$
 from the donor star allows the accretor star to be simultaneously fast
-rotating and $^{14}\mathrm{N}$-rich, while single rotating stars can
-only mix upward $^{14}\mathrm{N}$ from their core, and have
-significantly spun down by the time they become
-$^{14}\mathrm{N}$-rich. \YG{I am not convinced by this argument -
-  looking at \Figref{fig:n14}, the fast rotating single stars seem to
-  have enriched surfaces already after 4Myr or so (second line in the
-  diagram, orange color), then their surfaces become slightly more
-  enriched with time, but not much. From the veq-t diagram, it doesn't
-  seem to me that they are spun down at that time.  } Moreover,
-alternative scenarios where \zoph\ evolved as a single, fast-rotating
-star require ad-hoc explanations for the runaway velocity, and have
-been shown by \citetalias{villamariz:05} to struggle in reproducing
-surface mass fractions, apparent age, mass, and rotation rate
-simultaneously.
+rotating and $^{14}\mathrm{N}$-rich. Alternative scenarios where
+\zoph\ evolved as a single, fast-rotating star require ad-hoc
+explanations for the runaway velocity, and have been shown by
+\citetalias{villamariz:05} to struggle in reproducing surface mass
+fractions, apparent age, mass, and rotation rate simultaneously.
 
 The surface rotation rate of the accretor post-mass-transfer is always
 higher than the rotation rate of single stars initialized with
