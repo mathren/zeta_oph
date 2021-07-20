@@ -3,3 +3,249 @@ authors: [[mailto:mrenzo@flatironinstitute.org][Mathieu Renzo]], Ylva Goetberg
 
 Code for reproducing the numerical results of [arXiv:].
 We used [[http://mesa.sourceforge.net/][MESA]] version r15140 with the [[http://www.astro.wisc.edu/~townsend/static.php?ref=mesasdk][MESA SDK]] x86_64-linux-20.12.1.
+
+
+
+* Responses to Ylva
+
+** Pablo's grid
+
+   I think the 2016 thing is his PhD thesis. His grid is published in
+   his thesis, not as a paper.
+
+   From Langer+2020 (no link provided, so I refuse to dig into this)
+
+   =Marchant, P. 2016, PhD Thesis, Bonn University, Germany=
+
+** Efficiency
+
+   That is literally a fudge factor in front of the formula to
+   calculate the diffusion coefficient for said process. Those
+   calculations are highly uncertain. Observations seem to suggest the
+   need for factors >>1 (which indicates the formulas are wrong). On
+   the other hand direct simulations find factors ~1. In practice this
+   is an entire sub-field of astrophysical fluid dynamics with active
+   research. Not sure what we can say that is not trivial.
+
+** Overshooting
+
+   Yes, with it the models crashed. Keep in mind I've experimented for
+   more than 1 year with this stuff. There is also no observational
+   constraint available on over/undershooting in shells as far as I
+   know (although I do believe it must still physically be happening).
+
+** MLT--
+
+   The reference is still unpublished. It is just a different way to
+   get rid of the superadiabaticity (like MLT++) which solves an
+   implicit equation to get the superadiabaticity below a certain
+   threshold
+
+** GSF and Heger
+
+   There is an entire world there. I did dive into it, but honestly
+   those are processes that for this model don't matter very much. The
+   free parameters of Heger are listed in the inlist, I don't feel it
+   adds anything to put the list there. Scarily, many come from 2D
+   simulations from the early 90s and would need revision I think.
+
+** Tolerance on omega/omega_Crit
+
+   This means than when solving implicitly for the wind to get
+   omega/omega_crit < threshold you consider yourself happy when
+   reaching threshold +/- tolerance.
+
+** Something quantitative about spin down?
+
+   That is mentioned in the intro and in the discussion, a factor of
+   100 too fast according to Marcolino+09
+
+** ref for entropy at surface
+
+   I am not aware of any, and no, there is no name for it. None does
+   accretor models, that is part of the reason for this paper!
+
+** The excess luminosity is *not* accretion luminosity
+
+   Accretion luminosity = d V/dt where V is the gravitational
+   potential. The excess luminosity in the accretor model is not
+   that. It is an excess of internal energy due to the fact that the
+   structure has now more mass than it should and had less than the
+   local thermal timescale to readjust.
+
+   Also, the way you put the number is confusing, because at A Lnuc is
+   not 10^5.1.
+
+** Model until He depletion
+
+   It is not described elsewhere, and it is not the default because
+   most variations would fail during the He core burning of the
+   donor. THere is no other difference between that model and the
+   fiducial model except that I pushed it further. I might hvae had to
+   play with the resolution in the donor. I don't remember, this was 6
+   months ago by now. Literally nobody cares.
+
+
+** Steeper tracks from rotation
+
+   Rotation makes the star cooler, and thus makes the tracks shallower
+   if anything. I think what might matter here is the internal
+   rotation profile, which sets rho, which sets tau, which sets L.
+
+**  wiggles post detachment
+
+   MESA is finding two solutions for the structure, which are very
+   close. Those wiggles are much much much smaller than observational
+   errorbars, so we don't care. Likely a better treatment of rotation
+   and mixing would prevent them.
+
+
+** Steps in single stars rotation
+
+   I don't know what they are. I played with resolution and could not
+   get rid of them. I don't care enough by now to fix this.
+
+** contraction explains core spin up
+
+   J = m r^2 omega ~ constant approximately
+
+   r decreases, m is the mass of the core which is constant, omega has
+   to increase like 1/r^2 as r decreases to keep J constant.
+
+   In reality J is not exactly constant because there is some
+   core-envelope coupling thought the ST dynamo, but that is evidently
+   too weak to prevent the core from spinning up.
+
+   The same thing happens in the single stars, but since they had all
+   of the MS to spin down (vs. less than half for the accretor),
+   things end up quite differently.
+
+
+   The accretor does not break "earlier", if anything if breaks much
+   later. Look at the orange curve at 4Myrs  for 20Msun
+   omega/omega_Crit~0.5: that single star model already "broke", while
+   the accretor is basically non-rotating still. I don't think the
+   physics is any different, what is different is the timing of spin
+   up only.
+
+** Asteroseismology
+
+   To measure the rotation rate of the core you need mixed modes
+   This is hard, virtually impossible, fro massive stars like zeta
+   ophiuchi right now (TESS is super hard to analyze because of its
+   large pixels). I have asked to seismology people and they suggested
+   not to dwell much on that. I have added a short sentence
+
+
+** Semiconvection
+
+   You are thinking of the donor post-MS where semiconvection acts
+   above the core. That does not apply to the accretor, because its
+   core grows due to rejuvenation. In the Kippenhahn you cannot see
+   any semiconvection ever during the MS, it would appear post-MS.
+
+
+** min Diffusion coeff for begin important
+
+   D>0 => process is on. Then it depends on how long is that
+   evolutionary phase. If D>0 but another process has D' >> D, than D
+   doesn't matter.
+
+
+** panel for core recession
+
+No, single star physics is known. I don't have time for this, and we
+will put the entire video profile by profile online (already on zenodo).
+
+
+**  \YG{it said weak - can we say negligible? is there out-mixing from the core?}
+
+   I think weak is better. We do see the steps in the fig. 6 caused by
+   that convective region, so it's weak but not negligible.
+
+** Shear vs. undershooting
+
+   This is 100% implementation dependent and we have no clue. I don't
+   think we have anything new or smart to say about this.
+
+   The spikyness is completely dependent on the fact that the shear
+   depends on the d omega/dr and resolving gradients is difficult.
+
+** Spin up
+
+   Those shown in Fig. 5 are the diffusion coefficient for the
+   chemical species, not for the AM. Don't confuse the two. Each
+   diffusion equation for quantity X (mass fractions or AM) have their
+   own diffusion coefficient.
+
+** enhanced thermohaline: Do you know why they didn't manage? did the timestep become too short?
+
+   Yes, but that just means the solver struggles to find an acceptable
+   solution. It is not very enlightening.
+
+** re abundances: \YG{What about overshooting above that convective layer? It  seems to impact the N profile in the inner part at late stages at   least...
+
+   Not relevant for the surface, which is what we can see.
+
+
+** Semiconvection and convection above the core
+
+ \YG{I had a discussion with Abel and he said that when he did the
+ exploration of semiconvection in 2019, he found that semiconvection
+ can trigger a convection zone in the envelope, which I thought was
+ interesting. So I agree that these are important to account for. But
+ I would be surprised if the temperature gradient is unchanged above
+ the core after/during mass accretion. Is that what you are saying
+ happened in the Braun models? }
+
+ No, I'm saying it steepened, but in their models by now there was
+ already a strong chemical gradient that prevented mixing and impeded
+ rejuvenation. Ultimately, I just think Braun & Langer models are
+ interesting as a proof of principle, but not realistic models for
+ real stars.
+
+** variability
+
+ YG: Wait, with the last part of
+the sentence, it sounded like zoph has brightness vari-
+ability but it is not due to pulsations, but instead comes
+from a decretion disk - is that true? Maybe we want
+to rephrase if not?
+
+ Yes, zeta ophiuchi probably has a transient disk (it's an Oe star!),
+ it has pulsations, it has variability. Like any closeby star, it is a mess.
+
+
+** Stuff on low Z models in discussion
+
+   doesn't belong in this paper. Not sure I agree with all you wrote
+   (for instance whether the binary is or isn't disrupted has nothign
+   to do with the internal structure of the accretor), but it's beyond
+   the scope here.
+
+** conclusions
+
+   It's not critizing anyone, it is true those models are rare and
+   sparse. I stand by my statement.
+
+** Disruption with BHs
+
+   if BHs get kicks yes, otherwise no. And for zeta ophiuchi we see
+   the associated pulsar, so it is definitely not a BH companion
+
+** spin up to critical rotation in conclusions
+
+I don't need to understand AM better in binaries to say that accretors
+would reach critical rotation at least at the surface. Let's think of
+the surface only: then you don't have any AM transport issues. Packet+81
+demonstrates analytically that you spin up to critical rotation. I
+trust that more than vsin(i) from observations.
+
+
+** Diffusion coefficients
+
+** TODO rejuvenation quantification
+
+** TODO why thermohaline mixing in early RLOF
+
+   mmh...good question. Not sure.
