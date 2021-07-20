@@ -56,3 +56,8 @@ The simulations were computed with [[http://mesa.sourceforge.net/][MESA]] versio
 * mix_movie.mp4
 
   Movie of the mixing processes inside the accretor star (cf. Fig. 4).
+
+* composition_accretor.mp4
+
+  Movie of the hydrogen, helium, carbon, nitrogen, and oxygen
+  abundances in the accretor star.
