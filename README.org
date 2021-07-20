@@ -240,12 +240,3 @@ would reach critical rotation at least at the surface. Let's think of
 the surface only: then you don't have any AM transport issues. Packet+81
 demonstrates analytically that you spin up to critical rotation. I
 trust that more than vsin(i) from observations.
-
-
-** Diffusion coefficients
-
-** TODO rejuvenation quantification
-
-** TODO why thermohaline mixing in early RLOF
-
-   mmh...good question. Not sure.
