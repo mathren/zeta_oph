@@ -1,7 +1,0 @@
-* Geneva models
-
-These are downloaded on Feb 18, 2021 from
-
-https://obswww.unige.ch/Research/evol/tables_grids2011/Z014/
-
-and are the models from [[https://ui.adsabs.harvard.edu/abs/2012A%26A...537A.146E/abstract][Ektrom et al. 2012]]
