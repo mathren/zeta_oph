@@ -1,4 +1,4 @@
-* Evolution of accretor stars in massive binaries: broader implications from modeling $\zeta$ Ophiuchi
+* Evolution of accretor stars in massive binaries: broader implications from modeling \zeta Ophiuchi
 authors: [[mailto:mrenzo@flatironinstitute.org][Mathieu Renzo]], Ylva Goetberg
 
 Code for reproducing the numerical results of [arXiv:], submitted to
@@ -33,7 +33,7 @@ The data produced are available on [zenodo:].
 *** Single stars
     The single star models are produced with the
     =MESA_setup/single_rotating_stars= work directory. You need to set
-    explicitly the initial $\omega/\omega_{crit}$ and mass wanted in =inlist_extra=.
+    explicitly the initial \omega/\omega_{crit} and mass wanted in =inlist_extra=.
 
 ** Notebooks
 
@@ -60,7 +60,7 @@ The data produced are available on [zenodo:].
 
     The code to create Table 1 is in =notebooks/table.ipynb=.
 ** data
-   Contains the /Gaia/ DR3 data for $\zeta$ Ophiuchi. These are
+   Contains the /Gaia/ DR3 data for \zeta Ophiuchi. These are
    unfortunately not usable (large RUWE)
 ** movies
    Contains the movies of the mixing processes and chemical
