@@ -10,7 +10,6 @@ The data produced are available on [zenodo:].
 
 ** MESA input files
 
-
 *** Binary evolution
 
     The setup for our binary evolution runs, until the
@@ -31,12 +30,18 @@ The data produced are available on [zenodo:].
     binary run by modifying =saved_model_name=, and modify =ZBASE=
     to be the initial metallicity of the model.
 
+*** Single stars
+    The single star models are produced with the
+    =MESA_setup/single_rotating_stars= work directory. You need to set
+    explicitly the initial $\omega/\omega_{crit}$ and mass wanted in =inlist_extra=.
+
 ** Notebooks
 
    Inside =notebooks/= you can find the scripts to reproduce the
    numerical analysis of our models and the figures. Many auxiliary
    functions are defined in =plot_aux.py=, and the notebooks also rely
-   on [[https://github.com/mathren90/plotFunc]].
+   on [[https://github.com/mathren90/plotFunc]]. The other dependencies
+   are listed in =pyproject.toml=.
 
 *** Figure 1 and 2
 
@@ -54,3 +59,14 @@ The data produced are available on [zenodo:].
 *** Table 1
 
     The code to create Table 1 is in =notebooks/table.ipynb=.
+** data
+   Contains the /Gaia/ DR3 data for $\zeta$ Ophiuchi. These are
+   unfortunately not usable (large RUWE)
+** movies
+   Contains the movies of the mixing processes and chemical
+   composition of our accretor models.
+** manuscript
+   This folder is probably not interesting to you. It contains the tex
+   file for the paper associated to this repository. Unlike the rest
+   of the repository, licensed with GPLv3, that subfolder is licensed
+   with CC BY-NC-ND 3.0.
