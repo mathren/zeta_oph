@@ -8,7 +8,7 @@ We used [[http://mesa.sourceforge.net/][MESA]] version r15140 with the [[http://
 
 The data produced are available on [[https://doi.org/10.5281/zenodo.4701565]].
 
-** MESA input files
+** Setup of the MESA simulations
 
 *** Binary evolution
 
@@ -37,7 +37,7 @@ The data produced are available on [[https://doi.org/10.5281/zenodo.4701565]].
     explicitly the initial \omega/\omega_{crit} and mass wanted in =inlist_extra=.
 
 
-** Notebooks
+** notebooks/
 
    Inside =notebooks/= you can find the scripts to reproduce the
    numerical analysis of our models and the figures. Many auxiliary
@@ -62,19 +62,19 @@ The data produced are available on [[https://doi.org/10.5281/zenodo.4701565]].
 
     The code to create Table 1 is in =notebooks/table.ipynb=.
 
-** data
+** data/
 
    Contains the /Gaia/ DR3 data for \zeta Ophiuchi. These are
    unfortunately not usable (large RUWE)
 
-** movies
+** movies/
 
    Contains the movies of the mixing processes and chemical
    composition of our accretor models.
 
-** manuscript
+** manuscript/
 
-   This folder is probably not interesting to you. It contains the tex
-   file for the paper associated to this repository. Unlike the rest
-   of the repository, licensed with GPLv3, that subfolder is licensed
-   with CC BY-NC-ND 3.0.
+   This folder is probably not interesting to you. It contains the =tex=
+   file and other auxiliary files for the paper associated to this
+   repository. Unlike the rest of the repository, licensed with GPLv3,
+   that subfolder is licensed with CC BY-NC-ND 3.0.
