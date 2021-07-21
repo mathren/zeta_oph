@@ -55,7 +55,7 @@ The simulations were computed with [[http://mesa.sourceforge.net/][MESA]] versio
 
 * mix_movie.mp4
 
-  Movie of the mixing processes inside the accretor star (cf. Fig. 4).
+  Movie of the mixing processes inside the accretor star (cf. Fig. 5).
 
 * composition_accretor.mp4
 
