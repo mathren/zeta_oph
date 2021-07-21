@@ -46,3 +46,4 @@ movie/*.png
 *.DS*
 
 CLEAN/*
+manuscript/comments
