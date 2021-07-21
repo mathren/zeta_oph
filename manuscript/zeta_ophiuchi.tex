@@ -820,7 +820,7 @@ Conversely, the entire interior of the accretor has a negligible
 rotational velocity until RLOF (starting at
 $\sim{}7.25$\,Myr). Because of binary mass transfer, the accretor is
 spun up from the surface inwards (cf.\ initially rigid rotation assumed
-for single stars, \citetalt{maeder:00}), late in its evolution (cf.\
+for single stars, \citealt{maeder:00}), late in its evolution (cf.\
 at ZAMS for single stars), and it
 reaches critical rotation $\omega/\omega_\mathrm{crit}\simeq1$. In our
 model, inward transport of angular momentum creates a $v_\mathrm{rot}$
@@ -1316,7 +1316,7 @@ at higher $Z$ (see also \Secref{sec:bin_param}).
 
 \paragraph{Mass transfer efficiency, $\beta_\mathrm{RLOF}$}
 We regulate the accretion efficiency through the rotational
-enhancement of mass loss \citep[e.g.,][]{langer:98}.  However, whether
+enhancement of mass loss \citep[e.g.,][]{langer:98, petrovic:05, wang:20}.  However, whether
 critical rotation can effectively stop the accretion of matter is
 unclear. \cite{popham:91} and \cite{paczynski:91} argued that
 accretion of mass (but not angular momentum) might be possible even at
@@ -1340,9 +1340,9 @@ below), and the geometric distorsion of the outer layers because of
 the centrifugal forces would not follow the spherical symmetry imposed
 by 1D codes such as \texttt{MESA}.
 
-While the mass transfer efficiency, $\beta_\mathrm{RLOF}$, and
-importantly its time-evolution need further attention, it is also
-likely that this parameter and its evolution depend on the details of
+While the mass-transfer efficiency, $\beta_\mathrm{RLOF}$, and
+importantly its evolution need further attention, it is also
+likely that this parameter depends on the details of
 the system (masses, mass ratio, period, etc.). For instance, to
 explain the lower mass sdO+Be binaries found by \cite{wang:21_sdOBe}
 it is likely that a larger mass transfer efficiency would be
@@ -1376,7 +1376,7 @@ the numerical results of \cite{lubow:75}. We find
 $R_\mathrm{min}\simeq 1.5\,R_\odot < R_\mathrm{accretor}$: this
 suggests that the stream should hit the accretor directly, without
 forming an accretion disk. Nevertheless, for the sake of numerical
-stability, we assume the incoming material and the stellar surface to
+stability, we assume the incoming material and the accretor's surface to
 have the same specific angular momentum. This provides a slow angular
 momentum accretion and consequent spin-up of the surface.
 
@@ -1425,11 +1425,10 @@ shear, while the off-center convective layer of \Figref{fig:D_mix} and
 mixing of H-rich material and the rejuvenation itself. We cannot
 exclude that in the presence of a strong shell undershooting that
 convective layer would also mix efficiently with the core, enhancing
-further the rejuvenation effect
-
+further the rejuvenation effect.
 
 \paragraph{Initial binary parameters}
-The initial donor mass $M_1$, mass ratio $q\equiv M_2/M_1$, and the
+The initial donor mass $M_1$, mass ratio $q\equiv M_2/M_1$, and
 period of the progenitor binary of \zoph\ cannot be directly
 constrained from observations. We have explored variation in these,
 and the qualitative behavior of the models is similar.  Shorter
@@ -1452,7 +1451,8 @@ is expected to widen relatively more than our fiducial model of
 \Secref{sec:best_model}, slowing down the accretor. The increased mass
 of the stripped donor star could also imply a lower chance of
 exploding for the donor, which might instead collapse to a black-hole
-(however, see \Secref{sec:SN_comp}).
+(however, see \Secref{sec:SN_comp}). This would be incompatible with
+the association of the pulsar PSR B1706-16 with \zoph\ \citep{neuhauser:20}.
 
 The higher $M_1$ does not significantly change the post-RLOF total
 mass of the accretor, with $M_2$ remaining about $\sim$20.5\,$M_\odot$, since
@@ -1478,7 +1478,7 @@ Throughout this study, we have assumed the ``binary SN scenario'' to
 explain the runaway nature of \zoph: after the mass transfer phase,
 the explosion of the donor disrupts the binary and ejects the accretor
 at roughly its pre-explosion orbital velocity
-\citep[e.g.,][]{blaauw:61, renzo:19walk}. This fate occurs to the
+\citep[e.g.,][]{blaauw:61, eldridge:11, renzo:19walk}. This fate occurs to the
 majority of massive binary systems, and \zoph\ might be the best
 example of it \citep[e.g.,][]{blaauw:52, blaauw:61,
   hoogerwerf:00}. \cite{neuhauser:20} suggested not only the companion
@@ -1492,7 +1492,7 @@ large to unbind the binary which has
 $v_\mathrm{orb}=\sqrt{G(M_1+M_2)/a}\simeq 135\,\kms$ at the end of our
 binary simulation (blue diamond in \Figref{fig:HRD_both}), and this
 will decrease further in the remaining time to the donor's
-core-collapse \citep{kalogera:96, tauris:15}.
+core-collapse \citep{kalogera:96, tauris:98, tauris:15}.
 
 The SN ejecta mass would depend on the post-RLOF wind mass loss of our
 donor star, which is uncertain \citep[see also][]{renzo:17, vink:17,
@@ -1523,11 +1523,12 @@ the stellar spin should be investigated further.
 Using 2D hydrodynamic simulations of the star-SN ejecta interactions
 in close binaries ($a\lesssim 60\,R_\odot$,
 cf. $a\gtrsim 343\,R_\odot$ in our fiducial binary model),
-\cite{hirai:18} and \cite{ogata:21} found that the companion star recovers its
+\cite{hirai:18} found that the companion star recovers its
 pre-explosion luminosity and effective temperature within a few years
-to decades, and the amount of mass removed by the SN shock is
-$\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute the
-surface of the runaway by depositing processed nuclear material
+to decades. This result was later corroborated for a wider range of
+parameters by \cite{ogata:21}. The amount of mass removed by the SN
+shock is $\lesssim10^{-2}\,M_\odot$.  The SN ejecta might also pollute
+the surface of the runaway by depositing processed nuclear material
 \citep[e.g.,][]{przybilla:08, suda:21}. However, for the large final
 separation of our model, little pollution is expected and enhanced
 mass loss and inward mixing might quickly dilute any signature below
@@ -1538,9 +1539,9 @@ detectable levels.
 \section{Summary \& conclusions}
 \label{sec:conclusions}
 
-The impact of mass transfer on the structure and evolution of accretors
-stars in massive binaries has received relatively little attention in
-the literature. To investigate this, we have performed \texttt{MESA}
+The impact of mass transfer on the structure and evolution of
+accretors stars in massive binaries has received relatively little
+attention. To investigate this, we have performed \texttt{MESA}
 calculations of massive binaries evolving two coupled stars
 simultaneously.
 
@@ -1556,7 +1557,7 @@ the generic population of massive stars accreting in binaries.
 \subsection{Reproducing \zoph}
 
 We found that the main features of \zoph\ can be
-reasonably well reproduced using standard stellar physics
+reasonably well reproduced using standard non-fine-tuned stellar physics
 assumptions for the treatment of mass transfer, chemical mixing, and
 rotation. Our choices are described in \Secref{sec:methods} and
 Appendix~\ref{sec:software}.
@@ -1628,7 +1629,7 @@ The first notable difference we find is the internal rotation
 profile. Single rotating stars are usually initialized as rigid
 rotators at birth, and throughout their evolution they spin down due
 to wind mass loss. Conversely, accretors are spun up later during
-their main-sequence evolution and from the surface inward. Moreover,
+their main sequence and from the surface inward. Moreover,
 for single stars, the maximum rotation rate, that is the one assumed
 at the beginning of the evolution, is poorly understood theoretically
 and observationally \citep[e.g.,][]{ramirez-agudelo:13,
@@ -1649,12 +1650,13 @@ in an interacting binary system.
 Finally, in our models, the accretion of mass leads to rejuvenation
 and also the formation of a off-center convective layer above the
 main-sequence core (cf.\ \Figref{fig:D_mix}). The latter ultimately
-results in a sharper density drop at the core edge (cf.\
-\Figref{fig:rho}), and a flatter density profile close to the end of
-the main sequence. If physical, the presence of such a convective
-layer could in principle be probed using asteroseismology. Depending
-on how the accretor (and the binary) evolves in the future, this
-difference could be crucial in determining the outcome of common
+results in a sharper density drop at the core edge, and a flatter
+density profile close to the end of the main sequence (cf.\
+\Figref{fig:rho}). If physical,
+the presence of such a convective layer could in principle be probed
+using asteroseismology. Depending on how the accretor (and the binary)
+evolves in the future, this difference could be crucial in determining
+the outcome of common
 envelope events between massive stars and compact objects.\\
 
 
