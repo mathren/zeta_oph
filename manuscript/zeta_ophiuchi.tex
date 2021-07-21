@@ -291,11 +291,12 @@ off-center convective layers. We also use the local implicit
 enhancement of the convective flux in superadiabatic regions
 introduced in \texttt{MESA} 15140 (\texttt{use\_superad\_reduction = .true.}).
 
+% Rotation and chemical mixing due to rotation
 We treat rotation in the ``shellular'' approximation
-\citep[e.g.,][]{zahn:92, ekstrom:12}, that is we assume constant
+\citep[e.g.,][]{zahn:92, ekstrom:12}, that is, we assume constant
 rotational frequency $\omega$ along isobaric surfaces. Furthermore, we
 assume tidal synchronization and rigid rotation at the beginning of
-our runs, that is zero age main sequence (ZAMS). % With the initial
+our runs, at the zero age main sequence (ZAMS). % With the initial
 % configuration that we assume motivated by \zoph\ -- $M_1=25\,M_\odot$,
 % $M_2=17\,M_\odot$ and period of $P=100$\,days -- this means initially
 % slow rotation: the surface averaged rotational velocity is
@@ -305,47 +306,53 @@ approximation for meridional currents (Eddington-Sweet circulations,
 \citealt{sweet:50}), which dominate the chemical mixing due to
 rotation. We also include the secular and dynamical shear
 instabilities, and the Goldreich-Schubert-Fricke (GSF) instability
-(see \cite{heger:00} for a review of these processes).  We assume a
+(see \cite{heger:00} for a review of these processes).  
+% AM transport
+We assume a
 Spruit-Tayler dynamo for the transport of angular momentum
-\citep{spruit:02}, and chose the same free parameters as
+\citep{spruit:02}, and choose the same free parameters as
 \cite{heger:00}. This also includes the rotational enhancement of the
 wind mass loss as in \cite{langer:98}. Moreover, when a star
-approaches critical rotation, we re-calculate implicitly the wind mass
-loss rate to keep its rotation sub-critical. Specifically, at each
-timestep we calculate a wind enhancement factor to reduce the ratio
+approaches critical rotation, we re-calculate the wind mass
+loss rate implicitly to keep its rotation sub-critical. Specifically, at each
+time step we calculate a wind enhancement factor to reach the ratio
 $\omega/\omega_\mathrm{crit}\lesssim 0.95$ where $\omega$ is the
-angular frequency and
-$\omega_\mathrm{crit}=\sqrt{(1-L/L_\mathrm{Edd})GM/R^3}$ with
+angular spin frequency and
+$\omega_\mathrm{crit}=\sqrt{(1-L/L_\mathrm{Edd})GM/R^3}$ is the critical spin frequency, with
 $L_\mathrm{Edd}$ the Eddington luminosity computed using the stellar
 opacity down to optical depth $\tau=2/3$, $L$ is the luminosity, $R$
 the radius of the equator, and $G$ the gravitational
 constant. % However, we allow a tolerance of $\pm0.05$ on this limit
 % when re-calculating implicitly the mechanically enhanced wind.
 
+% Z
 We assume a metallicity of $Z=0.01$ informed by the present-day $Z$ of
-\zoph's parent cluster \citep{murphy:21}, and assume the relative
-element abundances to scale with solar values \citep{grevesse:98}.
+\zoph's parent cluster \citep{murphy:21}. The relative
+element abundances are assumed to scale with solar values \citep{grevesse:98}.
 
+% winds
 We include stellar winds following \cite{vink:00,vink:01} for
 effective temperature $T_\mathrm{eff}\geq 11\,000$\,K, unless the
-surface H mass fraction is lower than 0.4 when we use
+surface H mass fraction is lower than 0.4, when we instead use
 the mass-loss rate from \cite{nugis:00}. For $T_\mathrm{eff}\leq 10\,000$\,K, we use the
 mass-loss rate from \cite{dejager:88}, and interpolate linearly in
-between the hot and cold wind for intermediate $T_\mathrm{eff}$. We
-assume a wind scaling factor of 1. Compared to the measurements for
+between the hot and cold wind for intermediate $T_\mathrm{eff}$. 
+%We assume a wind scaling factor of 1 \cite{smith:14}. 
+Compared to the measurements for
 \zoph, we might be over-estimating the wind mass-loss rate by a factor
 of 100 \citep[``weak wind problem'', see][]{marcolino:09}. This
 suggests that spin-down due to wind mass-loss may also be
-overestimated compared to reality.  However, \cite{lucy:12} and
+overestimated compared to reality. However, \cite{lucy:12} and
 \cite{lagae:21} proposed that the temperature structure of the winds
 of low-luminosity O-type stars might affect the spectral lines and
-cause an empirical underestimate of the mass-loss rate.
+cause an empirical underestimate of the mass-loss rate. 
 
+% Mass transfer method
 We follow \cite{kolb:90} to calculate the mass transfer rate with an
 implicit scheme. Moreover, we assume that the specific angular
 momentum and entropy of the transferred mass match the surface of the
 accretor, while the chemical composition is set by the stratification
-of the donor star.  Mass transfer is conservative until the accretor
+of the donor star. Mass transfer is conservative until the accretor
 reaches critical rotation, after which rotationally-enhanced mass loss
 governs the mass transfer efficiency \citep[e.g.,][]{petrovic:05}.
 Transferred matter which is not successfully accreted carries away the
@@ -369,7 +376,7 @@ transfer is completed. We define this based on the surface properties
 of the donor star, specifically, we require that is has lost most of
 its hydrogen-rich envelope -- surface He mass fraction exceeds 0.35 --
 and its radius is smaller than both its Roche radius and the ZAMS
-radius.  The stripped donor star is contracting at this point, and
+radius. The stripped donor star is contracting at this point, and
 will likely develop strong wind mass loss, possibly appearing as a
 Wolf-Rayet star. Depending on the amount of leftover H-rich material
 and the wind mass-loss rate, it is possible that the donor would
@@ -379,12 +386,14 @@ and metallicity we focus on here \citep[e.g.,][]{laplace:20}. We stop the evolut
 of the accretor star at terminal age main sequence (TAMS) defined as
 when the central mass fraction of H drops below $10^{-4}$.
 
+% Other single stars
 To compare with our accretor model, we also compute the main sequence
 evolution of non-rotating single stars of 15, 17, 20, 25, and
 30$\,M_\odot$ and four more single $20\,M_\odot$ stars rigidly rotating with
 $\omega/\omega _{\rm crit} = $ 0.2, 0.3, 0.4, and 0.5 at birth. Apart
 from the initial rotation rate and the fact that they are single, the
 setup of these models is otherwise identical to our stars in the binary system.
+
 
 \section{Evolution of an accretor star}
 \label{sec:best_model}
