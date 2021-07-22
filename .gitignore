@@ -47,3 +47,6 @@ movie/*.png
 
 CLEAN/*
 manuscript/comments
+
+#remove manuscript pdf
+zeta_ophiuchi.pdf
