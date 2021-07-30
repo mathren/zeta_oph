@@ -1,9 +1,7 @@
 * Evolution of accretor stars in massive binaries: broader implications from modeling \zeta Ophiuchi
 authors: [[mailto:mrenzo@flatironinstitute.org][Mathieu Renzo]], Ylva Goetberg
 
-arXiv: 2107.10933 https://arxiv.org/abs/2107.10933
-
-Code for reproducing the numerical results of [arXiv:2107.10933], submitted to
+Code for reproducing the numerical results of [[https://arxiv.org/abs/2107.10933][arXiv:2107.10933]], submitted to
 the Astrophysical Journal.
 
 We used [[http://mesa.sourceforge.net/][MESA]] version r15140 with the [[http://www.astro.wisc.edu/~townsend/static.php?ref=mesasdk][MESA SDK]] x86_64-linux-20.12.1.
