@@ -6,7 +6,7 @@ the Astrophysical Journal.
 
 We used [[http://mesa.sourceforge.net/][MESA]] version r15140 with the [[http://www.astro.wisc.edu/~townsend/static.php?ref=mesasdk][MESA SDK]] x86_64-linux-20.12.1.
 
-The data produced are available on [[https://doi.org/10.5281/zenodo.4701565]].
+The data produced are available at [[https://doi.org/10.5281/zenodo.4701565]].
 
 ** Setup of the MESA simulations
 
