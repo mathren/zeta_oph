@@ -43,7 +43,10 @@ The data produced are available at [[https://doi.org/10.5281/zenodo.4701565]].
    numerical analysis of our models and the figures. Many auxiliary
    functions are defined in =plot_aux.py=, and the notebooks also rely
    on [[https://github.com/mathren90/plotFunc]]. The other dependencies
-   are listed in =pyproject.toml=.
+   are listed in =pyproject.toml=. You will need to download 
+   the simulation output from [[https://doi.org/10.5281/zenodo.4701565]]
+   and modify some strings to match the location of these
+   files to run the scripts.
 
 *** Figure 1 and 2
 
