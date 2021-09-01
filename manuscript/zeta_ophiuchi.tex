@@ -19,7 +19,7 @@
 \newcommand{\YG}[1]{{\color{blue}{YG: #1}}}
 \newcommand{\Msun}{\ensuremath{\,M_\odot}}
 \newcommand{\Lsun}{\ensuremath{\,L_\odot}}
-
+\newcommand{\referee}[1]{\textcolor{red}{\bf #1}}
 \defcitealias{villamariz:05}{VH05}
 
 
@@ -886,8 +886,7 @@ gravitational wave mergers, e.g.,][]{zaldarriaga:18,
     during RLOF (slightly after point C), late during RLOF (close to
     point F), after detachment (within the \zoph\ errorbar on
     \Figref{fig:HRD_both}), and after RLOF (point G). A movie of the
-    entire evolution is available at
-    \url{https://doi.org/10.5281/zenodo.4701565}.}
+    entire evolution is \referee{included in \Figref{fig:mix_movie}}.}
   \label{fig:D_mix}
 \end{figure}
 
@@ -1048,19 +1047,45 @@ the dynamically unstable mass transfer.
 In contrast to single rotating stars, our accretor model is chemically
 enriched both by accreting CNO-processed material and by outward
 mixing from its own core. Both these processes brings CNO-processed
-material to the surface, resulting in He- and N-enhancement. After
-RLOF, the surface $^4\mathrm{He}$ mass fraction of the accretor has
-increased by $\sim{}20\,\%$, from 0.26 up to 0.31, while the surface
-$^{14}\mathrm{N}$ mass fraction has increased by a factor of 2.5, from
-$5\times 10^{-4}$ up to $1.346 \times 10^{-3}$ (see also \Tabref{tab:surf_prop}). Because of this large
-change in composition, we focus here on the $^{14}\mathrm{N}$
-enrichment, but refer to \Figref{fig:composition_huge} for the
-evolution of the mass fractions of $^{12}\mathrm{C}$ and
-$^{16}\mathrm{O}$. We also include a movie of the evolution of the
-accretor's internal composition profile for these three elements plus
-$^1\mathrm{H}$ and $^4\mathrm{He}$ at
-\url{https://doi.org/10.5281/zenodo.4701565}.
+material to the surface, resulting in He- and
+N-enhancement.
 
+\referee{However, these two mechanism tap into the core at different
+  evolutionary phases, which can result in a different ratio of mass
+  fractions $X(^{4}\mathrm{He})/X(^{14}\mathrm{N})$ at the surface of
+  an accretor star compared single rotating stars. In fact, rotational
+  mixing from the core occurs during the main sequence, as the
+  $^4\mathrm{He}$ content is growing while the composition of
+  $^{14}\mathrm{N}$ is fixed to the CNO-equilibrium
+  abundance. Conversely, the material coming from the donor during a
+  case B RLOF has a composition fixed in time by the donor's main
+  sequence evolution. However, we emphasize that the ratio of
+  abundances still varies with mass coordinate owing to the core
+  recession in mass coordinate during the main sequence. }
+
+After RLOF, the surface $^4\mathrm{He}$ mass fraction of the accretor
+has increased by $\sim{}20\,\%$, from 0.26 up to 0.31, while the
+surface $^{14}\mathrm{N}$ mass fraction has increased by a factor of
+2.5, from $5\times 10^{-4}$ up to $1.346 \times 10^{-3}$ (see also
+\Tabref{tab:surf_prop}). \referee{This corresponds to a surface ratio
+  $X(^{4}\mathrm{He})/X(^{14}\mathrm{N})=231$, which decreases in the
+  remaining evolution. For comparison, this is slightly higher than
+  TAMS ratio reached by our single star model staring with
+  $\omega/\omega_\mathrm{crit}=0.3$ which however reaches a similar
+  $X(^{14}\mathrm{N})$ as our accretor model at TAMS (see below). Joint
+  constraints on the He- and N-enhancement might thus be helpful to
+  distinguish stars enriched by both the accretion of material from a
+  companion and rotational mixing from stars self-enriched from their
+  own primordial rotation, but the differences might be smaller than
+  typical error bars on abundances.}
+
+Because of \referee{its} large change, we focus here on the
+$^{14}\mathrm{N}$ enrichment, but refer to
+\Figref{fig:composition_huge} for the evolution of the mass fractions
+of \referee{$^{4}\mathrm{He}$}, $^{12}\mathrm{C}$ and
+$^{16}\mathrm{O}$. We also include a movie of the evolution of the
+accretor's internal composition profile for \referee{four} elements
+plus $^1\mathrm{H}$ \referee{in \Figref{fig:composition_movie}}.
 
 The first four panels of
 \Figref{fig:n14} show the mass fraction of $^{14}\mathrm{N}$ as a
@@ -1787,31 +1812,81 @@ sizes is the change of surface angular momentum in both stars during
 the mass transfer.
 
 
-\section{Internal composition profile evolution}
+\section{Internal composition profile evolution and mixing}
 \label{sec:X_fig}
 
-
-\Figref{fig:composition_huge} compares the internal evolution of the composition
-profile of single rotating stars with our accretor model.
-We show mass fractions of $^{12}\mathrm{C}$  and $^{16}\mathrm{O}$ to complement the
-mass fraction of $^{14}\mathrm{N}$ shown in \Figref{fig:n14}, and
-reproduced also in the middle panel of \Figref{fig:composition_huge}.
+\Figref{fig:composition_huge} compares the internal evolution of the
+composition profile of single rotating stars with our accretor model.
+We show mass fractions of \referee{$^{4}\mathrm{He}$}, $^{12}\mathrm{C}$, and
+$^{16}\mathrm{O}$ to complement the mass fraction of $^{14}\mathrm{N}$
+shown in \Figref{fig:n14}, and reproduced also in \referee{third row} of
+\Figref{fig:composition_huge}. \referee{The black error bars in the
+  leftmost panel correspond to the abundances reported by
+  \citetalias{villamariz:05} assuming a surface hydrogen mass fraction
+  $X_\mathrm{surf}=0.67801$ (cf.\ \Tabref{tab:surf_prop}).}
 
 
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{huge_composition_colored}
-  \caption{Same as \Figref{fig:n14}, but for $^{12}\mathrm{C}$ (top
-    panel), and $^{16}\mathrm{O}$ (bottom panel). The first four
-    panels show single rotating stars of initially $20\,M_\odot$, the
-    rightmost panel shows the accretor in our fiducial binary. The middle panel is
-    exactly the same as \Figref{fig:n14}. The red lines mark the
-    initial mass fractions, black dashed lines indicate the TAMS surface mass
+  \caption{Same as \Figref{fig:n14}, but for
+    \referee{$^{4}\mathrm{He}$ (top row), $^{12}\mathrm{C}$ (second
+      row), $^{14}\mathrm{N}$ (third row, identical to \Figref{fig:n14}),
+      and $^{16}\mathrm{O}$ (bottom row). We emphasize the linear
+    scale on the vertical axis in the top row, while all others have a
+    logarithmic scale.} The first four panels show single rotating
+    stars of initially $20\,M_\odot$, the rightmost panels show the
+    accretor in our fiducial binary. The red lines mark the initial
+    mass fractions, black dashed lines indicate the TAMS surface mass
     fraction, and the black error bars in the first column indicate
-    the surface composition of \zoph\ inferred by \citetalias{villamariz:05}
-    using the surface H mass fraction from our model.}
+    the surface composition of \zoph\ inferred by
+    \citetalias{villamariz:05} using the surface H mass fraction from
+    our model.}
   \label{fig:composition_huge}
 \end{figure*}
+
+
+\referee{ \Figref{fig:composition_movie} shows the composition profile
+  of $^1\mathrm{H}$, $^{4}\mathrm{He}$, $^{12}\mathrm{C}$,
+  $^{14}\mathrm{N}$, and $^{16}\mathrm{O}$ for our fiducial accretor
+  model shortly after ZAMS. The associated animation shows this
+  evolves in time, as the core burning proceeds, mass is accreted
+  during RLOF and mixed inwards.}
+
+\begin{figure}[htbp]
+  \begin{interactive}{animation}{composition_accretor.mp4}
+    \includegraphics[width=0.5\textwidth]{composition0000}
+  \end{interactive}
+  \caption{Composition profile of our fiducial accretor model at the
+    beginning of the simulation (ZAMS). The animation shows the entire
+    main-sequence evolution (see physical time at the top). The number of frames per unit time is not constant, and greatly
+    increases during the RLOF phase, when smaller timesteps are needed.}
+  \label{fig:composition_movie}
+\end{figure}
+
+\referee{\Figref{fig:mix_movie} shows the diffusion coefficients for
+  various mixing processes (cf.\ \Figref{fig:D_mix}) at ZAMS. The
+  associated animation shows the evolution of these mixing
+  coefficients throughout our simulation until TAMS.}
+
+\begin{figure}[htbp]
+  \begin{interactive}{animation}{mix_movie.mp4}
+    \includegraphics[width=0.5\textwidth]{mix_0000}
+  \end{interactive}
+  \caption{Diffusion coefficients for convection (red), overshooting
+    (blue), thermohaline (pink), and rotational mixing (yellow). The
+    latter includes meridional circulations, secular and dynamical
+    shear, and GSF. Semiconvection is not shown for clarity. The
+    associated animation shows how these evolve with time until
+    TAMS. The number of frames per unit time is not constant, and
+    greatly increases during the RLOF phase, when smaller timesteps
+    are needed.}
+  \label{fig:mix_movie}
+\end{figure}
+
+
+
+
 
 \bibliographystyle{aasjournal}
 \bibliography{./zeta_ophiuchi.bib}
