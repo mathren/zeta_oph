@@ -43,19 +43,19 @@ The data produced are available at [[https://doi.org/10.5281/zenodo.4701565]].
    numerical analysis of our models and the figures. Many auxiliary
    functions are defined in =plot_aux.py=, and the notebooks also rely
    on [[https://github.com/mathren90/plotFunc]]. The other dependencies
-   are listed in =pyproject.toml=. You will need to download 
-   the simulation output from [[https://doi.org/10.5281/zenodo.4701565]]
-   and modify some strings to match the location of these
-   files to run the scripts.
+   are listed in =pyproject.toml=. You will need to download the
+   simulation output from [[https://doi.org/10.5281/zenodo.4701565]] and
+   modify some strings (typically starting with =/mnt/home/mrenzo/=) to
+   match the location of these files to run the scripts.
 
 *** Figure 1 and 2
 
     The code to reproduce Fig. 1 and 2 is in
     =notebooks/Best_model.ipynb=.
 
-*** Figure 3-7
+*** Figure 3-7 and 9-11
 
-    The code to reproduce Fig. 3-7 is in =notebooks/mixing_and_AM.ipynb=.
+    The code to reproduce Fig. 3-7 and 9-11 is in =notebooks/mixing_and_AM.ipynb=.
 
 *** Figure 8
 
@@ -68,12 +68,16 @@ The data produced are available at [[https://doi.org/10.5281/zenodo.4701565]].
 ** data/
 
    Contains the /Gaia/ DR3 data for \zeta Ophiuchi. These are
-   unfortunately not usable (large RUWE)
+   unfortunately not usable (large RUWE).
+
+   The bulk of the simulation data is publicly available
+   at [[https://doi.org/10.5281/zenodo.4701565]]
 
 ** movies/
 
    Contains the movies of the mixing processes and chemical
-   composition of our accretor models.
+   composition of our accretor models. The frames for these movies are
+   created using the ipython notebook =notebooks/mixing_and_AM.ipynb=.
 
 ** manuscript/
 
