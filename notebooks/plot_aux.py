@@ -603,10 +603,11 @@ def get_modnum_from_profile(pfile):
 
 def get_ZAMS_abundances(hfile):
     src, col = getSrcCol(hfile)
+    surface_he4 = src[0, col.index("surface_he4")]
     surface_c12 = src[0, col.index("surface_c12")]
     surface_n14 = src[0, col.index("surface_n14")]
     surface_o16 = src[0, col.index("surface_o16")]
-    return surface_c12, surface_n14, surface_o16
+    return surface_he4, surface_c12, surface_n14, surface_o16
 
 
 def get_profile_from_modnum(num, LOGS):
