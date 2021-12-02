@@ -56,6 +56,19 @@ profile_interval = 1
 photo_interval = 500
 
 
+! from May Gade Pedersen
+! Print output to be used with GYRE
+write_pulse_data_with_profile = .true.
+pulse_data_format = 'GYRE'
+add_atmosphere_to_pulse_data = .false.
+add_center_point_to_pulse_data = .true.
+keep_surface_point_for_pulse_data = .true.
+add_double_points_to_pulse_data = .true.
+interpolate_rho_for_pulse_data = .true.
+threshold_grad_mu_for_double_point = 5d0
+
+
+
 / ! end of controls namelist
 
 
