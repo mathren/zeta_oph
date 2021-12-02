@@ -47,6 +47,7 @@ movie/*.png
 
 CLEAN/*
 manuscript/comments
+GYRE_output/*
 
 #remove manuscript pdf
 zeta_ophiuchi.pdf
