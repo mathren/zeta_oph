@@ -79,7 +79,7 @@ The data produced are available at [[https://doi.org/10.5281/zenodo.4701565]].
    composition of our accretor models. The frames for these movies are
    created using the ipython notebook =notebooks/mixing_and_AM.ipynb=.
 
-** manuscript/
+** manuscript_accretors/
 
    This folder is probably not interesting to you. It contains the =tex=
    file and other auxiliary files for the paper associated to this
