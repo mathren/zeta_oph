@@ -1,0 +1,93 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: zeta_ophiuchi.aux
+The style file: aasjournal.bst
+Database file #1: ./zeta_ophiuchi.bib
+Repeated entry---line 1480 of file ./zeta_ophiuchi.bib
+ : @article{   packet:81
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2171 of file ./zeta_ophiuchi.bib
+ : @article{   maeder:00
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2186 of file ./zeta_ophiuchi.bib
+ : @article{   paxton:11
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2206 of file ./zeta_ophiuchi.bib
+ : @article{   paxton:13
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2230 of file ./zeta_ophiuchi.bib
+ : @article{   paxton:15
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2255 of file ./zeta_ophiuchi.bib
+ : @article{   paxton:18
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2280 of file ./zeta_ophiuchi.bib
+ : @article{   paxton:19
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2670 of file ./zeta_ophiuchi.bib
+ : @article{ekstrom:12
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3000 of file ./zeta_ophiuchi.bib
+ : @article{yoon:17
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3176 of file ./zeta_ophiuchi.bib
+ : @article{sander:20
+ :                   ,
+I'm skipping whatever remains of this entry
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in boubert:18
+Warning--empty journal in gotberg:17
+Warning--empty journal in hirai:18
+Warning--empty journal in paxton:19
+Warning--empty journal in zapartas:19
+You've used 171 entries,
+            3168 wiz_defined-function locations,
+            1776 strings with 41269 characters,
+and the built_in function-call counts, 79811 in all, are:
+= -- 6762
+> -- 5776
+< -- 61
++ -- 1938
+- -- 2112
+* -- 7080
+:= -- 14463
+add.period$ -- 194
+call.type$ -- 171
+change.case$ -- 1012
+chr.to.int$ -- 171
+cite$ -- 176
+duplicate$ -- 2862
+empty$ -- 4877
+format.name$ -- 2312
+if$ -- 16249
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 167
+newline$ -- 544
+num.names$ -- 686
+pop$ -- 1122
+preamble$ -- 1
+purify$ -- 1012
+quote$ -- 0
+skip$ -- 2552
+stack$ -- 0
+substring$ -- 3439
+swap$ -- 14
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1539
+warning$ -- 5
+while$ -- 659
+width$ -- 0
+write$ -- 1852
+(There were 10 error messages)

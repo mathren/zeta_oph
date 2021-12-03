@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{The importance of accretor stars}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{A prototypical example of an accretor: \040Ophiuchi}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Modeling massive binaries with MESA}{}% 4
+\BOOKMARK [1][-]{section.3}{Evolution of an accretor star}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Mass, velocity, photometry, and age of \040Oph are naturally explained by binary interactions}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Mass and mass-transfer rate evolution}{}% 7
+\BOOKMARK [1][-]{section.5}{Rotation and angular momentum transport in the accretor}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{Surface rotation}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{Internal rotation \205 comparison to single stars}{section.5}% 10
+\BOOKMARK [1][-]{section.6}{Mixing and composition of the accretor}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{Internal composition profile \205 comparison to single stars}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.2}{Comparison to \040Oph's composition, radius, and rotation rate}{section.6}% 13
+\BOOKMARK [1][-]{section.7}{Robustness of the models and discussion}{}% 14
+\BOOKMARK [2][-]{subsection.7.1}{Uncertainties in the single-star physics}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.2}{Uncertainties in the treatment of mass transfer}{section.7}% 16
+\BOOKMARK [2][-]{subsection.7.3}{The explosion of the donor star}{section.7}% 17
+\BOOKMARK [1][-]{section.8}{Summary \046 conclusions}{}% 18
+\BOOKMARK [2][-]{subsection.8.1}{Reproducing \040Oph}{section.8}% 19
+\BOOKMARK [2][-]{subsection.8.2}{Accretors are not single rotating stars}{section.8}% 20
+\BOOKMARK [1][-]{appendix.A}{MESA setup}{}% 21
+\BOOKMARK [1][-]{appendix.B}{Resolution tests}{}% 22
+\BOOKMARK [1][-]{appendix.C}{Internal composition profile evolution and mixing}{}% 23

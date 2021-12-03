@@ -35,8 +35,8 @@ __pycache__/
 *.mod
 *.data
 
-manuscript/comments/*
-manuscript/.DS_Store
+manuscript_accretors/comments/*
+manuscript_accretors/.DS_Store
 
 # frames of movies
 movie/*/*.png
@@ -46,7 +46,7 @@ movie/*.png
 *.DS*
 
 CLEAN/*
-manuscript/comments
+manuscript_accretors/comments
 GYRE_output/*
 
 #remove manuscript pdf

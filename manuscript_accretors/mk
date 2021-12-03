@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pdflatex zeta_ophiuchi.tex
+bibtex zeta_ophiuchi
+pdflatex zeta_ophiuchi.tex
+pdflatex zeta_ophiuchi.tex
