@@ -580,8 +580,8 @@
    log_brunt_nonB ! = grada - gradT
 
    !sign_brunt_N2 ! sign of brunt_N2 (+1 for Ledoux stable; -1 for Ledoux unstable)
-   !lamb_S2 ! for l=1: S = 2*(csound/r)^2
-   !lamb_S ! for l=1: S = sqrt(2)*csound/r
+   lamb_S2 ! for l=1: S = 2*(csound/r)^2
+   lamb_S ! for l=1: S = sqrt(2)*csound/r
    !brunt_nu ! brunt_frequency in microHz
 
    !lamb_Sl1 ! for l=1; = sqrt(2)*csound/r   (microHz)
@@ -589,10 +589,10 @@
    !lamb_Sl3 ! for l=3; = sqrt(12)*csound/r   (microHz)
 
    !log_brunt_nu ! brunt_frequency in microHz
-   !log_lamb_Sl1 ! for l=1; = sqrt(2)*csound/r   (microHz)
-   !log_lamb_Sl2 ! for l=2; = sqrt(6)*csound/r   (microHz)
-   !log_lamb_Sl3 ! for l=3; = sqrt(12)*csound/r   (microHz)
-   !log_lamb_Sl10
+   log_lamb_Sl1 ! for l=1; = sqrt(2)*csound/r   (microHz)
+   log_lamb_Sl2 ! for l=2; = sqrt(6)*csound/r   (microHz)
+   log_lamb_Sl3 ! for l=3; = sqrt(12)*csound/r   (microHz)
+   log_lamb_Sl10
 
    !brunt_N_div_r_integral ! integral from center of N*dr/r
    !k_r_integral ! integral from center of k_r*dr
