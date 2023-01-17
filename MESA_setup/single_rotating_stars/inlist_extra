@@ -29,6 +29,6 @@ Zbase = 0.01d0
 /
 
 &controls
-initial_mass = 20.0d0
+initial_mass = 25.0d0
 max_model_number = 50000
 / ! end of controls namelist
